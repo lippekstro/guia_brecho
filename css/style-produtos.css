@@ -1,7 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
 .borda-laranja{
     border: 1px solid #fe712a;
 }
-
+.tabela{
+    display: inline;
+    position: relative;
+    width: 700px;
+    left: 5rem;
+}
+table{
+    width: 900px;
+}
 td,thead{
     vertical-align: middle;
     text-align: center;
@@ -17,4 +31,18 @@ thead{
 .img-resize{
     width: 100px;
     height: 100px;
+}
+.container-fluid{
+    justify-content: end;
+}
+h3{
+    font-weight: bold;
+    margin-left: 8.5rem;
+}
+.offcanvas-body > a,label{
+    text-decoration: none;
+    color: #fe712a;
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem;
 }
