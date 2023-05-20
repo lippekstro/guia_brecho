@@ -1,0 +1,20 @@
+.borda-laranja{
+    border: 1px solid #fe712a;
+}
+
+td,thead{
+    vertical-align: middle;
+    text-align: center;
+}
+thead{
+    background-color: #e6e6e6;
+    color: #8F8E8E;
+}
+.btn-img{
+    border: none;
+    background-color:transparent;
+}
+.img-resize{
+    width: 100px;
+    height: 100px;
+}
