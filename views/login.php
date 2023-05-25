@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/afbrecho/guia_brecho/templates/cabecalho.php";
+include_once "/opt/lampp/htdocs/guia_brecho/templates/cabecalho.php"
 ?>
 
 <div>
@@ -22,5 +22,5 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/afbrecho/guia_brecho/templates/cabeca
 </div>
 
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/afbrecho/guia_brecho/templates/rodape.php";
+include_once "/opt/lampp/htdocs/guia_brecho/templates/rodape.php"
 ?>
