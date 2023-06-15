@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Brechó</title>
+    <link rel="stylesheet" href="/guia_brecho/css/style.css">
     <link rel="shortcut icon" href="/guia_brecho/img/img.png" type="image/x-icon">
 
     <!-- css bootstrap -->
