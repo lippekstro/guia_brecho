@@ -1,26 +1,31 @@
 <?php
-include_once "/opt/lampp/htdocs/guia_brecho/templates/cabecalho.php"
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php"
 ?>
 
 <div>
         <form action="" autocomplete="off" method="POST">
-            <fieldset>
+            <fieldset id="loginmod">
                 <h1>Login</h1>
-                <p>Digite os seus dados de acesso nos campos abaixo.</p>
-                <div style="display: flex; align-items: center;">
-                    <input type="mail" name="nome" id="nome" placeholder="E-mail" required autofocus>
+                <p class= "fontelogin">Digite os seus dados de acesso nos campos abaixo.</p> 
+                <br>
+                <div>
+                    <input type="mail" class="bordainput meu-input" name="nome" id="nome" placeholder="E-mail" required autofocus>
                 </div>
-                <div style="display: flex; align-items: center;">
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <br>
+                <div>
+                    <input type="password" class="bordainput meu-input" name="senha" id="senha" placeholder="Senha" required>
                 </div>
-                <button type="submit">Acessar</button>
-                <p><a href="esqueci_senha.html">Esqueci minha senha</a></p> 
-                <p><a href="cadastrar.html">Cadastrar</a></p> 
+                <br>
+                <button type="submit" id="buttonb">Acessar</button>
+                <br><br>
+                <p><a href="esqueci_senha.html" id="linkb">Esqueci minha senha</a></p> 
+                <p><a href="cadastrar.html"  id="linkb">Cadastrar</a></p> 
+                <br>
 
             </fieldset>
          </form>
 </div>
 
 <?php
-include_once "/opt/lampp/htdocs/guia_brecho/templates/rodape.php"
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php"
 ?>

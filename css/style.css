@@ -5,3 +5,55 @@
     box-sizing: border-box;
 }
 
+body{
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-image: url(/guia_brecho/img/brecho.jpg);
+    font-family: 'Ysabeau', sans-serif;
+}
+
+/* Login style começo */
+#loginmod{
+    background-color: #F9F8F8;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8%;
+    text-align:center;
+    border-width: 0%;
+    
+}
+
+#buttonb{
+    background-color: black;
+    color: #F9F8F8;
+    width: 55%;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#linkb{
+    font-size: 70%;
+    color: black;
+}
+
+.bordainput{
+    padding: 0.5rem;
+    width: 270px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #FB732C;
+    color: #F9F8F8;
+}
+
+.meu-input::placeholder {
+    color: #F9F8F8;
+  }
+
+.fontelogin{
+    color: gray;
+    font-size: 12px;
+}
+/* Login style fim */
+  
