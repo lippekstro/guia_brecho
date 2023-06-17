@@ -73,4 +73,50 @@ body{
 }
 
 /* Quemsomos style fim /*
+
+/* style cabeçalho inicio */
+
+nav{
+    text-align: center;
+}
+
+.logowidth{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 150px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+nav ul {
+    list-style: none; /* especifica o estilo para uma lista como padrão*/
+    margin: 0; /* define a área de margem nos quatro lados do elemento */
+    padding: 0; /* é responsável por definir uma distância interna entre um elemento e sua borda */
+    background-color:#FB732C; /* cor do menu de navegação */
+}
+  
+nav li {
+    display: inline-block; /* faz com que o elemento HTML seja renderizado inline, dentro do bloco na mesma linha */
+}
+  
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+nav li a:hover {
+    color: #000000;
+}
+
+/* style cabeçalho fim */
+
   
