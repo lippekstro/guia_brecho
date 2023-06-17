@@ -1,9 +1,17 @@
     <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+
+    $lista = array(        
+        array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?city", "texto" => "cidade","preco"=>25.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?mountain", "texto" => "montanha","preco"=>30.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?beach", "texto" => "praia","preco"=>52.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?robot", "texto" => "robo","preco"=>9.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?cat", "texto" => "gato","preco"=>12.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!")    
+    )
     ?>
 
 <!---------------------------------- aqui o menu lateral do filtro --------------------------------------------->
-
 <section>
     <div class="d-flex justify-content-end">
         <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border:none; color:#fe712a; background-color:transparent;font-size: 22px;"><i class="fa-solid fa-sliders" style="color: #fe712a;"></i>Filtrar</button>
@@ -29,192 +37,37 @@
 <!------------------------------------ aqui os cards dos produtos --------------------------------------------->
 <h3 style="color:#fe712a">Produtos</h3>
 <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 8.5rem;">
+    <?php foreach ($lista as $produto) : ?>
     <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-img"> 
+        <button type="button" data-bs-toggle="modal" data-bs-target="#<?= $produto['texto'] ?>" class="btn-img">
             <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?blouse" class="card-img-top" alt="...">
+                <img src="<?= $produto['img'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Blusa feminina</h5>
-                    <p class="card-text">Vestuário <br> <b>R$ 25,00</b> </p>
+                    <h5 class="card-title"><?= $produto['texto'] ?></h5>
+                    <p class="card-text"><?= $produto['descricao'] ?><br> <b>R$ <?= $produto['preco']?></b> </p>
                 </div>
             </div>
         </button>
     </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?shirt" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Camisa Masculina</h5>
-                    <p class="card-text">Vestuário <br> <b>R$ 35,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?dress" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Vestido feminio</h5>
-                    <p class="card-text">Vestuário<br> <b>R$ 50,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?pants" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Calça Mas/Fem</h5>
-                    <p class="card-text">Vestuário<br> <b>R$ 60,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?coats" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Casaco Mas/Fem</h5>
-                    <p class="card-text">Vestuário<br> <b>R$ 55,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal5" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?shoe" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sapato Mas/Fem</h5>
-                    <p class="card-text">Calçados<br> <b>R$ 25,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?skirt" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Saia Feminina</h5>
-                    <p class="card-text">Vestuário <br> <b>R$ 25,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?bracelet" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Saia Feminina</h5>
-                    <p class="card-text">Vestuário <br> <b>R$ 25,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6" class="btn-img"> 
-            <div class="card">
-                <img src="https://source.unsplash.com/random/900x900/?hat" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Saia Feminina</h5>
-                    <p class="card-text">Vestuário <br> <b>R$ 25,00</b> </p>
-                </div>
-            </div>
-        </button>
-    </div>  
+    <?php endforeach; ?>    
 </div>
     <!----------------------------------------- aqui o efeito modal ------------------------------------------>
 <div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <?php foreach ($lista as $produto) : ?>
+    <div class="modal fade" id="<?= $produto['texto'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?blouse" class="card-img-top" alt="...">
+                    <img src="<?= $produto['img'] ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Cropped Lastex com alças finas - R$ 15,00</p>
+                        <p class="card-text"><?= $produto['descricao'] ?> <br></p>
+                        <p class="card-text"> <b>R$ <?= $produto['preco'] ?></b>  </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?shirt" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Camisa Social Masculina - R$ 25,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?dress" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Vestido feminino - R$ 50,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?pants" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Pulseira - R$ 12,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?coats" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Pulseira - R$ 12,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?shoe" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Pulseira - R$ 12,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="https://source.unsplash.com/random/900x900/?skirt" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Pulseira - R$ 12,00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php endforeach; ?>    
 </div>
 
     <!---------------------========================================================------------------------->
@@ -233,7 +86,4 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 
 
 
-
-
-    <!--link de imagens aleatorias: https://source.unsplash.com/random/1920x1080/?(aqui vai a drescricao da img em ingles) -->
 >>>>>>> 6f07a23 (alt layout para card e implmentacao menu lateral)
