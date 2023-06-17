@@ -74,3 +74,21 @@
 }
 
 /* Login style fim */
+
+/* Quemsomos style começo */
+
+#margem{
+    margin-top: 30px;
+}
+
+.caixa-laranja{
+    background-color: #FB732C;
+    color: #F9F8F8;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 10px;
+}
+
+/* Quemsomos style fim /*
+  
