@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-produtos.css">
 
     <!-------------------------------- link google icons ---------------------------------------------------->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -23,10 +24,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous" defer></script>
     <!------------------------------------------------------------------------------------------------------>
     <script src="../js/script-produtos.js" defer></script>
-    <link rel="stylesheet" href="../css/style-produtos.css">
+
     <title>Guia Brechó</title>
     <link rel="shortcut icon" href="/guia_brecho/img/img.png" type="image/x-icon">
 </head>
+<style>
+    .d-flex {
+        width: 79vw;   
+        justify-content: space-between;
+        position: absolute;
+        top: 10vh;
+        left: 10vw;
+        align-items: baseline;
+    }
+    body{
+        background: #fe712a;  
+        background: -webkit-linear-gradient(180deg, #F16529, #fe712a); 
+        background: linear-gradient(180deg, #F16529, #fe712a); 
+    }
+
+</style>
 <body>
     <header>
 

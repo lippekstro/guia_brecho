@@ -1,5 +1,5 @@
     <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+    require_once "../templates/cabecalho.php";
 
     $lista = array(        
         array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
@@ -11,15 +11,16 @@
     )
     ?>
 
-<!---------------------------------- aqui o menu lateral do filtro --------------------------------------------->
+<!--------------------------- aqui o menu lateral do filtro --------------------------------------->
 <section>
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border:none; color:#fe712a; background-color:transparent;font-size: 22px;"><i class="fa-solid fa-sliders" style="color: #fe712a;"></i>Filtrar</button>
+    <div class="d-flex">
+        <h3 style="color:#ffffff;margin-left: 0;">Produtos</h3>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border:none; color:#ffffff; background-color:transparent;font-size: 22px;"><i class="fa-solid fa-sliders" style="color: #ffffff;"></i>Filtrar</button>
     </div>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel" style="color:#fe712a;"><i class="fa-solid fa-sliders" style="color: #fe712a;"></i> Filtrar</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel" style="color:#fe712a;"><i class="fa-solid fa-sliders" style="color: #ffffff;"></i> Filtrar</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">       
@@ -32,10 +33,11 @@
             </form>
         </div>
     </div>
+    <!-- <h3 style="color:#ffffff">Produtos</h3> -->
 </section>
 
-<!------------------------------------ aqui os cards dos produtos --------------------------------------------->
-<h3 style="color:#fe712a">Produtos</h3>
+<!---------------------------------- aqui os cards dos produtos --------------------------------->
+
 <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 8.5rem;">
     <?php foreach ($lista as $produto) : ?>
     <div class="col">
@@ -51,7 +53,7 @@
     </div>
     <?php endforeach; ?>    
 </div>
-    <!----------------------------------------- aqui o efeito modal ------------------------------------------>
+    <!------------------------------- aqui o efeito modal ------------------------------------------>
 <div>
     <?php foreach ($lista as $produto) : ?>
     <div class="modal fade" id="<?= $produto['texto'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,7 +72,7 @@
     <?php endforeach; ?>    
 </div>
 
-    <!---------------------========================================================------------------------->
+    <!---------------------===============================================------------------------->
 
 
 
