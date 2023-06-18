@@ -10,13 +10,15 @@ body{
     background-size: 100%;
     background-image: url(/guia_brecho/img/brecho.jpg);
     font-family: 'Ysabeau', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com 50% de opacidade */
+    background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
 }
 
 /* Login style começo */
 #loginmod{
     background-color: #F9F8F8;
     width: 30%;
-    height: 350px;
+    height: 360px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -27,7 +29,7 @@ body{
 }
 
 #h1style{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 50px;
     text-align: left;
 }
