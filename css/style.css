@@ -15,7 +15,8 @@ body{
 /* Login style começo */
 #loginmod{
     background-color: #F9F8F8;
-    width: 20%;
+    width: 30%;
+    height: 350px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -25,24 +26,31 @@ body{
     
 }
 
+#h1style{
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: left;
+}
+
 #buttonb{
     background-color: black;
     color: #F9F8F8;
-    width: 55%;
-    height: 30px;
+    width: 60%;
+    height: 40px;
     border-radius: 8px;
     border: none;
 }
 
 #linkb{
-    font-size: 70%;
+    font-size:small;
+    text-decoration: none;
     color: black;
 }
 
 .bordainput{
     padding: 0.5rem;
-    width: 240px;
-    height: 35px;
+    width: 300px;
+    height: 40px;
     border-radius: 10px;
     background-color: #FB732C;
     color: #F9F8F8;
@@ -55,7 +63,9 @@ body{
 
 .fontelogin{
     color: gray;
-    font-size: 12px;
+    font-size: 10px;
+    margin-left: 50px;
+    text-align: left;
 }
 
 /* Login style fim */
@@ -128,24 +138,42 @@ nav li a:hover {
 
 footer {
     position: fixed; /* mantém a posição fixa do rodapé em relação a página */
+    justify-content: space-between;
     display: flex; /* Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */
-    justify-content: center; /* é empregada para alinhar os elementos ao longo do eixo principal, cuja direção ( row ou column ) é definida a partir da propriedade flex-direction */
     align-items: center; /* Os itens são centralizados no eixo transversal */
-    flex-wrap: wrap; /* serve para definir se os itens dentro do contêiner poderão ocupar multiplas linhas ou não. Se sim, os elementos quebradão linha quando chegar no limite do elemento pai, caso não, os elementos serão dimencionados de forma a caberem no elemento pai */
+    flex-wrap:wrap; /* serve para definir se os itens dentro do contêiner poderão ocupar multiplas linhas ou não. Se sim, os elementos quebradão linha quando chegar no limite do elemento pai, caso não, os elementos serão dimencionados de forma a caberem no elemento pai */
     flex-direction: row; /* permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal */
     background-color:#FB732C;
     color:#F9F8F8;
     left: 0; /* fica colado a esquerda */
+    right: 0;
     width: 100%; /* tamanho do flex container */
-    height: 40px; /* determina a altura da área do conteúdo de um elemento em relação ao elemento-pai do box */
+    height: auto; /* determina a altura da área do conteúdo de um elemento em relação ao elemento-pai do box */
     bottom: 0; /* define a posição vertical do elemento em relação a sua borda inferior */
 }
 
-.a {
-    margin: 0 10px;
-    color: #F9F8F8;
-    text-decoration: none;
+.left {
+    margin-left: 10px;
 }
+  
+.right {
+    letter-spacing: -1px; /* ajusta o espaçamento entre as letras */
+    word-spacing: -1px; /* ajusta o espaçamento entre as palavras */
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.imgfooter{
+    width: 35px;
+}
+
+.link-sem-barra {
+    text-decoration: none;
+  }
+  
 
 /*style footer final */
 

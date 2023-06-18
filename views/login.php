@@ -5,7 +5,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php"
 <div>
         <form action="" autocomplete="off" method="POST">
             <fieldset id="loginmod">
-                <h1>Login</h1>
+                <h1 id="h1style">Login</h1>
                 <p class= "fontelogin">Digite os seus dados de acesso nos campos abaixo.</p> 
                 <br>
                 <div>

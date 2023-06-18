@@ -15,10 +15,10 @@
         <nav>
             <ul>
                 <li> <img src="/guia_brecho/img/logo_guia_brecho-rem.png" class="logowidth"> </li>
-              <li><a href="/guia_brecho/index.php">Home</a></li>
-              <li><a href="/guia_brecho/views/produtos.php">Produtos</a></li>
-              <li><a href="/guia_brecho/views/loja.php">Lojas</a></li>
-              <li><a href="/guia_brecho/views/quemsomos.php">Quem Somos?</a></li>
+                <li><a href="/guia_brecho/index.php">Home</a></li>
+                <li><a href="/guia_brecho/views/produtos.php">Produtos</a></li>
+                <li><a href="/guia_brecho/views/loja.php">Lojas</a></li>
+                <li><a href="/guia_brecho/views/quemsomos.php">Quem Somos?</a></li>
                 <li>
                     <a href="/guia_brecho/views/login.php"><span class="material-symbols-outlined">
                         person
