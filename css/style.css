@@ -10,7 +10,7 @@
 #loginmod{
     background-color: #F9F8F8;
     width: 30%;
-    height: 350px;
+    height: 360px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +25,7 @@
 }
 
 #h1style{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 50px;
     text-align: left;
 }
