@@ -37,7 +37,7 @@ body{
 #buttonb{
     background-color: black;
     color: #F9F8F8;
-    width: 60%;
+    width: 250px;
     height: 40px;
     border-radius: 8px;
     border: none;
@@ -109,6 +109,9 @@ nav{
 }
 
 nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     list-style: none; /* especifica o estilo para uma lista como padrão*/
     margin: 0; /* define a área de margem nos quatro lados do elemento */
     padding: 0; /* é responsável por definir uma distância interna entre um elemento e sua borda */
