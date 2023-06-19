@@ -1,24 +1,14 @@
     <?php
-    require_once "../templates/cabecalho.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
-
-    
-    try {
-
-        $conexao = new mysqli("localhost","root","","guiabrecho");
-        
-        $sql = "SELECT * FROM produto WHERE id_produto=3";
-        
-        $resultado= $conexao->query($sql);
-
-        $linha = mysqli_fetch_array($resultado)
-            
-        echo '<img src="data:image/jpeg;base64,'.$linha['imagem_produto'] . '" />';
-         
-    } catch (PDOException $th) {
-        echo $th->getMessage();
-    }
-
+    $lista = array(        
+        array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?city", "texto" => "cidade","preco"=>25.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?mountain", "texto" => "montanha","preco"=>30.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?beach", "texto" => "praia","preco"=>52.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?robot", "texto" => "robo","preco"=>9.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
+        array("img" => "https://source.unsplash.com/random/1920x1080/?cat", "texto" => "gato","preco"=>12.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!")    
+    )
     ?>
 
 <!--------------------------- aqui o menu lateral do filtro --------------------------------------->
@@ -35,7 +25,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">       
-            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vestuário</a>
+            <a href="#">Vestuário</a>
             <a href="#">Calçados</a>
             <a href="#">Acessórios</a>    
             <form action="">
@@ -54,7 +44,7 @@
     <div class="col">
         <button type="button" data-bs-toggle="modal" data-bs-target="#<?= $produto['nome_produto'] ?>" class="btn-img">
             <div class="card">
-                <img src="<?php echo "../img/". $produto["imagem_produto"]; ?>" class="card-img-top" alt="imagem do produto">
+                <img src="<?= $produto['img'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $produto['nome_produto'] ?></h5>
                     <p class="card-text"><?= $produto['descricao'] ?><br> <b>R$ <?= $produto['preco']?></b> </p>
