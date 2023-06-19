@@ -1,13 +1,13 @@
 <footer>
     <div class="left">
         <a href="url_do_seu_link" class="link-sem-barra">
-            <img src="/guia_brecho/img/facebook.png" alt="Facebook" class="imgfooter">
+            <img src="/PHPORRA/guia_brecho/img/facebook.png" alt="Facebook" class="imgfooter">
         </a> 
         <a href="url_do_seu_link" class="link-sem-barra">
-            <img src="/guia_brecho/img/instagram.png" alt="Instagram" class="imgfooter">
+            <img src="/PHPORRA/guia_brecho/img/instagram.png" alt="Instagram" class="imgfooter">
         </a>  
         <a href="url_do_seu_link" class="link-sem-barra">
-            <img src="/guia_brecho/img/twitter.png" alt="Twitter" class="imgfooter">
+            <img src="/PHPORRA/guia_brecho/img/twitter.png" alt="Twitter" class="imgfooter">
         </a>       
     </div>
     <div class="right">
@@ -20,10 +20,10 @@
 </body>
 
     <!-- Swiper JS -->
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="/PHPORRA/guia_brecho/js/swiper-bundle.min.js"></script>
 
 <!-- JavaScript -->
-<script src="js/script.js"></script>
+<script src="/PHPORRA/guia_brecho/js/script.js"></script>
 
 </html>
 
