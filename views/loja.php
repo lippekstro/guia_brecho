@@ -38,7 +38,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             
                             <h2 class="name">Itens de Brechó</h2>
                             <p class="description">
-                            Item de Brechó em São Luis - MA
+                            @itensdebrecho
                             Roupas e vestuário
                             ✿ Toda peça de brechó é uma
                             oportunidade única! 
@@ -60,7 +60,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <div class="card-content">
                             <h2 class="name">Bregirl Boss</h2>
                             <p class="description"> 
-                                Brechó | Girl Boss
+                                @bregirlboss
                                 Há 3 anos na moda sustentável!
                                 • Acompanha os stories ✨
                                 • Entregas facilitadas- 1x na semana
@@ -81,7 +81,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
                         <div class="card-content">
                             <h2 class="name">Mais Um Brechó</h2>
-                            <p class="description"> @maisumbrecho
+                            <p class="description"> 
+                                @maisumbrecho
                                 Roupas e vestuário
                                 Desde 2017
                                 Do Maranhão para todo Brasil

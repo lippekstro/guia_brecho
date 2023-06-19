@@ -1,13 +1,12 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   font-family: 'Poppins', sans-serif;
-}
 /* Google Fonts - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 body{
   min-height: 100vh;
   display: flex;
@@ -105,7 +104,7 @@ body{
 }
 
 .swiper-navBtn{
-  color: #6E93f7;
+  color: #FB732C;
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
