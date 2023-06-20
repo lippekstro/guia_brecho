@@ -19,8 +19,8 @@
   
 </body>
 
-    <!-- Swiper JS -->
-    <script src="/PHPORRA/guia_brecho/js/swiper-bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="/PHPORRA/guia_brecho/js/swiper-bundle.min.js"></script>
 
 <!-- JavaScript -->
 <script src="/PHPORRA/guia_brecho/js/script.js"></script>
