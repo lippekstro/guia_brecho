@@ -15,6 +15,7 @@ body{
 }
 
 /* Login style começo */
+
 #loginmod{
     background-color: #F9F8F8;
     width: 30%;
@@ -25,12 +26,16 @@ body{
     border-radius: 8%;
     text-align:center;
     border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     
 }
 
 #h1style{
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
     text-align: left;
 }
 
@@ -65,8 +70,16 @@ body{
 .fontelogin{
     color: gray;
     font-size: 10px;
-    margin-left: 50px;
+    margin-left: 100px;
     text-align: left;
+}
+
+.cent{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
 /* Login style fim */
@@ -82,8 +95,8 @@ body{
     color: #F9F8F8;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    padding: 10px;
+    width: 80%;
+    padding: 30px;
 }
 
 /* Quemsomos style fim /*

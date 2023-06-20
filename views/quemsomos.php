@@ -2,6 +2,8 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php"
 ?>
 
+<div class="cent">
+
 <div class="caixa-laranja" id="margem">
     <p>
         Bem-vindo(a) ao Guia Brechó, o seu guia online para explorar o mundo dos brechós em São Luís do Maranhão! Nós acreditamos na valorização do que é feito com cuidado e no apoio aos brechozeiros e brechozeiras locais que buscam crescer e expandir seus negócios.
@@ -25,6 +27,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php"
         Junte-se a nós no Guia Brechó e faça parte dessa comunidade que valoriza a moda com cuidado, sustentabilidade e estilo. Explore os brechós locais, descubra peças exclusivas e contribua para um consumo mais consciente e responsável. Vamos juntos promover a moda sustentável e apoiar o crescimento dos brechós em São Luís do Maranhão!
     </p>
 </div>
+
+</div>
+
+
 
 <br>
 
