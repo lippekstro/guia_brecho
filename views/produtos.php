@@ -1,23 +1,14 @@
     <?php
-    require_once "../templates/cabecalho.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] ."/guia_brecho/models/produto.php";
 
-
-    
     try {
+        $lista = Produto::listar();
 
-        $conexao = new mysqli("localhost","root","","guiabrecho");
-        
-        $sql = "SELECT * FROM produto WHERE id_produto=3";
-        
-        $resultado= $conexao->query($sql);
-
-        $linha = mysqli_fetch_array($resultado)
-            
-        echo '<img src="data:image/jpeg;base64,'.$linha['imagem_produto'] . '" />';
-         
-    } catch (PDOException $th) {
+    } catch (\Throwable $th) {
         echo $th->getMessage();
     }
+
 
     ?>
 
@@ -35,7 +26,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">       
-            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vestuário</a>
+            <a href="#">Vestuário</a>
             <a href="#">Calçados</a>
             <a href="#">Acessórios</a>    
             <form action="">
@@ -54,7 +45,7 @@
     <div class="col">
         <button type="button" data-bs-toggle="modal" data-bs-target="#<?= $produto['nome_produto'] ?>" class="btn-img">
             <div class="card">
-                <img src="<?php echo "../img/". $produto["imagem_produto"]; ?>" class="card-img-top" alt="imagem do produto">
+                <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $produto['nome_produto'] ?></h5>
                     <p class="card-text"><?= $produto['descricao'] ?><br> <b>R$ <?= $produto['preco']?></b> </p>
