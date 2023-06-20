@@ -1,27 +1,32 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
- <main>
-
+<nav><h1 bs-orange>Eventos</h1></nav>
+<!-- inicio dos indicadores do carrossel  -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
   </div>
+  <!-- fim dos indicadores do carrossel  -->
+  
+  <!-- inicio do carrossel -->
   <div class="carousel-inner">
+    <!-- slide do carrossel -->
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+      <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <div class="container">
         <div class="carousel-caption text-start">
           <h1>Example headline.</h1>
           <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p><!-- botão dentro do slide -->
         </div>
       </div>
     </div>
-    <div class="carousel-item active carousel-item-start">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+    <!-- slide do carrossel -->
+    <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <div class="container">
         <div class="carousel-caption">
           <h1>Another example headline.</h1>
@@ -30,8 +35,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         </div>
       </div>
     </div>
-    <div class="carousel-item carousel-item-next carousel-item-start">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+    <div class="carousel-item">
+      <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <div class="container">
         <div class="carousel-caption text-end">
           <h1>One more for good measure.</h1>
@@ -50,6 +55,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<!-- fim do carrossel -->
 
 
 <!-- Marketing messaging and featurettes
@@ -58,27 +64,27 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
 <div class="container marketing">
 
-  <!-- Three columns of text below the carousel -->
+   <!--Three columns of text below the carousel 
   <div class="row">
     <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="/guia_brecho/img/img.png" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <h2 class="fw-normal">Heading</h2>
       <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
       <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
+    </div>
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <h2 class="fw-normal">Heading</h2>
       <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
       <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
+    </div>
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
       <h2 class="fw-normal">Heading</h2>
       <p>And lastly this, the third column of representative placeholder content.</p>
       <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
+    </div>
+  </div> /.row -->
 
 
   <!-- START THE FEATURETTES -->
@@ -131,7 +137,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
   <p class="float-end"><a href="#">Back to top</a></p>
   <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
 </footer>
-</main>
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
