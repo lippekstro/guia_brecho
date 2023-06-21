@@ -15,7 +15,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
   <div class="carousel-inner">
     <!-- slide do carrossel -->
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+     <img src="/guia_brecho/img/img.png" alt="" srcset=""  class="bd-placeholder-img" width="100%" height="500px">
       <div class="container">
         <div class="carousel-caption text-start">
           <h1>Example headline.</h1>
