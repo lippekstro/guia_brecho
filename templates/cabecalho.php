@@ -42,6 +42,17 @@
         background: -webkit-linear-gradient(180deg, #F16529, #fe712a); 
         background: linear-gradient(180deg, #F16529, #fe712a); 
     }
+    .btn-img{
+        border:none;
+        background: transparent;
+    }
+    .img-card{
+        width:auto;
+        height:30vh;
+    }
+    .card{
+        
+    }
 
 </style>
 <body>

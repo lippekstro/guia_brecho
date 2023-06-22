@@ -1,6 +1,6 @@
     <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] ."/guia_brecho/models/produto.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] ."/guia_brecho/models/class_produto.php";
 
     try {
         $lista = Produto::listar();
@@ -41,11 +41,11 @@
 <!---------------------------------- aqui os cards dos produtos --------------------------------->
 
 <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 8.5rem;">
-    <?php foreach ($album as $produto) : ?>
+    <?php foreach ($lista as $produto) : ?>
     <div class="col">
         <button type="button" data-bs-toggle="modal" data-bs-target="#<?= $produto['nome_produto'] ?>" class="btn-img">
             <div class="card">
-                <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" class="card-img-top" alt="...">
+                <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" class="card-img-top img-card" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $produto['nome_produto'] ?></h5>
                     <p class="card-text"><?= $produto['descricao'] ?><br> <b>R$ <?= $produto['preco']?></b> </p>
@@ -57,12 +57,12 @@
 </div>
     <!------------------------------- aqui o efeito modal ------------------------------------------>
 <div>
-    <?php foreach ($album as $produto) : ?>
+    <?php foreach ($lista as $produto) : ?>
     <div class="modal fade" id="<?= $produto['nome_produto'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="card" style="width: 32rem;">
-                    <img src="<?php echo "../img/". $produto["imagem_produto"]; ?>" class="card-img-top" alt="...">
+                    <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text"><?= $produto['descricao'] ?> <br></p>
                         <p class="card-text"> <b>R$ <?= $produto['preco'] ?></b>  </p>

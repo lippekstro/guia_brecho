@@ -1,6 +1,6 @@
 <?php
 
-require_once "../db/conexao.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/db/conexao.php";
 
 class Produto{
 
@@ -18,11 +18,11 @@ class Produto{
         if ($id_produto) {
             $this->id_produto = $id_produto;
             
-            $this->carregar();
+            self::carregar();
         }
     }
     
-    public function carregar(){
+    public static function carregar(){
 
         $conexao = Conexao::conectar();
         $sql = "SELECT id_produto,nome_produto,descricao,categoria,preco,estoque,imagem_produto FROM produto WHERE id_produto = :id_produto";
@@ -40,7 +40,7 @@ class Produto{
     }
 
 
-    public function deletar(){
+    public static function deletar(){
 
         $conexao = conexao::conectar();
         $sql = "DELETE FROM produto WHERE id_produto=:id_produto";
@@ -58,7 +58,7 @@ class Produto{
         return $array;
     }
 
-    public function inserir($arq_img_blob){
+    public static function inserir($arq_img_blob){
 
         $conexao = Conexao::conectar();
         $sql = $sql = "INSERT INTO produto (nome_produto,descricao,categoria,preco,estoque,imagem_produto) VALUES (:nome_produto,:descricao,:categoria,:preco,:estoque,:imagem_produto)";
@@ -71,27 +71,25 @@ class Produto{
         $insert->bindParam(':imagem_produto',$arq_img_blob);
         $insert->execute();
 
-        if ($insert->rowCount()) {
-            
-            //header("location:javascript:alert(\"Arquivo cadastrado com Sucesso!\");location.href=\"index.php\";");
-            /* header('location: index.php');
+        if ($insert->rowCount() > 0) {            
 
-            echo  "<script>alert('Arquivo cadastrado com sucesso!);</script>"; */
             echo "<p> Arquivo cadastrado com sucesso!</p>";
+
         }else {
+
             echo "<p> Arquivo nao cadastrado!</p>";
         }
     }
 
-/*     public static function editar(){
+    public static function editar(){
 
         $conexao = conexao::conectar();
-        $sql = "UPDATE pessoa SET nome=:nome,email=:email,nascimento=:nascimento WHERE id_pessoa=:is_pessoa";
+        $sql = "UPDATE produto SET nome_produto=:nome_produto,descricao=:descricao,categoria=:categoria,preco=:preco,estoque=:estoque,imagem_produto=:imagem_produto WHERE id_produto=:id_produto";
         $edit = $conexao->prepare($sql);
-        $edit->bindValue(':nome',$this->nome);
-        $edit->bindValue(':email',$this->email);
-        $edit->bindValue(':nascimento',$this->nascimento);
-        $edit->bindValue(':id_pessoa',$this->id_pessoa);
+        $edit->bindValue(':nome_produto',$this->nome);
+        $edit->bindValue(':descricao',$this->descricao);
+        $edit->bindValue(':categoria',$this->categoria);
+        $edit->bindValue(':id_produto',$this->id_produto);
         $edit->execute();
-    } */
+    }
 }
