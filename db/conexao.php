@@ -1,5 +1,5 @@
 <?php
-require_once '../configs/config.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/config.php";
 
 class Conexao
 {
