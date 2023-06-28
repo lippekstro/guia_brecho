@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
     <div class="slide-container swiper">
             <div class="slide-content">
@@ -8,7 +8,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                         <div class="image-content">
                             <span class="overlay"></span>
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile1.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile1.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile2.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile2.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile3.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile3.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile4.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile4.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -97,7 +97,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile5.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile5.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -119,7 +119,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile6.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile6.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -140,7 +140,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile7.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile7.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile8.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile8.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -186,7 +186,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <img src="/PHPORRA/guia_brecho/img/profile9.png" alt="" class="card-img">
+                                <img src="/guia_brecho/img/profile9.png" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -210,5 +210,5 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/cabecal
             <div class="swiper-pagination"></div>
         </div>
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/PHPORRA/guia_brecho/templates/rodape.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
