@@ -1,5 +1,6 @@
 </main>
 
+<<<<<<< HEAD
 <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -24,6 +25,13 @@
 <!-- JavaScript -->
 <script src="/guia_brecho/js/script.js"></script>
 
+=======
+    <footer>
+        
+    </footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/guia_brecho/js/script.js"></script>
+>>>>>>> 95ff33f (update da pagina com cards e modal novos)
 </body>
 
 </html>
