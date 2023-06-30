@@ -62,8 +62,8 @@
                 </div>
                 <!-- End contact Icon -->
                 <div class="contact-info">
-                  <h3>Jaipur India</h3>
-                  <p>5353 Road Avenue</p>
+                  <h3>São luís </h3>
+                  <p>Maranhão</p>
                 </div>
                 <!-- End Contact Info -->
               </div>
@@ -77,8 +77,8 @@
                 </div>
                 <!-- End contact Icon -->
                 <div class="contact-info">
-                  <h3>95 711 9 5353</h3>
-                  <p>Give us a call</p>
+                  <h3>+55 98 0000-0000</h3>
+                  <p>Nosso telefone</p>
                 </div>
                 <!-- End Contact Info -->
               </div>
@@ -108,11 +108,6 @@
                     <a href="#">quem somos?</a>
                   </li>
                 </ul>
-                <ul>
-                  <li>
-                    <a href="#">login</a>
-                  </li>
-                </ul>
               </div>
               <!-- End Footer Widget -->
             </div>
@@ -120,11 +115,11 @@
             <div class="col-md-12 col-lg-6">
               <div class="footer-widget">
                 <div class="section-heading">
-                  <h3>Subscribe</h3>
+                  <h3>Contato</h3>
                   <span class="animate-border border-black"></span>
                 </div>
                 <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                  Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                  Mande uma mensagem para a nossa equipe </p>
                 <form action="#">
                   <div class="form-row">
                     <div class="col dk-footer-form">
@@ -164,7 +159,7 @@
                   <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="#">login</a>
                 </li>
               </ul>
             </div>

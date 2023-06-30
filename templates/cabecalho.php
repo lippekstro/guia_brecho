@@ -34,7 +34,8 @@
             <a href="home.html">Lojas</a>
             <a href="home.html">Eventos</a>
             <a href="home.html">Quem somos?</a>
-            <a class="btn" href="home.html"><img src="img/login branco.png" alt="" width="30px"></a> 
+            <a href="home.html" class="btn"><button>Login</button></a>
+
 
           </ul>
         </a>
