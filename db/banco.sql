@@ -33,8 +33,7 @@ CREATE TABLE produto (
 );
 
 CREATE TABLE evento (
-    id_evento int PRIMARY KEY AUTO_INCREMENT,
-    nome_evento VARCHAR(255) NOT NULL,
+    id_evento int PRIMARY KEY AUTO_INCREMENT,  
     data_evento DATE NOT NULL, 
     horario TIME NOT NULL,
     imagem_evento LONGBLOB, 
