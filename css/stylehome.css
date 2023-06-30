@@ -32,13 +32,13 @@ p{
 
 
 /*  login botão -------------------------------------------*/
-.btn{
-  border-radius: 50px;
-}
+/* .btn{
+  border-radius: 50px;} */
+
 button {
   border: none;
   color: #fff;
-  background-image: linear-gradient(5deg, #FE712A, #ffffff);
+  background-image: linear-gradient(50deg,#ef964d, #FE712A);
   border-radius: 30px;
   background-size: 100% auto;
   font-family: inherit;
@@ -88,7 +88,7 @@ header{
 
 .menu_fixo.scroll {
   top: 0; /* Define a posição fixa no topo */
-  background-color: orange; /* Adiciona o fundo laranja */
+  background-color: #FE712A; /* Adiciona o fundo laranja */
 }
 
 
@@ -99,12 +99,14 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding-top: -20px;
+    
      
 }
 nav ul{
     display: flex;
     align-items: center;
     margin-right: 100px;
+    
 }
 nav ul a {
     color: white;
