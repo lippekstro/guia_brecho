@@ -18,7 +18,7 @@ try{
     <title>Document</title>
 </head>
 <body>
-    <form action="atualiza_controller.php" method="post">
+    <form action="/guia_brecho/controllers/atualiza_evento.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id_evento" value="<?= $evento->id_evento ?>">
         <label for="nome">Nome do Evento</label>
         <input type="text" name="nome" id="nome" value="<?= $evento->nome ?>">
@@ -34,6 +34,9 @@ try{
         <br>
         <label for="nome">Local do Evento</label>
         <input type="text" name="local_evento" id="local_evento" value="<?= $evento->local_evento ?>">
+        <br>
+        <label for="imagem_evento">Imagem do Evento</label>
+        <input type="file" name="imagem_evento" id="imagem_evento" value="<?= $evento->imagem_evento ?>">
         <br>
         <input type="submit" value="Atualizar">
     </form>

@@ -1,0 +1,47 @@
+<?php
+require_once 'loja.php';
+
+$id_loja = $_GET['id'];
+
+try{
+    $loja = new Loja ($id_loja);
+}catch(PDOException $e){
+    echo $e->getMessage();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="atualiza_controller.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id_loja" value="<?= $loja->id_loja ?>">
+        <label for="nome_loja">Nome do seu Brechó</label>
+        <input type="text" name="nome_loja" id="nome_loja" value="<?= $loja->nome_loja ?>">
+        <br>
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco" value="<?= $loja->endereco ?>">
+        <br>
+        <label for="telefone">Telefone para Contato</label>
+        <input type="telefone" name="telefone" id="telefone" value="<?= $loja->telefone ?>">
+        <br>
+        <label for="rede_social">Rede Social do seu Brechó</label>
+        <input type="text" name="rede_social" id="rede_social" value="<?= $loja->rede_social ?>">
+        <br>
+        <label for="logo_loja">Logomarca do seu Brechó</label>
+        <input type="file" name="logo_loja" id="logo_loja" value="<?= $loja->logo_loja ?>">
+        <br>
+        <label for="id_usuario">Nome de Usuário</label>
+        <input type="text" name="id_usuario" id="id_usuario" value="<?= $loja->id_usuario ?>">
+        <br>
+        <input type="submit" value="Atualizar">
+    </form>
+</body>
+</html>
+ 
+    
+     
