@@ -24,17 +24,17 @@
       <div class="menu_fixo" id="menu_fixo">
 
       <nav class="menu_nav">
-        <a href="home.html"> 
+        <a href="/guia_brecho/index.php"> 
           <div class="img_logo">
-          <img src="img/sem fundo.png" alt="guia brechó" >
+          <img src="/guia_brecho/img/sem fundo.png" alt="guia brechó" >
         </div>
           <ul>
-            <a href="home.html">Home</a>
-            <a href="home.html">Produtos</a>
-            <a href="home.html">Lojas</a>
-            <a href="home.html">Eventos</a>
-            <a href="home.html">Quem somos?</a>
-            <a href="home.html" class="btn"><button>Login</button></a>
+            <a href="/guia_brecho/index.php">Home</a>
+            <a href="/guia_brecho/views/produtos.php">Produtos</a>
+            <a href="/guia_brecho/views/loja.php">Lojas</a>
+            <a href="/guia_brecho/views/eventos.php">Eventos</a>
+            <a href="/guia_brecho/views/quemsomos.php">Quem somos?</a>
+            <a href="/guia_brecho/views/login.php" class="btn"><button>Login</button></a>
 
 
           </ul>
