@@ -1,0 +1,249 @@
+* {
+	
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+body {
+background: #f1fbff;
+}
+.section-padding {
+padding: 100px 0;
+}
+.carousel-item {
+height: 100vh;
+min-height: 300px;
+}
+.carousel-caption {
+bottom: 220px;
+z-index: 2;
+}
+.carousel-caption h5 {
+font-size: 45px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-top: 25px;
+}
+.carousel-caption p {
+width: 60%;
+margin: auto;
+font-size: 18px;
+line-height: 1.9;
+}
+.carousel-inner:before {
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.7);
+z-index: 1;
+}
+
+.w-100 {
+height: 100vh;
+}
+.navbar-toggler {
+padding: 1px 5px;
+font-size: 18px;
+line-height: 0.3;
+background: #fff;
+}
+.portfolio .card {
+box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.team .card {
+box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.services .card-body i {
+font-size: 50px;
+}
+.team .card-body i {
+font-size: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.carousel-caption {
+    bottom: 370px;
+}
+.carousel-caption p {
+    width: 100%;
+}
+.card {
+    margin-bottom: 30px;
+}
+.img-area img {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 767px) {
+.navbar-nav {
+    text-align: center;
+}
+.carousel-caption {
+    bottom: 125px;
+}
+.carousel-caption h5 {
+    font-size: 17px;
+}
+.carousel-caption a {
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.carousel-caption p {
+    width: 100%;
+    line-height: 1.6;
+    font-size: 12px;
+}
+.about-text {
+    padding-top: 50px;
+}
+.card {
+    margin-bottom: 30px;
+}
+}
+/* cards ------------------------- */
+
+.wrapper{
+padding: 10px 10%;
+}
+#card-area{
+padding: 50px 0;
+}
+.box-area{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 40px;
+margin-top: 50px;
+}
+.box {
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+.box img{
+height: 450px;
+width: 100%;
+border-radius: 10px;
+display: block;
+transition: transform 0.5s;
+}
+.overlay {
+width: 100%;
+height: 0;
+background: linear-gradient(transparent,#edecec 58%);
+border-radius: 10px;
+position: absolute;
+left: 0;
+bottom: 0;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center;
+font-size: 14px;
+transition: height 0.5s;
+}
+.overlay h3 {
+font-weight: 500;
+margin-bottom: 5px;
+margin-top: 80%;
+font-family: 'Bebas Neue', sans-serif;
+font-size: 30px;
+letter-spacing: 2px;
+}
+.overlay a {
+margin-top: 10px;
+color: #262626;
+text-decoration: none;
+font-size: 14px;
+background: #fb732c;
+border-radius: 50px;
+text-align: center;
+padding: 5px 15px;
+}
+.box:hover img{
+transform: scale(1.1);
+}
+.box:hover .overlay{
+height: 100%;
+}
+/* fim card---------------------------------------------- */
+
+
+
+.h2_sevirço{
+	color: #fff;
+	font-family: bebas neue;
+	font-size: 50px;
+}
+.serviços_cor{
+    /* background-color:#cecdcd ; */
+    background-color:#fb8342 ;
+}
+.butao_nav{
+    background-color:#fb732c ;
+    border: #fb732c;
+}
+
+
+
+/* flex box */
+ .flexbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #cecdcd;
+	font-family: poppins;
+	text-align: center;
+}
+.wrapper_caixa {
+
+	padding: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.caixa-area {
+	height: 350px;
+	width: 350px;
+	margin: 25px;
+	padding: 40px;
+	background-color: #f5f5f5;
+	transition: all 0.6s ease-in-out;
+}
+.caixa-area .icon-area {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.icon-area i {
+	font-size: 70px;
+	color: #262626;
+}
+.caixa-area h6 {
+	margin-bottom: 10px;
+	color: #fb732c;
+	font-size: 50px;
+	font-family: bebas neue;
+}
+.caixa-area:hover {
+	background-color: #fb732c;
+	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+}
+.caixa-area:hover i {
+	color: #fff;
+}
+.caixa-area:hover h6 {
+	color: #fff;
+}
+.caixa-area:hover p {
+	color: #fff;
+} 
+
+/* fim flex box */
