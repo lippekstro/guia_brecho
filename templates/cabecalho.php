@@ -18,7 +18,7 @@
 
 <body>
   <!-- header -->
-  <header style="background-image: url(/guia_brecho/img/back02.png);">
+  <header class="header_back" style="background-image: url(/guia_brecho/img/back02.png);">
     <!-- conteiner -->
     <div class="conteiner">
       <div class="menu_fixo" id="menu_fixo">
@@ -40,17 +40,7 @@
           </ul>
         </a>
       </nav>
-    </div>
-
-      <section class="banner">
-        <div class="banner-text">
-          <h1> GUIA BRECHÓ</h1>
-          <p>o melhor site brechó de São luís</p>
-          <!--  <a href="home.html" class="btn">Login</a>
- -->
-        </div>
-      </section>
-    </div>
+    
     <!-- fim conteiner -->
   </header>
   <!-- fim header -->

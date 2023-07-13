@@ -76,6 +76,9 @@ header{
     background-attachment: fixed; /* imagem fixa quando faz a rolagem */
     height: 500px;
 }
+.hearder_back{
+  height: 1000px;
+}
 .menu_fixo {
   position: fixed;
   top: 5px; /* Posiciona o menu acima do topo inicialmente */
@@ -275,8 +278,7 @@ p {
     color:#FE712A; }
 
 .dk-footer-box-info {
-  position: absolute;
-  top: 0px;
+  top: -50px;
   left: 200px;
   width: 400px;
   background: #202020;
