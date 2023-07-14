@@ -70,7 +70,7 @@ header {
 }
 
 .hearder_back {
-  height: 1000px;
+  height: 900px;
 }
 
 .menu_fixo {
@@ -86,6 +86,7 @@ header {
 .menu_fixo.scroll {
   top: 0;
   background-image: linear-gradient(50deg, #ef964d, #FE712A);
+  
 }
 
 nav {
@@ -93,6 +94,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-top: -20px;
+  
 }
 
 nav ul {
@@ -127,6 +129,7 @@ nav ul a:hover::after {
   margin-top: -50px;
 }
 
+
 .btn {
   background-color: #FE712A;
   color: white;
@@ -149,7 +152,7 @@ nav ul a:hover::after {
 }
 
 .banner .banner-text {
-  margin: 230px;
+  margin: -130px;
   text-align: center;
   padding: 0 90px;
 }
@@ -165,6 +168,7 @@ nav ul a:hover::after {
   font-weight: lighter;
   margin: 18px 0;
 }
+
 
 /* Responsividade */
 
@@ -183,7 +187,7 @@ nav ul a:hover::after {
 /* Para tela de PC */
 @media (min-width: 768px) {
   .banner .banner-text {
-    margin: 230px;
+    margin: -130px;
     padding: 0 90px;
   }
 
