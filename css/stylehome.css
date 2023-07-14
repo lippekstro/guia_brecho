@@ -1,87 +1,81 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Titillium+Web:wght@400;600&display=swap');
-/* inicio do header */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none; /* sem decoração quando o link for clicado */
-    font-family: 'Anton', sans-serif;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-family: 'Titillium Web', sans-serif;
-
-}
-section,footer{
-    padding: 54px 0 ;
-
-
-}
-h3{
-    font-size: 50px;
-}
-p{
-    color: rgb(249, 249, 249);
-}
-.conteiner{
-    max-width: 1400px; /* largura maxima */
-    margin: 0 auto;
-    padding: 0 5%;
-    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
+section,
+footer {
+  padding: 54px 0;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+p {
+  color: rgb(249, 249, 249);
+}
+
+.conteiner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
 
 /*  login botão -------------------------------------------*/
-/* .btn{
-  border-radius: 50px;} */
-
 button {
   border: none;
   color: #fff;
-  background-image: linear-gradient(50deg,#ef964d, #f89766);
+  background-image: linear-gradient(50deg, #ef964d, #f89766);
   border-radius: 30px;
   background-size: 100% auto;
   font-family: inherit;
   font-size: 17px;
   padding: 0.6em 1.5em;
+}
 
- }
- 
- button:hover {
+button:hover {
   background-position: right center;
   background-size: 200% auto;
   -webkit-animation: pulse 2s infinite;
   animation: pulse512 1.5s infinite;
- }
- 
- @keyframes pulse512 {
-  0% {
-   box-shadow: 0 0 0 0 #f9ce2466;
-  }
- 
-  70% {
-   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-  }
- 
-  100% {
-   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
-  }
- }
-
- /* fim botão login --------------------------------------------- */
-
-header{
-    background-position: center; /* posição da imagem no centro */
-    background-size: cover; /* posição completa no header */
-    background-attachment: fixed; /* imagem fixa quando faz a rolagem */
-    height: 500px;
 }
-.hearder_back{
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #f9ce2466;
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
+
+/* fim botão login --------------------------------------------- */
+
+header {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+.hearder_back {
   height: 1000px;
 }
+
 .menu_fixo {
   position: fixed;
-  top: 5px; /* Posiciona o menu acima do topo inicialmente */
+  top: 5px;
   left: 0;
   width: 100%;
   z-index: 9999;
@@ -90,61 +84,57 @@ header{
 }
 
 .menu_fixo.scroll {
-  top: 0; /* Define a posição fixa no topo */
-  background-image: linear-gradient(50deg,#ef964d, #FE712A) ; /* Adiciona o fundo laranja */
+  top: 0;
+  background-image: linear-gradient(50deg, #ef964d, #FE712A);
 }
 
-
- 
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: -20px;
-    
-     
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: -20px;
 }
-nav ul{
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
 }
+
 nav ul a {
-    color: white;
-    margin: 0 25px;
-    text-transform: uppercase;
-    font-size: 14px;
-    display: block;
+  color: white;
+  margin: 0 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
 }
-nav ul a:not(.btn)::after{
-    content:"" ;
-    background-color: #FE712A;
-    height: 3px;
-    width: 0%;
-    display: block;
-    margin: 0 auto;
-    transition: 0.3s;
-}
-nav ul a:hover::after{
-    width: 100%;
 
-
+nav ul a:not(.btn)::after {
+  content: "";
+  background-color: #FE712A;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
 }
-.menu_nav.scroller{
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.menu_nav.scroller {
   margin-top: -50px;
 }
-.btn{
-    background-color: #FE712A;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-block;
+
+.btn {
+  background-color: #FE712A;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
 }
-
-
 
 .img_logo img {
   position: relative;
@@ -152,30 +142,56 @@ nav ul a:hover::after{
   left: 50px;
   width: 270px;
 }
-.banner{
-    display: flex;
-    justify-content: center;
-    
+
+.banner {
+  display: flex;
+  justify-content: center;
 }
-.banner .banner-text{
-    
+
+.banner .banner-text {
+  margin: 230px;
+  text-align: center;
+  padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+  font-size: 96px;
+  color: white;
+}
+
+.banner .banner-text p {
+  font-size: 20px;
+  color: #ffffffb7;
+  font-weight: lighter;
+  margin: 18px 0;
+}
+
+/* Responsividade */
+
+/* Para tela de celular */
+@media (max-width: 767px) {
+  .banner .banner-text {
+    margin: 130px;
+    padding: 0 20px;
+  }
+
+  .banner .banner-text h1 {
+    font-size: 48px;
+  }
+}
+
+/* Para tela de PC */
+@media (min-width: 768px) {
+  .banner .banner-text {
     margin: 230px;
-    text-align: center;
     padding: 0 90px;
-}
-.banner .banner-text h1{
+  }
+
+  .banner .banner-text h1 {
     font-size: 96px;
-    color: white;
-
+  }
 }
-.banner .banner-text p{
-  
-    font-size: 20px;
-    color: #ffffffb7;
-    font-weight: lighter;
-    margin: 18px 0;
 
-}
 /* fim do header */
 
 /* INICIO DO FOOTER ---------------------------------------------------------- */
@@ -278,8 +294,9 @@ p {
     color:#FE712A; }
 
 .dk-footer-box-info {
-  top: -50px;
-  left: 200px;
+  position: relative;
+  top: -75px;
+  left: 20px;
   width: 400px;
   background: #202020;
   padding: 40px;
