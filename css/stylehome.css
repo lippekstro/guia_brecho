@@ -77,13 +77,13 @@ header{
     height: 500px;
 }
 .menu_fixo {
-  position: fixed;
+  
   top: 5px; /* Posiciona o menu acima do topo inicialmente */
   left: 0;
   width: 100%;
   z-index: 9999;
   transition: .5s;
-  height: 200px;
+  
 }
 
 .menu_fixo.scroll {

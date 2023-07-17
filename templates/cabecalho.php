@@ -13,6 +13,7 @@
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="/guia_brecho/js/home.js" defer></script>
+  <link rel="stylesheet" href="/guia_brecho/css/style.css">
 
   <title>Guia Brechó</title>
 </head>
