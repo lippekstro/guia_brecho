@@ -8,7 +8,9 @@
     
     <link rel="stylesheet" href="/guia_brecho/css/swiper-bundle.min.css">
     <link rel="shortcut icon" href="/guia_brecho/img/img.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
 </head>
 <body>
@@ -28,5 +30,4 @@
             </ul>
         </nav>        
     </header>
-
     <main>

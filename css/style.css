@@ -1,5 +1,4 @@
-/* Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 
 /* style cabeçalho inicio */
 
@@ -55,13 +54,11 @@ nav li a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; */
+  
 }
 body{
   min-height: 100vh;
-  /* display: flex;
-  align-items: center; */
-  /* justify-content: center; */
+  font-family: 'Righteous', cursive;
   background-color: #EFEFEF;
 }
 .slide-container{
@@ -80,7 +77,7 @@ body{
 }
 .card{
   border-radius: 25px;
-  background-color: #FFF;
+  background-color: #FFFF;
 }
 .image-content,
 .card-content{
@@ -176,7 +173,7 @@ body{
 }
 .swiper-pagination-bullet{
   background-color: #FB732C;
-  opacity: 1;
+  opacity: 3;
 }
 .swiper-pagination-bullet-active{
   background-color: #FB732C;
@@ -191,12 +188,9 @@ body{
   }
 }
 
-
-
 /* style footer início */
 
 footer {
-  font-family: 'Ysabeau', sans-serif;
   position: fixed; /* mantém a posição fixa do rodapé em relação a página */
   justify-content: space-between;
   display: flex; /* Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */
