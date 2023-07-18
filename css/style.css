@@ -1,7 +1,95 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body{
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-image: url(/guia_brecho/img/brecho.jpg);
+    font-family: 'Ysabeau', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com 50% de opacidade */
+    background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
 }
 
+/* Login style começo */
+
+#loginmod{
+    background-color: #F9F8F8;
+    width: 30%;
+    height: 360px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8%;
+    text-align:center;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    
+}
+
+#h1style{
+    margin-top: 20px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+#buttonb{
+    background-color: black;
+    color: #F9F8F8;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+}
+
+#linkb{
+    font-size:small;
+    color: black;
+}
+
+.bordainput{
+    padding: 0.5rem;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #2c82fb;
+    color: #F9F8F8;
+    border: none;
+}
+
+.meu-input::placeholder {
+    color: #F9F8F8;
+  }
+
+.fontelogin{
+    color: gray;
+    font-size: 10px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.cent{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+/* Login style fim */
+
+/* Quemsomos style começo */
+
+#margem{
+    margin-top: 30px;
+}
+
+.caixa-laranja{
+    background-color: #FB732C;
+    color: #F9F8F8;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 30px;
+}
+
+/* Quemsomos style fim /*
