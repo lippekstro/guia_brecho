@@ -1,2 +1,9 @@
-aqui coloquem as views do sistema
-apagar esse arquivo assim q colocar os primeiros arquivos nessa pasta
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+?>
+
+
+
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
+?>
