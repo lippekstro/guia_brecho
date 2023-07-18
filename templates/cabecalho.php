@@ -39,4 +39,3 @@
         </nav>
     </header>
 
-    <main>

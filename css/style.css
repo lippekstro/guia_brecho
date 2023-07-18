@@ -1,8 +1,10 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body{
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-image: url(/guia_brecho/img/brecho.jpg);
+    font-family: 'Ysabeau', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com 50% de opacidade */
+    background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
 }
 
 /* Login style começo */
