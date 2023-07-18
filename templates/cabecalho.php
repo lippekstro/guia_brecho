@@ -19,20 +19,20 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg" style="background-color: #fb732c;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#"><img src="/guia_brecho/img/logo_guia_brecho-rem3.png" alt="" id="logo-icone"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/index.php">Home</a>
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/views/produtos.php">Produtos</a>
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
-                        <a class="nav-link active" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php">Produtos</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
                     </div>
                 </div>
             </div>

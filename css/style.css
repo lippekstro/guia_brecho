@@ -7,13 +7,16 @@ body{
     background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
 }
 
+#logo-icone {
+    width: 5rem;
+}
+
 /* Login style começo */
 
 #loginmod{
     background-color: #F9F8F8;
     width: 30%;
-    height: 360px;
-    margin-top: 20px;
+    padding: 3rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8%;
@@ -26,11 +29,6 @@ body{
     
 }
 
-#h1style{
-    margin-top: 20px;
-    margin-left: 100px;
-    text-align: left;
-}
 
 #buttonb{
     background-color: black;
@@ -48,10 +46,10 @@ body{
 
 .bordainput{
     padding: 0.5rem;
-    width: 300px;
+    width: 17rem;
     height: 40px;
     border-radius: 10px;
-    background-color: #2c82fb;
+    background-color: #fb732c;
     color: #F9F8F8;
     border: none;
 }
@@ -63,8 +61,6 @@ body{
 .fontelogin{
     color: gray;
     font-size: 10px;
-    margin-left: 100px;
-    text-align: left;
 }
 
 .cent{
