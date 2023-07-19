@@ -1,9 +1,10 @@
-body{
-    background-repeat:no-repeat;
+body {
+    background-repeat: no-repeat;
     background-size: 100%;
-   /*  background-image: url(/guia_brecho/img/brecho.jpg); */
+    /*  background-image: url(/guia_brecho/img/brecho.jpg); */
     font-family: 'Ysabeau', sans-serif;
-    background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
+    background-blend-mode: overlay;
+    /* Mescla a cor de fundo com a imagem */
 }
 
 #logo-icone {
@@ -12,24 +13,24 @@ body{
 
 /* Login style começo */
 
-#loginmod{
+#loginmod {
     background-color: #F9F8F8;
     width: 30%;
     padding: 3rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8%;
-    text-align:center;
+    text-align: center;
     border: none;
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    
+
 }
 
 
-#buttonb{
+#buttonb {
     background-color: black;
     color: #F9F8F8;
     width: 250px;
@@ -38,12 +39,12 @@ body{
     border: none;
 }
 
-#linkb{
-    font-size:small;
+#linkb {
+    font-size: small;
     color: black;
 }
 
-.bordainput{
+.bordainput {
     padding: 0.5rem;
     width: 17rem;
     height: 40px;
@@ -55,14 +56,14 @@ body{
 
 .meu-input::placeholder {
     color: #F9F8F8;
-  }
+}
 
-.fontelogin{
+.fontelogin {
     color: gray;
     font-size: 10px;
 }
 
-.cent{
+.cent {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -74,17 +75,18 @@ body{
 
 /* Quemsomos style começo */
 
-#margem{
+#margem {
     margin-top: 30px;
 }
 
-.caixa-laranja{
+.caixa-laranja {
     background-color: #FB732C;
     color: #F9F8F8;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     padding: 30px;
+    text-align: justify;
 }
 
 /* Quemsomos style fim */
@@ -92,59 +94,61 @@ body{
 
 /* Cadastro de Brecho */
 
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.body-titulo{
-   text-align: center;
-   margin-top: 7vh;
-   padding-bottom: 3vh;
+.body-titulo {
+    text-align: center;
+    margin-top: 7vh;
+    padding-bottom: 3vh;
 }
 
-.nav-input{
+.nav-input {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch;   
+    align-items: stretch;
 }
 
-.option-termos{
+.option-termos {
     text-align: center;
     padding: 20px;
 }
 
-.box-input{
+.box-input {
     padding: 40px;
-    border-radius:  20px;
+    border-radius: 20px;
 }
 
-.box-max-input{
+.box-max-input {
     margin-bottom: 15px;
     display: block;
     width: 20vw;
     border: none;
     border-bottom: 2px solid #424242;
     outline: none;
-       
+
 }
 
-label{
+label {
     color: #4e4e4e;
-    
+
 }
-legend{
-    font-size: 1.3rem;
-    
-}
-.box-max-input:focus-visible{
+
+legend {
     font-size: 1.3rem;
 
 }
 
-.box-max-input:focus{
+.box-max-input:focus-visible {
+    font-size: 1.3rem;
+
+}
+
+.box-max-input:focus {
     font-size: 1.3rem;
 
 }
@@ -153,40 +157,41 @@ legend{
 .labelDestacada {
     font-size: 10px;
     color: red;
-    top:50px;
+    top: 50px;
 }
-.labelDestacada ~ input {
+
+.labelDestacada~input {
     font-size: 1.0rem;
-    
+
 }
 
-#view_photo{
-    width:100px;
-    height:100px;
-    border:dashed 1px #ccc;
+#view_photo {
+    width: 100px;
+    height: 100px;
+    border: dashed 1px #ccc;
     margin-top: 5px;
-    
+
 }
 
-#output{
-    height:100px;
-    width:100px;
+#output {
+    height: 100px;
+    width: 100px;
 }
 
-.barra{
-    background-color:#fb732c;  
+.barra {
+    background-color: #fb732c;
     margin: 10px;
 }
 
-.form-nav{
+.form-nav {
     padding-top: 5vh;
-    
+
 }
 
-.cad-nav{
+.cad-nav {
     margin-left: 10px;
     color: black;
-    
+
 
 }
 
