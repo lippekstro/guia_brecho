@@ -15,7 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
 
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
+
+    <link rel="stylesheet" href="/guia_brecho/css/swiper-bundle.min.css">
+
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
+
 
 </head>
 
@@ -40,3 +44,5 @@
             </div>
         </nav>
     </header>
+<main>
+  
