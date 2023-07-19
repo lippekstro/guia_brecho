@@ -190,5 +190,37 @@ legend{
 
 }
 
-
 /* Cadastro de Brecho */
+
+/* Pagina de Cadastrar Produto*/
+.barra-cadastro-texto{
+   font-weight: bold;
+
+}
+.barra-cadastro{
+
+   background-color:#fb732c;
+   margin: 2% 6% 4% 6%;
+   border-radius: 10px;
+}
+.barra-cadastro-texto{
+    margin-left: 2%;
+
+}
+.nav-cad-master{
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-cadastro-produto{
+   display: flex;
+   flex-direction: column;
+   margin: 1px 6%;
+
+}
+
+.nav-img{
+
+    margin-top: 2%;
+}
+/* Pagina de Cadastrar Produto*/
