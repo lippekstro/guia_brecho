@@ -7,13 +7,16 @@ document.addEventListener('click', function(event)
   if (event.target.tagName.toLowerCase() === 'input')
      {
       var inputId = event.target.id;
+      //console.log(inputId) precisa de implementação para ser somente no cadastro_brecho
       var Nomeinput = document.getElementById(inputId);
       // Obtém o ID do input clicado
+      if((inputId != "nome_produto") && (inputId != "descricao") && (inputId != "descricao") && (inputId != "preco")){
+        console.log("entrou")
       
       var label = document.querySelector('label[for="' + inputId+ '"]');
       label.classList.add("labelDestacada");
       console.log('O input contém texto.');
-
+    }
   }
 }
 );
