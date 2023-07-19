@@ -1,9 +1,7 @@
 body{
     background-repeat:no-repeat;
     background-size: 100%;
-    background-image: url(/guia_brecho/img/brecho.jpg);
     font-family: 'Ysabeau', sans-serif;
-    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com 50% de opacidade */
     background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
 }
 
@@ -93,16 +91,16 @@ body{
 /*STYLE - LOJA - COMEÇO*/
 
 .slide-container{
-    max-width: 1120px;
     width: 100%;
     padding: 40px 0;
-    position: absolute;
+    position: absolute !important;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+
   }
   .slide-content{
-    margin: 0 40px;
+    margin:0 100px;
     overflow: hidden;
     border-radius: 25px;
   }
@@ -167,7 +165,7 @@ body{
   }
   .description{
     font-size: 14px;
-    color: #707070;
+    color: #333;
     text-align: center;
   }
   .button{
