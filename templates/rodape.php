@@ -1,7 +1,6 @@
-
-
+</main>
 <footer>
-   
+
 </footer>
   
 <!-- Swiper JS -->
@@ -11,4 +10,5 @@
 <script src="/guia_brecho/js/script.js"></script>
 
 </body>
+
 </html>

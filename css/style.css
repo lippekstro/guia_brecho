@@ -1,8 +1,11 @@
-body{
-    background-repeat:no-repeat;
+body {
+    background-repeat: no-repeat;
     background-size: 100%;
     font-family: 'Ysabeau', sans-serif;
     background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
+    font-family: 'Ysabeau', sans-serif;
+    background-blend-mode: overlay;
+    /* Mescla a cor de fundo com a imagem */
 }
 
 #logo-icone {
@@ -11,24 +14,24 @@ body{
 
 /* Login style começo */
 
-#loginmod{
+#loginmod {
     background-color: #F9F8F8;
     width: 30%;
     padding: 3rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8%;
-    text-align:center;
+    text-align: center;
     border: none;
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    
+
 }
 
 
-#buttonb{
+#buttonb {
     background-color: black;
     color: #F9F8F8;
     width: 250px;
@@ -37,12 +40,12 @@ body{
     border: none;
 }
 
-#linkb{
-    font-size:small;
+#linkb {
+    font-size: small;
     color: black;
 }
 
-.bordainput{
+.bordainput {
     padding: 0.5rem;
     width: 17rem;
     height: 40px;
@@ -54,14 +57,14 @@ body{
 
 .meu-input::placeholder {
     color: #F9F8F8;
-  }
+}
 
-.fontelogin{
+.fontelogin {
     color: gray;
     font-size: 10px;
 }
 
-.cent{
+.cent {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -73,17 +76,82 @@ body{
 
 /* Quemsomos style começo */
 
-#margem{
+#margem {
     margin-top: 30px;
 }
 
-.caixa-laranja{
+.caixa-laranja {
     background-color: #FB732C;
     color: #F9F8F8;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     padding: 30px;
+    text-align: justify;
+}
+
+/* Quemsomos style fim */
+
+
+/* Cadastro de Brecho */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-titulo {
+    text-align: center;
+    margin-top: 7vh;
+    padding-bottom: 3vh;
+}
+
+.nav-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.option-termos {
+    text-align: center;
+    padding: 20px;
+}
+
+.box-input {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.box-max-input {
+    margin-bottom: 15px;
+    display: block;
+    width: 20vw;
+    border: none;
+    border-bottom: 2px solid #424242;
+    outline: none;
+
+}
+
+label {
+    color: #4e4e4e;
+
+}
+
+legend {
+    font-size: 1.3rem;
+
+}
+
+.box-max-input:focus-visible {
+    font-size: 1.3rem;
+
+}
+
+.box-max-input:focus {
+    font-size: 1.3rem;
+
 }
 
 /* Quemsomos style fim */
@@ -218,3 +286,76 @@ body{
   }
   
   /*STYLE - LOJA - FINAL*/
+
+
+.labelDestacada {
+    font-size: 10px;
+    color: red;
+    top: 50px;
+}
+
+.labelDestacada~input {
+    font-size: 1.0rem;
+
+}
+
+#view_photo {
+    width: 100px;
+    height: 100px;
+    border: dashed 1px #ccc;
+    margin-top: 5px;
+
+}
+
+#output {
+    height: 100px;
+    width: 100px;
+}
+
+.barra {
+    background-color: #fb732c;
+    margin: 10px;
+}
+
+.form-nav {
+    padding-top: 5vh;
+
+}
+
+.cad-nav {
+    margin-left: 10px;
+    color: black;
+
+
+}
+
+
+/* Cadastro de Brecho */
+.hr {
+    margin-top: 10px;
+    margin: 1rem ;
+  
+    
+}
+.float{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    float: left;
+    align-items: center;
+ 
+}
+.tam_img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.larg{
+    width: 50%;
+    margin: 8rem;
+    border: 10px;
+}
+.aa{
+    margin-left: 100px;
+}
+
