@@ -39,10 +39,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <p class="description">
                             @itensdebrecho |
                             Roupas e vestuário
-                            ✿ Toda peça de brechó é uma
-                            oportunidade única! #itemdisp
+                            ✿ Toda peça de brechó é uma oportunidade única!
+                            #itemdisp
                             ✿ Atualização nos Storys ✨
-                            ✿ não fazemos trocas/devolução/cancelamentos </p>
+                            ✿ não fazemos trocas|devolução|cancelamentos </p>
 
                             <button class="button">Saiba Mais</button>
                         </div>

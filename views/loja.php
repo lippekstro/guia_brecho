@@ -15,7 +15,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <div class="card-content">
                             <h2 class="name">Brechaos</h2>
                             <p class="description"> 
-                                @brechaos |  Aqui você encontra peças novas e usadas garimpadas com amor 🤍
+                                @brechaos | Aqui você encontra peças novas e usadas garimpadas com amor 🤍
                                 • Enviamos para todo Brasil ✈️
                                 • Sem trocas e devolução
                                 • Compre via link ou direct ⬇️
@@ -37,12 +37,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             
                             <h2 class="name">Itens de Brechó</h2>
                             <p class="description">
-                            @itensdebrecho |
+                            @itensdebrecho
                             Roupas e vestuário
                             ✿ Toda peça de brechó é uma
-                            oportunidade única! #itemdisp
+                            oportunidade única! #itemdisponivel
                             ✿ Atualização nos Storys ✨
-                            ✿ não fazemos trocas/devolução/cancelamentos </p>
+                            ✿ não fazemos trocas | devolução | cancelamentos. </p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -62,9 +62,9 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                                 @bregirlboss |
                                 Há 3 anos na moda sustentável!
                                 • Acompanhe os stories ✨
-                                • Entregas facilitadas- 1x na semana
+                                • Entregas facilitadas 1x na semana
                                 • Apoie uma mulher empreendedora 
-                                • São Luís, MARANHÃO.</p>
+                                • São Luís, Maranhão.</p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -82,12 +82,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <h2 class="name">Mais Um Brechó</h2>
                             <p class="description"> 
                                 @maisumbrecho |
-                                Roupas e vestuário
-                                Desde 2017
-                                Do Maranhão para todo Brasil
-                                Para mais informações, leia o nosso destaque
-                                Sem trocas/devolução
-                                #maisumdispo</p>
+                                Roupas e vestuário • Desde 2017 •
+                                Do Maranhão para todo Brasil • Para mais informações, leia o nosso destaque
+                                • Sem trocas|devolução.
+                                #maisumdisponivel</p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -105,11 +103,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <h2 class="name">Brechó Caramujo</h2>
                             <p class="description">@brechocaramujo |
                                 Vestuário 
-                                Comércio Virtual em São Luís MA
+                                Comércio Virtual em São Luís
                                 • For Men - 2020
-                                ❌ Não fazemos reservas (apenas por transferência)
-                                ❌ Não fazemos trocas
-                                wa.me/5598987140402.</p>
+                                •Não fazemos reservas (apenas por transferência)
+                                •Não fazemos trocas
+                                São Luís, Maranhão.</p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -129,8 +127,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                                 @brechoestrela | Brechó Online
                                 • Vintage/Moderno/Sexy
                                 • Você é uma estrela que nasceu pra brilhar! ✨
-                                • Enviamos pra todo BR | De São Luís.
-                                #brechoesteladispo</p>
+                                • Enviamos pra todo BR | From São Luís - MA.
+                                #brechoesteladisponivel</p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -148,12 +146,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <h2 class="name">Brechó Art</h2>
                             <p class="description">@brecho&art |
                                 Produto/serviço
-                                FAZENDO DO BRECHÓ UMA ARTE!
-                                ☻ vendas pelo direct
-                                ☻ facilitamos sua entrega
-                                ☻ são luís, ma.
-                                Sem devolução e trocas
-                                #brechoartdispo</p>
+                                •Fazendo do brechó uma arte
+                                ☻ Vendas pelo direct
+                                ☻ Facilitamos sua entrega
+                                ☻ São luís, MA.
+                                • Sem devolução e trocas.
+                                #brechoartdisponivel</p>
 
                             <button class="button">Saiba Mais</button>
                         </div>
@@ -171,11 +169,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <h2 class="name">Agá Brechó</h2>
                             <p class="description">@agabrecho | Agá Brechó
                                 Roupa e Vestuário
-                                Por: @mlyvale
                                 Aceitamos somente transferências ou pix.
-                                Sem trocas sem devolução X
+                                Sem trocas sem devolução •
                                 São Luís-MA.
-                                #agabrechodisp
+                                #agabrechodisponível
                                 </p>
 
                             <button class="button">Saiba Mais</button>
@@ -196,7 +193,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                                 ✨Vintage moderno atemporal
                                 ✨NÃO COMPRAMOS DESAPEGO!
                                 ✨Desde 2020
-                                🚚 entrega moto boy /terminal cohab sabados a tarde
+                                🚚 Entrega moto boy para terminal cohab sabados a tarde.
                                 </p>
 
                             <button class="button">Saiba Mais</button>
