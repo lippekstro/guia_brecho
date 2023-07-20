@@ -108,6 +108,15 @@ footer {
 
 /*STYLE - LOJA - COMEÇO*/
 
+.centered {
+  color: #FB732C;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 39px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
 .centrotitulo {
   text-align: center;
   color: #fb732c; /* Cor do texto (pode ser uma cor hexadecimal, nome da cor, etc.) */
@@ -116,13 +125,32 @@ footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.slide-container {
-  width: 100%;
-  padding: 40px 0;
-  position: absolute !important;
-  top: 39%;
-  left: 50%;
-  translate: -50% -50%;
+legend {
+    font-size: 1.3rem;
+
+}
+
+.box-max-input:focus-visible {
+    font-size: 1.3rem;
+
+}
+
+.box-max-input:focus {
+    font-size: 1.3rem;
+
+}
+
+/* Quemsomos style fim */
+
+/*STYLE - LOJA - COMEÇO*/
+
+.slide-container{
+    width: 100%;
+    padding: 40px 0;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 
 }
 
