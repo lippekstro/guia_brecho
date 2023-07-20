@@ -1,75 +1,77 @@
 body {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-family: 'Ysabeau', sans-serif;
-    background-blend-mode: overlay; /* Mescla a cor de fundo com a imagem */
-    font-family: 'Ysabeau', sans-serif;
-    background-blend-mode: overlay;
-    /* Mescla a cor de fundo com a imagem */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Ysabeau', sans-serif;
+  background-blend-mode: overlay;
+}
+
+main {
+  position: relative;
+  height: 50vw;
 }
 
 #logo-icone {
-    width: 5rem;
+  width: 5rem;
 }
 
 /* Login style começo */
 
 #loginmod {
-    background-color: #F9F8F8;
-    width: 30%;
-    padding: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8%;
-    text-align: center;
-    border: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+  background-color: #F9F8F8;
+  width: 30%;
+  padding: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8%;
+  text-align: center;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 
 }
 
 
 #buttonb {
-    background-color: black;
-    color: #F9F8F8;
-    width: 250px;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
+  background-color: black;
+  color: #F9F8F8;
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
 }
 
 #linkb {
-    font-size: small;
-    color: black;
+  font-size: small;
+  color: black;
 }
 
 .bordainput {
-    padding: 0.5rem;
-    width: 17rem;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fb732c;
-    color: #F9F8F8;
-    border: none;
+  padding: 0.5rem;
+  width: 17rem;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--bs-orange);
+  color: #F9F8F8;
+  border: none;
 }
 
 .meu-input::placeholder {
-    color: #F9F8F8;
+  color: #F9F8F8;
 }
 
 .fontelogin {
-    color: gray;
-    font-size: 10px;
+  color: gray;
+  font-size: 10px;
 }
 
 .cent {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 /* Login style fim */
@@ -77,17 +79,18 @@ body {
 /* Quemsomos style começo */
 
 #margem {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .caixa-laranja {
-    background-color: #FB732C;
-    color: #F9F8F8;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 30px;
-    text-align: justify;
+  background-color: var(--bs-orange);
+  color: #F9F8F8;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 30px;
+  text-align: justify;
+  font-size: larger;
 }
 
 /* Quemsomos style fim */
@@ -96,61 +99,61 @@ body {
 /* Cadastro de Brecho */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .body-titulo {
-    text-align: center;
-    margin-top: 7vh;
-    padding-bottom: 3vh;
+  text-align: center;
+  margin-top: 7vh;
+  padding-bottom: 3vh;
 }
 
 .nav-input {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .option-termos {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .box-input {
-    padding: 40px;
-    border-radius: 20px;
+  padding: 40px;
+  border-radius: 20px;
 }
 
 .box-max-input {
-    margin-bottom: 15px;
-    display: block;
-    width: 20vw;
-    border: none;
-    border-bottom: 2px solid #424242;
-    outline: none;
+  margin-bottom: 15px;
+  display: block;
+  width: 20vw;
+  border: none;
+  border-bottom: 2px solid #424242;
+  outline: none;
 
 }
 
 label {
-    color: #4e4e4e;
+  color: #4e4e4e;
 
 }
 
 legend {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 
 }
 
 .box-max-input:focus-visible {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 
 }
 
 .box-max-input:focus {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 
 }
 
@@ -158,173 +161,193 @@ legend {
 
 /*STYLE - LOJA - COMEÇO*/
 
-.slide-container{
-    width: 100%;
-    padding: 40px 0;
-    position: absolute !important;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+.slide-container {
+  width: 100%;
+  padding: 40px 0;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 
+}
+
+.slide-content {
+  margin: 0 100px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: #FFFF;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bs-orange);
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--bs-orange);
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bs-orange);
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: var(--bs-orange);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: var(--bs-orange);
+}
+
+.swiper-navBtn {
+  color: var(--bs-orange);
+  transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: var(--bs-orange);
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--bs-orange);
+  opacity: 3;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--bs-orange);
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
   }
-  .slide-content{
-    margin:0 100px;
-    overflow: hidden;
-    border-radius: 25px;
+
+  .swiper-navBtn {
+    display: none;
   }
-  .card{
-    border-radius: 25px;
-    background-color: #FFFF;
-  }
-  .image-content,
-  .card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-  }
-  .image-content{
-    position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
-  }
-  .overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #FB732C;
-    border-radius: 25px 25px 0 25px;
-  }
-  .overlay::before,
-  .overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #FB732C;
-  }
-  .overlay::after{
-    border-radius: 0 25px 0 0;
-    background-color: #FFF;
-  }
-  .card-image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #FFF;
-    padding: 3px;
-  }
-  .card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #FB732C;
-  }
-  .name{
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-  }
-  .description{
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-  }
-  .button{
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: #FB732C;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .button:hover{
-    background: #FB732C;
-  }
-  
-  .swiper-navBtn{
-    color: #FB732C;
-    transition: color 0.3s ease;
-  }
-  .swiper-navBtn:hover{
-    color: #FB732C;
-  }
-  .swiper-navBtn::before,
-  .swiper-navBtn::after{
-    font-size: 35px;
-  }
-  .swiper-button-next{
-    right: 0;
-  }
-  .swiper-button-prev{
-    left: 0;
-  }
-  .swiper-pagination-bullet{
-    background-color: #FB732C;
-    opacity: 3;
-  }
-  .swiper-pagination-bullet-active{
-    background-color: #FB732C;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .slide-content{
-      margin: 0 10px;
-    }
-    .swiper-navBtn{
-      display: none;
-    }
-  }
-  
-  /*STYLE - LOJA - FINAL*/
+}
+
+/*STYLE - LOJA - FINAL*/
 
 
 .labelDestacada {
-    font-size: 10px;
-    color: red;
-    top: 50px;
+  font-size: 10px;
+  color: red;
+  top: 50px;
 }
 
 .labelDestacada~input {
-    font-size: 1.0rem;
+  font-size: 1.0rem;
 
 }
 
 #view_photo {
-    width: 100px;
-    height: 100px;
-    border: dashed 1px #ccc;
-    margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  border: dashed 1px #ccc;
+  margin-top: 5px;
 
 }
 
 #output {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .barra {
-    background-color: #fb732c;
-    margin: 10px;
+  background-color: var(--bs-orange);
+  margin: 10px;
 }
 
 .form-nav {
-    padding-top: 5vh;
+  padding-top: 5vh;
 
 }
 
 .cad-nav {
-    margin-left: 10px;
-    color: black;
+  margin-left: 10px;
+  color: black;
 
 
 }
@@ -332,30 +355,33 @@ legend {
 
 /* Cadastro de Brecho */
 .hr {
-    margin-top: 10px;
-    margin: 1rem ;
-  
-    
-}
-.float{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    float: left;
-    align-items: center;
- 
-}
-.tam_img{
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-.larg{
-    width: 50%;
-    margin: 8rem;
-    border: 10px;
-}
-.aa{
-    margin-left: 100px;
+  margin-top: 10px;
+  margin: 1rem;
+
+
 }
 
+.float {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  float: left;
+  align-items: center;
+
+}
+
+.tam_img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.larg {
+  width: 50%;
+  margin: 8rem;
+  border: 10px;
+}
+
+.aa {
+  margin-left: 100px;
+}

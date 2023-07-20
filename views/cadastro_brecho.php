@@ -6,7 +6,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <h1 class="tit-nav">GUIA BRECHÓ - O SEU GUIA ONLINE PARA MODA CONSCIENTE!</h1>
 </div>
 <div class="barra">
-    <p class="cad-nav"><strong>CADASTRO</strong></p>
+    <p class="cad-nav text-white"><strong>CADASTRO</strong></p>
 </div>
 <form class="form-nav" ethod="get" action="#">
     <div class="nav-input">
