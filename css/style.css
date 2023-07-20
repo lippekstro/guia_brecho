@@ -352,6 +352,84 @@ legend {
 
 }
 
+/* Cadastro de Brecho */
+
+/* Pagina de Cadastrar Produto*/
+.barra-cadastro-texto{
+   font-weight: bold;
+
+}
+.barra-cadastro{
+
+   background-color:#fb732c;
+   margin: 2% 6% 4% 6%;
+   border-radius: 10px;
+}
+.barra-cadastro-texto{
+    margin-left: 2%;
+
+}
+.nav-cad-master{
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-cadastro-produto{
+   display: flex;
+   flex-direction: column;
+   margin: 1px 6%;
+
+}
+
+.nav-img{
+
+    margin: 2% 0;
+}
+.nav-cad-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cad-botao{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: #FB732C;
+    color:white;
+    border: none
+}
+.cad-botao:hover{
+    background-color: #f88e54;
+    color:black;
+   
+}
+
+.cad-input{
+    width: 35vw;
+    border: none;
+    border-bottom: 2px solid #424242;
+    outline: none;
+    font-size: 0.9rem;
+}
+.cad-select{
+    width: 15vw;
+   
+}
+
+.cad-label{
+    margin: 20px 0 6px ;
+    font-size: 0.8rem;
+}
+.cad-input-preco{
+    width: 6vw;
+}
+.cad-sifrao{
+    font-size: 0.8rem;
+}
+
+
+/* Pagina de Cadastrar Produto*/
 
 /* Cadastro de Brecho */
 .hr {
@@ -385,3 +463,4 @@ legend {
 .aa {
   margin-left: 100px;
 }
+
