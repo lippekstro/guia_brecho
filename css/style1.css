@@ -1,0 +1,633 @@
+body {
+  background-image: url(../projeto/os-melhores-brechos-de-buenos-aires-dani-noce-imagem-destaque-960x625.jpg);
+  background-color: rgb(238, 211, 177);
+  color: #040404;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+header {
+  background-color: #ff6a00;
+  text-align: center;
+
+}
+
+#barrabaixo {
+  background-color: #ff6a00;
+  text-align: center;
+
+}
+
+#pesquisar {
+  background-color: #ddd;
+  width: 200px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* pesquisa*/
+
+
+
+/**/
+nav {
+  text-align: center;
+}
+
+/*imgtop*/
+.logowidth {
+  width: 160px;
+  /* tamanho da img */
+  height: 140px;
+  border-radius: 50%;
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+nav ul {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  /* especifica o estilo para uma lista como padrão*/
+  margin: 0;
+  /* define a área de margem nos quatro lados do elemento */
+  padding: 0;
+  /* é responsável por definir uma distância interna entre um elemento e sua borda */
+  background-color: #FB732C;
+  /* cor do menu de navegação */
+}
+
+nav {
+  background-color: #FB732C;
+
+  text-align: center;
+}
+
+
+nav li {
+  display: inline-block;
+  /* faz com que o elemento HTML seja renderizado inline, dentro do bloco na mesma linha */
+}
+
+nav li a {
+  display: block;
+  color: #F9F8F8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* style cabeçalho fim */
+
+/* barra de menu*/
+.mapholder {
+  width: 50px;
+
+}
+
+svg {
+
+  width: 50px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: solid;
+  margin: 0 10px;
+}
+
+main {
+  padding: 10px;
+}
+
+/*formulario do cadastro */
+#form-evento {
+  background-color: #f7f7f7;
+  width: 1050px;
+  margin: 50px auto;
+  /* Adicionando margens de 50px nas laterais e 0px no topo/baixo */
+  padding: 30px;
+  border: 1px solid #ffa600;
+  border-radius: 30px;
+}
+
+/* formulario de pagina de eventos */
+#evento-form {
+  background-color: #f1f1f1;
+  color: #f17603;
+  width: 300px;
+  margin: 50px auto;
+  /* Adicionando margens de 50px nas laterais e 0px no topo/baixo */
+  padding: 30px;
+  border: 5px solid #f17603;
+  border-radius: 30px;
+  position: relative;
+  left: -23.0938px;
+  box-sizing: border-box;
+  padding-left: 23.0938px;
+  padding-right: 23.0942px;
+
+}
+
+
+/* div das informaçoes  */
+.diveventos {
+  background-color: #f08001;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 500px;
+  align-items: center;
+  border-radius: 2px;
+}
+
+button {
+  background-color: #0d0d0e;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  align-items: center;
+
+}
+
+button:hover {
+  background-color: orange;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+}
+
+label {
+  color: #0d0c0b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: rgb(233, 128, 7);
+  color: #110b0b;
+  border: none;
+  cursor: pointer;
+}
+
+.event {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.event h3 {
+  margin: 0;
+}
+
+.event p {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: rgb(255, 140, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(255, 136, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+/**/
+
+#form-img {
+  background-color: #f58506;
+  width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 4px solid #ffa600;
+
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 3px solid #f88e04;
+  border-radius: 12px;
+  background-color: #f08001;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 5px;
+  background-color: orange;
+  color: #fff;
+  border-radius: px;
+  cursor: pointer;
+}
+
+.store {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.store h3 {
+  margin: 0;
+}
+
+.store p {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/* configuração de imagem das informaçoes */
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: px;
+  width: 300px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.image3 {
+  display: block;
+  width: 400px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: rgb(252, 134, 0);
+  font-size: 6px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* pagina dos eventos */
+
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,700&display=swap);
+
+
+
+.div-slider {
+  width: auto;
+  height: 400px;
+  text-align: center;
+}
+
+.slides-front {
+  padding: 0;
+  width: 980px;
+  height: 370px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.slides-front * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides-front input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  width: 975px;
+  height: 370px;
+  display: block;
+  position: absolute;
+
+  transform: scale(0);
+
+  transition: all .7s ease-in-out 0.1s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+}
+
+.nav label {
+  width: 150px;
+  height: 100%;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+  transition: opacity .2s;
+  color: #FFF;
+  font-size: 156pt;
+  text-align: center;
+  line-height: 380px;
+  font-family: "Varela Round", sans-serif;
+  background-color: rgba(255, 255, 255, .3);
+  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover+.nav label {
+  opacity: 0.5;
+}
+
+.nav label:hover {
+  opacity: 1;
+}
+
+.nav .next {
+  right: 0;
+}
+
+input:checked+.slide-container .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out 0.1s;
+}
+
+input:checked+.slide-container .nav label {
+  display: block;
+}
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: 375px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked~.nav-dots label#img-dot-1,
+input#img-2:checked~.nav-dots label#img-dot-2,
+input#img-3:checked~.nav-dots label#img-dot-3,
+{
+background: rgba(0, 0, 0, 0.8);
+}
+
+/* botao de curtir*/
+:root {
+  --purple: #9920ea;
+  --purple-black: #5e1580;
+  --white: #fff;
+  --gray: #ccc;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  outline: 0;
+  border: 2px solid var(--gray);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-curtir {
+  padding: 1.5rem 1.5rem 1.5rem 6rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.btn-curtir.curtido {
+  background: var(--purple);
+  border-color: var(--purple-black);
+}
+
+/* Icone do botão */
+.btn-icone {
+  display: inline-block;
+  width: 32px;
+  height: 36px;
+  position: absolute;
+  left: 1.5rem;
+  transform: rotate(0deg);
+}
+
+/* Cor do icone e pulsar */
+.curtido .btn--icone-curtir {
+  transform: scale(2);
+}
+
+.btn:not(.curtido).btn--icone-curtido {
+  transform: scale(-2);
+}
+
+.curtido .btn--icone-curtir,
+.btn--icone-curtido {
+  opacity: 0;
+  position: absolute;
+}
+
+.btn--icone-curtir,
+.curtido .btn--icone-curtido {
+  opacity: 1;
+  left: 1.5rem;
+}
+
+/*-- Conteudo do botão -- */
+.btn-conteudo {
+  display: inline-block;
+}
+
+/* Rotação */
+.btn:not(.curtido) .btn-conteudo--curtido {
+  transform: translate(110px);
+}
+
+.btn:not(.curtido) .btn-conteudo--curtir {
+  transform: translate(-99px);
+}
+
+.curtido .btn-conteudo--curtir {
+  transform: translate(40px);
+}
+
+.btn-conteudo--curtido {
+  transform: translate(-11px);
+}
+
+/* Classes que utilizam propriedades iguais */
+.btn,
+.btn-curtir,
+.btn-icone,
+.curtido,
+.btn-conteudo,
+.btn-conteudo--curtir,
+.btn-conteudo--curtir {
+  transition: 1.5s;
+}
+
+.btn,
+.btn:hover.curtido .btn-conteudo,
+.btn.curtido:hover .btn-icone {
+  color: var(--purple-black);
+}
+
+.btn:hover,
+.btn:hover .btn-icone {
+  color: var(--purple);
+}
+
+.curtido .btn--icone-curtir,
+.btn--icone-curtido,
+.curtido .btn-conteudo {
+  color: var(--white);
+}
+
+
+.mySlides {
+  display: none;
+  border-radius: 8px;
+  border: 10px solid #ddd;
+}
