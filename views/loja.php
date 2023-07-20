@@ -1,6 +1,10 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
+    <h1 class="centered"> <!-- Adicione a classe "centered" aqui -->
+        Encontre os melhores brechós de São Luís 🡳
+    </h1>
+    <p></p>
     <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
@@ -11,7 +15,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                                 <img src="/guia_brecho/img/profile1.png" alt="" class="card-img">
                             </div>
                         </div>
-
                         <div class="card-content">
                             <h2 class="name">Brechaos</h2>
                             <p class="description"> 

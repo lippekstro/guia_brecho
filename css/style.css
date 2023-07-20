@@ -158,6 +158,15 @@ legend {
 
 /*STYLE - LOJA - COMEÇO*/
 
+.centered {
+  color: #FB732C;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 39px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
 .slide-container{
     width: 100%;
     padding: 40px 0;
