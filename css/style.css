@@ -386,9 +386,9 @@ legend {
     margin: 2% 0;
 }
 .nav-cad-botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row-reverse;
 
 }
 .cad-botao{
@@ -397,7 +397,7 @@ legend {
     border-radius: 10px;
     background-color: #FB732C;
     color:white;
-    border: none
+    border: none;
 }
 .cad-botao:hover{
     background-color: #f88e54;
@@ -426,6 +426,30 @@ legend {
 }
 .cad-sifrao{
     font-size: 0.8rem;
+}
+
+#view_photo_cad_produto{
+  width: 20vw;
+  height: 50vh;
+  border: dashed 2px #ccc;
+  
+}
+
+#outputCadProduto{
+  height: 50vh;
+  width: 20vw;
+}
+
+.nav-master-cad-produto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.legendinha{
+
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 

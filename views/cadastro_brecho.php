@@ -67,7 +67,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             <p>Escolha sua Logo:</p>
             <br>
             <div>
-                <input type="file" name="files" />
+                <input type="file" name="files" id="files" />
             </div>
             <p id="view_photo">
                 <img id='output'>
