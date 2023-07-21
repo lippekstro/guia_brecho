@@ -22,7 +22,7 @@ class Produto{
         }
     }
     
-    public static function carregar(){
+    public function carregar(){
 
         $conexao = Conexao::conectar();
         $sql = "SELECT id_produto,nome_produto,descricao,categoria,preco,estoque,imagem_produto FROM produto WHERE id_produto = :id_produto";
@@ -40,7 +40,7 @@ class Produto{
     }
 
 
-    public static function deletar(){
+    public function deletar(){
 
         $conexao = conexao::conectar();
         $sql = "DELETE FROM produto WHERE id_produto=:id_produto";
@@ -49,16 +49,16 @@ class Produto{
         $delete->execute();
     }
     
-    public static function listar(){
+    public static function listar($inicio,$limite){
 
         $conexao = conexao::conectar();
-        $sql = "SELECT * FROM produto";
-        $list = $conexao->query($sql);
+        $sql = "SELECT * FROM produto LIMIT $inicio,$limite";
+        $list = $conexao -> query($sql);        
         $array = $list->fetchAll();
         return $array;
     }
 
-    public static function inserir($arq_img_blob){
+    public function inserir($arq_img_blob){
 
         $conexao = Conexao::conectar();
         $sql = $sql = "INSERT INTO produto (nome_produto,descricao,categoria,preco,estoque,imagem_produto) VALUES (:nome_produto,:descricao,:categoria,:preco,:estoque,:imagem_produto)";
@@ -81,12 +81,12 @@ class Produto{
         }
     }
 
-    public static function editar(){
+    public function editar(){
 
         $conexao = conexao::conectar();
         $sql = "UPDATE produto SET nome_produto=:nome_produto,descricao=:descricao,categoria=:categoria,preco=:preco,estoque=:estoque,imagem_produto=:imagem_produto WHERE id_produto=:id_produto";
         $edit = $conexao->prepare($sql);
-        $edit->bindValue(':nome_produto',$this->nome);
+        $edit->bindValue(':nome_produto',$this->nome_produto);
         $edit->bindValue(':descricao',$this->descricao);
         $edit->bindValue(':categoria',$this->categoria);
         $edit->bindValue(':id_produto',$this->id_produto);
