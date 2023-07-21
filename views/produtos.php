@@ -1,6 +1,7 @@
     <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     $lista = array(        
         array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
@@ -12,10 +13,11 @@
     )
 =======
     require_once $_SERVER["DOCUMENT_ROOT"] ."/guia_brecho/models/class_produto.php";
+=======
+>>>>>>> f3c0c82 (alterei os cards do produto e o background)
 
-    try {
-        $lista = Produto::listar();
 
+<<<<<<< HEAD
     } catch (\Throwable $th) {
         echo $th->getMessage();
     }
@@ -27,12 +29,31 @@
                         <?= $produto['preco']?>
         <?php endforeach; ?>  */
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
-    ?>
-  
-   
+=======
+    $produtos = array(
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
+        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"]
+    );
 
+
+>>>>>>> f3c0c82 (alterei os cards do produto e o background)
+    ?>
 
     <div class="container">
+<<<<<<< HEAD
     <?php foreach ($lista as $produto) : ?>
 <<<<<<< HEAD
     <div class="col">
@@ -72,18 +93,27 @@
                             </figcaption>
                         </figure>
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
+=======
+        <?php foreach ($produtos as $lista) : ?>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="<?= $lista["imagem"] ?>" alt="" class="img card" width="194px" height="300px">
+                    </div>
+                    <div class="card-back">
+                        <span><?= $lista['nome'] ?></h1>
+                            <p><?= $lista["descricao"] ?></p>
+                            <p>R$<?= $lista["preco"] ?></p>
+                            <span><?= $lista["loja"] ?></span>
+
+>>>>>>> f3c0c82 (alterei os cards do produto e o background)
                     </div>
                 </div>
             </div>
-            <div class="detalhes-produto">
-                <h3><?= $produto['nome_produto'] ?></h3>
-                <p style="font-weight: 100;font-size: 1.5rem;">R$ <?= $produto['preco']?></p>
-                <p><?= $produto['descricao'] ?></p>        
-            </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 
+<<<<<<< HEAD
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
         <symbol id="close" viewBox="0 0 18 18">
             <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
@@ -108,3 +138,10 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
+=======
+
+
+    <?php
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
+    ?>
+>>>>>>> f3c0c82 (alterei os cards do produto e o background)
