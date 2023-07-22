@@ -8,7 +8,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <div class="barra">
     <p class="cad-nav text-white"><strong>CADASTRO</strong></p>
 </div>
-<form class="form-nav" ethod="get" action="#">
+<form class="form-nav" method="post" action="#">
     <div class="nav-input">
         <fieldset class="box-input">
             <legend>Dados Pessoais</legend>
@@ -89,7 +89,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         <input type="checkbox" id="termo2" name="termo2" value="termo2" required>
         <label for="termo2"> Aceito de novo!!</label><br>
     </div>
-    <p class="option-termos"><input type="submit" value="Cadastrar" /></p>
+    <p class="option-termos"><input class="cad_botao_brecho" type="submit" value="Cadastrar" /></p>
+
 </form>
 
 
