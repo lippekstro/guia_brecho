@@ -161,11 +161,19 @@ legend {
 
 /*STYLE - LOJA - COMEÇO*/
 
+.centrotitulo {
+  text-align: center;
+  color: #fb732c; /* Cor do texto (pode ser uma cor hexadecimal, nome da cor, etc.) */
+  font-size: 40px; /* Tamanho da fonte em pixels */
+  margin-top: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .slide-container {
   width: 100%;
   padding: 40px 0;
   position: absolute !important;
-  top: 50%;
+  top: 39%;
   left: 50%;
   translate: -50% -50%;
 
