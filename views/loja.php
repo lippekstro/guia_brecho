@@ -26,14 +26,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <button class="button">Saiba Mais</button>
                         </div>
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
+                </div>
 
-                            <div class="card-image">
-                                <img src="/guia_brecho/img/profile2.png" alt="" class="card-img">
-                            </div>
-                        </div>
 
                         <div class="card-content">
                             
