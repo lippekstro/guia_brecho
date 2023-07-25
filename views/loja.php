@@ -12,6 +12,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <img src="/guia_brecho/img/profile1.png" alt="" class="card-img">
                     </div>
                 </div>
+
+
                 <div class="card-content">
                     <h2 class="name">Brechaos</h2>
                     <p class="description">
@@ -20,21 +22,19 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         • Sem trocas e devolução
                         • Compre via link ou direct ⬇️
                         • Site: linktr.ee/brechaos1</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile2.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
-
                     <h2 class="name">Itens de Brechó</h2>
                     <p class="description">
                         @itensdebrecho |
@@ -43,10 +43,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         oportunidade única! #itemdisp
                         ✿ Atualização nos Storys ✨
                         ✿ Não fazemos trocas/devolução/cancelamentos. </p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
@@ -55,43 +56,42 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <img src="/guia_brecho/img/profile3.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Brechó Girl Boss</h2>
                     <p class="description">
                         @bregirlboss |
                         • Há 3 anos na moda sustentável!
                         • Acompanhe os stories ✨
-                        • Entregas facilitadas - 1x na semana
+                        • Entregas facilitadas - 1x por semana
                         • Apoie uma mulher empreendedora
                         • São Luís, MARANHÃO.</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile4.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Mais Um Brechó</h2>
                     <p class="description">
                         @maisumbrecho |
-                        • Roupas e vestuário
-                        • Desde 2017
-                        • Do Maranhão para todo Brasil
-                        • Para mais informações, leia o nosso destaque
-                        • Sem trocas/devolução
+                        • Roupas e vestuário.
+                        • Desde 2017.
+                        • Do Maranhão para todo Brasil.
+                        • Para mais informações, leia o nosso destaque.
+                        • Sem trocas/devolução.
                         #maisumdisponivel</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+            
+
+    
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
@@ -100,105 +100,103 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <img src="/guia_brecho/img/profile5.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Brechó Caramujo</h2>
                     <p class="description">@brechocaramujo |
                         Vestuário
-                        Comércio Virtual em São Luís MA
-                        • For Men - 2020
-                        • Não fazemos reservas (apenas por transferência)
+                        Comércio Virtual em São Luís - MA.
+                        • For Men - 2020.
+                        • Não fazemos reservas (apenas por transferência).
                         • Não fazemos trocas
                         #brechocaramujodisponivel</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile6.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Brechó Estrela</h2>
                     <p class="description">
-                        @brechoestrela | Brechó Online
-                        • Vintage/Moderno/Sexy
+                        @brechoestrela | Brechó Online.
+                        • Vintage/Moderno/Sexy.
                         • Você é uma estrela que nasceu pra brilhar! ✨
                         • Enviamos pra todo BR | De São Luís.
                         #brechoesteladisponivel</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile7.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Brechó Art</h2>
                     <p class="description">@brecho&art |
                         Produto/serviço
                         FAZENDO DO BRECHÓ UMA ARTE!
-                        ☻ vendas pelo direct
-                        ☻ facilitamos sua entrega
+                        ☻ vendas pelo direct.
+                        ☻ facilitamos sua entrega.
                         ☻ São Luís, MA.
-                        Sem devolução e trocas
+                        Sem devolução e trocas.
                         #brechoartdisponivel</p>
-
-                    <button class="button">Saiba Mais</button>
+                        <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile8.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Agá Brechó</h2>
                     <p class="description">@agabrecho | Agá Brechó
-                        Roupa e Vestuário
+                        Roupa e Vestuário.
                         Aceitamos somente transferências ou pix.
                         Sem trocas sem devolução 
                         São Luís-MA.
+                        Fazemos entregas (+ taxas).
+                        Moda sustentável.
                         #agabrechodisponivel
                     </p>
-
-                    <button class="button">Saiba Mais</button>
+                    <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
+
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay"></span>
-
                     <div class="card-image">
                         <img src="/guia_brecho/img/profile9.png" alt="" class="card-img">
                     </div>
                 </div>
-
                 <div class="card-content">
                     <h2 class="name">Brechó Garimpeira</h2>
                     <p class="description"> @garimpeira_brech | Garimpeira Brechó Slz
-                    • Vintage moderno atemporal
+                    • Vintage moderno atemporal.
                     • NÃO COMPRAMOS DESAPEGO!
-                    • Desde 2020
+                    • Desde 2020.
                     • Entrega moto boy /terminal cohab sabados a tarde.
                     </p>
-
-                    <button class="button">Saiba Mais</button>
+                    <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                 </div>
             </div>
         </div>
