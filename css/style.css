@@ -108,7 +108,7 @@ main {
   text-align: center;
   margin-top: 7vh;
   padding-bottom: 3vh;
-}
+} 
 
 .nav-input {
   display: flex;
@@ -118,8 +118,10 @@ main {
 }
 
 .option-termos {
+  margin-right: 10%;
   text-align: center;
   padding: 20px;
+ 
 }
 
 .box-input {
@@ -157,7 +159,40 @@ legend {
 
 }
 
-/* Quemsomos style fim */
+.cad_botao_brecho{
+  margin-right: 10%;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: var(--bs-orange);
+  color:white;
+  border: none;
+}
+.cad_botao_brecho:hover{
+  background-color: #f88e54;
+  color:black;
+
+}
+
+.nav-cont-cad{
+  margin-top: 9%;
+
+}
+.nav-cont-cad-paga{
+  margin-top: 2%;
+}
+
+.preco-cont-cad{
+  width: 30%;
+}
+.baixo-cont-cad{
+  margin-top: -10px;
+}
+.cad-sifrao-brecho{
+  font-size: 0.8rem;
+}
+
+/* Cadastro de Brecho FIM*/
 
 /*STYLE - LOJA - COMEÇO*/
 
@@ -345,7 +380,8 @@ legend {
 
 .barra {
   background-color: var(--bs-orange);
-  margin: 10px;
+  border-radius: 10px;
+  margin: 1% 3% 0% 5%;
 }
 
 .form-nav {
@@ -362,14 +398,14 @@ legend {
 
 /* Cadastro de Brecho */
 
-/* Pagina de Cadastrar Produto*/
-.barra-cadastro-texto{
+/* Pagina de Cadastrar Produto INICIO*/
+.barra-cadastro-texto .text-white{
    font-weight: bold;
 
 }
-.barra-cadastro{
+.barra-cadastro {
 
-   background-color:#fb732c;
+   background-color:var(--bs-orange);
    margin: 2% 6% 4% 6%;
    border-radius: 10px;
 }
@@ -389,9 +425,15 @@ legend {
 
 }
 
+.onde{
+  margin-top: -10px;
+ 
+  
+}
 .nav-img{
 
     margin: 2% 0;
+   
 }
 .nav-cad-botao {
   margin-top: 5vw;
@@ -399,11 +441,11 @@ legend {
   flex-direction: row-reverse;
 
 }
-.cad-botao{
+.cad-botao {
     width: 10vw;
     height: 5vh;
     border-radius: 10px;
-    background-color: #FB732C;
+    background-color: var(--bs-orange);
     color:white;
     border: none;
 }
@@ -459,11 +501,13 @@ legend {
   font-size: 0.8rem;
   font-style: italic;
 }
+.cad-produto-radio{
+  font-size: 0.8rem;
+}
 
 
-/* Pagina de Cadastrar Produto*/
+/* Pagina de Cadastrar Produto FIM*/
 
-/* Cadastro de Brecho */
 .hr {
   margin-top: 10px;
   margin: 1rem;

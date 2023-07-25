@@ -10,7 +10,7 @@ document.addEventListener('click', function (event) {
       //console.log(inputId) precisa de implementação para ser somente no cadastro_brecho
       var Nomeinput = document.getElementById(inputId);
       // Obtém o ID do input clicado
-      if((inputId != "nome_produto") && (inputId != "descricao") && (inputId != "descricao") && (inputId != "preco")){
+      if((inputId != "nome_produto") && (inputId != "descricao") && (inputId != "descricao") && (inputId != "preco") && (inputId != "estoque")){
         console.log("entrou")
       
       var label = document.querySelector('label[for="' + inputId+ '"]');
