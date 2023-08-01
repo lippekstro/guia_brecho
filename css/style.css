@@ -121,7 +121,7 @@ footer {
   text-align: center;
   margin-top: 7vh;
   padding-bottom: 3vh;
-}
+} 
 
 .nav-input {
   display: flex;
@@ -131,8 +131,10 @@ footer {
 }
 
 .option-termos {
+  margin-right: 10%;
   text-align: center;
   padding: 20px;
+ 
 }
 
 .box-input {
@@ -170,15 +172,56 @@ legend {
 
 }
 
-/* Quemsomos style fim */
+.cad_botao_brecho{
+  margin-right: 10%;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: var(--bs-orange);
+  color:white;
+  border: none;
+}
+.cad_botao_brecho:hover{
+  background-color: #f88e54;
+  color:black;
+
+}
+
+.nav-cont-cad{
+  margin-top: 9%;
+
+}
+.nav-cont-cad-paga{
+  margin-top: 2%;
+}
+
+.preco-cont-cad{
+  width: 30%;
+}
+.baixo-cont-cad{
+  margin-top: -10px;
+}
+.cad-sifrao-brecho{
+  font-size: 0.8rem;
+}
+
+/* Cadastro de Brecho FIM*/
 
 /*STYLE - LOJA - COMEÇO*/
+
+.centrotitulo {
+  text-align: center;
+  color: #fb732c; /* Cor do texto (pode ser uma cor hexadecimal, nome da cor, etc.) */
+  font-size: 40px; /* Tamanho da fonte em pixels */
+  margin-top: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 .slide-container {
   width: 100%;
   padding: 40px 0;
   position: absolute !important;
-  top: 50%;
+  top: 39%;
   left: 50%;
   translate: -50% -50%;
 
@@ -350,7 +393,8 @@ legend {
 
 .barra {
   background-color: var(--bs-orange);
-  margin: 10px;
+  border-radius: 10px;
+  margin: 1% 3% 0% 5%;
 }
 
 .form-nav {
@@ -367,17 +411,42 @@ legend {
 
 /* Cadastro de Brecho */
 
-/* Pagina de Cadastrar Produto*/
-.barra-cadastro-texto {
-  font-weight: bold;
+/* Pagina de Cadastrar Produto INICIO*/
+.barra-cadastro-texto .text-white{
+   font-weight: bold;
+
+}
+.barra-cadastro {
+
+   background-color:var(--bs-orange);
+   margin: 2% 6% 4% 6%;
+   border-radius: 10px;
+}
+.barra-cadastro-texto{
+    margin-left: 2%;
+
+}
+.nav-cad-master{
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-cadastro-produto{
+   display: flex;
+   flex-direction: column;
+   margin: 1px 6%;
 
 }
 
-.barra-cadastro {
+.onde{
+  margin-top: -10px;
+ 
+  
+}
+.nav-img{
 
-  background-color: #fb732c;
-  margin: 2% 6% 4% 6%;
-  border-radius: 10px;
+    margin: 2% 0;
+   
 }
 
 .barra-cadastro-texto {
@@ -404,19 +473,23 @@ legend {
 }
 
 .nav-cad-botao {
+  margin-top: 5vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row-reverse;
 
 }
-
 .cad-botao {
-  width: 10vw;
-  height: 5vh;
-  border-radius: 10px;
-  background-color: #FB732C;
-  color: white;
-  border: none
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: var(--bs-orange);
+    color:white;
+    border: none;
+}
+.cad-botao:hover{
+    background-color: #f88e54;
+    color:black;
+   
 }
 
 .cad-botao:hover {
@@ -451,10 +524,36 @@ legend {
   font-size: 0.8rem;
 }
 
+#view_photo_cad_produto{
+  width: 20vw;
+  height: 50vh;
+  border: dashed 2px #ccc;
+  
+}
 
-/* Pagina de Cadastrar Produto*/
+#outputCadProduto{
+  height: 50vh;
+  width: 20vw;
+}
 
-/* Cadastro de Brecho */
+.nav-master-cad-produto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.legendinha{
+
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.cad-produto-radio{
+  font-size: 0.8rem;
+}
+
+
+/* Pagina de Cadastrar Produto FIM*/
+
 .hr {
   margin-top: 10px;
   margin: 1rem;
