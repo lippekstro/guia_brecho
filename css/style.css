@@ -209,6 +209,15 @@ legend {
 
 /*STYLE - LOJA - COMEÇO*/
 
+.centered {
+  color: #FB732C;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 39px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
 .centrotitulo {
   text-align: center;
   color: #fb732c; /* Cor do texto (pode ser uma cor hexadecimal, nome da cor, etc.) */
