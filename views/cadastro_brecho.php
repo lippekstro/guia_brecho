@@ -8,7 +8,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <div class="barra">
     <p class="cad-nav text-white"><strong>CADASTRO</strong></p>
 </div>
-<form class="form-nav" method="post" action="#">
+<form class="form-nav" ethod="get" action="\guia_brecho\controller\cadastro_brecho\controller.php">
     <div class="nav-input">
         <fieldset class="box-input">
             <legend>Dados Pessoais</legend>
