@@ -78,18 +78,15 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     </div>
 
   </div>
-
-  <hr class="featurette-divider">
-
   <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
 
 
 <!-- extra voltar para o inicio -->
-<div class="container">
+<!-- <div class="container">
   <p class="float-end"><a href="#">Back to top</a></p>
-</div>
+</div> -->
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>

@@ -5,9 +5,22 @@ body {
   background-blend-mode: overlay;
 }
 
-main {
+html,
+body {
   position: relative;
-  height: 50vw;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+main {
+  padding-bottom: 4rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
 }
 
 #logo-icone {
@@ -355,77 +368,87 @@ legend {
 /* Cadastro de Brecho */
 
 /* Pagina de Cadastrar Produto*/
-.barra-cadastro-texto{
-   font-weight: bold;
-
-}
-.barra-cadastro{
-
-   background-color:#fb732c;
-   margin: 2% 6% 4% 6%;
-   border-radius: 10px;
-}
-.barra-cadastro-texto{
-    margin-left: 2%;
-
-}
-.nav-cad-master{
-    display: flex;
-    flex-direction: column;
-
-}
-.nav-cadastro-produto{
-   display: flex;
-   flex-direction: column;
-   margin: 1px 6%;
+.barra-cadastro-texto {
+  font-weight: bold;
 
 }
 
-.nav-img{
+.barra-cadastro {
 
-    margin: 2% 0;
+  background-color: #fb732c;
+  margin: 2% 6% 4% 6%;
+  border-radius: 10px;
 }
+
+.barra-cadastro-texto {
+  margin-left: 2%;
+
+}
+
+.nav-cad-master {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav-cadastro-produto {
+  display: flex;
+  flex-direction: column;
+  margin: 1px 6%;
+
+}
+
+.nav-img {
+
+  margin: 2% 0;
+}
+
 .nav-cad-botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
-.cad-botao{
-    width: 10vw;
-    height: 5vh;
-    border-radius: 10px;
-    background-color: #FB732C;
-    color:white;
-    border: none
-}
-.cad-botao:hover{
-    background-color: #f88e54;
-    color:black;
-   
+
+.cad-botao {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #FB732C;
+  color: white;
+  border: none
 }
 
-.cad-input{
-    width: 35vw;
-    border: none;
-    border-bottom: 2px solid #424242;
-    outline: none;
-    font-size: 0.9rem;
-}
-.cad-select{
-    width: 15vw;
-   
+.cad-botao:hover {
+  background-color: #f88e54;
+  color: black;
+
 }
 
-.cad-label{
-    margin: 20px 0 6px ;
-    font-size: 0.8rem;
+.cad-input {
+  width: 35vw;
+  border: none;
+  border-bottom: 2px solid #424242;
+  outline: none;
+  font-size: 0.9rem;
 }
-.cad-input-preco{
-    width: 6vw;
+
+.cad-select {
+  width: 15vw;
+
 }
-.cad-sifrao{
-    font-size: 0.8rem;
+
+.cad-label {
+  margin: 20px 0 6px;
+  font-size: 0.8rem;
+}
+
+.cad-input-preco {
+  width: 6vw;
+}
+
+.cad-sifrao {
+  font-size: 0.8rem;
 }
 
 
@@ -463,4 +486,3 @@ legend {
 .aa {
   margin-left: 100px;
 }
-
