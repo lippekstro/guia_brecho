@@ -45,12 +45,25 @@ if  //Dados Pessoas do Dono do Brecho:
     $brecho_contato= $_POST['contato'];
 
     //Informações para Divulgações   
-    $brecho_paga_pix $_POST['paga_pix'];
+    $brecho_paga_pix = $_POST['paga_pix'];
+    $brecho_paga_ted = $_POST['paga_ted'];
+    $brecho_paga_boleto = $_POST['paga_boleto'];
+    $brecho_paga_boleto = $_POST['paga_dinheiro'];
 
+    $brecho_faixa_preco_ini = $_POST['faixa_preco_ini'];
+    $brecho_faixa_preco_fim = $_POST['faixa_preco_fim'];
 
+    $brecho_hora = $_POST['hora'];
+    $brecho_entrega = $_POST['entrega'];
 
-    $nomebrecho = htmlspecialchars($nomebrecho);
-    $faixapreco = floatval($faixapreco); 
+    $brecho_story = $_POST['story'];
+    $brecho_termo = $_POST['termo'];
+
+    
+    $pessoa_nome = htmlspecialchars($pessoa_nome);
+    $pessoa_sobrenome = htmlspecialchars($pessoa_sobrenome);
+    $brecho_faixa_preco_ini  = floatval($brecho_faixa_preco_ini); 
+    $brecho_faixa_preco_fim  = floatval($brecho_faixa_preco_fim); 
 
   
     $brecho = new Brecho();
