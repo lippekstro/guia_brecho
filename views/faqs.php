@@ -15,7 +15,7 @@ try {
             <?php foreach ($faqs as $f) : ?>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $f['id_faq'] ?>" aria-expanded="true" aria-controls="collapse<?= $faq['id_faq'] ?>">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $f['id_faq'] ?>" aria-expanded="true" aria-controls="collapse<?= $f['id_faq'] ?>">
                             <?= $f['faq_pergunta'] ?>
                         </button>
                     </h2>
