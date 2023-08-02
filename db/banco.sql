@@ -42,3 +42,8 @@ CREATE TABLE evento (
     descricao_evento TEXT NOT NULL
 );
 
+CREATE TABLE faqs (
+    id_faq INT PRIMARY KEY AUTO_INCREMENT,
+    faq_pergunta text not null,
+    faq_resposta text not null
+);

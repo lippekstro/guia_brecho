@@ -11,15 +11,9 @@
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                    <use xlink:href="#twitter"></use>
-                </svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                    <use xlink:href="#instagram"></use>
-                </svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
-                    <use xlink:href="#facebook"></use>
-                </svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-twitter"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi bi-facebook"></i></a></li>
     </ul>
 </footer>
 
