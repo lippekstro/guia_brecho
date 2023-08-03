@@ -48,7 +48,7 @@ if  //Dados Pessoas do Dono do Brecho:
     $brecho_paga_pix = $_POST['paga_pix'];
     $brecho_paga_ted = $_POST['paga_ted'];
     $brecho_paga_boleto = $_POST['paga_boleto'];
-    $brecho_paga_boleto = $_POST['paga_dinheiro'];
+    $brecho_paga_dinheiro = $_POST['paga_dinheiro'];
 
     $brecho_faixa_preco_ini = $_POST['faixa_preco_ini'];
     $brecho_faixa_preco_fim = $_POST['faixa_preco_fim'];
@@ -67,6 +67,8 @@ if  //Dados Pessoas do Dono do Brecho:
 
   
     $brecho = new Brecho();
-    $brecho->inserirProduto($nomebrecho, $cnpj, $cidade, $);
+    $brecho->cadastrarBrecho($pessoa_nome, $pessoa_sobrenome, $pessoa_email, $pessoa_password,$brecho_nome,$brecho_cnpj,$brecho_cidade,$brecho_endereco,$brecho_numero,$brecho_bairro,$brecho_img,
+    $brecho_rede, $brecho_contato, $brecho_paga_pix, $brecho_paga_ted,$brecho_paga_boleto,$brecho_paga_dinheiro, $brecho_faixa_preco_ini, $brecho_faixa_preco_fim,$brecho_hora,$brecho_entrega,
+    $brecho_story,$brecho_termo);
 }
 
