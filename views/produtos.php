@@ -1,148 +1,131 @@
-    <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+<?php
 
-    $lista = array(        
-        array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
-        array("img" => "https://source.unsplash.com/random/1920x1080/?city", "texto" => "cidade","preco"=>25.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
-        array("img" => "https://source.unsplash.com/random/1920x1080/?mountain", "texto" => "montanha","preco"=>30.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
-        array("img" => "https://source.unsplash.com/random/1920x1080/?beach", "texto" => "praia","preco"=>52.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
-        array("img" => "https://source.unsplash.com/random/1920x1080/?robot", "texto" => "robo","preco"=>9.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
-        array("img" => "https://source.unsplash.com/random/1920x1080/?cat", "texto" => "gato","preco"=>12.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!")    
-    )
-=======
-    require_once $_SERVER["DOCUMENT_ROOT"] ."/guia_brecho/models/class_produto.php";
-=======
->>>>>>> f3c0c82 (alterei os cards do produto e o background)
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
+$produtos = array(
+    ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shirt", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
+    ["nome" => "Vestido", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?dress", "categoria" => "Acessório", "brecho" => "Brechó da Su", "img-loja" => "logo-loja2.png"],
+    ["nome" => "Camisa", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?pants", "categoria" => "Calçado", "brecho" => "Meu Brechó", "img-loja" => "logo-loja3.jpg"],
+    ["nome" => "Sapato", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shoe", "categoria" => "Roupa", "brecho" => "Chic Brechó", "img-loja" => "logo-loja.jpg"],
+    ["nome" => "Saia", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?earring", "categoria" => "Calçado", "brecho" => "Brechó Maria Bonita", "img-loja" => "logo-loja2.png"],
+    ["nome" => "Blusa", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shirt", "categoria" => "Acessório", "brecho" => "Brechó da Katia", "img-loja" => "logo-loja3.jpg"],
+    ["nome" => "Short", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?dress", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
+    ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?pants", "categoria" => "Calçado", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja3.jpg"],
+  
+  
+  
+  );
 
-<<<<<<< HEAD
-    } catch (\Throwable $th) {
-        echo $th->getMessage();
-    }
-/* 
-    <?php foreach ($lista as $produto) : ?>
-        <?= $produto['nome_produto'] ?>
-                <?= $produto['nome_produto'] ?>
-                        <?= $produto['descricao'] ?>
-                        <?= $produto['preco']?>
-        <?php endforeach; ?>  */
->>>>>>> 95ff33f (update da pagina com cards e modal novos)
-=======
-=======
+?>
 
-
->>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
-    $produtos = array(
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?pants"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shoe"],
-        ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?earring"]
-    );
-
-
-<<<<<<< HEAD
->>>>>>> f3c0c82 (alterei os cards do produto e o background)
-    ?>
-
-    <div class="container">
-<<<<<<< HEAD
-    <?php foreach ($lista as $produto) : ?>
-<<<<<<< HEAD
-    <div class="col">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#<?= $produto['nome_produto'] ?>" class="btn-img">
-            <div class="card">
-                <img src="<?= $produto['img'] ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $produto['nome_produto'] ?></h5>
-                    <p class="card-text"><?= $produto['descricao'] ?><br> <b>R$ <?= $produto['preco']?></b> </p>
-                </div>
-            </div>
-        </button>
-    </div>
-    <?php endforeach; ?>    
-</div>
-    <!------------------------------- aqui o efeito modal ------------------------------------------>
-<div>
-    <?php foreach ($lista as $produto) : ?>
-    <div class="modal fade" id="<?= $produto['nome_produto'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="card" style="width: 32rem;">
-                    <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"><?= $produto['descricao'] ?> <br></p>
-                        <p class="card-text"> <b>R$ <?= $produto['preco'] ?></b>  </p>
-=======
-        <div class="full-card">
-            <div class="stack">
-                <div class="card">          
-                    <div class="image">
-                        <figure>
-                            <img src="data:image/jpg;charset=utf8;base64,<?=base64_encode($produto['imagem_produto'])?>" alt="">
-                            <figcaption>
-                                <h3><?= $produto['nome_produto'] ?></h3>
-                                <p><small>R$ <?= $produto['preco']?></small></p>                  
-                            </figcaption>
-                        </figure>
->>>>>>> 95ff33f (update da pagina com cards e modal novos)
-=======
-=======
-    ?>
-
-    <div class="container">
->>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
-        <?php foreach ($produtos as $lista) : ?>
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="<?= $lista["imagem"] ?>" alt="" class="img card" width="194px" height="300px">
-                    </div>
-                    <div class="card-back">
-                        <span><?= $lista['nome'] ?></h1>
-                            <p><?= $lista["descricao"] ?></p>
-                            <p>R$<?= $lista["preco"] ?></p>
-                            <span><?= $lista["loja"] ?></span>
-
-<<<<<<< HEAD
->>>>>>> f3c0c82 (alterei os cards do produto e o background)
-=======
->>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
+<section class="header">
+    <!-- First container -->
+    <div class="container-produtos container_solid">
+      <div class="title_wrapper">
+        <h1>GUIA BRECHO </h1>
+      </div>
     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-        <symbol id="close" viewBox="0 0 18 18">
-            <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
-                S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
-                l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
-                c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
-                s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"/>
-        </symbol>
-    </svg>
-    
+    <!-- Second container -->
+    <div class="container-produtos container_image" aria-hidden="true">
+      <div class="title_wrapper">
+        <h1>GUIA BRECHO</h1>
+      </div>
+    </div>
+  </section>
 
+  <!-- cards produtos -->
 
+  <section class="grid-produto">
+    <div class="titulo">
+      <h2>Produtos</h2>
+    </div>
+    <ul class="gallery">
+      <?php foreach ($produtos as $lista) : ?>
+        <li>
+          <div class="card-produtos">
+            <figcaption>
+              <img src="<?= $lista["imagem"] ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+            </figcaption>
+          </div>
+          <div class="info-produto">
+            <h3><?= $lista["nome"] ?></h3>
+            <p style="font-size: .9rem;"><?= $lista["categoria"] ?> / <?= $lista["brecho"] ?></p>
+            <p style="font-size: .7rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
+            <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
 
+          </div>
+        </li>
 
+      <?php endforeach; ?>
+    </ul>
+
+    <!-- Modal -->
+    <?php foreach ($produtos as $lista) : ?>
+      <div class="modal-wrapper" id="modal">
+        <div class="modal-body">
+          <div class="img-loja">
+            <img src="<?= $lista["img-loja"] ?>" alt="">
+          </div>
+          <div class="modal-header">
+            <h2 class="heading"><?= $lista["brecho"] ?></h2>
+            <a href="#!" role="button" class="close" aria-label="close this modal">
+              <svg viewBox="0 0 24 24">
+                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+              </svg>
+            </a>
+          </div>
+          <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Whatsapp</li>
+          </ul>
+          
+        </div>
+        <a href="#!" class="outside-trigger"></a>
+      </div>
+    <?php endforeach; ?>
+
+    <!-- paginacao -->
+
+    <div class="cont-pag">
+      <ul class="pagination modal-3">
+        <li><a href="#" class="prev">&laquo</a></li>
+        <li><a href="#" class="active">1</a></li>
+        <li> <a href="#">2</a></li>
+        <li> <a href="#">3</a></li>
+        <li> <a href="#">4</a></li>
+        <li><a href="#" class="next">&raquo;</a></li>
+      </ul>
+    </div>
+
+    <!-- sidebar -->
+
+    <aside class="filtro">
+      <h3>FILTRE POR:</h3>
+      <div class="accordion-menu">
+        <ul class="ul">
+          <li class="li">
+            <input type="checkbox" checked>
+            <i class="arrow"></i>
+            <h2 class="h2">Categoria</h2>
+            <p class="p">Roupas</p>
+            <p class="p">Acessórios</p>
+            <p class="p">Calçados</p>
+          </li>
+          <li class="li">
+            <input type="checkbox" checked>
+            <i class="arrow"></i>
+            <h2 class="h2"></i>Brechó</h2>
+            <p class="p"><?= $lista["brecho"] ?></p>
+            <p class="p"><?= $lista["brecho"] ?></p>
+            <p class="p"><?= $lista["brecho"] ?></p>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+  </section>
 
 
 
@@ -151,18 +134,7 @@
 
 
 <?php
+
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
+
 ?>
-=======
-=======
->>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
-
-
-    <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
-<<<<<<< HEAD
-    ?>
->>>>>>> f3c0c82 (alterei os cards do produto e o background)
-=======
-    ?>
->>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
