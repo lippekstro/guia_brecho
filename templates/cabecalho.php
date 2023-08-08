@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
     <link rel="shortcut icon" href="/guia_brecho/img/img.png" type="image/x-icon">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <!-- css bootstrap -->
     <link rel="stylesheet" href="/guia_brecho/css/bootstrap.css">
@@ -22,6 +23,11 @@
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
 
 
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+    <link rel="stylesheet" href="/guia_brecho/css/style.css">
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
 </head>
 
 =======

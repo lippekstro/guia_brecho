@@ -31,7 +31,10 @@
     </footer>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="/guia_brecho/js/script.js"></script>
+<<<<<<< HEAD
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
 </body>
 
 </html>

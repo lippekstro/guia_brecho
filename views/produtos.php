@@ -2,6 +2,7 @@
     require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     $lista = array(        
         array("img" => "https://source.unsplash.com/random/1920x1080/?flower", "texto" => "flor","preco"=>15.00,"descricao"=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea doloribus neque, eveniet illum reiciendis vero ad amet voluptatem cum laboriosam placeat est, sequi quisquam ab quidem assumenda atque soluta a!"),
@@ -30,6 +31,10 @@
         <?php endforeach; ?>  */
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
 =======
+=======
+
+
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
     $produtos = array(
         ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?shirt"],
         ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus quibusdam sequi debitis dolorum.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/1920x1080/?dress"],
@@ -49,6 +54,7 @@
     );
 
 
+<<<<<<< HEAD
 >>>>>>> f3c0c82 (alterei os cards do produto e o background)
     ?>
 
@@ -94,6 +100,11 @@
                         </figure>
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
 =======
+=======
+    ?>
+
+    <div class="container">
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
         <?php foreach ($produtos as $lista) : ?>
             <div class="card">
                 <div class="card-inner">
@@ -106,13 +117,17 @@
                             <p>R$<?= $lista["preco"] ?></p>
                             <span><?= $lista["loja"] ?></span>
 
+<<<<<<< HEAD
 >>>>>>> f3c0c82 (alterei os cards do produto e o background)
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
         <symbol id="close" viewBox="0 0 18 18">
@@ -139,9 +154,15 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
 =======
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
 
 
     <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
+<<<<<<< HEAD
     ?>
 >>>>>>> f3c0c82 (alterei os cards do produto e o background)
+=======
+    ?>
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e

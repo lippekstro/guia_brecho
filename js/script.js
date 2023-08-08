@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -29,6 +30,8 @@ var swiper = new Swiper(".slide-content", {
     },
   });
 =======
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
 popup = {
   init: function(){
     $('figure').click(function(){
@@ -62,6 +65,7 @@ popup = {
     }, 100);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   popup.init()
 >>>>>>> 95ff33f (update da pagina com cards e modal novos)
@@ -70,3 +74,8 @@ popup = {
 
 popup.init()
 >>>>>>> f3c0c82 (alterei os cards do produto e o background)
+=======
+}
+
+popup.init()
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e

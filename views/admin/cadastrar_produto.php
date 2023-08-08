@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
 
@@ -76,6 +77,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
 =======
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/class_produto.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/controllers/inserir_produto_controller.php";
 
@@ -141,4 +144,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/controllers/inserir_produ
 </body>
 </html>
 
+<<<<<<< HEAD
 >>>>>>> d88c576 (add controller a  pag de cadastro de produto e a classe produto)
+=======
+>>>>>>> f3c0c8289706ce42ff25977938db1196177c401e
