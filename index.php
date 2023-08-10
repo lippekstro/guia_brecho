@@ -1,7 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
-<header class="header_back02" style="background-image: url(/guia_brecho/img/back02.png);" >
 
     
     <!-- CARROSSEL  ------------->
