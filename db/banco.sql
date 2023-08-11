@@ -26,7 +26,7 @@ CREATE TABLE produto (
     descricao TEXT NOT NULL, 
     categoria ENUM('vestimentas', 'calcados', 'acessorios') NOT NULL, 
     preco FLOAT NOT NULL, 
-    estoque BOOL DEFAULT 1, 
+    estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
     id_loja int NOT NULL,
     FOREIGN KEY (id_loja) REFERENCES loja(id_loja)
