@@ -71,9 +71,12 @@ isset($_POST['paga_pix']) && isset($_POST['paga_ted'])
 
 
     $brecho = new Brecho();
-    $brecho->cadastrarBrecho($pessoa_nome, $pessoa_sobrenome, $pessoa_email, $pessoa_password,$brecho_nome,$brecho_cnpj,$brecho_cidade,$brecho_endereco,$brecho_numero,$brecho_bairro,$brecho_img,
-    $brecho_rede, $brecho_contato, $brecho_paga_pix, $brecho_paga_ted,$brecho_paga_boleto,$brecho_paga_dinheiro, $brecho_faixa_preco_ini, $brecho_faixa_preco_fim,$brecho_hora,$brecho_entrega,
-    $brecho_story,$brecho_termo);
+    $brecho->cadastrarBrecho(
+        $pessoa_nome, $pessoa_sobrenome, $pessoa_email, $pessoa_password,
+        $brecho_nome,$brecho_cnpj,$brecho_cidade,$brecho_endereco,$brecho_numero,
+        $brecho_bairro,$brecho_img,$brecho_rede, $brecho_contato, $brecho_paga_pix,
+        $brecho_paga_ted,$brecho_paga_boleto,$brecho_paga_dinheiro, $brecho_faixa_preco_ini,
+        $brecho_faixa_preco_fim,$brecho_hora,$brecho_entrega,$brecho_story,$brecho_termo);
     
 }
 
