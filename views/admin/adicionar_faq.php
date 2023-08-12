@@ -33,7 +33,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cabecalho.php';
 
 <section class="d-flex align-items-center py-4">
     <div class="form-signin col-8 col-lg-4 m-auto">
-        <form action="/guia_brecho/controllers/add_faq_controller.php" method="POST">
+        <form action="/guia_brecho/controllers/faq_add_controller.php" method="POST">
             <h1 class="h3 mb-3 fw-normal">Cadastrar FAQ</h1>
 
             <div class="input-group my-3">

@@ -1,7 +1,8 @@
-<?php 
+<?php
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
 
-class Produto {
+class Produto
+{
     public $id_produto;
     public $nome_produto;
     public $descricao;
@@ -86,8 +87,26 @@ class Produto {
         $stmt->execute();
     }
 
-    public static function listarMinhaLoja($id){
-        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_loja = :id";
+    public static function listarProdutosMinhaLoja($id)
+    {
+        $query = "SELECT p.*
+        FROM produto p
+        JOIN loja l ON p.id_loja = l.id_loja
+        WHERE l.id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+
+    public static function listarSomenteEstocados($id)
+    {
+        $query = "SELECT DISTINCT p.*
+        FROM produto p
+        JOIN loja l ON p.id_loja = :id
+        WHERE p.estoque = 1;";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id', $id);

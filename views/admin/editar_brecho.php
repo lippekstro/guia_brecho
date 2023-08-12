@@ -41,7 +41,7 @@ try {
             <hr class="my-4">
 
             <button class="w-100 btn btn-primary btn-lg" type="submit">Atualizar</button>
-            <a href="/guia_brecho/controllers/brecho_del_controller?id=<?= $brecho['id_loja'] ?>" class="btn btn-danger my-2">Excluir Brecho</a>
+            <a href="/guia_brecho/controllers/brecho_del_controller.php?id=<?= $brecho['id_loja'] ?>" class="btn btn-danger my-2">Excluir Brecho</a>
         </div>
     </form>
 </section>

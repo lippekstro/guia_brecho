@@ -17,7 +17,7 @@ CREATE TABLE loja (
     rede_social VARCHAR(255) NOT NULL,
     logo_loja LONGBLOB,
     id_usuario int NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
 CREATE TABLE produto (
@@ -29,7 +29,7 @@ CREATE TABLE produto (
     estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
     id_loja int NOT NULL,
-    FOREIGN KEY (id_loja) REFERENCES loja(id_loja)
+    FOREIGN KEY (id_loja) REFERENCES loja(id_loja) ON DELETE CASCADE
 );
 
 CREATE TABLE evento (

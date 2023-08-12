@@ -86,7 +86,18 @@ class Loja {
 
     public static function getMeuBrecho($id)
     {
-        $query = "SELECT l.* FROM loja l JOIN usuario u ON l.id_usuario = :id";
+        $query = "SELECT l.*, u.nome FROM loja l JOIN usuario u ON l.id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetch();
+        return $lista;
+    }
+
+    public static function getBrecho($id)
+    {
+        $query = "SELECT l.*, u.nome FROM loja l JOIN usuario u ON l.id_loja = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':id', $id);

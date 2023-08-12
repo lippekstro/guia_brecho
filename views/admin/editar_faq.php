@@ -40,7 +40,7 @@ try {
 
 <section class="d-flex align-items-center py-4">
     <div class="form-signin col-8 col-lg-4 m-auto">
-        <form action="/guia_brecho/controllers/edit_faq_controller.php" method="POST">
+        <form action="/guia_brecho/controllers/faq_edit_controller.php" method="POST">
             <h1 class="h3 mb-3 fw-normal">Editar FAQ</h1>
 
             <input type="hidden" class="form-control" id="floatingInput" name="id" value="<?= $faq->id_faq ?>">

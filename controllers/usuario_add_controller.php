@@ -35,7 +35,7 @@ try {
     $user->senha = $senha;
     $user->criar();
 
-    header("Location: /guia_brecho/views/admin/perfil_admin.php");
+    header("Location: /guia_brecho/views/login.php");
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

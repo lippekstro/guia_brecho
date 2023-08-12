@@ -28,7 +28,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
 <section class="form-signin col-11 col-lg-6 mx-auto my-3">
     <h4 class="mb-3">Cadastro</h4>
-    <form action="/guia_brecho/controllers/add_usuario_controller.php" method="POST">
+    <form action="/guia_brecho/controllers/usuario_add_controller.php" method="POST">
         <div class="row g-3">
             <div class="col-12">
                 <label for="nome" class="form-label">Nome</label>

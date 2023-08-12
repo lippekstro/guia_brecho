@@ -4,7 +4,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
 <section class="form-signin col-11 col-lg-6 mx-auto my-3">
     <h4 class="mb-3">Cadastro Brechó</h4>
-    <form action="/guia_brecho/controllers/add_brecho_controller.php" method="POST" enctype="multipart/form-data">
+    <form action="/guia_brecho/controllers/brecho_add_controller.php" method="POST" enctype="multipart/form-data">
         <div class="row g-3">
             <div class="col-12">
                 <label for="nome" class="form-label">Nome</label>
@@ -25,7 +25,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <label for="rede" class="form-label">Rede Social</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="rede" placeholder="" required="">
+                    <input type="text" class="form-control" id="rede" name="rede" placeholder="" required="">
                 </div>
             </div>
 

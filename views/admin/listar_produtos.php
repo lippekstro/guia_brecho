@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/produto.php';
 } */
 
 try {
-    $produtos = Produto::listarMinhaLoja($_SESSION['usuario']['id']);
+    $produtos = Produto::listarProdutosMinhaLoja($_SESSION['usuario']['id']);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

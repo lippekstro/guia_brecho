@@ -57,7 +57,7 @@ try {
                     <td class="col-2"><?= $f['faq_pergunta'] ?></td>
                     <td class="col-2"><?= $f['faq_resposta'] ?></td>
                     <td class="col-2"><a href="/guia_brecho/views/admin/editar_faq.php?id=<?= $f['id_faq'] ?>">Editar</a></td>
-                    <td class="col-2"><a href="/guia_brecho/controllers/delete_faq_controller.php?id=<?= $f['id_faq'] ?>">Deletar</a></td>
+                    <td class="col-2"><a href="/guia_brecho/controllers/faq_del_controller.php?id=<?= $f['id_faq'] ?>">Deletar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
