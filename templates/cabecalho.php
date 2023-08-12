@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,12 +17,14 @@
     <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script>
     <!-- css personalizado geral -->
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
-    <!-- css swiper -->
+
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="/guia_brecho/css/swiper-bundle.min.css">
-    <!-- js personalizado -->
-    <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="/guia_brecho/js/swiper-bundle.min.js" defer></script>
 
-
+    <!-- JavaScript -->
+    <script src="/guia_brecho/js/script.js" defer></script>
 </head>
 
 <body>
@@ -38,7 +43,12 @@
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
+
+                        <?php if (!isset($_SESSION['usuario'])) : ?>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
+                        <?php else : ?>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/perfil_admin.php">Perfil</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

@@ -85,4 +85,14 @@ class Produto {
         $stmt->bindValue(':id', $this->id_produto);
         $stmt->execute();
     }
+
+    public static function listarMinhaLoja($id){
+        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_loja = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 }

@@ -64,7 +64,7 @@ class Loja {
 
     public function editar()
     {
-        $query = "UPDATE loja SET nome = :nome, endereco = :endereco, telefone = :tel, rede_social = :rede WHERE id_loja = :id";
+        $query = "UPDATE loja SET nome_loja = :nome, endereco = :endereco, telefone = :tel, rede_social = :rede WHERE id_loja = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome_loja);
@@ -82,5 +82,16 @@ class Loja {
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_loja', $this->id_loja);
         $stmt->execute();
+    }
+
+    public static function getMeuBrecho($id)
+    {
+        $query = "SELECT l.* FROM loja l JOIN usuario u ON l.id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetch();
+        return $lista;
     }
 }
