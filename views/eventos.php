@@ -4,10 +4,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/evento.php";
 
 try {
   $eventos = Evento::listar();
+  $proximos = Evento::listarProximos();
 } catch (PDOException $e) {
   echo $e->getMessage();
 }
 
+$alternar = false;
+$primeiro = true;
 ?>
 
 <?php if (count($eventos) > 0) : ?>
@@ -24,17 +27,20 @@ try {
       <!-- inicio do carrossel -->
       <div class="carousel-inner">
         <!-- slide do carrossel -->
-        <div class="carousel-item active">
-          <img src="/guia_brecho/img/dummy.png" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        </div>
+        <?php foreach ($proximos as $p) : ?>
+          <div class="carousel-item <?= $primeiro ? 'active' : "" ?>">
+            <img src="data:image;charset=utf8;base64,<?= base64_encode($p['imagem_evento']); ?>" alt="" class="bd-placeholder-img " width="100%" focusable="false">
+          </div>
+          <?php $primeiro = false ?>
+        <?php endforeach; ?>
         <!-- slide do carrossel -->
-        <div class="carousel-item ">
+        <!-- <div class="carousel-item ">
           <img src="/guia_brecho/img/dummy.png" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
         </div>
 
         <div class="carousel-item">
           <img src="/guia_brecho/img/dummy.png" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-        </div>
+        </div> -->
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -50,30 +56,19 @@ try {
 
     <!-- divs de views Eventos -->
     <div class="container marketing mt-3">
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">Evento 1 <span class="text-body-secondary">local&hora</span></h2>
-          <p class="lead">descriçao Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quos neque provident repudiandae suscipit facilis dignissimos quis nihil impedit. Quasi officiis soluta velit saepe? In illo necessitatibus culpa explicabo laboriosam!</p>
+      <?php foreach ($eventos as $e) : ?>
+        <div class="row featurette">
+          <div class="col-md-7 <?= $alternar ? 'order-lg-2' : "" ?>">
+            <h2 class="featurette-heading fw-normal lh-1"><?= $e['nome_evento'] ?> <span class="text-body-secondary"><?= $e['local_evento'] ?> <?= $e['horario'] ?></span></h2>
+            <p class="lead"><?= $e['descricao_evento'] ?></p>
+          </div>
+          <div class="col-md-5 <?= $alternar ? 'order-lg-1' : "" ?>">
+            <img src="data:image;charset=utf8;base64,<?= base64_encode($e['imagem_evento']); ?>" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" focusable="false">
+          </div>
         </div>
-        <div class="col-md-5">
-          <img src="/guia_brecho/img/dummy.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" focusable="false">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Evento 2 <span class="text-body-secondary">local&hora</span></h2>
-          <p class="lead">descriçao evento 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic omnis neque, harum corporis maiores? Voluptatum quis repellat suscipit eius, voluptatem repudiandae possimus voluptates sunt temporibus, consectetur exercitationem sit sequi.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <img src="/guia_brecho/img/dummy.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" focusable="false">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
+        <hr class="featurette-divider">
+        <?php $alternar = !$alternar ?>
+      <?php endforeach; ?>
     </div>
   </section>
 <?php else : ?>

@@ -97,7 +97,7 @@ class Usuario
             $_SESSION['usuario']['id'] = $registro['id_usuario'];
             $_SESSION['usuario']['nome'] = $registro['nome'];
             $_SESSION['usuario']['email'] = $registro['email'];
-            $_SESSION['usuario']['nv_acesso'] = $registro['nv_acesso'];
+            $_SESSION['usuario']['nv_acesso'] = $registro['nivel_acesso'];
             $_SESSION['usuario']['inicio'] = time();
             $_SESSION['usuario']['expira'] = 900;
 

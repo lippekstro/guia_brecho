@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if (isset($_COOKIE['msg'])) {
     setcookie('msg', '', time() - 3600, '/guia_brecho/');
     setcookie('tipo', '', time() - 3600, '/guia_brecho/');

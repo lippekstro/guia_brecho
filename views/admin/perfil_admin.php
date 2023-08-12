@@ -27,6 +27,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/usuario.php";
     <?php endif; ?>
 </section>
 
+<?php if($_SESSION['usuario']['nv_acesso'] == 1) : ?>
 <section class="m-3">
     <?php if (!Usuario::criouBrecho($_SESSION['usuario']['id'])) : ?>
         <a href="/guia_brecho/views/admin/cadastro_brecho.php" class="btn btn-primary my-2">Criar Brecho</a>
@@ -36,6 +37,17 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/usuario.php";
     <?php endif; ?>
     <a href="/guia_brecho/controllers/logout_controller.php" class="btn btn-primary my-2">Sair</a>
 </section>
+<?php endif; ?>
+
+<?php if($_SESSION['usuario']['nv_acesso'] == 2) : ?>
+<section class="m-3">
+    <a href="/guia_brecho/views/admin/listar_brechos.php" class="btn btn-primary my-2">Listar Brechos</a>
+    <a href="/guia_brecho/views/admin/listar_produtos.php" class="btn btn-primary my-2">Listar Produtos</a>
+    <a href="/guia_brecho/views/admin/listar_eventos.php" class="btn btn-primary my-2">Listar Eventos</a>
+    <a href="/guia_brecho/views/admin/listar_faqs.php" class="btn btn-primary my-2">Listar Faqs</a>
+    <a href="/guia_brecho/controllers/logout_controller.php" class="btn btn-primary my-2">Sair</a>
+</section>
+<?php endif; ?>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";

@@ -5,7 +5,7 @@ if (isset($_COOKIE['msg'])) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cabecalho.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/produto.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/loja.php';
 
 /* if (!isset($_SESSION['admin'])) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
@@ -14,19 +14,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/produto.php';
     exit();
 } */
 
-if ($_SESSION['usuario']['nv_acesso'] == 1) {
-    try {
-        $produtos = Produto::listarProdutosMinhaLoja($_SESSION['usuario']['id']);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-} else if ($_SESSION['usuario']['nv_acesso'] == 2) {
-    try {
-        $produtos = Produto::listar();
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
+
+try {
+    $brechos = Loja::listar();
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
+
 
 
 ?>
@@ -54,23 +48,16 @@ if ($_SESSION['usuario']['nv_acesso'] == 1) {
         <thead>
             <tr>
                 <th scope="col">Nome</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Em Estoque?</th>
+                <th scope="col">Dono</th>
                 <th scope="col" colspan="2"></th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($produtos as $p) : ?>
+            <?php foreach ($brechos as $p) : ?>
                 <tr>
-                    <td class="col-2"><?= $p['nome_produto'] ?></td>
-                    <td class="col-2"><?= $p['categoria'] ?></td>
-                    <td class="col-2"><?= $p['preco'] ?></td>
-                    <td class="col-2"><?= $p['estoque'] == 1 ? 'Sim' : 'Não' ?></td>
-                    <?php if (!$_SESSION['usuario']['nv_acesso'] == 2) : ?>
-                        <td class="col-2"><a href="/guia_brecho/views/admin/editar_produto.php?id=<?= $p['id_produto'] ?>">Editar</a></td>
-                    <?php endif; ?>
-                    <td class="col-2"><a href="/guia_brecho/controllers/produto_delete_controller.php?id=<?= $f['id_produto'] ?>">Deletar</a></td>
+                    <td class="col-2"><?= $p['nome_loja'] ?></td>
+                    <td class="col-2"><?= $p['nome'] ?></td>
+                    <td class="col-2"><a href="/guia_brecho/controllers/brecho_del_controller.php?id=<?= $f['id_loja'] ?>">Deletar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
