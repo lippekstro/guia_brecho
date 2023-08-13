@@ -26,7 +26,7 @@ session_start();
                                 <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Minha Lojas</a>
                                 <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Meus Eventos</a>
                                 <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
-                                <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Sair</a>
+                                <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
                             </div>
                         </div>
                     </div>
