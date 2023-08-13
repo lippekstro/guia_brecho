@@ -161,7 +161,7 @@ class Brecho
 
                 try {
                     $stmt_loja->execute();
-                    header("Location: \guia_brecho\index.php"); //redirecionando para a pagina principal
+                    header("Location: \guia_brecho\views\admin\login.php"); //redirecionando para a pagina principal
                 } catch (PDOException $e) 
                     {echo "Erro na para a tabela da loja: " . $e->getMessage();}
                 
