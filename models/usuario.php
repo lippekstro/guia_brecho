@@ -8,7 +8,7 @@ class Usuario
 
     public static function logar($email, $senha)
     {
-        $query = "SELECT id_usuario, email, senha FROM usuario WHERE email = :email";
+        $query = "SELECT id_usuario, nome, nivel_acesso, email, senha FROM usuario WHERE email = :email";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt ->bindValue(":email", $email);
@@ -20,8 +20,8 @@ class Usuario
         if ($senha === $registro['senha']) {
             session_start();
             $_SESSION['id_usuario'] = $registro['id_usuario'];
-            $_SESSION['usuario']['nome'] = $registro['nome_usuario'];
-            $_SESSION['usuario']['nv_acesso'] = $registro['nv_acesso'];
+            $_SESSION['usuario']['nome'] = $registro['nome'];
+            $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
             
             if (isset($_COOKIE['erro'])) {
                 setcookie('erro', '', time() - 3600, '/');
