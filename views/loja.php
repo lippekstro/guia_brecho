@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 ?>
 <h1 class="centrotitulo"> Encontre os melhores brechós de São Luís aqui ⇩ </h1>
 <div class="slide-container swiper">
