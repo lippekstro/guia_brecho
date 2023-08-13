@@ -13,5 +13,4 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
    $usuario = new Usuario();
    $usuario->logar($email, $senha);
     
-   var_dump($_POST);
 }
