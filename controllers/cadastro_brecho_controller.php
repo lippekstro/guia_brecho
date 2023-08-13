@@ -5,7 +5,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "\guia_brecho\models\brecho.php";
 
 
 //Dados Pessoas do Dono do Brecho:
-//Dados Pessoais
 if(isset($_POST['nome']) && isset($_POST['sobrenome'])
 && isset($_POST['email']) && isset($_POST['password'])
 &&
