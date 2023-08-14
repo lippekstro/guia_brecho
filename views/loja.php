@@ -13,7 +13,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                     </div>
                 </div>
 
-
                         <div class="card-content">
                             <h2 class="name">Brechaos</h2>
                             <p class="description"> 
