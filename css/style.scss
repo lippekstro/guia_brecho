@@ -584,29 +584,31 @@ form {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all 1s;
+  transition: all 500ms;
   width: 50px;
   height: 50px;
   background: white;
   box-sizing: border-box;
   border-radius: 25px;
-  /* border: 4px solid #fb732c; */
+  
   padding: 5px;
 }
 
-input {
+#search {
   position: absolute;
-  top: -2;
+  bottom: 6%;
   left: 0;
   width: 100%;
-  height: 48px;
+  height: 49px;
   line-height: 30px;
   outline: 0;
   border: 0;
   display: none;
   font-size: 1em;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 0 20px;
+  background-color: #fb732c;
+
 }
 
 .fa {
@@ -621,7 +623,7 @@ input {
   color: #fb732c;
   text-align: center;
   font-size: 1.2em;
-  transition: all 1s;
+  transition: all 500ms;
   line-height: 1.5 !important;
 }
 
@@ -629,11 +631,11 @@ form:hover,
 form:valid {
   width: 400px;
   cursor: pointer;
-  /* border: 3px solid #fb732c; */
+  
 }
 
-form:hover input,
-form:valid input {
+form:hover #search,
+form:valid #search {
   display: block;
 }
 
@@ -648,7 +650,7 @@ form:valid .fa {
   line-height: 1.5;
 }
 
-a {
+/* a {
   display: none;
   position: absolute;
   top: 70px;
@@ -663,7 +665,7 @@ a {
 
 form:valid a {
   display: block;
-}
+} */
 
 @media (max-width: 820px) {
   .container_solid {

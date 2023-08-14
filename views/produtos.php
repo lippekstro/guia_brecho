@@ -43,7 +43,7 @@ $produtos = array(
     <form action="">
       <input type="search" id="search" required>
       <i class="fa fa-search"></i>
-      <a href="javascript:void(0)" id="clear-btn">Limpar</a>
+      
     </form>
   </div>
   <div class="titulo">
