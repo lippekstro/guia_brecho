@@ -21,12 +21,17 @@
     <script src="/guia_brecho/js/swiper-bundle.min.js" defer></script>
     <!-- js personalizado -->
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
+<<<<<<< HEAD
     <!-- JavaScript -->
     <script src="/guia_brecho/js/script.js" defer></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <script src="/guia_brecho/js/script-produtos.js" defer></script>
+=======
+    <!-- bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+>>>>>>> 6774dab (buscar e modal atualizado)
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">

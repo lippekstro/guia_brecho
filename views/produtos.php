@@ -23,12 +23,20 @@ $listaBrecho = Brecho::listarNomeBrecho();
     
   <?php else : ?>
 
+<<<<<<< HEAD
     <div class="search">
       <form action="" class="form-search">
         <input type="search" name="pesquisa" id="search" required>
         <i class="fa fa-search"></i>
       </form>
     </div>
+=======
+    <form action="" class="form-search">
+      <input type="search" id="search" required>
+      <i class="fa fa-search"></i>
+      
+    </form>
+>>>>>>> 6774dab (buscar e modal atualizado)
   </div>
 
   <?php endif; ?>
@@ -40,11 +48,40 @@ $listaBrecho = Brecho::listarNomeBrecho();
   <ul class="gallery">
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
+<<<<<<< HEAD
     <?= include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>
 
   </ul>
 
   <!------------------------------------------ aqui paginaçao ------------------------------------------------------------->
+=======
+        </div>
+      </li>
+      <div class="modal-wrapper" id="modal">
+      <div class="modal-body">
+        <div class="img-loja">
+          <img src="<?= $lista["img-loja"] ?>" alt="">
+        </div>
+        <div class="modal-header">
+          <h2 class="heading"><?= $lista["brecho"] ?></h2>
+          <a href="#!" role="button" class="close" aria-label="close this modal">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+            </svg>
+          </a>
+        </div>
+        <ul>
+          <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
+          <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
+          <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
+        </ul>
+
+      </div>
+      <a href="#!" class="outside-trigger"></a>
+    </div>
+    <?php endforeach; ?>
+  </ul>
+>>>>>>> 6774dab (buscar e modal atualizado)
 
   <div class="cont-pag">
     <ul class="pagination modal-3">
