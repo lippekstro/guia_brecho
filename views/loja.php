@@ -22,7 +22,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                                 • Compre via link ou direct ⬇️
                                 linktr.ee/brechaos1</p>
 
-                            <button class="button">Saiba Mais</button>
+                                <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card swiper-slide">
@@ -45,7 +45,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             ✿ Atualização nos Storys ✨
                             ✿ não fazemos trocas/devolução/cancelamentos </p>
 
-                            <button class="button">Saiba Mais</button>
+                            <a href="brechosaibamais.php" class="button">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card swiper-slide">
@@ -196,7 +196,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                     • Desde 2020.
                     • Entrega moto boy /terminal cohab sabados a tarde.
                     </p>
-                    <a href="brechosaibamais.php" class="button">Saiba Mais</a>
+                    <a href="guia_brecho/views/brechosaibamais.php?id=<?= $loja['id_loja']?>" class="button">Saiba Mais</a>
                 </div>
             </div>
         </div>
