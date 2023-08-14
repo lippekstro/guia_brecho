@@ -69,7 +69,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                             <img src="img/acessorios.png" alt="">
                             <div class="overlay">
                                 <h3>Acessórios</h3>
-                                <p>acreditamos que os detalhes fazem toda a diferença, e nossos acessórios únicos irão adicionar um toque especial a qualquer look.</p>
+                                <p>Acreditamos que os detalhes fazem toda a diferença, e nossos acessórios únicos irão adicionar um toque especial a qualquer look.</p>
                                 <a href="#" >VEJA MAIS</a>
                             </div>
                         </div>
@@ -185,49 +185,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         </div>
       </section>
 
-      <!-- nossos serviços -->
-      <section class="services section-padding serviços_cor" id="services">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="section-header text-center pb-5 text-orange">
-                          <h2 class="h2_sevirço" >Sobre os nossos serviços:</h2>
-                         
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-black text-center bg-white pb-2">
-                        <div class="card-body">
-                            <i class="bi bi-laptop"></i>
-                            <h3 class="card-title">Comunidade Engajada</h3>
-                            <p class="lead">O que torna nosso site brechó verdadeiramente especial é a comunidade engajada que construímos ao longo do tempo. Nossos clientes não são apenas compradores, são membros valiosos da nossa família fashion sustentável</p>
-                        </div>
-                    </div>
-                </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                  <div class="card text-black text-center bg-white pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-journal"></i>
-                              <h3 class="card-title">Sustentabilidade</h3>
-                              <p class="lead">Uma das qualidades mais distintas e valorizadas do nosso site brechó é o compromisso inabalável com a sustentabilidade. Acreditamos que a moda pode ser bonita e responsável ao mesmo tempo, e por isso, priorizamos o conceito de reutilização e reciclagem em tudo o que fazemos.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                  <div class="card text-black text-center bg-white pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-intersect"></i>
-                              <h3 class="card-title">Autenticidade</h3>
-                              <p class="lead">No Guia brechó, a autenticidade é uma das características que nos define. Cada peça em nosso acervo tem uma história única e carrega consigo um charme que apenas itens vintage podem proporcionar.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <!-- services section Ends -->
+      
 
           <!-- quem somos -->
           <section id="about" class="about section-padding">
@@ -279,11 +237,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                   <div class="collection-item">
                     <div class="products-thumb">
                       <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
-                    </div>g
+                    </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-                      <div class="categories">casual collection</div>
-                      <h3 class="item-title">street wear.</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                      <div class="categories">Faça sua coleção</div>
+                      <h3 class="item-title">Estilo pessoal.</h3>
+                      <p> Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. </p>
                       <div class="btn-wrap">
                         <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
                         </a>
@@ -297,10 +255,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                       <img src="img/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
-                      <div class="categories">Basic Collection</div>
-                      <h3 class="item-title">Basic shoes.</h3>
+                      <div class="categories"></div>
+                      <h3 class="item-title">Conforto em cada passo.</h3>
                       <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                        <a href="shop.html" class="d-flex align-items-center">Veja Mais<i class="icon icon-arrow-io"></i>
                         </a>
                       </div>
                     </div>
@@ -310,8 +268,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                       <img src="img/collection-item3.jpg" alt="collection item" class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
-                      <div class="categories">Best Selling Product</div>
-                      <h3 class="item-title">woolen hat.</h3>
+                      <div class="categories">Descubra nossas coleções.</div>
+                      <h3 class="item-title">Arte em Movimento.</h3>
                       <div class="btn-wrap">
                         <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
                         </a>
@@ -334,9 +292,9 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                     <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-                    <div class="categories">Denim collection</div>
-                    <h3 class="item-title">The casual selection.</h3>
-                    <p>Vel non viverra ligula odio ornare turpis mauris. Odio aliquam, tincidunt ut vitae elit risus. Tempor egestas condimentum et ac rutrum dui, odio.</p>
+                    <div class="categories">Descubra Tesouros Únicos:</div>
+                    <h3 class="item-title">Um universo da moda.</h3>
+                    <p>Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. Dos clássicos atemporais às peças mais ousadas, você encontrará algo que se encaixe perfeitamente no seu estilo pessoal.</p>
                     <div class="btn-wrap">
                       <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
                       </a>
@@ -422,6 +380,51 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             </div>
           </section>
         <!-- FIM EVENTOS ---------------------------------- -->
+
+
+        <!-- nossos serviços -->
+      <section class="services section-padding serviços_cor" id="services">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="section-header text-center pb-5 text-orange">
+                          <h2 class="h2_sevirço" >Sobre os nossos serviços:</h2>
+                         
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-black text-center bg-white pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="card-title">Comunidade Engajada</h3>
+                            <p class="lead">O que torna nosso site brechó verdadeiramente especial é a comunidade engajada que construímos ao longo do tempo. Nossos clientes não são apenas compradores, são membros valiosos da nossa família fashion sustentável</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                  <div class="card text-black text-center bg-white pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-journal"></i>
+                              <h3 class="card-title">Sustentabilidade</h3>
+                              <p class="lead">Uma das qualidades mais distintas e valorizadas do nosso site brechó é o compromisso inabalável com a sustentabilidade. Acreditamos que a moda pode ser bonita e responsável ao mesmo tempo, e por isso, priorizamos o conceito de reutilização e reciclagem em tudo o que fazemos.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                  <div class="card text-black text-center bg-white pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-intersect"></i>
+                              <h3 class="card-title">Autenticidade</h3>
+                              <p class="lead">No Guia brechó, a autenticidade é uma das características que nos define. Cada peça em nosso acervo tem uma história única e carrega consigo um charme que apenas itens vintage podem proporcionar.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- FIM DE SERVIÇOS-->
    
  
 
