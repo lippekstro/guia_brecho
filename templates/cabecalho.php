@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="/guia_brecho/css/swiper-bundle.min.css">
     <!-- js personalizado -->
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
-
-    <script src="/guia_brecho/js/script-produtos.js" defer></script>
+    <!-- bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">

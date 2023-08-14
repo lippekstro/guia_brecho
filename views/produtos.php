@@ -40,7 +40,7 @@ $produtos = array(
   <div class="search">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <form action="">
+    <form action="" class="form-search">
       <input type="search" id="search" required>
       <i class="fa fa-search"></i>
       
@@ -66,13 +66,7 @@ $produtos = array(
 
         </div>
       </li>
-
-    <?php endforeach; ?>
-  </ul>
-
-  <!-- Modal -->
-  <?php foreach ($produtos as $lista) : ?>
-    <div class="modal-wrapper" id="modal">
+      <div class="modal-wrapper" id="modal">
       <div class="modal-body">
         <div class="img-loja">
           <img src="<?= $lista["img-loja"] ?>" alt="">
@@ -86,17 +80,16 @@ $produtos = array(
           </a>
         </div>
         <ul>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>Whatsapp</li>
+          <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
+          <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
+          <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
         </ul>
 
       </div>
       <a href="#!" class="outside-trigger"></a>
     </div>
-  <?php endforeach; ?>
-
-  <!-- paginacao -->
+    <?php endforeach; ?>
+  </ul>
 
   <div class="cont-pag">
     <ul class="pagination modal-3">
