@@ -1,19 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
-<header class="header_back02" style="background-image: url(/guia_brecho/img/back02.png);" >
-
-</div>
-
-      <section class="banner">
-        <div class="banner-text">
-          <h1> GUIA BRECHÓ</h1>
-          <p>o melhor site brechó de São luís</p>
-          <!--  <a href="home.html" class="btn">Login</a>
- -->
-        </div>
-      </section>
-    </div>
 
     
     <!-- CARROSSEL  ------------->
@@ -22,6 +9,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <link href="/guia_brecho/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/guia_brecho/css/indexhome.css">
+    <link rel="stylesheet" href="/guia_brecho/css/vendor.css">
 <body>
     
              
@@ -283,13 +271,162 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
       </section>
       <!-- about section Ends -->
    
+    <!-- COLEÇÃO ---------------- -->
+    <section id="latest-collection">
+            <div class="container">
+              <div class="product-collection row">
+                <div class="col-lg-7 col-md-12 left-content">
+                  <div class="collection-item">
+                    <div class="products-thumb">
+                      <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
+                    </div>g
+                    <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                      <div class="categories">casual collection</div>
+                      <h3 class="item-title">street wear.</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                      <div class="btn-wrap">
+                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-md-12 right-content flex-wrap">
+                  <div class="collection-item top-item">
+                    <div class="products-thumb">
+                      <img src="img/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                    </div>
+                    <div class="col-md-6 product-entry">
+                      <div class="categories">Basic Collection</div>
+                      <h3 class="item-title">Basic shoes.</h3>
+                      <div class="btn-wrap">
+                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="collection-item bottom-item">
+                    <div class="products-thumb">
+                      <img src="img/collection-item3.jpg" alt="collection item" class="small-image image-rounded">
+                    </div>
+                    <div class="col-md-6 product-entry">
+                      <div class="categories">Best Selling Product</div>
+                      <h3 class="item-title">woolen hat.</h3>
+                      <div class="btn-wrap">
+                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- FIM COLEÇÃO ---------------- -->
 
+
+        <!--  BANNER ------------------------------ -->
+        <section class="shoppify-section-banner">
+            <div class="container">
+              <div class="product-collection">
+                <div class="left-content collection-item">
+                  <div class="products-thumb">
+                    <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                    <div class="categories">Denim collection</div>
+                    <h3 class="item-title">The casual selection.</h3>
+                    <p>Vel non viverra ligula odio ornare turpis mauris. Odio aliquam, tincidunt ut vitae elit risus. Tempor egestas condimentum et ac rutrum dui, odio.</p>
+                    <div class="btn-wrap">
+                      <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>        
+            </div>
+          </section>
+        <!-- FIM  BANNER ------------------------------ -->
+
+
+
+        <!-- EVENTOS ---------------------------------- -->
+        <section id="latest-blog" class="padding-large">
+            <div class="container">
+              <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
+                <h2 class="section-title">our Journal</h2>
+                <div class="btn-wrap align-right">
+                  <a href="blog.html" class="d-flex align-items-center">Read All Articles <i class="icon icon icon-arrow-io"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="row d-flex flex-wrap">
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/post-small-image1.jpg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">22</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">top 10 casual look ideas to dress up your kids</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Fashion</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/post-small-image2.jpg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">25</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">Latest trends of wearing street wears supremely</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Trending</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/collection-item3.jpg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">28</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">types of comfortable clothes ideas for women</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Inspiration</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        <!-- FIM EVENTOS ---------------------------------- -->
+   
  
 
 
-    </header>
-
-    </header>
+    
 
     
     
