@@ -1,11 +1,9 @@
-/* function precoRange(val){
-    let display = document.getElementById("display")
-    display.innerHTML = val
+function clearInput() {
 
-} */
-
-
-
-
-
-
+    const input = document.querySelector("#search");
+    input.value = "";
+  }
+  
+  const clearBtn = document.getElementById("clear-btn");
+  clearBtn.addEventListener("click", clearInput());
+  

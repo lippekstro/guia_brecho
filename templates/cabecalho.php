@@ -21,6 +21,8 @@
     <!-- js personalizado -->
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
 
+    <script src="/guia_brecho/js/script-produtos.js" defer></script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
