@@ -162,6 +162,7 @@ class Produto{
 
         if (count($res)== 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
         }else {
             $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
@@ -178,7 +179,11 @@ class Produto{
         return $resultado;
 =======
             $_SESSION["resultado_pesquisa"] = "Nenhum resultado encontrado...";
+=======
+            $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
+>>>>>>> f5581de (algoritmo pesquisa)
         }else {
+            $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
             return $res;
         }
     }
