@@ -1,3 +1,4 @@
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 body {
   background-repeat: no-repeat;
@@ -573,16 +574,4 @@ legend {
 
 .tam_img {
   display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.larg {
-  width: 50%;
-  margin: 8rem;
-  border: 10px;
-}
-
-.aa {
-  margin-left: 100px;
 }

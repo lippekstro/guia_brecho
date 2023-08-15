@@ -43,7 +43,6 @@ CREATE TABLE produto (
     estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
     id_loja int NOT NULL,
-    FOREIGN KEY (id_loja) REFERENCES loja(id_loja)
 );
 
 CREATE TABLE evento (

@@ -8,6 +8,7 @@
     <title>Guia Brechó</title>
     <link rel="shortcut icon" href="/guia_brecho/img/img.png" type="image/x-icon">
 
+
     <!-- css bootstrap -->
     <link rel="stylesheet" href="/guia_brecho/css/bootstrap.css">
     <!-- js boostrap adicionei a propriedade defer para garantir o carregamento so no final -->
@@ -19,6 +20,11 @@
     <!-- js personalizado -->
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+    <link rel="stylesheet" href="/guia_brecho/css/style.css">
+    <link rel="stylesheet" href="/guia_brecho/css/style.scss">
 
 </head>
 
