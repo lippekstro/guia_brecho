@@ -285,7 +285,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
-                        <h2>Our Projects</h2>
+                        <h2>Guia Lojas</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
                     </div>
                 </div>
@@ -297,7 +297,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                           <div class="img-area mb-4">
                               <img src="img/project-1.jpg" class="img-fluid" alt="">
                           </div>
-                            <h3 class="card-title">Building Make</h3>
+                            <h3 class="card-title">Loja 1</h3>
                             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
                             <button class="btn bg-warning text-dark">Learn More</button>
                         </div>
@@ -309,7 +309,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                           <div class="img-area mb-4">
                               <img src="img/project-2.jpg" class="img-fluid" alt="">
                           </div>
-                            <h3 class="card-title">Building Make</h3>
+                            <h3 class="card-title">loja 2</h3>
                             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
                             <button class="btn bg-warning text-dark">learn More</button>
                         </div>
@@ -321,7 +321,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                           <div class="img-area mb-4">
                               <img src="img/project-3.jpg" class="img-fluid" alt="">
                           </div>
-                            <h3 class="card-title">Building Make</h3>
+                            <h3 class="card-title">loja 3</h3>
                             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
                             <button class="btn bg-warning text-dark">Learn More</button>
                         </div>
