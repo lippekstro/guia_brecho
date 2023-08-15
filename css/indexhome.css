@@ -12,7 +12,7 @@ background: #f1fbff;
 padding: 100px 0;
 }
 .carousel-item {
-height: 100vh;
+height: 91vh;
 min-height: 300px;
 }
 .carousel-caption {
@@ -292,6 +292,9 @@ img.brand-image {
 
 /*----- Latest Collection Section
 --------------------------------------------------------------*/
+#latest-collection{
+    padding-top: 80px;
+}
 .product-collection .collection-item {
     position: relative;
     margin-bottom: 20px;
@@ -357,6 +360,7 @@ img.brand-image {
 --------------------------------------------------------------*/
 .shoppify-section-banner img{
 	object-position: top;
+    padding-top: 80px;
   }
   @media screen and (max-width: 1199px) {
 	.shoppify-section-banner img {
@@ -496,9 +500,56 @@ a.blog-categories:hover{
       font-size: 1.5em;
   }
 }
-.padding-large {
-	padding-top: 7em;
-	padding-bottom: 7em;
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-xsmall {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .padding-small {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .padding-medium {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  .padding-large {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+  .padding-xlarge {
+    padding-top: 9.5em;
+    padding-bottom: 9.5em;
+  }
+  .padding-2xlarge {
+    padding-top: 15em;
+    padding-bottom: 15em;
+  }
+
+  /* aling ----------- */
+  
+  .align-left {
+    float: left;
+    text-align: left;
+  }
+  .align-right {
+    float: right;
+    text-align: right;
+  }
+  .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  /**::after,*/
+  .container::after,
+  .row::after,
+  .clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
   }
 /*--- Section Title
 -----------------------------------------------*/
@@ -521,3 +572,128 @@ button, input, select, textarea {
     width: 100%;
     height: 100vh;
     object-fit: cover;}
+
+.text_banner_color{
+    color:#fff;
+}
+.text_banner_color1{
+    color:#fb732c;
+}
+
+/* -Zoom Effect
+------------------------------------------*/
+.zoom-effect {
+    position: relative;
+    overflow: hidden;
+}
+.zoom-effect img {
+    max-width: 100%;
+    -webkit-transition: 0.6s ease-out;
+    -moz-transition: 0.6s ease-out;
+    transition: 0.6s ease-out;
+}
+.zoom-effect:hover img {
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+.zoom-effect:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    z-index: 2;
+    opacity: 0;
+    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+.zoom-effect:hover:before {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*button----------------------  */
+.btn-56,
+.btn-56 *,
+.btn-56 :after,
+.btn-56 :before,
+.btn-56:after,
+.btn-56:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-56 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color:#fb732c;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 0.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-56:disabled {
+  cursor: default;
+}
+
+.btn-56:-moz-focusring {
+  outline: auto;
+}
+
+.btn-56 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-56 [hidden] {
+  display: none;
+}
+
+.btn-56 {
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-56:hover {
+  -webkit-animation: pulse 0.5s;
+  animation: pulse 0.6s;
+  box-shadow: 0 0 0 0.5em transparent;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+}
+.text_banner_link{
+    text-decoration: none;
+    color: #f1fbff;
+}
+/*fim button----------------------  */

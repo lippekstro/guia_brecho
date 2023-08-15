@@ -21,27 +21,27 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="img/brecho1.jpg" class="d-block w-100" alt="...">
+            <img src="img/1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Bem-vindo ao nosso mundo de produtos de brechó cuidadosamente selecionados! Aqui, você encontrará uma coleção única de peças que vão desde roupas e calçados até acessórios, todos em ótimo estado e prontos para uma nova vida com você.</p>
-                              <p><a href="#" class="btn btn-warning mt-3 butao_nav">cadastre-se</a></p>
+                              <p><a href="/guia_brecho/views/login.php" class="btn btn-warning mt-3 butao_nav">Cadastre-se</a></p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/brecho2.jpg" class="d-block w-100" alt="...">
+            <img src="img/carrossel1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Explore os Eventos que acontecem na ilha - Moda, Sustentabilidade e Diversão!</p>
-                              <p><a href="#" class="btn btn-warning mt-3 butao_nav">eventos</a></p>
+                              <p><a href="/guia_brecho/views/eventos.php" class="btn btn-warning mt-3 butao_nav">Eventos</a></p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/brecho3.jpg" class="d-block w-100" alt="...">
+            <img src="img/carrossel2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Nossos produtos abrangem uma ampla variedade de estilos, tamanhos e marcas, para atender às necessidades de todos os nossos clientes.</p>
-                              <p><a href="#" class="btn btn-warning mt-3 butao_nav">produtos</a></p>
+                              <p><a href="/guia_brecho/views/produtos.php" class="btn btn-warning mt-3 butao_nav">Produtos</a></p>
             </div>
           </div>
         </div>
@@ -56,6 +56,54 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
       </div>
 
       <!-- FIM CARROSSEL ------------------------ -->
+
+      <!-- COLEÇÃO ---------------- -->
+    <section id="latest-collection">
+            <div class="container">
+              <div class="product-collection row">
+                <div class="col-lg-7 col-md-12 left-content">
+                  <div class="collection-item">
+                    <div class="products-thumb">
+                      <img src="img/5.jpg" alt="collection item" class="large-image image-rounded">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                      <div class="categories text_banner_color">Faça sua coleção</div>
+                      <h3 class="item-title text_banner_color1">Estilo pessoal.</h3>
+                      <p class="text_banner_color"> Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. </p>
+                      <div>
+                      <button class="btn-56">
+                      <a href="/guia_brecho/views/produtos.php" class="text_banner_link">Veja Mais</a>
+                      </button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-md-12 right-content flex-wrap">
+                  <div class="collection-item top-item">
+                    <div class="products-thumb">
+                      <img src="img/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                    </div>
+                    <div class="col-md-6 product-entry">
+                      <div class="categories"></div>
+                      <h3 class="item-title text_banner_color1">Conforto em cada passo.</h3>
+                    </div>
+                  </div>
+                  <div class="collection-item bottom-item">
+                    <div class="products-thumb">
+                      <img src="img/4.jpg" alt="collection item" class="small-image image-rounded">
+                    </div>
+                    <div class="col-md-6 product-entry">
+                      <div class="categories text_banner_color">Descubra nossas coleções.</div>
+                      <h3 class="item-title text_banner_color1">Arte em Movimento.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <!-- FIM COLEÇÃO ---------------- -->
+
+
 
 
 
@@ -96,6 +144,80 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         <!-- fim cards ---------------------- -->
 
 
+              <!-- EVENTOS ---------------------------------- -->
+      <section id="latest-blog" class="padding-large">
+            <div class="container">
+              <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
+                <h2 class="section-title">Eventos</h2>
+                <div class="btn-wrap align-right">
+                  <a href="/guia_brecho/views/eventos.php" class="d-flex align-items-center">Veja Mais<i class="icon icon icon-arrow-io"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="row d-flex flex-wrap">
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/evento1.jpeg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">22</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">top 10 casual look ideas to dress up your kids</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Fashion</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/evento3.jpeg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">25</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">Latest trends of wearing street wears supremely</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Trending</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-md-4 post-item">
+                  <div class="image-holder zoom-effect">
+                    <a href="single-post.html">
+                      <img src="img/evneto2.jpeg" alt="post" class="post-image">
+                    </a>
+                  </div>
+                  <div class="post-content d-flex">
+                    <div class="meta-date">
+                      <div class="meta-day text-primary">28</div>
+                      <div class="meta-month">Aug-2021</div>
+                    </div>
+                    <div class="post-header">
+                      <h3 class="post-title">
+                        <a href="single-post.html">types of comfortable clothes ideas for women</a>
+                      </h3>
+                      <a href="blog.html" class="blog-categories">Inspiration</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        <!-- FIM EVENTOS ---------------------------------- -->
+
+
 
 
               
@@ -124,12 +246,36 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
           <i class="lni lni-trees"></i>
         </div>
         <h6>Eclético</h6>
-        <p>Ao Adentrar no Guia brechó e mergulhar em um universo eclético de moda, onde cores, estilos e épocas se misturam em uma dança harmoniosa de autenticidade e diversidade.</p>
+        <p>Ao adentrar no Guia brechó e mergulhar em um universo eclético de moda, onde cores, estilos e épocas se misturam em uma dança harmoniosa de autenticidade e diversidade.</p>
       </div>
     </div>    
  
   </section>
       <!-- fim flex box  -->
+
+
+      <!--  BANNER ------------------------------ -->
+      <section class="shoppify-section-banner">
+            <div class="container">
+              <div class="product-collection">
+                <div class="left-content collection-item">
+                  <div class="products-thumb">
+                    <img src="img/2.jpg" alt="collection item" class="large-image image-rounded">
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                    <div class="categories text_banner_color">Descubra Tesouros Únicos:</div>
+                    <h3 class="item-title text_banner_color1">Um universo da moda.</h3>
+                    <p class="text_banner_color">Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. Dos clássicos atemporais às peças mais ousadas, você encontrará algo que se encaixe perfeitamente no seu estilo pessoal.</p>
+                    <button class="btn-56">
+                      <a href="/guia_brecho/views/produtos.php" class="text_banner_link">Veja Mais</a>
+                      </button>
+                  </div>
+                </div>
+              </div>        
+            </div>
+          </section>
+        <!-- FIM  BANNER ------------------------------ -->
+
 
 
 
@@ -188,7 +334,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
       
 
           <!-- quem somos -->
-          <section id="about" class="about section-padding">
+         <!--  <section id="about" class="about section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-12">
@@ -205,181 +351,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- fim de quem somos -->
-
-           <!-- about section starts -->
-      <section id="about" class="about section-padding">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-4 col-md-12 col-12">
-                      <div class="about-img">
-                          <img src="img/Prancheta 2.png" alt="" class="img-fluid">
-                      </div>
-                  </div>
-                  <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                      <div class="about-text">
-                            <h2>We Provide the Best Quality <br/> Services Ever</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis. Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p>
-                            <a href="#" class="btn btn-warning">Learn More</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <!-- about section Ends -->
-   
-    <!-- COLEÇÃO ---------------- -->
-    <section id="latest-collection">
-            <div class="container">
-              <div class="product-collection row">
-                <div class="col-lg-7 col-md-12 left-content">
-                  <div class="collection-item">
-                    <div class="products-thumb">
-                      <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-                      <div class="categories">Faça sua coleção</div>
-                      <h3 class="item-title">Estilo pessoal.</h3>
-                      <p> Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. </p>
-                      <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-5 col-md-12 right-content flex-wrap">
-                  <div class="collection-item top-item">
-                    <div class="products-thumb">
-                      <img src="img/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
-                    </div>
-                    <div class="col-md-6 product-entry">
-                      <div class="categories"></div>
-                      <h3 class="item-title">Conforto em cada passo.</h3>
-                      <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">Veja Mais<i class="icon icon-arrow-io"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="collection-item bottom-item">
-                    <div class="products-thumb">
-                      <img src="img/collection-item3.jpg" alt="collection item" class="small-image image-rounded">
-                    </div>
-                    <div class="col-md-6 product-entry">
-                      <div class="categories">Descubra nossas coleções.</div>
-                      <h3 class="item-title">Arte em Movimento.</h3>
-                      <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        <!-- FIM COLEÇÃO ---------------- -->
-
-
-        <!--  BANNER ------------------------------ -->
-        <section class="shoppify-section-banner">
-            <div class="container">
-              <div class="product-collection">
-                <div class="left-content collection-item">
-                  <div class="products-thumb">
-                    <img src="img/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
-                    <div class="categories">Descubra Tesouros Únicos:</div>
-                    <h3 class="item-title">Um universo da moda.</h3>
-                    <p>Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. Dos clássicos atemporais às peças mais ousadas, você encontrará algo que se encaixe perfeitamente no seu estilo pessoal.</p>
-                    <div class="btn-wrap">
-                      <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>        
-            </div>
-          </section>
-        <!-- FIM  BANNER ------------------------------ -->
-
-
-
-        <!-- EVENTOS ---------------------------------- -->
-        <section id="latest-blog" class="padding-large">
-            <div class="container">
-              <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
-                <h2 class="section-title">our Journal</h2>
-                <div class="btn-wrap align-right">
-                  <a href="blog.html" class="d-flex align-items-center">Read All Articles <i class="icon icon icon-arrow-io"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="row d-flex flex-wrap">
-                <article class="col-md-4 post-item">
-                  <div class="image-holder zoom-effect">
-                    <a href="single-post.html">
-                      <img src="img/post-small-image1.jpg" alt="post" class="post-image">
-                    </a>
-                  </div>
-                  <div class="post-content d-flex">
-                    <div class="meta-date">
-                      <div class="meta-day text-primary">22</div>
-                      <div class="meta-month">Aug-2021</div>
-                    </div>
-                    <div class="post-header">
-                      <h3 class="post-title">
-                        <a href="single-post.html">top 10 casual look ideas to dress up your kids</a>
-                      </h3>
-                      <a href="blog.html" class="blog-categories">Fashion</a>
-                    </div>
-                  </div>
-                </article>
-                <article class="col-md-4 post-item">
-                  <div class="image-holder zoom-effect">
-                    <a href="single-post.html">
-                      <img src="img/post-small-image2.jpg" alt="post" class="post-image">
-                    </a>
-                  </div>
-                  <div class="post-content d-flex">
-                    <div class="meta-date">
-                      <div class="meta-day text-primary">25</div>
-                      <div class="meta-month">Aug-2021</div>
-                    </div>
-                    <div class="post-header">
-                      <h3 class="post-title">
-                        <a href="single-post.html">Latest trends of wearing street wears supremely</a>
-                      </h3>
-                      <a href="blog.html" class="blog-categories">Trending</a>
-                    </div>
-                  </div>
-                </article>
-                <article class="col-md-4 post-item">
-                  <div class="image-holder zoom-effect">
-                    <a href="single-post.html">
-                      <img src="img/collection-item3.jpg" alt="post" class="post-image">
-                    </a>
-                  </div>
-                  <div class="post-content d-flex">
-                    <div class="meta-date">
-                      <div class="meta-day text-primary">28</div>
-                      <div class="meta-month">Aug-2021</div>
-                    </div>
-                    <div class="post-header">
-                      <h3 class="post-title">
-                        <a href="single-post.html">types of comfortable clothes ideas for women</a>
-                      </h3>
-                      <a href="blog.html" class="blog-categories">Inspiration</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-        <!-- FIM EVENTOS ---------------------------------- -->
 
 
         <!-- nossos serviços -->
