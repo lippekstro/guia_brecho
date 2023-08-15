@@ -1,7 +1,20 @@
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+<<<<<<< HEAD
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
+=======
+
+$produtos = array(
+  ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shirt", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
+  ["nome" => "Vestido", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?dress", "categoria" => "Acessório", "brecho" => "Brechó da Su", "img-loja" => "logo-loja2.png"],
+  ["nome" => "Camisa", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?pants", "categoria" => "Calçado", "brecho" => "Meu Brechó", "img-loja" => "logo-loja3.jpg"],
+  ["nome" => "Sapato", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shoe", "categoria" => "Roupa", "brecho" => "Chic Brechó", "img-loja" => "logo-loja.jpg"],
+  ["nome" => "Saia", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?earring", "categoria" => "Calçado", "brecho" => "Brechó Maria Bonita", "img-loja" => "logo-loja2.png"],
+  ["nome" => "Blusa", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shirt", "categoria" => "Acessório", "brecho" => "Brechó da Katia", "img-loja" => "logo-loja3.jpg"],
+  ["nome" => "Short", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?dress", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
+  ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?pants", "categoria" => "Calçado", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja3.jpg"]
+>>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
 
 
 
@@ -11,6 +24,7 @@ $listaBrecho = Brecho::listarNomeBrecho();
 <!------------------------------------------ cards produtos -------------------------------------------------------->
 
 <section class="grid-produto">
+<<<<<<< HEAD
   <!--------------------------------------- aqui a barra de pesquisa -------------------------------------------------->
   <?php if (isset($_GET["pesquisa"])) : ?>
     
@@ -31,10 +45,12 @@ $listaBrecho = Brecho::listarNomeBrecho();
       </form>
     </div>
 =======
+=======
+  <div class="search">
+>>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
     <form action="" class="form-search">
-      <input type="search" id="search" required>
-      <i class="fa fa-search"></i>
-      
+      <input type="search" name="pesquisa" id="search" required>      
+      <i class="fa fa-search"></i>      
     </form>
 >>>>>>> 6774dab (buscar e modal atualizado)
   </div>
