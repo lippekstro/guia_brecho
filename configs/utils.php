@@ -2,7 +2,12 @@
 
 class Utilidades{
     public static function validaEmail($email){
-        return filter_var($email, FILTER_VALIDATE_EMAIL);
+        $email = trim($email);
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static function sanitizaEmail($email){
@@ -13,9 +18,10 @@ class Utilidades{
         return filter_var($valor, FILTER_VALIDATE_FLOAT);
     }
 
-    public static function sanitizaString($s) {
-        $s = htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
-        $s = trim($s);
-        return $s;
+    public static function sanitizaString($input) {
+        $input = trim($input);
+        $input = filter_var($input, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
+        return $input;
     }
+
 }

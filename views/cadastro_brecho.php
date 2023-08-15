@@ -9,7 +9,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 <div class="barra">
     <p class="cad-nav text-white"><strong>CADASTRO</strong></p>
 </div>
-<form class="form-nav" method="post" action="/guia_brecho/controllers/cadastro_brecho_controller.php">
+<form class="form-nav" action="/guia_brecho/controllers/cadastro_brecho_controller.php" method="POST" enctype="multipart/form-data" >
     <div class="nav-input">
         <fieldset class="box-input">
             <legend>Dados Pessoais</legend>
