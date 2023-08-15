@@ -66,8 +66,9 @@ class Produto{
         $res = $query->fetchAll(PDO::FETCH_ASSOC);
 
         if (count($res)== 0) {
-            $_SESSION["resultado_pesquisa"] = "Nenhum resultado encontrado...";
+            $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
         }else {
+            $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
             return $res;
         }
     }
