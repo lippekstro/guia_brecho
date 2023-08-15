@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/db/conexao.php";
 
 class Produto{
@@ -49,13 +49,27 @@ class Produto{
         $delete->execute();
     }
     
-    public static function listar($inicio,$limite){
+    public static function listarLimiteProdutos($inicio,$limite){
 
         $conexao = conexao::conectar();
         $sql = "SELECT * FROM produto LIMIT $inicio,$limite";
         $list = $conexao -> query($sql);        
         $array = $list->fetchAll();
         return $array;
+    }
+
+    public static function pesquisarProdutos($nome){
+        $conexao = Conexao::conectar();        
+        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
+        $query = $conexao->prepare($sql);
+        $query->execute();
+        $res = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($res)== 0) {
+            $_SESSION["resultado_pesquisa"] = "Nenhum resultado encontrado...";
+        }else {
+            return $res;
+        }
     }
 
     public function inserir($arq_img_blob){
