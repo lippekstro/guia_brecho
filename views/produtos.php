@@ -14,25 +14,17 @@ $produtos = array(
 );
 ?>
 
-<section class="header">
-    <!-- First container -->
-    <div class="container-produtos container_solid">
-      <div class="title_wrapper">
-        <h1>GUIA BRECHO </h1>
-      </div>
-    </div>
 
-    <!-- Second container -->
-    <div class="container-produtos container_image" aria-hidden="true">
-      <div class="title_wrapper">
-        <h1>GUIA BRECHO</h1>
-      </div>
-    </div>
-  </section>
 
   <!-- cards produtos -->
 
   <section class="grid-produto">
+  <div class="search">
+    <form action="" class="form-search">
+      <input type="search" name="pesquisa" id="search" required>
+      <i class="fa fa-search"></i>
+    </form>
+  </div>
     <div class="titulo">
       <h2>Produtos</h2>
     </div>
