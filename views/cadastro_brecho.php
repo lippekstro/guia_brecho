@@ -96,16 +96,16 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                 <label class='cad-label-nd nav-cont-cad' for="">Formas de Pagamento: </label>    
                 <div class="nav-cont-cad-paga">
                     
-                    <input type="radio" id="a" name="paga_pix" value="pix">
+                    <input type="checkbox" id="a" name="paga_pix" value="pix">
                     <label class='cad-produto-radio' for="paga_pix">Pix</label>
                     
-                    <input type="radio" id="b" name="paga_ted" value="ted">
+                    <input type="checkbox" id="b" name="paga_ted" value="ted">
                     <label class='cad-produto-radio' for="paga_ted">TED/DOC</label>
 
-                    <input type="radio" id="c" name="paga_boleto" value="boleto">
+                    <input type="checkbox" id="c" name="paga_boleto" value="boleto">
                     <label class='cad-produto-radio' for="paga_boleto">Boleto</label>
 
-                    <input type="radio" id="d" name="paga_dinheiro" value="dinheiro">
+                    <input type="checkbox" id="d" name="paga_dinheiro" value="dinheiro">
                     <label class='cad-produto-radio' for="paga_dinheiro">À vista</label>
                     
                 </div>
