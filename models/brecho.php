@@ -35,7 +35,7 @@ class Brecho
 
     //Inserir no Banco de Dados PESSOA
 
-    public function cadastrarBrecho(
+    public static function cadastrarBrecho(
         $pessoa_nome,
         $pessoa_sobrenome,
         $pessoa_email,
@@ -161,7 +161,7 @@ class Brecho
 
                 try {
                     $stmt_loja->execute();
-                    header("Location: \guia_brecho\views\admin\login.php"); //redirecionando para a pagina principal
+                    header("Location: /guia_brecho/views/login.php"); //redirecionando para a pagina principal
                 } catch (PDOException $e) 
                     {echo "Erro na para a tabela da loja: " . $e->getMessage();}
                 
