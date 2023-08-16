@@ -70,7 +70,7 @@ if(isset($_POST['nome']) && isset($_POST['sobrenome'])
     $brecho_termo = $_POST['termo'];
 
 
-
+/*
         //Tratamento para ataques de Injeção INICIO 
         //continuar colocando as outras variáveis...
     try {
@@ -98,7 +98,7 @@ if(isset($_POST['nome']) && isset($_POST['sobrenome'])
         }
         exit();
     }
-
+*/
 
     $brecho = new Brecho();
     $brecho->cadastrarBrecho(
