@@ -20,7 +20,7 @@ class Brecho
     public $brecho_numero;
     public $brecho_bairro;
         
-        //Informações para Divulgações
+    //Informações para Divulgações
     public $brecho_paga_pix;
     public $brecho_paga_ted;
     public $brecho_paga_boleto;

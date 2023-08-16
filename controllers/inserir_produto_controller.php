@@ -1,47 +1,40 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/class_produto.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome_produto"];
+    $descricao = $_POST["descricao"];
+    $categoria = $_POST["categoria"];
+    $preco = $_POST["preco"];
 
-    $imagem_produto= filter_input_array(INPUT_POST,FILTER_DEFAULT);
+    try {
+        $produto = new Produto();
+        $produto->nome_produto = $nome;
+        $produto->descricao = $descricao;
+        $produto->categoria = $categoria;
+        $produto->preco = $preco;
 
-    
-    if (!empty($imagem_produto["cadProd"])) {
-
-
-        $arq_img = $_FILES["imagem_produto"];
-
-        if (($arq_img["type"] == "image/jpg")||($arq_img["type"] == "image/jpeg")) {
-
-            $arq_img_blob = file_get_contents($arq_img["tmp_name"]);
-            
-            try {
-
-                $img_produto = new Produto();
-
-                $img_produto -> nome_produto=$_POST['nome_produto'];
-                $img_produto -> descricao=$_POST['descricao'];
-                $img_produto -> categoria=$_POST['categoria'];
-                $img_produto -> preco=floatval($_POST['preco']);
-                $img_produto -> estoque=intval($_POST['estoque']);            
-                
-                Produto::inserir($arq_img_blob);
-                
-            
-            } catch (PDOException $th) {
-            
-                echo $th->getMessage();
-            }          
-            
-
-        }else {
-            echo "<p>ERROR: Necessario cadastrar imagem.</p>";
-
-        }
+        $produto->id_loja = Loja::listarId($_SESSION["id_usuario"]);
+     
         
+
+        if (!empty($_FILES["imagem_produto"])) {
+            
+            $img = file_get_contents($_FILES["imagem_produto"]["tmp_name"]);
+            $produto->imagem_produto = $img;
+        }
+
+        $produto->criar();
+
+        header("Location: /guia_brecho/views/admin/cadastrar_produto.php");        
+        exit();
+
+    } catch (PDOException $e) {
+        echo $e->getMessage();
     }
-
-
-
 }
+
+
+
+?>

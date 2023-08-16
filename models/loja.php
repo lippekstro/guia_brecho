@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
 
+session_start();
+
 class Loja {
     public $id_loja;
     public $nome_loja;
@@ -54,8 +56,17 @@ class Loja {
 
     public static function listar()
     {
-        $query = "SELECT l.*, u.nome FROM loja l JOIN usuario u ON l.id_usuario = u.id_usuario";
         $conexao = Conexao::conectar();
+        $query = "SELECT l.id_loja, u.id_usuario FROM loja l JOIN usuario u ON l.id_usuario = u.id_usuario";        
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+    public static function listarId($id_usuario)
+    {
+        $conexao = Conexao::conectar();
+        $query = "SELECT l.id_loja, u.id_usuario FROM loja l JOIN usuario u ON l.id_usuario = u.$id_usuario";        
         $stmt = $conexao->prepare($query);
         $stmt->execute();
         $lista = $stmt->fetchAll();
