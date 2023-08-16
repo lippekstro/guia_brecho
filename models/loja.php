@@ -49,7 +49,9 @@ class Loja {
         
         $stmt->execute();
         $this->id_loja = $conexao->lastInsertId();
-        return $this->id_loja;
+
+        setcookie("id_loja",$conexao->lastInsertId(),time()+3600,"/guia_brecho/");
+        setcookie("nome_loja",$this->nome_loja,time()+3600,"/guia_brecho/");        
     }
 
     public static function listar()

@@ -75,7 +75,7 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 
-
+ 
 else: 
     header("Location: /guia_brecho/index.php");
 

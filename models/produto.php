@@ -39,8 +39,10 @@ class Produto {
 
     public function criar()
     {
-        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_loja) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
+
         $conexao = Conexao::conectar();
+        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_loja) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
+        
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->nome_produto);
         $stmt->bindValue(':descricao', $this->descricao);
