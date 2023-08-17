@@ -14,25 +14,47 @@ $produtos = array(
 );
 ?>
 
+<section class="header">
+    <!-- First container -->
+    <div class="container-produtos container_solid">
+      <div class="title_wrapper">
+        <h1>GUIA BRECHO </h1>
+      </div>
+    </div>
+
+    <!-- Second container -->
+    <div class="container-produtos container_image" aria-hidden="true">
+      <div class="title_wrapper">
+        <h1>GUIA BRECHO</h1>
+      </div>
+    </div>
+  </section>
+
 <!-- cards produtos -->
 
-<section class="grid-produto">
-  <div class="titulo">
-    <h2>Produtos</h2>
+  <section class="grid-produto">
+  <div class="search">
+    <form action="" class="form-search">
+      <input type="search" name="pesquisa" id="search" required>
+      <i class="fa fa-search"></i>
+    </form>
   </div>
-  <ul class="gallery">
-    <?php foreach ($produtos as $lista) : ?>
-      <li>
-        <div class="card-produtos">
-          <figcaption>
-            <img src="<?= $lista["imagem"] ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
-          </figcaption>
-        </div>
-        <div class="info-produto">
-          <h3><?= $lista["nome"] ?></h3>
-          <p style="font-size: .9rem;"><?= $lista["categoria"] ?> / <?= $lista["brecho"] ?></p>
-          <p style="font-size: .7rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
-          <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
+    <div class="titulo">
+      <h2>Produtos</h2>
+    </div>
+    <ul class="gallery">
+      <?php foreach ($produtos as $lista) : ?>
+        <li>
+          <div class="card-produtos">
+            <figcaption>
+              <img src="<?= $lista["imagem"] ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+            </figcaption>
+          </div>
+          <div class="info-produto">
+            <h3><?= $lista["nome"] ?></h3>
+            <p style="font-size: .9rem;"><?= $lista["categoria"] ?> / <?= $lista["brecho"] ?></p>
+            <p style="font-size: .7rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
+            <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
 
         </div>
       </li>
