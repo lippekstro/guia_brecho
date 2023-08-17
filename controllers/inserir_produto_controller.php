@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
@@ -40,3 +41,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
+=======
+>>>>>>> 1a27c58 (commit)
