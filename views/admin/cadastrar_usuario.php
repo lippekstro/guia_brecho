@@ -8,17 +8,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <div class="barra">
     <p class="cad-nav text-white"><strong>CADASTRO</strong></p>
 </div>
-<form class="form-nav" method="post" action="#">
+<form class="form-nav" method="post" action="\guia_brecho\controllers\cadastro_usuario_controller.php">
     <div class="nav-input">
         <fieldset class="box-input">
             <legend>Dados Pessoais</legend>
             <div>
                 <label for="nome">Nome</label>
                 <input class="box-max-input" type="text" name="nome" id="nome">
-            </div>
-            <div>
-                <label for="sobrenome">Sobrenome</label>
-                <input class="box-max-input" type="text" name="sobrenome" id="sobrenome">
             </div>
             <div>
                 <label for="email">E-mail de Acesso</label>
@@ -28,39 +24,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <label for="senha">Senha de Acesso</label>
                 <input class="box-max-input" type="password" name="password" id="password">
             </div>
-
-
-        </fieldset>
-        <fieldset class="box-input box-max">
-            <legend>Dados do Brechó</legend>
             <div>
-                <label for="nomebrecho">Nome do Brechó</label>
-                <input class="box-max-input" type="text" name="nomebrecho" id="nomebrecho">
-            </div>
-            <div>
-                <label for="cnpj-cpf">CNPJ</label>
-                <input class="box-max-input" type="text" name="cnpj-cpf" id="cnpj-cpf">
-            </div>
-            <div>
-                <label for="cidade">Cidade</label>
-                <input class="box-max-input" type="text" name="cidade" id="cidade">
-
+                <label for="cpf">CPF</label>
+                <input class="box-max-input" type="text" name="cpf" id="nome">
             </div>
 
-            <div>
-                <label for="endereco">Endereço</label>
-                <input class="box-max-input" type="text" name="endereco" id="endereco">
-            </div>
-            <div>
-                <label for="numero">Numero</label>
-                <input class="box-max-input" type="text" name="numero" id="numero">
 
-            </div>
-            <label for="bairro">Bairro</label>
-            <input class="box-max-input" type="text" name="bairro" id="bairro">
-            <div>
-
-            </div>
         </fieldset>
         <fieldset class="box-input">
             <legend>Mídias do Brecho</legend>
@@ -73,14 +42,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <img id='output'>
             </p>
             <br>
-            <div>
-                <label for="redeSocial">Rede Social</label>
-                <input class="box-max-input" type="text" name="redeSocial" id="redeSocial">
-            </div>
-            <div>
-                <label for="contato">WhatsApp/Telefone</label>
-                <input class="box-max-input" type="contato" name="contato" id="contato">
-            </div>
         </fieldset>
     </div>
     <br>
