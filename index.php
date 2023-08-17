@@ -107,6 +107,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
 
 
+
          <!-- cards-------------------------------- -->
       
          <section class="card1">
