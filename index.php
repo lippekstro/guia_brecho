@@ -10,9 +10,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="/guia_brecho/css/indexhome.css">
 <!--     <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script> -->
-   
+  <html>
 </body>
 <body>
+ <section class="indexfofo">
     
              
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
