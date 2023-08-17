@@ -72,8 +72,17 @@ class Produto{
             return $res;
         }
     }
+    public static function filtroCategoria($categoria){
+        $conexao = Conexao::conectar();
+        $sql = "SELECT * FROM produto WHERE categoria = :categoria";
+        $query = $conexao->prepare($sql);
+        $query->bindValue(":categoria",$categoria);
+        $query->execute();
+        $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
 
-    public function inserir($arq_img_blob){
+    public function inserir(){
 
         $conexao = Conexao::conectar();
         $sql = $sql = "INSERT INTO produto (nome_produto,descricao,categoria,preco,estoque,imagem_produto) VALUES (:nome_produto,:descricao,:categoria,:preco,:estoque,:imagem_produto)";
@@ -83,17 +92,8 @@ class Produto{
         $insert->bindParam(':categoria',$this->categoria);
         $insert->bindParam(':preco',$this->preco);
         $insert->bindParam(':estoque',$this->estoque);
-        $insert->bindParam(':imagem_produto',$arq_img_blob);
+        $insert->bindParam(':imagem_produto',$this->imagem_produto);
         $insert->execute();
-
-        if ($insert->rowCount() > 0) {            
-
-            echo "<p> Arquivo cadastrado com sucesso!</p>";
-
-        }else {
-
-            echo "<p> Arquivo nao cadastrado!</p>";
-        }
     }
 
     public function editar(){
