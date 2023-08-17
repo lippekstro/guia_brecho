@@ -234,6 +234,7 @@
 }
 
 .p {
+<<<<<<< HEAD
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 15px;
 	line-height: 26px;
@@ -245,6 +246,20 @@
 	transform: translate(0, 0);
 	margin-top: 14px;
 	z-index: 2;
+=======
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+  /* display: block; */
+>>>>>>> 3157485 (filtro e pesquisa)
   text-decoration: none;
 }
 

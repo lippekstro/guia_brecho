@@ -235,6 +235,7 @@ class Produto {
         }
     }
     public static function filtroCategoria($categoria){
+<<<<<<< HEAD
         $conexao = Conexao::conectar();
         $sql = "SELECT * FROM produto WHERE categoria = :categoria";
         $query = $conexao->prepare($sql);
@@ -266,6 +267,29 @@ class Produto {
 
             echo "<p> Arquivo nao cadastrado!</p>";
         }
+=======
+        $conexao = Conexao::conectar();
+        $sql = "SELECT * FROM produto WHERE categoria = :categoria";
+        $query = $conexao->prepare($sql);
+        $query->bindValue(":categoria",$categoria);
+        $query->execute();
+        $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
+
+    public function inserir(){
+
+        $conexao = Conexao::conectar();
+        $sql = $sql = "INSERT INTO produto (nome_produto,descricao,categoria,preco,estoque,imagem_produto) VALUES (:nome_produto,:descricao,:categoria,:preco,:estoque,:imagem_produto)";
+        $insert = $conexao->prepare($sql);
+        $insert->bindParam(':nome_produto',$this->nome_produto);        
+        $insert->bindParam(':descricao',$this->descricao);
+        $insert->bindParam(':categoria',$this->categoria);
+        $insert->bindParam(':preco',$this->preco);
+        $insert->bindParam(':estoque',$this->estoque);
+        $insert->bindParam(':imagem_produto',$this->imagem_produto);
+        $insert->execute();
+>>>>>>> 3157485 (filtro e pesquisa)
     }
 
     public function editar(){
