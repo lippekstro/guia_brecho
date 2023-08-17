@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/brecho.php';
+=======
+<?php
+
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
+>>>>>>> b0dc0f2 (commit)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome_produto"];
@@ -16,9 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $produto->descricao = $descricao;
         $produto->categoria = $categoria;
         $produto->preco = $preco;
+<<<<<<< HEAD
 
         $id_brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
         $produto->id_brecho = $id_brecho;
+=======
+>>>>>>> b0dc0f2 (commit)
      
         
 
@@ -40,6 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+<<<<<<< HEAD
 ?>
 =======
 >>>>>>> 1a27c58 (commit)
+=======
+?>
+>>>>>>> b0dc0f2 (commit)
