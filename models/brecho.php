@@ -66,7 +66,7 @@ class Brecho
 
     public static function listar()
     {
-        $query = "SELECT * FROM brecho";
+        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u ON b.id_usuario = u.id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();

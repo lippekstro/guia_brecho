@@ -2,8 +2,7 @@ CREATE DATABASE guiabrecho;
 
 CREATE TABLE usuario (
     id_usuario int PRIMARY KEY AUTO_INCREMENT, 
-    nome VARCHAR(255) NOT NULL,
-    sobrenome VARCHAR(255) NOT NULL,
+    nome_usuario VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL, 
     email VARCHAR(255) NOT NULL,
     cpf_cnpj BIGINT UNIQUE NOT NULL, 
