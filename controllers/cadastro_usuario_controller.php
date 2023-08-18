@@ -8,14 +8,16 @@ try {
     //Dados do Pessoa:
     $nome_usuario = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = password_hash( $_POST['senha'], PASSWORD_DEFAULT );
     $cpf_cnpj = $_POST['cpf_cnpj'];
+
 
     $usuario = new Usuario();
     $usuario->nome_usuario = $nome_usuario;
     $usuario->email = $email;
     $usuario->senha = $senha;
     $usuario->cpf_cnpj = $cpf_cnpj;
+    
 
     $usuario->criar();
 
