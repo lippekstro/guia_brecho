@@ -40,4 +40,5 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+                    <?=include_once $_SERVER["DOCUMENT_ROOT"] . '\guia_brecho\templates\menu.php'?>
          

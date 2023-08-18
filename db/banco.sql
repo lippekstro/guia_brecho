@@ -31,7 +31,7 @@ CREATE TABLE produto (
     preco FLOAT NOT NULL, 
     estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
-    id_loja int NOT NULL,
+    id_loja int NOT NULL
 );
 
 CREATE TABLE evento (

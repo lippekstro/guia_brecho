@@ -74,6 +74,16 @@ class Brecho
         return $lista;
     }
 
+    public static function listarTudo()
+    {
+        $query = "SELECT * FROM brecho";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+
     public function editar()
     {
         $query = "UPDATE brecho SET brecho_nome = :nome, brecho_endereco = :endereco, brecho_rede = :rede, brecho_contato = :contato, brecho_faixa_preco_ini = :faixa_ini, brecho_faixa_preco_fim = :faixa_fim, brecho_bio = :bio WHERE id_brecho = :id_brecho";

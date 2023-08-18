@@ -16,10 +16,7 @@ session_start();
         </header>
         <main>
 
-<?php else: ?>
-
-    <?php if($_SESSION['usuario']['nivel_acesso']=='1'):
-        //var_dump( $_SESSION['usuario']['nv_acesso']);?>
+<?php elseif($_SESSION['usuario']['nivel_acesso']=='1'): ?>
 
         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
                                 <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php">Meus Produtos</a>
@@ -50,4 +47,4 @@ session_start();
             <main>
 
     <?php endif; ?>
-<?php endif; ?>          
+          
