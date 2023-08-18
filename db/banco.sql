@@ -27,9 +27,8 @@ CREATE TABLE produto (
     id_produto int PRIMARY KEY AUTO_INCREMENT, 
     nome_produto VARCHAR(255) NOT NULL, 
     descricao TEXT NOT NULL, 
-    categoria ENUM('vestimentas', 'calcados', 'acessorios') NOT NULL, 
+    categoria ('vestimentas', 'calcados', 'acessorios') NOT NULL, 
     preco FLOAT NOT NULL, 
-    estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
     id_brecho int NOT NULL,
     FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho)
