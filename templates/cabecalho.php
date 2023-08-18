@@ -31,7 +31,8 @@
 </head>
 
 <body>
-    <header>
+    
+    <head>
         <nav class="navbar navbar-expand-lg" style="background-color: #fb732c;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="/guia_brecho/img/logo_guia_brecho-rem3.png" alt="" id="logo-icone"></a>
@@ -40,5 +41,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+<<<<<<< HEAD
                     <?=include_once $_SERVER["DOCUMENT_ROOT"] . '\guia_brecho\templates\menu.php'?>
          
+=======
+>>>>>>> 94cbefb193296dd63c72f7bb160c55c399cd7d68
