@@ -131,34 +131,6 @@ class Produto {
         return $resultado;
     }
 
-<<<<<<< HEAD
-    public function inserir(){
-
-        $conexao = Conexao::conectar();
-        $sql = $sql = "INSERT INTO produto (nome_produto,descricao,categoria,preco,estoque,imagem_produto) VALUES (:nome_produto,:descricao,:categoria,:preco,:estoque,:imagem_produto)";
-        $insert = $conexao->prepare($sql);
-        $insert->bindParam(':nome_produto',$this->nome_produto);        
-        $insert->bindParam(':descricao',$this->descricao);
-        $insert->bindParam(':categoria',$this->categoria);
-        $insert->bindParam(':preco',$this->preco);
-        $insert->bindParam(':estoque',$this->estoque);
-        $insert->bindParam(':imagem_produto',$this->imagem_produto);
-        $insert->execute();
-    }
-
-    public function editar(){
-
-        $conexao = conexao::conectar();
-        $sql = "UPDATE produto SET nome_produto=:nome_produto,descricao=:descricao,categoria=:categoria,preco=:preco,estoque=:estoque,imagem_produto=:imagem_produto WHERE id_produto=:id_produto";
-        $edit = $conexao->prepare($sql);
-        $edit->bindValue(':nome_produto',$this->nome_produto);
-        $edit->bindValue(':descricao',$this->descricao);
-        $edit->bindValue(':categoria',$this->categoria);
-        $edit->bindValue(':id_produto',$this->id_produto);
-        $edit->execute();
-    }
-}
-=======
 
 
 }
@@ -166,4 +138,3 @@ class Produto {
     
 
     
->>>>>>> 3048581c060ff4c1cfac3924935c5cd4f53abbe7
