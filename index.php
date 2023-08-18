@@ -13,7 +13,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
   <html>
 </body>
 <body>
- <section class="indexfofo">
+ <section class="index">
     
              
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
