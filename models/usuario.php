@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
+
+include_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
 
 class Usuario
 {
@@ -89,26 +90,27 @@ class Usuario
         
         
         $stmt -> execute();
-        $registro = $stmt->fetch(PDO::FETCH_ASSOC);
+        $registro = $stmt->fetchAll();
             
-        if ( $senha === password_verify($registro['senha'],PASSWORD_DEFAULT)) {
+        if ( $senha == password_verify($registro['senha'],PASSWORD_DEFAULT)) {
             session_start();
             $_SESSION['id_usuario'] = $registro['id_usuario'];
             $_SESSION['usuario']['nome'] = $registro['nome'];
             $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
             
             if (isset($_COOKIE['erro'])) {
-                setcookie('erro', '', time() - 3600, '/');
+                setcookie('erro', '', time() - 3600, '/guia_brecho/');
                 
             }
             header("Location: /guia_brecho/index.php");
             exit();
         } else {
 
-            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/');
+            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/guia_brecho/');
             header("Location: /guia_brecho/views/login.php");
             exit();
         }
+        var_dump($registro);
     }
 
 }
