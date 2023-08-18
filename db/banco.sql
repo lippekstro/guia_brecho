@@ -2,21 +2,24 @@ CREATE DATABASE guiabrecho;
 
 CREATE TABLE usuario (
     id_usuario int PRIMARY KEY AUTO_INCREMENT, 
-    nome VARCHAR(255) NOT NULL, 
+    nome_usuario VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL, 
     email VARCHAR(255) NOT NULL,
     cpf_cnpj BIGINT UNIQUE NOT NULL, 
     nivel_acesso int DEFAULT 1
 );
 
-CREATE TABLE loja (
-    id_loja int PRIMARY KEY AUTO_INCREMENT, 
-    nome_loja VARCHAR(255) NOT NULL, 
-    endereco VARCHAR(255) NOT NULL, 
-    telefone BIGINT NOT NULL, 
-    rede_social VARCHAR(255) NOT NULL,
-    logo_loja LONGBLOB,
-    id_usuario int NOT NULL,
+CREATE TABLE brecho (
+    id_brecho int PRIMARY KEY AUTO_INCREMENT,
+    brecho_nome VARCHAR(255) NOT NULL,
+    brecho_endereco VARCHAR(255) NOT NULL,
+    brecho_img LONGBLOB,
+    brecho_rede VARCHAR(255),
+    brecho_contato VARCHAR(255) NOT NULL,
+    brecho_faixa_preco_ini DECIMAL(10,2),
+    brecho_faixa_preco_fim DECIMAL(10,2),
+    brecho_bio VARCHAR(255) NOT NULL,
+    id_usuario INT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
@@ -28,8 +31,8 @@ CREATE TABLE produto (
     preco FLOAT NOT NULL, 
     estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
-    id_loja int NOT NULL,
-    FOREIGN KEY (id_loja) REFERENCES loja(id_loja)
+    id_brecho int NOT NULL,
+    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho)
 );
 
 CREATE TABLE evento (
