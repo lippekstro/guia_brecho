@@ -46,9 +46,6 @@ class Usuario
         $stmt->execute();
         $this->id_usuario = $conexao->lastInsertId();
         return $this->id_usuario;
-        header("Location: /guia_brecho/views/login.php");
-        exit();
-        var_dump("aqui!");
     }
 
     public static function listar()
