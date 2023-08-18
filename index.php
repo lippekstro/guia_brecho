@@ -32,7 +32,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/carrossel1.jpg" class="d-block w-100" alt="...">
+            <img src="/guia_brecho/img/IMG_0662.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Explore os Eventos que acontecem na ilha - Moda, Sustentabilidade e Diversão!</p>
@@ -67,7 +67,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <div class="col-lg-7 col-md-12 left-content">
                   <div class="collection-item">
                     <div class="products-thumb">
-                      <img src="img/5.jpg" alt="collection item" class="large-image image-rounded">
+                      <img src="/guia_brecho/img/IMG_0648.jpg" alt="collection item" class="large-image image-rounded">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
                       <div class="categories text_banner_color">Faça sua coleção</div>
@@ -93,7 +93,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                   </div>
                   <div class="collection-item bottom-item">
                     <div class="products-thumb">
-                      <img src="img/4.jpg" alt="collection item" class="small-image image-rounded">
+                      <img src="/guia_brecho/img/IMG_0665.jpg" alt="collection item" class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
                       <div class="categories text_banner_color">Descubra nossas coleções.</div>
@@ -118,7 +118,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <div class="wrapper">
                     <div class="box-area"> 
                         <div class="box">
-                            <img src="img/acessorios.png" alt="">
+                            <img src="img/IMG_0666.jpg" alt="">
                             <div class="overlay">
                                 <h3>Acessórios</h3>
                                 <p>Acreditamos que os detalhes fazem toda a diferença, e nossos acessórios únicos irão adicionar um toque especial a qualquer look.</p>
@@ -128,7 +128,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <div class="box">
                             <img src="img/calça.png" alt="">
                             <div class="overlay">
-                                <h3>Calças</h3>
+                                <h3>Rou</h3>
                                 <p>Nossas calças são cuidadosamente selecionadas por nossos clientes, garantindo qualidade e conforto para que você se sinta confiante em qualquer ocasião. </p>
                                 <a href="#">VEJA MAIS </a>
                             </div>
