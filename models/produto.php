@@ -9,7 +9,7 @@ class Produto {
     public $preco;
     public $estoque;
     public $imagem_produto;
-    public $id_loja;
+    public $id_brecho;
 
     public function __construct($id_produto = false)
     {
@@ -34,12 +34,12 @@ class Produto {
         $this->preco = $produto['preco'];
         $this->estoque = $produto['estoque'];
         $this->imagem_produto = $produto['imagem_produto'];
-        $this->id_loja = $produto['id_loja'];
+        $this->id_brecho = $produto['id_brecho'];
     }
 
     public function criar()
     {
-        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_loja) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
+        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_brecho) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->nome_produto);
@@ -47,7 +47,7 @@ class Produto {
         $stmt->bindValue(':cat', $this->categoria);
         $stmt->bindValue(':preco', $this->preco);
         $stmt->bindValue(':img', $this->imagem_produto);
-        $stmt->bindValue(':loja', $this->id_loja);
+        $stmt->bindValue(':loja', $this->id_brecho);
         $stmt->execute();
         $this->id_produto = $conexao->lastInsertId();
         return $this->id_produto;
@@ -55,7 +55,7 @@ class Produto {
 
     public static function listar()
     {
-        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_loja = l.id_loja";
+        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_brecho = l.id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -97,8 +97,9 @@ class Produto {
 
     public static function pesquisarProdutos($nome){
         $conexao = Conexao::conectar();        
-        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
+        $sql = "SELECT * FROM produto WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
         $query = $conexao->prepare($sql);
+        $query->bindValue(":termo", '%' . $nome .'%');
         $query->execute();
         $res = $query->fetchAll(PDO::FETCH_ASSOC);
 

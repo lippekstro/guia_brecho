@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $produto->categoria = $categoria;
         $produto->preco = $preco;
 
-        $produto->id_loja = Loja::listarId($_SESSION["id_usuario"]);
+        $id_brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
+        $produto->id_loja = $id_brecho;
      
         
 

@@ -108,4 +108,13 @@ class Brecho
         $stmt->bindValue(':id_brecho', $this->id_brecho);
         $stmt->execute();
     }
+
+    public static function buscarMeuBrecho($id){
+        $query = "SELECT id_brecho FROM brecho WHERE id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
 }
