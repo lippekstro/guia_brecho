@@ -31,7 +31,8 @@ CREATE TABLE produto (
     preco FLOAT NOT NULL, 
     estoque BOOLEAN DEFAULT 1, 
     imagem_produto LONGBLOB, 
-    id_loja int NOT NULL
+    id_brecho int NOT NULL,
+    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho)
 );
 
 CREATE TABLE evento (
