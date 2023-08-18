@@ -17,8 +17,12 @@
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
     <!-- css swiper -->
     <link rel="stylesheet" href="/guia_brecho/css/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="/guia_brecho/js/swiper-bundle.min.js" defer></script>
     <!-- js personalizado -->
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
+    <!-- JavaScript -->
+    <script src="/guia_brecho/js/script.js" defer></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
