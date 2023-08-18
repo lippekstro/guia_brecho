@@ -27,6 +27,8 @@
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
     <link rel="stylesheet" href="/guia_brecho/css/style.scss">
+    <link rel="stylesheet" href="/guia_brecho/css/cadastro_usuario.css">
+    <link rel="stylesheet" href="/guia_brecho/css/cadastro_brecho.css">
 
 </head>
 
