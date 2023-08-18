@@ -37,74 +37,6 @@
 
 }
 
-.container_solid {
-  background: #fb732c;
-
-  /* position this container at the top of its parent element */
-  top: 0;
-}
-
-.title_wrapper {
-  position: fixed;
-  display: block;
-  margin: auto;
-  width: 100%;
-  /* center the text wrapper vertically */
-  top: 50%;
-
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  
-}
-
-.title_wrapper h1 {
-  text-align: center;
-  font-size: 100px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Jost", sans-serif;
-  font-weight: 900;
-  line-height: 1.5;
-}
-
-
-.container_solid .title_wrapper h1 {
-  /* the text background */
-  background: url(/pag-produtos/banner-produtos.jpg);
-  background-size: 100vw auto;
-  background-position: center;
-
-  /* clip the text is possible */
-  
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  /* fallback text color */
-  color: #fb732c;
-}
-
-
-.container_image {
-  /* Grab a free image from unsplash */
-  background-image: url(/pag-produtos/banner-produtos.jpg);
-  background-size: 100vw 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  
-
-  /* position the second container below the first container */
-  top: 100vh;
-}
-
-.container_image .title_wrapper h1 {
-  color: #fb732c;
-  
-}
-
-
-
 /*  css cards  */
 .grid-produto {
 
@@ -158,7 +90,6 @@
   
 }
 
-
 .titulo {
   font-size: 2.5rem;
   margin: 1.5rem 0rem;
@@ -173,7 +104,7 @@
   position: relative;
   left: 0px;
   width: 200px;
-  height: 280px;
+  height: auto;
   background-color: var(--background);  
   transition: 300ms all;
   transform-origin: center left;
@@ -289,8 +220,8 @@
 	letter-spacing: 1px;
 	display: block;
 	margin: 0;
-    cursor: pointer;
-    color: #000000;
+  cursor: pointer;
+  color: #000000;
 }
 .p {
 	color: rgba(0, 0, 0, 0.8);
@@ -304,6 +235,7 @@
 	transform: translate(0, 0);
 	margin-top: 14px;
 	z-index: 2;
+  text-decoration: none;
 }
 .p:hover {
   text-decoration: 2px underline #fb732c;
@@ -314,8 +246,7 @@
 	list-style: none;
 	perspective: 900;
 	padding: 0 20px 10px;
-    margin: 0;
-
+  margin: 0;
 	border-radius: 5px;
 
 }

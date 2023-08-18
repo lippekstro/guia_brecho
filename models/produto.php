@@ -85,4 +85,37 @@ class Produto {
         $stmt->bindValue(':id', $this->id_produto);
         $stmt->execute();
     }
+
+    public static function listarLimiteProdutos($inicio,$limite){
+
+        $conexao = conexao::conectar();
+        $sql = "SELECT * FROM produto LIMIT $inicio,$limite";
+        $list = $conexao -> query($sql);        
+        $array = $list->fetchAll();
+        return $array;
+    }
+
+    public static function pesquisarProdutos($nome){
+        $conexao = Conexao::conectar();        
+        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
+        $query = $conexao->prepare($sql);
+        $query->execute();
+        $res = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($res)== 0) {
+            $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
+        }else {
+            $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
+            return $res;
+        }
+    }
+    public static function filtroCategoria($categoria){
+        $conexao = Conexao::conectar();
+        $sql = "SELECT * FROM produto WHERE categoria = :categoria";
+        $query = $conexao->prepare($sql);
+        $query->bindValue(":categoria",$categoria);
+        $query->execute();
+        $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado;
+    }
 }
