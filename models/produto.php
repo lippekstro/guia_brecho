@@ -277,6 +277,7 @@ class Produto {
         return $resultado;
     }
 
+<<<<<<< HEAD
     public function inserir(){
 
         $conexao = Conexao::conectar();
@@ -308,3 +309,12 @@ class Produto {
 =======
     
 >>>>>>> 1a27c58 (commit)
+=======
+
+
+}
+    
+    
+
+    
+>>>>>>> 955cc10 (commit)
