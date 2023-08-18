@@ -10,7 +10,7 @@ try {
 ?>
 
 <?php if (count($brecho) > 0) : ?>
-    <h1 class="text-center mt-3" style="color: var(--bs-orange);">Encontre os melhores brechós de São Luís aqui ⇩</h1>
+    <h1 class="text-center mt-3 fs-2" style="color: var(--bs-orange);">Encontre os melhores brechós de São Luís aqui ⇩</h1>
 
     <section class="loja">
         <div class="slide-container swiper">
@@ -22,13 +22,13 @@ try {
                                 <div class="image-content">
                                     <span class="overlay"></span>
                                     <div class="card-image">
-                                        <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($loja['logo_loja']); ?>" alt="" class="card-img">
+                                        <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($loja['brecho_img']); ?>" alt="" class="card-img">
                                     </div>
                                 </div>
                                 <div class="card-content">
-                                    <h2 class="name"><?= $loja['nome_loja'] ?></h2>
-                                    <p class="description"><?= $loja['endereco'] ?></p>
-                                    <a href="/guia_brecho/views/detalhes_brecho.php?id=<?= $loja['id_loja'] ?>" class="btn btn-primary">Detalhes</a>
+                                    <h2 class="name"><?= $loja['brecho_nome'] ?></h2>
+                                    <p class="description"><?= $loja['brecho_endereco'] ?></p>
+                                    <a href="/guia_brecho/views/detalhes_brecho.php?id=<?= $loja['id_brecho'] ?>" class="btn btn-primary">Detalhes</a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
