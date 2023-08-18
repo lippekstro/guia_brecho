@@ -1,8 +1,21 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
-?>
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/evento.php";
 
+try {
+  $eventos = Evento::listar();
+  $proximos = Evento::listarProximos();
+} catch (PDOException $e) {
+  echo $e->getMessage();
+}
+
+$alternar = false;
+$primeiro = true;
+
+?>
+<?php if (count($eventos) > 0) : ?>
+  <section>
 <!-- inicio dos indicadores do carrossel  -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
   <div class="carousel-indicators">
@@ -15,17 +28,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
   <!-- inicio do carrossel -->
   <div class="carousel-inner">
     <!-- slide do carrossel -->
-    <div class="carousel-item active">
-      <img src="https://source.unsplash.com/random/1920x1080/?show" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <?php foreach ($proximos as $p) : ?>
+    <div class="carousel-item <?= $primeiro ? 'active' : "" ?>">
+      <img src="data:image;charset=utf8;base64,<?= base64_encode($p['imagem_evento']); ?>" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
+    <?php $proximos = false?>
+    <?php endforeach; ?>
     <!-- slide do carrossel -->
-    <div class="carousel-item ">
-      <img src="https://source.unsplash.com/random/1920x1080/?product" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
-
-    <div class="carousel-item">
-      <img src="https://source.unsplash.com/random/1920x1080/?sky" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
   </div>
 
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -82,12 +91,15 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
   <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
+</section>
+<?php else : ?>
+  <section class="m-3">
+    <div class="alert alert-info text-center" role="alert">
+      Nenhum Evento cadastrado!
+    </div>
+  </section>
+<?php endif; ?>
 
-
-<!-- extra voltar para o inicio -->
-<!-- <div class="container">
-  <p class="float-end"><a href="#">Back to top</a></p>
-</div> -->
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
