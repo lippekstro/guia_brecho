@@ -30,25 +30,10 @@ if (!isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_
                     </select>
                     <label class='cad-label' for="preco">Preço: </label>
                     <p class='cad-sifrao'>R$:<input class='cad-input cad-input-preco' type="number" name="preco" id="preco" step="0.010"></p>
-                    <label class='cad-label' for="estoque">Produto em estoque: </label>
-
-                    <div>
-
-                        <input type="radio" id="estoque" name="estoque" value="sim">
-                        <label class='cad-produto-radio' for="estoque">Sim</label>
-
-                        <input type="radio" id="estoque" name="estoque" value="nao">
-                        <label class='cad-produto-radio' for="estoque">Não</label>
-
+                
                     </div>
                     <br>
-                    <!--
-                    <select class='cad-input cad-select'  name="estoque" id="estoque">
-                        <option class= 'cad-opt' value="1">Sim</option>
-                        <option class= 'cad-opt' value="0">Não</option>
-                    </select>
-
--->
+                    
                 </fieldset>
             </div>
             <div class='nav-cad-master nav-img'>

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>remove eventos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/ANA.css">
 </head>
 <header>
     <nav>

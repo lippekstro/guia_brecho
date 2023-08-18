@@ -5,130 +5,59 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/utils.php";
 
 
-//Dados Pessoas do Dono do Brecho:
-if(isset($_POST['nome']) && isset($_POST['sobrenome'])
-&& isset($_POST['email']) && isset($_POST['password'])
-&& isset($_POST['cnpj-cpf'])
-
-//Dados do Brecho:
-&& isset($_POST['nomebrecho']) && isset($_POST['cidade'])
-&& isset($_POST['endereco']) && isset($_POST['numero'])
-&& isset($_POST['bairro'])
-
-     
-//Mídias do Brecho
-&& isset($_FILES['files']) && isset($_POST['redeSocial'])
-&& isset($_POST['contato'])
-
-//CONTINUE SEU CADASTRO
-//Informações para Divulgações
-&& isset($_POST['paga_pix']) && isset($_POST['paga_ted'])
-&& isset($_POST['paga_boleto']) && isset($_POST['paga_dinheiro']) 
-&& isset($_POST['faixa_preco_ini']) && isset($_POST['faixa_preco_fim'])
-&& isset($_POST['hora']) && isset($_POST['entrega'])
-&& isset($_POST['story']) && isset($_POST['termo'])
-
+//Dados Brecho:
+if(isset($_POST['brecho_nome'])
+&& isset($_POST['brecho_endereco'])
+&& isset($_POST['brecho_img'])
+&& isset($_POST['brecho_rede'])
+&& isset($_POST['brecho_contato'])
+&& isset($_POST['brecho_faixa_preco_ini'])
+&& isset($_POST['brecho_faixa_preco_fim'])
+&& isset($_POST['brecho_bio'])
 )
     {
-        //Dados do Pessoa:
-    $pessoa_nome = $_POST['nome'];
-    $pessoa_sobrenome= $_POST['sobrenome'];
-    $pessoa_email = $_POST['email'];
-    $pessoa_password = $_POST['password'];
-    $pessoa_cnpj_cpf = $_POST['cnpj-cpf'];
-
-    //Dados do Brecho:
-    $brecho_nome = $_POST['nomebrecho'];
-    $brecho_cidade = $_POST['cidade'];
-    $brecho_endereco = $_POST['endereco'];
-    $brecho_numero = $_POST['numero'];
-    $brecho_bairro = $_POST['bairro'];
     
-    //Mídias do Brecho    
-    $brecho_img = $_FILES['files']['name'];
-    $brecho_rede= $_POST['redeSocial'];
-    $brecho_contato= $_POST['contato'];
-
-    //Mídias do Brecho    
-    $brecho_img = $_FILES['files']['name'];
-    $brecho_rede= $_POST['redeSocial'];
-    $brecho_contato= $_POST['contato'];
-
-    //Informações para Divulgações   
-    $brecho_paga_pix = $_POST['paga_pix'];
-    $brecho_paga_ted = $_POST['paga_ted'];
-    $brecho_paga_boleto = $_POST['paga_boleto'];
-    $brecho_paga_dinheiro = $_POST['paga_dinheiro'];
-
-    $brecho_faixa_preco_ini = $_POST['faixa_preco_ini'];
-    $brecho_faixa_preco_fim = $_POST['faixa_preco_fim'];
-
-    $brecho_hora = $_POST['hora'];
-    $brecho_entrega = $_POST['entrega'];
-
-    $brecho_story = $_POST['story'];
-    $brecho_termo = $_POST['termo'];
+    $brecho_nome = $_POST['brecho_nome'];
+    $brecho_endereco = $_POST['brecho_endereco'];
+    $brecho_img = $_POST['brecho_img']; 
+    $brecho_rede = $_POST['brecho_rede'];
+    $brecho_contato = $_POST['brecho_contato'];
+    $brecho_faixa_preco_ini = $_POST['brecho_faixa_preco_ini'];
+    $brecho_faixa_preco_fim = $_POST['brecho_faixa_preco_fim'];
+    $brecho_bio = $_POST['brecho_bio'];
+  
 
 
 
         //Tratamento para ataques de Injeção INICIO 
         //continuar colocando as outras variáveis...
     try {
-        $pessoa_nome = Utilidades::sanitizaString($pessoa_nome);
+        $brecho_nome = Utilidades::sanitizaString($brecho_nome);
+        $brecho_endereco = Utilidades::sanitizaString($brecho_endereco);
+        $brecho_contato = Utilidades::sanitizaString($brecho_contato);
+        $brecho_bio =  Utilidades::sanitizaString($brecho_bio);
     
-        if(Utilidades::validaEmail($pessoa_email)){
-            $pessoa_email = Utilidades::sanitizaString($pessoa_email);
-        } else {
-            setcookie('msg', "Email Inválido!!", time() +3600, '/');
-            header("Location: /guia_brecho/views/admin/cadastro_brecho.php");
-            exit();
         } 
-    }
+    
     catch(PDOException $error)
     {
         $errorMessage = $error->getMessage();
-    
-        if ($sqlStateCode === '23000' && strpos($errorMessage, 'Duplicate entry') !== false)
-        {
-            setcookie('msg', "O email já está cadastrado. Favor, utilizar outro email", time() +3600, '/');
-            setcookie('tipo', 'info', time() + 3600, '/guia_brecho');
-            header('Location: /guia_brecho/index.php');
-        } else{
-            echo "Erro no Banco de Dados, Fale com Administrador:" . $errorMessage;
-        }
+         echo "Erro no Banco de Dados, Fale com Administrador:" . $errorMessage;
+        
         exit();
     }
 
 
     $brecho = new Brecho();
-    $brecho->cadastrarBrecho(
-        //Dados Pessoais
-        $pessoa_nome,
-        $pessoa_sobrenome,
-        $pessoa_email,
-        $pessoa_password,
-        $pessoa_cnpj_cpf,
-
-        //Dados do Brecho:
-        $brecho_nome,
-        $brecho_endereco,
-        $brecho_img,
-        $brecho_rede,
-        $brecho_contato,
-        $brecho_cidade, 
-        $brecho_numero, 
-        $brecho_bairro,
-        
-        //Informações para Divulgações
-        $brecho_paga_pix,
-        $brecho_paga_ted,
-        $brecho_paga_boleto,
-        $brecho_paga_dinheiro,
-        $brecho_faixa_preco_ini,
-        $brecho_faixa_preco_fim,
-        $brecho_hora,
-        $brecho_entrega,
-        $brecho_story,
-        $brecho_termo
-    );        
+    $brecho->$brecho_nome = $brecho_nome;
+    $brecho->$brecho_endereco =$brecho_endereco;
+    $brecho->$brecho_img = $brecho_img; 
+    $brecho->$brecho_rede = $brecho_rede;
+    $brecho->$brecho_contato = $brecho_contato;
+    $brecho->$brecho_faixa_preco_ini = $brecho_faixa_preco_ini;
+    $brecho->$brecho_faixa_preco_fim = $brecho_faixa_preco_fim;
+    $brecho->$brecho_bio = $brecho_bio ;
+    $brecho->criar();
+    header("Location: /guia_brecho/index.php");
+    exit();   
 }
