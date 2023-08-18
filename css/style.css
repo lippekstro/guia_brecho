@@ -33,43 +33,45 @@ footer {
 
 #loginmod {
   background-color: #F9F8F8;
-  width: 30%;
+  width: 80%; /* Reduzindo a largura para ocupar 80% da largura da tela */
+  max-width: 400px; /* Limitando a largura máxima para 400px */
   padding: 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto; /* Centralizando horizontalmente */
   border-radius: 8%;
   text-align: center;
   border: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  translate: -50% -50%;
-
+  transform: translate(-50%, -50%); /* Corrigindo a propriedade translate */
 }
-
 
 #buttonb {
   background-color: black;
   color: #F9F8F8;
-  width: 250px;
+  width: 100%; /* Ocupando 100% da largura do contêiner pai */
   height: 40px;
   border-radius: 8px;
   border: none;
+  margin-top: 10px; /* Espaçamento superior */
 }
 
 #linkb {
   font-size: small;
   color: black;
+  display: block; /* Colocando o link em uma nova linha */
+  margin-top: 5px; /* Espaçamento superior */
 }
 
 .bordainput {
   padding: 0.5rem;
-  width: 17rem;
+  width: 100%; /* Ocupando 100% da largura do contêiner pai */
   height: 40px;
   border-radius: 10px;
   background-color: var(--bs-orange);
   color: #F9F8F8;
   border: none;
+  margin-bottom: 10px; /* Espaçamento inferior */
 }
 
 .meu-input::placeholder {
@@ -81,15 +83,8 @@ footer {
   font-size: 10px;
 }
 
-.cent {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-}
-
 /* Login style fim */
+
 
 /* Quemsomos style começo */
 
