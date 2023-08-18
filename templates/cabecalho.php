@@ -27,11 +27,14 @@
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
     <link rel="stylesheet" href="/guia_brecho/css/style.css">
     <link rel="stylesheet" href="/guia_brecho/css/style.scss">
+    <link rel="stylesheet" href="/guia_brecho/css/cadastro_usuario.css">
+    <link rel="stylesheet" href="/guia_brecho/css/cadastro_brecho.css">
 
 </head>
 
 <body>
-    <header>
+
+    <head>
         <nav class="navbar navbar-expand-lg" style="background-color: #fb732c;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="/guia_brecho/img/logo_guia_brecho-rem3.png" alt="" id="logo-icone"></a>
@@ -40,6 +43,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+
                         <?php
                         require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                         ?>
