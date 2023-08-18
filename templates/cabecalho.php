@@ -31,7 +31,8 @@
 </head>
 
 <body>
-    <header>
+    
+    <head>
         <nav class="navbar navbar-expand-lg" style="background-color: #fb732c;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="/guia_brecho/img/logo_guia_brecho-rem3.png" alt="" id="logo-icone"></a>
@@ -40,4 +41,5 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-         
+    </head>
+</body>    
