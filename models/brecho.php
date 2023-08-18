@@ -74,9 +74,9 @@ class Brecho
         return $lista;
     }
 
-    public static function listarTudo()
+    public static function listarNomeBrecho()
     {
-        $query = "SELECT * FROM brecho";
+        $query = "SELECT brecho_nome FROM brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();

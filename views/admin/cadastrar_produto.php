@@ -2,9 +2,9 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 
-if (!isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == '1') {
+/* if (!isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == '1') {
     header("Location: /guia_brecho/index.php");
-}
+} */
 
 ?>
 

@@ -55,7 +55,7 @@ class Produto {
 
     public static function listar()
     {
-        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_brecho = l.id_brecho";
+        $query = "SELECT * FROM produto";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
