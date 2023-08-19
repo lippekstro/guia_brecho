@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 <?php 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
 
 class Produto {
     public $id_produto;
     public $nome_produto;
+<<<<<<< HEAD
 =======
 <?php
 session_start();
@@ -22,11 +26,14 @@ class Produto {
 =======
     public $nome_produto;
 >>>>>>> 1a27c58 (commit)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
     public $descricao;
     public $categoria;
     public $preco;
     public $estoque;
     public $imagem_produto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public $id_brecho;
@@ -110,6 +117,9 @@ class Produto {
 =======
     public $id_loja;
 >>>>>>> 1a27c58 (commit)
+=======
+    public $id_loja;
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
     public function __construct($id_produto = false)
     {
@@ -165,9 +175,12 @@ class Produto {
         return $lista;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
     public static function listarId()
     {
@@ -202,7 +215,10 @@ class Produto {
         $stmt->execute();
     }
 
+<<<<<<< HEAD
 >>>>>>> 1a27c58 (commit)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
     public static function listarLimiteProdutos($inicio,$limite){
 
         $conexao = conexao::conectar();
@@ -215,6 +231,7 @@ class Produto {
     public static function pesquisarProdutos($nome){
         $conexao = Conexao::conectar();        
 <<<<<<< HEAD
+<<<<<<< HEAD
         $sql = "SELECT * FROM produto WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
         $query = $conexao->prepare($sql);
         $query->bindValue(":termo", '%' . $nome .'%');
@@ -222,12 +239,19 @@ class Produto {
         $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
         $query = $conexao->prepare($sql);
 >>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
+=======
+        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
+        $query = $conexao->prepare($sql);
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         $query->execute();
         $res = $query->fetchAll(PDO::FETCH_ASSOC);
 
         if (count($res)== 0) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
         }else {
             $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
@@ -235,6 +259,7 @@ class Produto {
         }
     }
     public static function filtroCategoria($categoria){
+<<<<<<< HEAD
 <<<<<<< HEAD
         $conexao = Conexao::conectar();
         $sql = "SELECT * FROM produto WHERE categoria = :categoria";
@@ -268,6 +293,8 @@ class Produto {
             echo "<p> Arquivo nao cadastrado!</p>";
         }
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         $conexao = Conexao::conectar();
         $sql = "SELECT * FROM produto WHERE categoria = :categoria";
         $query = $conexao->prepare($sql);
@@ -277,6 +304,7 @@ class Produto {
         return $resultado;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function inserir(){
 
@@ -310,6 +338,8 @@ class Produto {
     
 >>>>>>> 1a27c58 (commit)
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 
 }
@@ -317,4 +347,7 @@ class Produto {
     
 
     
+<<<<<<< HEAD
 >>>>>>> 955cc10 (commit)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1

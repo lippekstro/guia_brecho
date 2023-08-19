@@ -14,6 +14,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container-produtos {
   /* hide fixed overflow contents */
   clip: rect(0, auto, auto, 0);
@@ -33,6 +34,8 @@
 }
 =======
 >>>>>>> d549377 (alt pagina proddutos)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 /*  css cards  */
 .grid-produto {
@@ -106,8 +109,13 @@
   position: relative;
   left: 0px;
   width: 200px;
+<<<<<<< HEAD
   height: auto;
   background-color: var(--background);  
+=======
+  height: 280px;
+  background-color: var(--background);
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
   transition: 300ms all;
   transform-origin: center left;
   /* box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); */
@@ -223,17 +231,27 @@
 }
 
 .h2 {
+<<<<<<< HEAD
 	font-size: 18px;
 	line-height: 34px;
 	font-weight: 500;
 	letter-spacing: 1px;
 	display: block;
 	margin: 0;
+=======
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
   cursor: pointer;
   color: #000000;
 }
 
 .p {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 15px;
@@ -247,6 +265,8 @@
 	margin-top: 14px;
 	z-index: 2;
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
   color: rgba(0, 0, 0, 0.8);
   font-size: 15px;
   line-height: 26px;
@@ -259,7 +279,10 @@
   margin-top: 14px;
   z-index: 2;
   /* display: block; */
+<<<<<<< HEAD
 >>>>>>> 3157485 (filtro e pesquisa)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
   text-decoration: none;
 }
 
@@ -269,11 +292,18 @@
 }
 
 .ul {
+<<<<<<< HEAD
 	list-style: none;
 	perspective: 900;
 	padding: 0 20px 10px;
   margin: 0;
 	border-radius: 5px;
+=======
+  list-style: none;
+  perspective: 900;
+  padding: 0 20px 10px;
+  margin: 0;
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
   border-radius: 5px;
 }
@@ -558,6 +588,7 @@ $opacity-transition: opacity $speed ease-in-out;
   list-style: none;
   text-decoration: none;
   color: #fb732c;
+<<<<<<< HEAD
 }
 /* buscar */
 
@@ -687,6 +718,10 @@ $opacity-transition: opacity $speed ease-in-out;
   }
 }
 
+=======
+}
+
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 /* buscar */
 

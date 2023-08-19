@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/usuario.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/utils.php";
@@ -28,6 +29,8 @@ try {
     echo $e->getMessage();
 }
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/usuario.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -64,5 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+<<<<<<< HEAD
 ?>
 >>>>>>> 17a24d4 (commit)
+=======
+?>
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1

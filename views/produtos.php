@@ -3,11 +3,15 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 =======
 =======
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 >>>>>>> f5581de (algoritmo pesquisa)
+=======
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 $produtos = array(
   ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?shirt", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
@@ -19,6 +23,7 @@ $produtos = array(
   ["nome" => "Short", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?dress", "categoria" => "Roupa", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja.jpg"],
   ["nome" => "Calça", "preco" => 100.00, "descricao" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "loja" => "Brecho Teste", "imagem" => "https://source.unsplash.com/random/200x300/?pants", "categoria" => "Calçado", "brecho" => "Fofo Brechó", "img-loja" => "logo-loja3.jpg"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
 
 
@@ -28,6 +33,8 @@ $listaBrecho = Brecho::listarNomeBrecho();
 
 <!------------------------------------------ cards produtos -------------------------------------------------------->
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 );
 
 if (isset($_GET["pesquisa"])) {
@@ -36,6 +43,7 @@ if (isset($_GET["pesquisa"])) {
 ?>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <!-- cards produtos -->
 >>>>>>> f5581de (algoritmo pesquisa)
@@ -72,10 +80,19 @@ if (isset($_GET["pesquisa"])) {
 >>>>>>> 3157485 (filtro e pesquisa)
   <div class="search">
 >>>>>>> d255965 (criei o metodo pesquisarProdutos na classe produto)
+=======
+<!------------------------------------------ cards produtos -------------------------------------------------------->
+
+<section class="grid-produto">
+
+  <!--------------------------------------- aqui a barra de pesquisa -------------------------------------------------->
+  <div class="search">
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
     <form action="" class="form-search">
       <input type="search" name="pesquisa" id="search" required>
       <i class="fa fa-search"></i>
     </form>
+<<<<<<< HEAD
 >>>>>>> 6774dab (buscar e modal atualizado)
   </div>
 <<<<<<< HEAD
@@ -83,12 +100,16 @@ if (isset($_GET["pesquisa"])) {
   <?php endif; ?>
 =======
 >>>>>>> 3157485 (filtro e pesquisa)
+=======
+  </div>
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
   <!--------------------------------------------------- // ----------------------------------------------------------------->
   <div class="titulo">
     <h2>Produtos</h2>
   </div>
 
   <ul class="gallery">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
@@ -120,6 +141,8 @@ if (isset($_GET["pesquisa"])) {
           <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
         </ul>
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
@@ -256,6 +279,7 @@ if (isset($_GET["pesquisa"])) {
       <?php endforeach; ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> f5581de (algoritmo pesquisa)
 
@@ -264,6 +288,10 @@ if (isset($_GET["pesquisa"])) {
 >>>>>>> 3157485 (filtro e pesquisa)
   </ul>
 >>>>>>> 6774dab (buscar e modal atualizado)
+=======
+    <?php endif; ?>
+  </ul>
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
   <!------------------------------------------ aqui paginaçao ------------------------------------------------------------->
 
@@ -300,10 +328,16 @@ if (isset($_GET["pesquisa"])) {
           <input type="checkbox" checked>
           <i class="arrow"></i>
           <h2 class="h2"></i>Brechó</h2>
+<<<<<<< HEAD
           <?php foreach ($listaBrecho as $lista) : ?>
             <p class="p"><a href="?brecho_nome=<?= $lista["brecho_nome"] ?>" class="p"><?= $lista["brecho_nome"] ?></a></p>
           <?php endforeach; ?>
           <p class="p"><a href="\guia_brecho\views\produtos.php" class="p">Limpar Filtro</a></p>
+=======
+          <?php foreach ($produtos as $lista) : ?>
+            <p class="p"><?= $lista["brecho"] ?></p>
+          <?php endforeach; ?>
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         </li>
       </ul>
     </div>

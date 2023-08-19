@@ -6,6 +6,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "\guia_brecho\models\usuario.php";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -20,6 +21,8 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     
 }
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $email = $_POST['email'];
@@ -38,5 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
     
+<<<<<<< HEAD
 }
 >>>>>>> 5c79635 (commit do dia 17/08)
+=======
+}
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1

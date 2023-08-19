@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 <<<<<<< HEAD
+<<<<<<< HEAD
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 
 /* if (!isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == '1') {
@@ -10,6 +11,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 
 
 >>>>>>> d820598 (commit)
+=======
+
+
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 ?>
 
@@ -20,10 +25,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
     <div class='nav-master-cad-produto'>
         <form action="\guia_brecho\controllers\inserir_produto_controller.php" method="post" autocomplete="on" enctype="multipart/form-data" target="alert">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             
 >>>>>>> d820598 (commit)
+=======
+            
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             <div class='nav-cad-master'>
                 <fieldset class='nav-cadastro-produto'>
                     <legend>Dados do produto</legend>
@@ -33,6 +42,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                     <input class='cad-input' type="text" name="descricao" id="descricao">
                     <label class='cad-label' for="categoria">Categoria do produto:</label>
                     <select class='cad-input cad-select' name="categoria" id="categoria">
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <option class='cad-opt' value="vestimentas">Roupa</option>
                         <option class='cad-opt' value="calcados">Calçado</option>
@@ -45,6 +55,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                     <br>
                     
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
                         <option class= 'cad-opt' value="vestimentas">Roupa</option>
                         <option class= 'cad-opt' value="calcados">Calçado</option>
                         <option class= 'cad-opt' value="acessorios">Acessório</option>
@@ -70,7 +82,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                     </select>
 
 -->
+<<<<<<< HEAD
 >>>>>>> d820598 (commit)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
                 </fieldset>
             </div>
             <div class='nav-cad-master nav-img'>
@@ -84,6 +99,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
                 <input class='cad-botao' type="submit" name="cadProd" value="Cadastrar">
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </form>
         <!--<iframe name="alert"></iframe>-->
@@ -92,13 +108,18 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
             <p class='legendinha'>Preview da imagem:
             <p>
 =======
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             
         </form>
         <!--<iframe name="alert"></iframe>-->
         
         <div class='div_photo_cad_produto'>
             <p class= 'legendinha'>Preview da imagem:<p>
+<<<<<<< HEAD
 >>>>>>> d820598 (commit)
+=======
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             <p id="view_photo_cad_produto">
                 <img id='outputCadProduto'>
             </p>
@@ -110,8 +131,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 <<<<<<< HEAD
+<<<<<<< HEAD
 ?>
 =======
 
  ?> 
 >>>>>>> d820598 (commit)
+=======
+
+ ?> 
+>>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
