@@ -2,10 +2,10 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 
-if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == 1) {
+/* if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == 1) {
     header("Location: /guia_brecho/index.php");
     echo "<p>nada</p>";
-}
+} */
 
 ?>
 
@@ -75,7 +75,7 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                 <p>Escolha sua Logo:</p>
                 <br>
                 <div>
-                    <input class="nav-input-midia" type="file" name="files" id="files" />
+                    <input class="nav-input-midia" type="file" name="brecho_img" id="files" >
                 </div>
                 <p id="view_photo">
                     <img id='output'>
@@ -83,9 +83,11 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                 <br>
             </fieldset>
         </div>
-        <br> 
-    </form>
-    <p class="button-input" ><input class="cad_botao_brecho" type="submit" value="Criar meu Brechó" /></p>
+        <br>
+        <p class="button-input" ><input class="cad_botao_brecho" type="submit" value="Criar meu Brechó"></p>
+    </form>  
+    
+    
     
     <br>
     <br>

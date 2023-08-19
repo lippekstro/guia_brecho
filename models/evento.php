@@ -1,59 +1,82 @@
-<?php 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/db/conexao.php";
 
-class Evento {
-    public $id_evento;
-    public $nome_evento;
-    public $data_evento;
-    public $horario;
-    public $imagem_evento;
-    public $local_evento;
-    public $descricao_evento;
+class Brecho
+{
+    public $id_brecho;
+    public $brecho_nome;
+    public $brecho_endereco;
+    public $brecho_img;
+    public $brecho_rede;
+    public $brecho_contato;
+    public $brecho_faixa_preco_ini;
+    public $brecho_faixa_preco_fim;
+    public $brecho_bio;
+    public $id_usuario;
 
-    public function __construct($id_evento = false)
+
+
+    public function __construct($id_brecho = false)
     {
-        if ($id_evento) {
-            $this->id_evento = $id_evento;
+        if ($id_brecho) {
+            $this->id_brecho = $id_brecho;
             $this->carregar();
         }
     }
 
     public function carregar()
     {
-        $query = "SELECT * FROM evento WHERE id_evento = :id";
+        $query = "SELECT * FROM brecho WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':id', $this->id_evento);
+        $stmt->bindValue(':id_brecho', $this->id_brecho);
         $stmt->execute();
 
-        $evento = $stmt->fetch();
-        $this->nome_evento = $evento['nome_evento'];
-        $this->data_evento = $evento['data_evento'];
-        $this->horario = $evento['horario'];
-        $this->imagem_evento = $evento['imagem_evento'];
-        $this->local_evento = $evento['local_evento'];
-        $this->descricao_evento = $evento['descricao_evento'];
+        $brecho = $stmt->fetch();
+        $this->brecho_nome = $brecho['brecho_nome'];
+        $this->brecho_endereco = $brecho['brecho_endereco'];
+        $this->brecho_img = $brecho['brecho_img'];
+        $this->brecho_rede = $brecho['brecho_rede'];
+        $this->brecho_contato = $brecho['brecho_contato'];
+        $this->brecho_faixa_preco_ini = $brecho['brecho_faixa_preco_ini'];
+        $this->brecho_faixa_preco_fim = $brecho['brecho_faixa_preco_fim'];
+        $this->brecho_bio = $brecho['brecho_bio'];
+        $this->id_usuario = $brecho['id_usuario'];
+
     }
 
     public function criar()
     {
-        $query = "INSERT INTO evento (nome_evento, data_evento, horario, imagem_evento, local_evento, descricao_evento) VALUES (:nome, :data_evento, :hora, :imagem, :local_evento, :descricao)";
+        $query = "INSERT INTO brecho (brecho_nome, brecho_endereco, brecho_img, brecho_rede, brecho_contato, brecho_faixa_preco_ini, brecho_faixa_preco_fim, brecho_bio, id_usuario) VALUES (:nome, :endereco, :imagem, :rede, :contato, :faixa_ini, :faixa_fim, :bio, :dono)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':nome', $this->nome_evento);
-        $stmt->bindValue(':data_evento', $this->data_evento);
-        $stmt->bindValue(':hora', $this->horario);
-        $stmt->bindValue(':imagem', $this->imagem_evento);
-        $stmt->bindValue(':local_evento', $this->local_evento);
-        $stmt->bindValue(':descricao', $this->descricao_evento);
+        $stmt->bindValue(':nome', $this->brecho_nome);
+        $stmt->bindValue(':endereco', $this->brecho_endereco);
+        $stmt->bindValue(':imagem', $this->brecho_img);
+        $stmt->bindValue(':rede', $this->brecho_rede);
+        $stmt->bindValue(':contato', $this->brecho_contato);
+        $stmt->bindValue(':faixa_ini', $this->brecho_faixa_preco_ini);
+        $stmt->bindValue(':faixa_fim', $this->brecho_faixa_preco_fim);
+        $stmt->bindValue(':bio', $this->brecho_bio);
+        $stmt->bindValue(':dono', $this->id_usuario);
         $stmt->execute();
-        $this->id_evento = $conexao->lastInsertId();
-        return $this->id_evento;
+        $this->id_brecho = $conexao->lastInsertId();
+        return $this->id_brecho;
     }
 
     public static function listar()
     {
-        $query = "SELECT * FROM evento";
+        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u ON b.id_usuario = u.id_usuario";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+
+    public static function listarNomeBrecho()
+    {
+        $query = "SELECT brecho_nome FROM brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -63,24 +86,35 @@ class Evento {
 
     public function editar()
     {
-        $query = "UPDATE evento SET nome_evento = :nome, data_evento = :data_evento, horario = :hora, local_evento = :local_evento, descricao_evento = :descricao WHERE id_evento = :id";
+        $query = "UPDATE brecho SET brecho_nome = :nome, brecho_endereco = :endereco, brecho_rede = :rede, brecho_contato = :contato, brecho_faixa_preco_ini = :faixa_ini, brecho_faixa_preco_fim = :faixa_fim, brecho_bio = :bio WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(":nome", $this->nome_evento);
-        $stmt->bindValue(":data_evento", $this->data_evento);
-        $stmt->bindValue(":hora", $this->horario);
-        $stmt->bindValue(":local_evento", $this->local_evento);
-        $stmt->bindValue(":descricao", $this->descricao_evento);
-        $stmt->bindValue(":id", $this->id_evento);
+        $stmt->bindValue(":nome", $this->brecho_nome);
+        $stmt->bindValue(":endereco", $this->brecho_endereco);
+        $stmt->bindValue(":rede", $this->brecho_rede);
+        $stmt->bindValue(":contato", $this->brecho_contato);
+        $stmt->bindValue(":faixa_ini", $this->brecho_faixa_preco_ini);
+        $stmt->bindValue(":faixa_fim", $this->brecho_faixa_preco_fim);
+        $stmt->bindValue(":bio", $this->brecho_bio);
+        $stmt->bindValue(":id_brecho", $this->id_brecho);
         $stmt->execute();
     }
 
     public function deletar()
     {
-        $query = "DELETE FROM evento WHERE id_evento = :id";
+        $query = "DELETE FROM brecho WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':id', $this->id_evento);
+        $stmt->bindValue(':id_brecho', $this->id_brecho);
         $stmt->execute();
+    }
+
+    public static function buscarMeuBrecho($id){
+        $query = "SELECT id_brecho FROM brecho WHERE id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }

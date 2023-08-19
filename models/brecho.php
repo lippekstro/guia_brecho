@@ -76,7 +76,7 @@ class Brecho
 
     public static function listarNomeBrecho()
     {
-        $query = "SELECT brecho_nome FROM brecho";
+        $query = "SELECT brecho_nome, id_brecho FROM brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -110,7 +110,7 @@ class Brecho
     }
 
     public static function buscarMeuBrecho($id){
-        $query = "SELECT id_brecho FROM brecho WHERE id_usuario = :id";
+        $query = "SELECT id_brecho , brecho_nome FROM brecho WHERE id_usuario = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id', $id);

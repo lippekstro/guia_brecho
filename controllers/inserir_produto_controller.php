@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <?php
-
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
-<<<<<<< HEAD
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/brecho.php';
-=======
-<?php
-
-require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
->>>>>>> b0dc0f2 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome_produto"];
@@ -25,15 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $produto->descricao = $descricao;
         $produto->categoria = $categoria;
         $produto->preco = $preco;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $id_brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
-        $produto->id_brecho = $id_brecho;
-=======
->>>>>>> b0dc0f2 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
+        $produto->id_brecho = $id_brecho["id_brecho"];
+        $produto->nome_brecho = $id_brecho["brecho_nome"];
      
         
 
@@ -45,7 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $produto->criar();
 
-        header("Location: /guia_brecho/views/admin/cadastrar_produto.php");        
+        header("Location: /guia_brecho/views/admin/cadastrar_produto.php");
+                
         exit();
 
     } catch (PDOException $e) {
@@ -55,14 +41,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ?>
-=======
->>>>>>> 1a27c58 (commit)
-=======
-?>
->>>>>>> b0dc0f2 (commit)
-=======
-?>
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1

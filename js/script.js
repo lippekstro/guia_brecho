@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -28,7 +27,4 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
-=======
-
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
 

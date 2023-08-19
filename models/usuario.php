@@ -1,32 +1,16 @@
 <?php
-
-include_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
+session_start();
 
 class Usuario
 {
     public $id_usuario;
-<<<<<<< HEAD
-<<<<<<< HEAD
     public $nome_usuario;
     public $email;
     public $senha;
     public $cpf_cnpj;
     public $nivel_acesso;
 
-=======
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
-    public $email;
-    public $senha;
-    public $nome;
-    public $cpf_cnpj;
-    public $nivel_acesso;
-
-
-<<<<<<< HEAD
->>>>>>> 17a24d4 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
     public function __construct($id_usuario = false)
     {
         if ($id_usuario) {
@@ -44,30 +28,15 @@ class Usuario
         $stmt->execute();
 
         $usuario = $stmt->fetch();
-<<<<<<< HEAD
-<<<<<<< HEAD
         $this->nome_usuario = $usuario['nome_usuario'];
         $this->email = $usuario['email'];
         $this->senha = $usuario['senha'];
-=======
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
-        $this->id_usuario = $usuario['id_usuario'];
-        $this->email = $usuario['email'];
-        $this->senha = $usuario['senha'];
-        $this->nome = $usuario['nome'];
-<<<<<<< HEAD
->>>>>>> 17a24d4 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         $this->cpf_cnpj = $usuario['cpf_cnpj'];
         $this->nivel_acesso = $usuario['nivel_acesso'];
     }
 
     public function criar()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $query = "INSERT INTO usuario (nome_usuario, email, senha, cpf_cnpj) VALUES (:nome, :email, :senha, :doc)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -75,20 +44,6 @@ class Usuario
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':senha', $this->senha);
         $stmt->bindValue(':doc', $this->cpf_cnpj);
-=======
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
-        $query = "INSERT INTO usuario (email,senha,nome,cpf_cnpj) VALUES (:email, :senha, :nome, :cpf_cnpj)";
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':email', $this->email);
-        $stmt->bindValue(':senha', $this->senha);
-        $stmt->bindValue(':nome', $this->nome);
-        $stmt->bindValue(':cpf_cnpj', $this->cpf_cnpj);
-<<<<<<< HEAD
->>>>>>> 17a24d4 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         $stmt->execute();
         $this->id_usuario = $conexao->lastInsertId();
         return $this->id_usuario;
@@ -106,8 +61,6 @@ class Usuario
 
     public function editar()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $query = "UPDATE usuario SET nome_usuario = :nome, email = :email, cpf_cnpj = :doc WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -115,19 +68,6 @@ class Usuario
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':doc', $this->cpf_cnpj);
         $stmt->bindValue(":id_usuario", $this->id_usuario);
-=======
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
-        $query = "UPDATE usuario SET email = :email, senha = :senha, nome = :nome WHERE id_usuario = :id_usuario";
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare($query);
-        $stmt->bindValue(":email", $this->email);
-        $stmt->bindValue(":senha", $this->senha);
-        $stmt->bindValue(":nome", $this->nome);
-<<<<<<< HEAD
->>>>>>> 17a24d4 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
         $stmt->execute();
     }
 
@@ -142,8 +82,6 @@ class Usuario
 
     public static function logar($email, $senha)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         $query = "SELECT * FROM usuario WHERE email = :email";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -158,62 +96,13 @@ class Usuario
             $_SESSION['usuario']['email'] = $registro['email'];
             $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
 
-=======
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
-        $query = "SELECT id_usuario, nome, nivel_acesso, email, senha FROM usuario WHERE email = :email";
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare($query);
-        $stmt ->bindValue(":email", $email);
-        
-        
-        $stmt -> execute();
-        $registro = $stmt->fetchAll();
-            
-        if ( $senha == password_verify($registro['senha'],PASSWORD_DEFAULT)) {
-            session_start();
-            $_SESSION['id_usuario'] = $registro['id_usuario'];
-            $_SESSION['usuario']['nome'] = $registro['nome'];
-            $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
-            
-            if (isset($_COOKIE['erro'])) {
-                setcookie('erro', '', time() - 3600, '/guia_brecho/');
-                
-            }
-<<<<<<< HEAD
->>>>>>> 17a24d4 (commit)
-=======
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             header("Location: /guia_brecho/index.php");
             exit();
         } else {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/guia_brecho/');
-=======
-            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/');
->>>>>>> 17a24d4 (commit)
-=======
-            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/guia_brecho/');
->>>>>>> 5c79635 (commit do dia 17/08)
-=======
-            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/guia_brecho/');
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1
             header("Location: /guia_brecho/views/login.php");
             exit();
         }
-        var_dump($registro);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> 17a24d4 (commit)
-=======
-
-}
->>>>>>> 955cc10be8aa2c93a256ca9f03d142c6b68182b1

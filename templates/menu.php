@@ -26,10 +26,15 @@ session_start();
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php">Meus Produtos</a>
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/cadastrar_produto.php">Cadastrar Produtos</a>
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Minha Lojas</a>
+            <a class="nav-link active text-white" aria-current="page" href="\guia_brecho\views\admin\cadastro_brecho.php">Cadastrar Loja</a>
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Meus Eventos</a>
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
             </div>
+            <div class="position-absolute end-0 mx-3">
+                <p class="active text-white" aria-current="page">Olá, <?= $_SESSION["usuario"]["nome"] ?></p>
+            </div>
+
             </div>
             </div>
             </nav>
