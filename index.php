@@ -67,7 +67,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <div class="col-lg-7 col-md-12 left-content">
                   <div class="collection-item">
                     <div class="products-thumb">
-                      <img src="/guia_brecho/img/IMG_0648.jpg" alt="collection item" class="large-image image-rounded">
+                      <img src="/guia_brecho/img/banner01.png" alt="collection item" class="large-image image-rounded">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
                       <div class="categories text_banner_color">Faça sua coleção</div>
