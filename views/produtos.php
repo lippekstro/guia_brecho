@@ -42,9 +42,9 @@ $listaBrecho = Brecho::listarNomeBrecho();
 
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
-    <?php if (isset($_GET["categoria"])) : ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>
 
-      <?= $categoria = $_GET["categoria"];
+      <?php $categoria = $_GET["categoria"];
 
       try {
         $resultadoFiltro = Produto::filtroCategoria($categoria);

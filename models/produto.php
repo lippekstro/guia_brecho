@@ -65,16 +65,6 @@ class Produto {
         return $lista;
     }
 
-    public static function listarId()
-    {
-        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_brecho = l.id_brecho";
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare($query);
-        $stmt->execute();
-        $lista = $stmt->fetchAll();
-        return $lista;
-    }
-
     public function editar()
     {
         $query = "UPDATE produto SET nome_produto = :nome, descricao = :descricao, categoria = :cat, preco = :preco, estoque = :estoque WHERE id_produto = :id";
