@@ -25,19 +25,19 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                 <br>
                 <div>
                     <label for="nomebrecho">Nome do Brechó</label>
-                    <input class="box-max-input" type="text" name="brecho_nome" id="nomebrecho">
+                    <input class="box-max-input" type="text" name="nomebrecho" id="nomebrecho">
                 </div>
                 <div>
                     <label for="endereco">Endereço</label>
-                    <input class="box-max-input" type="text" name="brecho_endereco" id="endereco">
+                    <input class="box-max-input" type="text" name="endereco" id="endereco">
                 </div>
                 <div>
                     <label for="redeSocial">Rede Social</label>
-                    <input class="box-max-input" type="text" name="brecho_rede" id="redeSocial">
+                    <input class="box-max-input" type="text" name="redeSocial" id="redeSocial">
                 </div>
                 <div>
                     <label for="contato">WhatsApp/Telefone</label>
-                    <input class="box-max-input" type="contato" name="brecho_contato" id="contato">
+                    <input class="box-max-input" type="contato" name="contato" id="contato">
                 </div>
             </fieldset>
        </div>               
@@ -54,7 +54,7 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                         <p class='cad-sifrao-brecho'>R$:<input class="box-max-input preco-cont-cad baixo-cont-cad" type="text" name="faixa_preco_fim" id="faixa-preco"></p>
                     -->
                     <div>
-                        <p class='cad-sifrao-brecho'> <i>de: </i> R$:<input class="box-max-input box-max-input-valor" type="number" name="brecho_faixa_preco_ini" id="faixa-preco"> <i>até:</i>R$:<input class="box-max-input box-max-input-valor" type="number" name="brecho_faixa_preco_fim" id="faixa-preco"> </p>
+                        <p class='cad-sifrao-brecho'> <i>de: </i> R$:<input class="box-max-input box-max-input-valor" type="number" name="faixa_preco_ini" id="faixa-preco"> <i>até:</i>R$:<input class="box-max-input box-max-input-valor" type="number" name="faixa_preco_fim" id="faixa-preco"> </p>
                     </div>
                                             
                     <div class="nav-cont-cad nav-cont-cad-bio">
@@ -62,7 +62,7 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                     </div>
                 
                     <div >
-                        <textarea  class="area_bio" placeholder= "Informações da bio do seu Instagram...." id="bio" name="brecho_bio" rows="5" cols="34"></textarea>
+                        <textarea  class="area_bio" placeholder= "Informações da bio do seu Instagram...." id="bio" name="bio" rows="5" cols="34"></textarea>
                     </div>          
             </fieldset>
         </div>
@@ -83,10 +83,9 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
                 <br>
             </fieldset>
         </div>
-        <br> 
+        <br>
+        <p class="button-input" ><input class="cad_botao_brecho" type="submit" value="Criar meu Brechó" /></p> 
     </form>
-    <p class="button-input" ><input class="cad_botao_brecho" type="submit" value="Criar meu Brechó" /></p>
-    
     <br>
     <br>
 </section>

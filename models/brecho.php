@@ -47,7 +47,8 @@ class Brecho
 
     public function criar()
     {
-        $query = "INSERT INTO brecho (brecho_nome, brecho_endereco, brecho_img, brecho_rede, brecho_contato, brecho_faixa_preco_ini, brecho_faixa_preco_fim, brecho_bio, id_usuario) VALUES (:nome, :endereco, :imagem, :rede, :contato, :faixa_ini, :faixa_fim, :bio, :dono)";
+        $query = "INSERT INTO brecho (brecho_nome, brecho_endereco, brecho_img, brecho_rede, brecho_contato, brecho_faixa_preco_ini, brecho_faixa_preco_fim, brecho_bio, id_usuario) 
+        VALUES (:nome, :endereco, :imagem, :rede, :contato, :faixa_ini, :faixa_fim, :bio, :dono)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->brecho_nome);
