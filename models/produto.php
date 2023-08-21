@@ -119,4 +119,18 @@ class Produto {
         $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
         return $resultado;
     }
+
+    public static function listarSomenteEstocados($id)
+    {
+        $query = "SELECT DISTINCT p.*
+        FROM produto p
+        JOIN brecho l ON p.id_brecho = :id
+        WHERE p.estoque = 1;";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 }

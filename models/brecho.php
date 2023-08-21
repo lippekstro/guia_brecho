@@ -118,4 +118,14 @@ class Brecho
         $stmt->execute();
         return $stmt->fetch();
     }
+    public static function getBrecho($id)
+    {
+        $query = "SELECT l.*, u.nome FROM brecho l JOIN usuario u ON l.id_brecho = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetch();
+        return $lista;
+    }
 }
