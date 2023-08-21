@@ -39,7 +39,7 @@ $listaBrecho = Brecho::listarNomeBrecho();
   <ul class="gallery">
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
-    <?= include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>
 
   </ul>
 

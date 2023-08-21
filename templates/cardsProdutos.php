@@ -105,7 +105,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 
 <?php else : ?>
 
-    <?=$produtos = Produto::listar(); ?>
+    <?php $produtos = Produto::listar(); ?>
 
     <?php foreach ($produtos as $lista) : ?>
         <li class="card-produtos">
@@ -116,7 +116,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
             </div>
             <div class="info-produto">
                 <h3><?= $lista["nome_produto"] ?></h3>
-                <p style="font-size: .6rem;"><?= $lista["categoria"] ?>/<?= $lista["brecho"] ?></p>
+                <p style="font-size: .6rem;"><?= $lista["categoria"] ?>/<?= $lista["brecho_nome"] ?></p>
                 <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
                 <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
             </div>
