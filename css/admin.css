@@ -1,0 +1,156 @@
+/* Add some basic styles to the page */
+
+/* Style the title */
+.admin .admtitulo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Style the container with padding */
+.admin .adm-container {
+  padding: 20px;
+}
+
+/* Style the search bar and "Delete All" button */
+.admin .search-bar {
+  margin-bottom: 10px;
+}
+
+.admin .delete-all-button {
+  margin-top: 10px;
+}
+
+/* Set a fixed width for the navigation tabs */
+.admin .nav-tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(251, 115, 44, 0.admin .6); /* Slightly transparent background color */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Center the navigation links and add spacing between them */
+.admin .nav-item {
+  margin-right: 10px;
+}
+
+/* Set the default text and background color for the navigation links */
+.admin .nav-link {
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+/* Set the text and background color for the active navigation link */
+.admin .nav-link.admin .active {
+  color: white;
+  background-color: rgba(251, 115, 44, 0.admin .8); /* Slightly transparent background color */
+}
+
+.admin .admtitulo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Style the container with padding */
+.admin .adm-container {
+  padding: 20px;
+}
+
+/* Style the search bar and "Delete All" button */
+.admin .search-bar {
+  margin-bottom: 10px;
+}
+
+.admin .delete-all-button {
+  margin-top: 10px;
+}
+
+/* Set a fixed width for the navigation tabs */
+.admin .nav-tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(251, 115, 44, 0.admin .6); /* Slightly transparent background color */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Center the navigation links and add spacing between them */
+.admin .nav-item {
+  margin-right: 10px;
+}
+
+/* Set a custom background color for the active navigation link */
+.admin .nav-link.admin .active {
+  background-color: rgba(251, 115, 44, 0.admin .8);
+  color: white;
+}
+
+.admin .adm-container {
+    margin-top: 30px;
+  }
+ 
+.admin .bg-transparent-orange {
+  background-color: rgba(251, 115, 44, 0.admin .8);
+}
+
+  .admin .box-max-input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .admin .box-input {
+    margin-top: 20px;
+  }
+  
+  .admin .accordion-item {
+    background-color: rgba(251, 115, 44, 0.admin .8);
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .admin .accordion-button {
+    font-size: 18px;
+  }
+  
+  
+  .admin .accordion-header {
+    background-color: rgba(251, 115, 44, 0.admin .5);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .admin .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .admin .delete-all-button {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .admin .edit-save-buttons {
+    margin-top: 10px;
+  }
+  
+  .admin .btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .admin .admtitulo {
+    text-align: center;
+  }
+  
