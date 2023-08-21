@@ -14,13 +14,19 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         $resultadoFiltro = Produto::filtroCategoria($categoria);
     } catch (\Throwable $th) {
         echo $th->getMessage();
-    } ?>
+    } 
+    ?>
+    <?php if (count($resultadoFiltro) == 0) : ?>
+        <div class="alert alert-danger" role="alert">
+            Nenhum produto encontrado!
+        </div>
+    <?php endif; ?>
 
     <?php foreach ($resultadoFiltro as $lista) : ?>
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">
@@ -64,12 +70,17 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
     }
     ?>
 
-    <?php foreach ($resultadoPesquisa as $lista) : ?>
+    <?php if (count($resultadoPesquisa) == 0) : ?>
+        <div class="alert alert-danger" role="alert">
+            Nenhum resultado encontrado...
+        </div>
+    <?php endif; ?>
 
+    <?php foreach ($resultadoPesquisa as $lista) : ?>
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">
@@ -102,7 +113,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         </div>
     <?php endforeach; ?>
 
-
 <?php elseif (isset($_GET["id_brecho"])) : ?>
     <?php
     $id_brecho = $_GET["id_brecho"];
@@ -117,7 +127,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($value["imagem_produto"]) ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($value["imagem_produto"]) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">
@@ -169,7 +179,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="" width="1000" height="1500" alt="" sizes="(max-width: 1000px) 100vw, 1000px">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">

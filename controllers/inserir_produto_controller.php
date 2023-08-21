@@ -22,10 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
         
 
-        if (!empty($_FILES["imagem_produto"])) {
+        if (isset($_POST["imagem_produto"])) {
             
             $img = file_get_contents($_FILES["imagem_produto"]["tmp_name"]);
             $produto->imagem_produto = $img;
+
+        } else {
+
+            $caminho_da_imagem = $_SERVER["DOCUMENT_ROOT"] . '\guia_brecho\img\produto-sem-imagem.jpg';
+            $conteudo_da_imagem = file_get_contents($caminho_da_imagem);
+            $produto->imagem_produto = $conteudo_da_imagem;            
         }
 
         $produto->criar();
@@ -38,7 +44,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $e->getMessage();
     }
 }
-
-
-
-?>

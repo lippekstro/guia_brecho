@@ -13,14 +13,14 @@ $listaBrecho = Brecho::listarNomeBrecho();
 <section class="grid-produto">
   <!--------------------------------------- aqui a barra de pesquisa -------------------------------------------------->
   <?php if (isset($_GET["pesquisa"])) : ?>
-    
+
     <div class="search">
       <form action="" class="form-search">
         <input type="search" name="pesquisa" id="search" value="<?= $_GET["pesquisa"] ?>" required>
         <i class="fa fa-search"></i>
       </form>
     </div>
-    
+
   <?php else : ?>
 
     <div class="search">
@@ -37,6 +37,15 @@ $listaBrecho = Brecho::listarNomeBrecho();
   </div>
 
   <ul class="gallery">
+
+    <?php if (isset($_SESSION["resultado_pesquisa"]["sem_sucesso"])) : ?>
+
+      <div class="alert alert-danger" role="alert">
+        <?= $_SESSION["resultado_pesquisa"]["sem_sucesso"] ?>
+      </div>
+
+    <?php endif; ?>
+
     <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
 
     <?php include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>

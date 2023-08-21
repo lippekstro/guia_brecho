@@ -31,7 +31,8 @@ CREATE TABLE produto (
     preco FLOAT NOT NULL, 
     imagem_produto LONGBLOB, 
     id_brecho int NOT NULL,
-    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho)
+    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho),
+    nome_brecho VARCHAR(255)
 );
 
 CREATE TABLE evento (

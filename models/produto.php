@@ -1,6 +1,8 @@
 <?php 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/db/conexao.php';
 
+
+
 class Produto {
     public $id_produto;
     public $nome_produto;
@@ -105,16 +107,18 @@ class Produto {
         $query = $conexao->prepare($sql);
         $query->bindValue(":termo", '%' . $nome .'%');
         $query->execute();
+        $linha = $query->rowCount();
         $res = $query->fetchAll();
-        return $res;
-
-/*         if (count($res)== 0) {
+        
+        return $res;        
+/*         session_start();
+         if ($linha < 1) {
+            
+            
             $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
-        }else {
-            $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
-            return $res;
         } */
     }
+
     public static function filtroCategoria($categoria){
         $conexao = Conexao::conectar();
         $sql = "SELECT * FROM produto WHERE categoria = :categoria";
