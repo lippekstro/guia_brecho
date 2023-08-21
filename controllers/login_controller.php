@@ -12,7 +12,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     $usuario = new Usuario();
     $usuario->$email = $email;
     $usuario->$senha = $senha;
-    $usuario->logar();
+    $usuario->logar($email,$senha);
    
 
 
