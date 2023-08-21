@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 ?>
 
 <link rel="stylesheet" href="/guia_brecho/css/style1.css">

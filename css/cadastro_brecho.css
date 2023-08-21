@@ -1,0 +1,241 @@
+/* Cadastro de Brecho */
+
+.cadastro_brecho{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .cadastro_brecho .body-titulo {
+    text-align: center;
+    margin-top: 7vh;
+    padding-bottom: 3vh;
+  } 
+  
+  .cadastro_brecho .form-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  .cadastro_brecho .button-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .cadastro_brecho .option-termos {
+    margin-right: 10%;
+    text-align: center;
+    padding: 20px;
+   
+  }
+  
+  .cadastro_brecho .box-input {
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .cadastro_brecho .box-max-input {
+    margin-bottom: 15px;
+    display: block;
+    width: 20vw;
+    border: none;
+    border-bottom: 2px solid #424242;
+    outline: none;
+  
+  }
+
+  .cadastro_brecho .box-max-input-valor{
+    width: 5vw;
+    display: inline;
+}
+
+.cadastro_brecho i{
+    margin: 0 10px 0 10px ;
+}
+  
+  .cadastro_brecho label {
+    color: #4e4e4e;
+  
+  }
+  
+  .cadastro_brecho legend {
+    font-size: 1.3rem;
+  
+  }
+  
+  .cadastro_brecho .box-max-input:focus-visible {
+    font-size: 1.3rem;
+  
+  }
+  
+  .cadastro_brecho .box-max-input:focus {
+    font-size: 1.3rem;
+  
+  }
+  
+  .cadastro_brecho .cad_botao_brecho{
+    margin-right: 10%;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: var(--bs-orange);
+    color:white;
+    border: none;
+  }
+  .cadastro_brecho .cad_botao_brecho:hover{
+    background-color: #f88e54;
+    color:black;
+  
+  }
+  
+  .cadastro_brecho .nav-cont-cad{
+    margin-top: 9%;
+  
+  }
+
+  .cadastro_brecho .nav-cont-cad-bio{
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+  .cadastro_brecho .nav-cont-cad-paga{
+    margin-top: 2%;
+  }
+  
+  .cadastro_brecho .preco-cont-cad{
+    width: 30%;
+  }
+  .cadastro_brecho .baixo-cont-cad{
+    margin-bottom: -5% ;
+  }
+  .cadastro_brecho .cad-sifrao-brecho{
+    font-size: 0.8rem;
+    margin-top: 5% ;
+  }
+  .cadastro_brecho .labelDestacada {
+    font-size: 10px;
+    color: red;
+    top: 50px;
+  }
+  
+  .cadastro_brecho .labelDestacada~input {
+    font-size: 1.0rem;
+  
+  }
+  
+  .cadastro_brecho #view_photo {
+    width: 100px;
+    height: 100px;
+    border: dashed 1px #ccc;
+    margin-top: 5px;
+  
+  }
+  
+  .cadastro_brecho #output {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .cadastro_brecho .barra {
+    background-color: var(--bs-orange);
+    border-radius: 10px;
+    margin: 1% 3% 0% 5%;
+  }
+  
+  .cadastro_brecho .form-nav {
+    padding-top: 5vh;
+  
+  }
+  
+  .cadastro_brecho .cad-nav {
+    margin-left: 10px;
+    font-weight: bold;
+    height: 5vh;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    color:white;
+
+  
+  }
+  
+  /* Cadastro de Brecho FIM*/
+
+  @media screen and (max-width: 1223px) {
+    .cadastro_brecho .box-max {
+        
+        font-size:1.0rem;
+      
+    }
+
+    .cadastro_brecho .form-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+       
+    }
+    .cadastro_brecho .box-max-input {
+        margin-bottom: 15px;
+        display: flex;
+        width: 80vw;
+    }
+    .cadastro_brecho .nav-input-midia {
+        
+        display: flex;
+        justify-content: left;
+        width: 80vw;
+        padding: 0;
+      
+      }
+      .cadastro_brecho .box-input {
+        margin-top: 10px;
+      }
+    .cadastro_brecho legend{
+        font-size: 1.6rem;
+    }
+    .cadastro_brecho label{
+        font-size: 1.2rem;
+    }
+
+    .cadastro_brecho .labelDestacada {
+        font-size: 1.0rem;
+        color: red;
+        top: 50px;
+    }
+
+    .cadastro_brecho .labelDestacada~input {
+        font-size: 1.8rem;
+    
+    }
+
+    .cadastro_brecho .box-max-input-valor{
+        width: 36vw;
+        display: inline;
+    }
+    .cadastro_brecho i{
+        font-size: 1rem;
+    
+    }
+
+    .cadastro_brecho .area_bio{
+       display: flex;
+       height: 50vh;
+       width: 90vw;
+
+    }
+
+}
+
+
+@media screen and (max-width: 764px) {
+    .cadastro_brecho {
+        padding: 0;
+        margin: 0;
+        width: 40vw;
+    }
+
+}

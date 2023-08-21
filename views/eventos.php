@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 ?>
 
 <!-- inicio dos indicadores do carrossel  -->
@@ -15,15 +16,15 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
   <div class="carousel-inner">
     <!-- slide do carrossel -->
     <div class="carousel-item active">
-      <img src="/guia_brecho/img/evento1.jpeg" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img src="https://source.unsplash.com/random/1920x1080/?show" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
     <!-- slide do carrossel -->
     <div class="carousel-item ">
-      <img src="/guia_brecho/img/evento4.jpeg" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img src="https://source.unsplash.com/random/1920x1080/?product" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
 
     <div class="carousel-item">
-      <img src="/guia_brecho/img/evento3.jpeg" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <img src="https://source.unsplash.com/random/1920x1080/?sky" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/faq.php';
 
 try {
@@ -9,8 +10,12 @@ try {
 }
 ?>
 
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">FAQs</h1>
+</div>
+
 <?php if (count($faqs) > 0) : ?>
-    <section class="m-3">
+    <section class="col col-lg-6 p-3 m-auto">
         <div class="accordion" id="accordionExample">
             <?php foreach ($faqs as $f) : ?>
                 <div class="accordion-item">
@@ -31,7 +36,7 @@ try {
 <?php else : ?>
     <section class="m-3">
         <div class="alert alert-info text-center" role="alert">
-            Nenhuma faq cadastrada!
+            Nenhuma FAQ cadastrada!
         </div>
     </section>
 <?php endif; ?>
