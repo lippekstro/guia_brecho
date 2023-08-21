@@ -1,5 +1,10 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- <html lang="pt-BR" data-bs-theme="dark"> -->
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +43,7 @@
 
 <body>
 
-    <head>
+    <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #fb732c;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="/guia_brecho/img/logo_guia_brecho-rem3.png" alt="" id="logo-icone"></a>
@@ -47,7 +52,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-
-                        <?php
-                        require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
-                        ?>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php">Produtos</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
+                        <?php if (!isset($_SESSION['usuario'])) : ?>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
+                        <?php else : ?>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>

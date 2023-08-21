@@ -5,12 +5,13 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "\guia_brecho\models\usuario.php";
 
 
-if (isset($_POST['email']) && isset($_POST['senha'])) {
+try {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-   
-   
-   $usuario = new Usuario();
-   $usuario->logar($email, $senha);
-    
+
+
+    $usuario = new Usuario();
+    $usuario->logar($email, $senha);
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }

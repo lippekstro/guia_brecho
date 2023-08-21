@@ -8,7 +8,7 @@ try {
     //Dados do Pessoa:
     $nome_usuario = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     $cpf_cnpj = $_POST['cpf_cnpj'];
 
     $usuario = new Usuario();

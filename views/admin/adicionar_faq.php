@@ -5,7 +5,6 @@ if (isset($_COOKIE['msg'])) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cabecalho.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/menu.php";
 
 /* if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nv_acesso'] < 2) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
