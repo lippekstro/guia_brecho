@@ -39,8 +39,10 @@ class Produto {
 
     public function criar()
     {
-        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_brecho) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
+
         $conexao = Conexao::conectar();
+        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_brecho) VALUES (:nome, :descricao, :cat, :preco, :img, :loja)";
+        
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->nome_produto);
         $stmt->bindValue(':descricao', $this->descricao);
@@ -55,7 +57,17 @@ class Produto {
 
     public static function listar()
     {
-        $query = "SELECT p.*, b.brecho_nome FROM produto p JOIN brecho b ON p.id_brecho = b.id_brecho";
+        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_brecho = l.id_brecho";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+
+    public static function listarId()
+    {
+        $query = "SELECT p.*, l.nome_loja FROM produto p JOIN loja l ON p.id_brecho = l.id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -97,9 +109,8 @@ class Produto {
 
     public static function pesquisarProdutos($nome){
         $conexao = Conexao::conectar();        
-        $sql = "SELECT * FROM produto WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
+        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
         $query = $conexao->prepare($sql);
-        $query->bindValue(":termo", '%' . $nome .'%');
         $query->execute();
         $res = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -119,4 +130,11 @@ class Produto {
         $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
         return $resultado;
     }
+
+
+
 }
+    
+    
+
+    

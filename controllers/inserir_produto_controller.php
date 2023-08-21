@@ -1,7 +1,6 @@
 <?php
 
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
-require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/brecho.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome_produto"];
@@ -15,9 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $produto->descricao = $descricao;
         $produto->categoria = $categoria;
         $produto->preco = $preco;
-
-        $id_brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
-        $produto->id_brecho = $id_brecho;
      
         
 

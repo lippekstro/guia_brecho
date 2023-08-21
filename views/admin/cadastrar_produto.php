@@ -1,9 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
-/* if (!isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_acesso'] == '1') {
-    header("Location: /guia_brecho/index.php");
-} */
 
 ?>
 
@@ -29,37 +26,38 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                     </select>
                     <label class='cad-label' for="preco">Preço: </label>
                     <p class='cad-sifrao'>R$:<input class='cad-input cad-input-preco' type="number" name="preco" id="preco" step="0.010"></p>
-                
-                    </div>
-                    <br>
-                    
-                </fieldset>
-            </div>
-            <div class='nav-cad-master nav-img'>
-                <fieldset class='nav-cadastro-produto onde'>
-                    <legend>Imagem</legend>
-                    <label class='cad-label onde' for="imagem_produto">Anexe a imagem do produto: </label>
-                    <input type="file" name="imagem_produto" id="imagem_produto" accept="application/jpeg">
-                </fieldset>
-            </div>
-            <div class='nav-cad-botao'>
-                <input class='cad-botao' type="submit" name="cadProd" value="Cadastrar">
-            </div>
 
-        </form>
-        <!--<iframe name="alert"></iframe>-->
+            </div>
+            <br>
 
-        <div class='div_photo_cad_produto'>
-            <p class='legendinha'>Preview da imagem:
-            <p>
-            <p id="view_photo_cad_produto">
-                <img id='outputCadProduto'>
-            </p>
-        </div>
+            </fieldset>
+    </div>
+    <div class='nav-cad-master nav-img'>
+        <fieldset class='nav-cadastro-produto onde'>
+            <legend>Imagem</legend>
+            <label class='cad-label onde' for="imagem_produto">Anexe a imagem do produto: </label>
+            <input type="file" name="imagem_produto" id="imagem_produto" accept="application/jpeg">
+        </fieldset>
+    </div>
+    <div class='nav-cad-botao'>
+        <input class='cad-botao' type="submit" name="cadProd" value="Cadastrar">
+    </div>
+
+    </form>
+    <!--<iframe name="alert"></iframe>-->
+
+    <div class='div_photo_cad_produto'>
+        <p class='legendinha'>Preview da imagem:
+        <p>
+        <p id="view_photo_cad_produto">
+            <img id='outputCadProduto'>
+        </p>
+    </div>
     </div>
 </body>
 
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
+
 ?>
