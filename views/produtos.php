@@ -13,14 +13,14 @@ $listaBrecho = Brecho::listarNomeBrecho();
 <section class="grid-produto">
   <!--------------------------------------- aqui a barra de pesquisa -------------------------------------------------->
   <?php if (isset($_GET["pesquisa"])) : ?>
-    
+
     <div class="search">
       <form action="" class="form-search">
         <input type="search" name="pesquisa" id="search" value="<?= $_GET["pesquisa"] ?>" required>
         <i class="fa fa-search"></i>
       </form>
     </div>
-    
+
   <?php else : ?>
 
     <div class="search">
