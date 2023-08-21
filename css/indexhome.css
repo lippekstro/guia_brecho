@@ -196,6 +196,11 @@ height: 100%;
     background-color:#fb732c ;
     border: #fb732c;
 }
+.index .p_serviço{
+  color: #fff;
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 
@@ -209,6 +214,15 @@ height: 100%;
 	font-family: poppins;
 	text-align: center;
 }
+.index .flexbox02 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color:#fb732c;
+	font-family: poppins;
+	text-align: center;
+}
 .index .wrapper_caixa {
 
 	padding: 40px;
@@ -218,7 +232,7 @@ height: 100%;
 	flex-wrap: wrap;
 }
 .index .caixa-area {
-	height: 350px;
+	height: 420px;
 	width: 350px;
 	margin: 25px;
 	padding: 40px;
@@ -292,8 +306,6 @@ height: 100%;
     height: auto;
     margin: 20px;
 }
-
-
 /*----- Latest Collection Section
 --------------------------------------------------------------*/
 .index #latest-collection{
@@ -714,3 +726,6 @@ height: 100%;
 }
 
 /*fim button----------------------  */
+
+
+
