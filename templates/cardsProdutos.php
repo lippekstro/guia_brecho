@@ -11,10 +11,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
     <?php $categoria = $_GET["categoria"];
 
     try {
+
         $resultadoFiltro = Produto::filtroCategoria($categoria);
     } catch (\Throwable $th) {
         echo $th->getMessage();
-    } 
+    }
     ?>
     <?php if (count($resultadoFiltro) == 0) : ?>
         <div class="alert alert-danger" role="alert">
@@ -33,30 +34,55 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
                 <h3><?= $lista["nome_produto"] ?></h3>
                 <p style="font-size: .6rem;"><?= $lista["categoria"] ?>/<?= $lista["nome_brecho"] ?></p>
                 <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
-                <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
+                <button type="button" id="style-2" class="button__link" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $lista['id_brecho']; ?>" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></button>
             </div>
         </li>
-        <div class="modal-wrapper" id="modal">
-            <div class="modal-body">
-                <div class="img-loja">
-                    <img src="<?= $lista["img-loja"] ?>" alt="">
+
+        <!------------------------------ aqui modal ----------------------------------------->
+        <?php
+        try {
+            $infoBrecho = Brecho::buscarBrechoId($lista["id_brecho"]);
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+        ?>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<?php echo $lista['id_brecho']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $infoBrecho["brecho_nome"]; ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="container-fluid ">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($infoBrecho['brecho_img']) ?>" alt="" class="rounded-circle" style="aspect-ratio: 2/2; object-fit:cover;width: 150px; height: 150px;">
+                                </div>
+                                <div class="col-md-7 ms-auto">
+                                    <ul>
+                                        <li><i class="bi bi-telephone-fill"><?php echo $infoBrecho["brecho_contato"];?></i></li>
+                                        <li><i class="bi bi-instagram"><?php echo $infoBrecho["brecho_rede"];?></i></li>
+                                        <li><i class="bi bi-house-fill"><?php echo $infoBrecho["brecho_endereco"];?></i></li>                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="modal-header">
-                    <h2 class="heading"><?= $lista["nome_brecho"] ?></h2>
-                    <a href="#!" role="button" class="close" aria-label="close this modal">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                        </svg>
-                    </a>
-                </div>
-                <ul>
-                    <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
-                    <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
-                    <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
-                </ul>
             </div>
-            <a href="#!" class="outside-trigger"></a>
         </div>
+
+
     <?php endforeach; ?>
 
 <?php elseif (isset($_GET["pesquisa"])) : ?>
@@ -87,30 +113,55 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
                 <h3><?= $lista["nome_produto"] ?></h3>
                 <p style="font-size: .6rem;"><?= $lista["categoria"] ?>/<?= $lista["nome_brecho"] ?></p>
                 <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
-                <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
+                <button type="button" id="style-2" class="button__link" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $lista['id_brecho']; ?>" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></button>
             </div>
         </li>
-        <div class="modal-wrapper" id="modal">
-            <div class="modal-body">
-                <div class="img-loja">
-                    <img src="<?= $lista["img-loja"] ?>" alt="">
+
+        <!------------------------------ aqui modal ----------------------------------------->
+        <?php
+        try {
+            $infoBrecho = Brecho::buscarBrechoId($lista["id_brecho"]);
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+        ?>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<?php echo $lista['id_brecho']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $infoBrecho["brecho_nome"]; ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="container-fluid ">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($infoBrecho['brecho_img']) ?>" alt="" class="rounded-circle" style="aspect-ratio: 2/2; object-fit:cover;width: 150px; height: 150px;">
+                                </div>
+                                <div class="col-md-7 ms-auto">
+                                    <ul>
+                                        <li><i class="bi bi-telephone-fill"><?php echo $infoBrecho["brecho_contato"];?></i></li>
+                                        <li><i class="bi bi-instagram"><?php echo $infoBrecho["brecho_rede"];?></i></li>
+                                        <li><i class="bi bi-house-fill"><?php echo $infoBrecho["brecho_endereco"];?></i></li>                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="modal-header">
-                    <h2 class="heading"><?= $lista["nome_brecho"] ?></h2>
-                    <a href="#!" role="button" class="close" aria-label="close this modal">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                        </svg>
-                    </a>
-                </div>
-                <ul>
-                    <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
-                    <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
-                    <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
-                </ul>
             </div>
-            <a href="#!" class="outside-trigger"></a>
         </div>
+
+
     <?php endforeach; ?>
 
 <?php elseif (isset($_GET["id_brecho"])) : ?>
@@ -123,46 +174,71 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         echo $th->getMessage();
     }
     ?>
-    <?php foreach ($filtroBrecho as $value) : ?>
+    <?php foreach ($filtroBrecho as $lista) : ?>
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($value["imagem_produto"]) ?>" alt="">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">
-                <h3><?= $value["nome_produto"] ?></h3>
+                <h3><?= $lista["nome_produto"] ?></h3>
                 <p style="font-size: .6rem;">
-                    <?= $value["categoria"] ?>
+                    <?= $lista["categoria"] ?>
                     /
-                    <?= $value["nome_brecho"] ?>
+                    <?= $lista["nome_brecho"] ?>
 
                 </p>
-                <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $value["descricao"] ?> </p>
-                <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $value["preco"] ?></span></a>
+                <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
+                <button type="button" id="style-2" class="button__link" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $lista['id_brecho']; ?>" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></button>
             </div>
         </li>
-        <div class="modal-wrapper" id="modal">
-            <div class="modal-body">
-                <div class="img-loja">
-                    <img src="" alt="">
+
+        <!------------------------------ aqui modal ----------------------------------------->
+        <?php
+        try {
+            $infoBrecho = Brecho::buscarBrechoId($lista["id_brecho"]);
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+        ?>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<?php echo $lista['id_brecho']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $infoBrecho["brecho_nome"]; ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="container-fluid ">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($infoBrecho['brecho_img']) ?>" alt="" class="rounded-circle" style="aspect-ratio: 2/2; object-fit:cover;width: 150px; height: 150px;">
+                                </div>
+                                <div class="col-md-7 ms-auto">
+                                    <ul>
+                                        <li><i class="bi bi-telephone-fill"><?php echo $infoBrecho["brecho_contato"];?></i></li>
+                                        <li><i class="bi bi-instagram"><?php echo $infoBrecho["brecho_rede"];?></i></li>
+                                        <li><i class="bi bi-house-fill"><?php echo $infoBrecho["brecho_endereco"];?></i></li>                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="modal-header">
-                    <h2 class="heading"></h2>
-                    <a href="#!" role="button" class="close" aria-label="close this modal">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                        </svg>
-                    </a>
-                </div>
-                <ul>
-                    <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
-                    <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
-                    <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
-                </ul>
             </div>
-            <a href="#!" class="outside-trigger"></a>
         </div>
+
+
     <?php endforeach; ?>
 
 <?php else : ?>
@@ -179,7 +255,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         <li class="card-produtos">
             <div class="card-produtos-img">
                 <figcaption>
-                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista["imagem_produto"]) ?>" alt="">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista['imagem_produto']) ?>" alt="">
                 </figcaption>
             </div>
             <div class="info-produto">
@@ -191,30 +267,59 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 
                 </p>
                 <p style="font-size: .8rem; font-weight:200;color:#666565;margin: .7rem 0rem;"><?= $lista["descricao"] ?> </p>
-                <a href="#modal" id="style-2" class="button-produtos button__link" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></a>
+                <button type="button" id="style-2" class="button__link" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $lista['id_brecho']; ?>" data-replace="Saiba+"><span>R$ <?= $lista["preco"] ?></span></button>
             </div>
         </li>
-        <div class="modal-wrapper" id="modal">
-            <div class="modal-body">
-                <div class="img-loja">
-                    <img src="<?= $lista["img-loja"] ?>" alt="">
+
+        <!------------------------------ aqui modal ----------------------------------------->
+        <?php
+        try {
+            $infoBrecho = Brecho::buscarBrechoId($lista["id_brecho"]);
+        } catch (\Throwable $th) {
+            echo $th->getMessage();
+        }
+        ?>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<?php echo $lista['id_brecho']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3" id="exampleModalLabel"><?php echo $infoBrecho["brecho_nome"]; ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="container-fluid ">
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($infoBrecho['brecho_img']) ?>" alt="" class="rounded-circle" style="aspect-ratio: 2/2; object-fit:cover;width: 150px; height: 150px;">
+                                </div>
+                                <div class="col-md-7 ms-auto">
+                                    <ul class="info-brecho">
+                                        <li class="my-2"><i class="bi bi-telephone-fill me-1"></i><?php echo $infoBrecho["brecho_contato"];?></li>
+                                        <li class="my-2"><i class="bi bi-instagram me-1"></i><?php echo $infoBrecho["brecho_rede"];?></li>
+                                        <li class="my-2 lh-sm"><i class="bi bi-house-fill"></i><?php echo $infoBrecho["brecho_endereco"];?></li>                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-modal" data-bs-dismiss="modal">Fechar</button>
+                    </div>
                 </div>
-                <div class="modal-header">
-                    <h2 class="heading"></h2>
-                    <a href="#!" role="button" class="close" aria-label="close this modal">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                        </svg>
-                    </a>
-                </div>
-                <ul>
-                    <li><a href=""><i class="bi bi-instagram"></i>Instagram</a></li>
-                    <li><a href=""><i class="bi bi-facebook"></i>Facebook</a></li>
-                    <li><a href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
-                </ul>
             </div>
-            <a href="#!" class="outside-trigger"></a>
         </div>
+
+
+
+
+
+
     <?php endforeach; ?>
 
 <?php endif; ?>

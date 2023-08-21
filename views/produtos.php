@@ -46,7 +46,7 @@ $listaBrecho = Brecho::listarNomeBrecho();
 
     <?php endif; ?>
 
-    <!--------------------------------------- aqui o if dos filtros ------------------------------------------------>
+    <!--------------------------------------- aqui o include dos cards dos produtos ------------------------------------------------>
 
     <?php include $_SERVER["DOCUMENT_ROOT"] .  "/guia_brecho/templates/cardsProdutos.php" ?>
 
