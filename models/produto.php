@@ -109,7 +109,10 @@ class Produto {
 
     public static function pesquisarProdutos($nome){
         $conexao = Conexao::conectar();        
-        $sql = "SELECT * FROM produto WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%'";
+        $sql = "SELECT p.*, b.brecho_nome 
+        FROM produto p 
+        JOIN brecho b ON p.id_brecho = b.id_brecho 
+        WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%';";
         $query = $conexao->prepare($sql);
         $query->execute();
         $res = $query->fetchAll(PDO::FETCH_ASSOC);
