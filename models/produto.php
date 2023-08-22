@@ -153,8 +153,9 @@ class Produto
         $stmt->bindValue(':id', $id);
         $stmt->execute();
         $lista = $stmt->fetchAll();
+        return $lista;
     }
-    
+
     public static function listarUltimos()
     {
         $conexao = conexao::conectar();
