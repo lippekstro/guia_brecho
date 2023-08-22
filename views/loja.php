@@ -27,8 +27,8 @@ try {
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name"><?= $loja['brecho_nome'] ?></h2>
-                                    <p class="description"><?= $loja['brecho_endereco'] ?></p>
-                                    <a href="/guia_brecho/views/brechosaibamais.php?id=<?= $loja['id_brecho'] ?>" class="btn btn-primary">Detalhes</a>
+                                    <p class="description"><?= $loja['brecho_bio'] ?></p>
+                                    <a href="/guia_brecho/views/brechosaibamais.php?id=<?= $loja['id_brecho'] ?>" class="btn button">𝗦𝗮𝗶𝗯𝗮 𝗠𝗮𝗶𝘀</a>
                                 </div>
                             </div>
                         <?php endforeach; ?>

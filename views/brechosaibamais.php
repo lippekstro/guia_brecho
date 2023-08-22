@@ -22,16 +22,16 @@ try {
                     <p><?= $brecho['brecho_nome'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>endereço: <?= $brecho['brecho_endereco'] ?></p>
+                    <p>Endereço: <?= $brecho['brecho_endereco'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>tel: <?= $brecho['brecho_contato'] ?></p>
+                    <p>Contato: <?= $brecho['brecho_contato'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>@<?= $brecho['brecho_rede'] ?></p>
+                    <p>Instagram:<?= $brecho['brecho_rede'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>Proprietário(a): <?= $brecho['nome_usuario'] ?></p>
+                    <p>Proprietário (a): <?= $brecho['nome_usuario'] ?></p>
                 </div>
             </div>
         </div>

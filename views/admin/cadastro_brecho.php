@@ -14,7 +14,7 @@ if (isset($_SESSION['usuario']['nivel_acesso']) && $_SESSION['usuario']['nivel_a
         <h1 class="tit-nav">GUIA BRECHÓ - O SEU GUIA ONLINE PARA MODA CONSCIENTE!</h1>
     </div>
     <div class="barra">
-        <p class="cad-nav text-white">CADASTRE SEU BRECHO</p>
+        <p class="cad-nav text-white">CADASTRE SEU BRECHÓ</p>
     </div>
     <form class="form-nav" action="/guia_brecho/controllers/cadastro_brecho_controller.php" method="POST" enctype="multipart/form-data" >
         <div class="nav-input">
