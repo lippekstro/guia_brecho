@@ -1,7 +1,20 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
-?>
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/evento.php";
 
+try {
+  $eventos = Evento::listar();
+  $proximos = Evento::listarProximos();
+} catch (PDOException $e) {
+  echo $e->getMessage();
+}
+
+$alternar = false;
+$primeiro = true;
+
+?>
+<?php if (count($eventos) > 0) : ?>
+  <section>
 <!-- inicio dos indicadores do carrossel  -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
   <div class="carousel-indicators">
@@ -14,19 +27,15 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
   <!-- inicio do carrossel -->
   <div class="carousel-inner">
     <!-- slide do carrossel -->
-    <div class="carousel-item active">
-      <img src="https://source.unsplash.com/random/1920x1080/?show" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <?php foreach ($proximos as $p) : ?>
+    <div class="carousel-item <?= $primeiro ? 'active' : "" ?>">
+      <img src="data:image;charset=utf8;base64,<?= base64_encode($p['imagem_evento']); ?>" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
+    <?php $primeiro = false?>
+    <?php endforeach; ?>
     <!-- slide do carrossel -->
-    <div class="carousel-item ">
-      <img src="https://source.unsplash.com/random/1920x1080/?product" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
-
-    <div class="carousel-item">
-      <img src="https://source.unsplash.com/random/1920x1080/?sky" alt="" srcset="" class="bd-placeholder-img " width="100%" height="500px" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
   </div>
-
+  <!-- botões do carrossel -->
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -36,57 +45,38 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
 <!-- fim do carrossel -->
 
 <!-- divs de views Eventos -->
-<div class="container marketing">
-
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">Evento 1<span class="text-body-secondary">local&hora</span></h2>
-      <p class="lead">descriçao Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quos neque provident repudiandae suscipit facilis dignissimos quis nihil impedit. Quasi officiis soluta velit saepe? In illo necessitatibus culpa explicabo laboriosam!</p>
+<div class="container marketing mt-3">
+<hr class="featurette-divider">
+      <?php  foreach ($eventos as $e):?>
+  <div class="row featurette d-flex justify-content-center align-items-center">
+    <div class="col-md-7 d-flex flex-column <?= $alternar ? 'order-lg-2' : "" ?>">
+      <h2 class="featurette-heading fw-normal align-itens-center display-1 text-center d-flex flex-column"><?= $e['nome_evento'] ?><span class="text-body-secondary h3 "><?=" ". $e['local_evento'] ?> <?= " ". date('d/m/Y',strtotime($e['data_evento']))  ?> <?= " ".$e['horario'] ?></span></h2>
+      <p class=" text-center lead"><?= $e['descricao_evento']?></p>
     </div>
-    <div class="col-md-5">
-      <img src="/guia_brecho/img/evento1.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+    <div class="col-md-5 <?= $alternar ? 'order-lg-1' : "" ?>">
+      <img src="data:image;charset=utf8;base64,<?= base64_encode($e['imagem_evento']); ?>" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
     </div>
   </div>
-
   <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading fw-normal lh-1">Evento 2<span class="text-body-secondary">local&hora</span></h2>
-      <p class="lead">descriçao evento 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic omnis neque, harum corporis maiores? Voluptatum quis repellat suscipit eius, voluptatem repudiandae possimus voluptates sunt temporibus, consectetur exercitationem sit sequi.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      <img src="/guia_brecho/img/evento4.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">Evento 3 <span class="text-body-secondary">local&hora</span></h2>
-      <p class="lead">descriçao evento3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta ex minima excepturi explicabo placeat, id quasi iusto dolorum itaque reprehenderit voluptates, omnis assumenda vero earum. Aliquid esse sunt dolorem ipsum?</p>
-    </div>
-    <div class="col-md-5">
-      <img src="/guia_brecho/img/evento3.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
-
-  </div>
-  <!-- /END THE FEATURETTES -->
-
+  <?php $alternar = !$alternar ?>
+  <?php endforeach;?>
+  
+  
+<!-- /END THE FEATURETTES -->
 </div><!-- /.container -->
+</section>
+ <?php else : ?> 
+  <section class="m-3">
+    <div class="alert alert-info text-center" role="alert">
+      Nenhum Evento cadastrado!
+    </div>
+  </section>
+<?php endif; ?>
 
-
-<!-- extra voltar para o inicio -->
-<!-- <div class="container">
-  <p class="float-end"><a href="#">Back to top</a></p>
-</div> -->
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
 ?>
