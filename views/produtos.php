@@ -154,7 +154,11 @@ $listaBrecho = Brecho::listar();
 
         <?php endforeach; ?>
       <?php } ?>
-      <div class="cont-pag">
+      
+    <?php endif; ?>
+
+  </ul>
+  <div class="cont-pag">
         <ul class="pagination modal-3">
           <li><a href="?pagina=<?php echo $MinPag; ?>" class="prev">&laquo</a></li>
 
@@ -177,9 +181,6 @@ $listaBrecho = Brecho::listar();
         </ul>
       </div>
 
-    <?php endif; ?>
-
-  </ul>
 
   <!------------------------------------------------------ sidebar ----------------------------------------------------------->
 
