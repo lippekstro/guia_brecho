@@ -1,4 +1,4 @@
-window.addEventListener("scroll", function () {
+/* window.addEventListener("scroll", function () {
   var menuFixo = document.getElementById("menu_fixo");
 
   if (window.pageYOffset > 30) {
@@ -14,9 +14,9 @@ window.addEventListener('scroll', function () {
   } else {
     menuNav.classList.remove('scrolled');
   }
-});
+}); */
 
-const productContainers = [...document.querySelectorAll('.index .product-container')];
+/*  const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
@@ -32,3 +32,21 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+ 
+ */
+const productContainers = [...document.querySelectorAll('.product-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let cardWidth = containerDimensions.width / 4; // Dividindo por 3 para mover um card por vez
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += cardWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= cardWidth;
+        })
+    })
