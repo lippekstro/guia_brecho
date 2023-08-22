@@ -3,7 +3,7 @@ session_start();
 ?>
 <?php if (!isset($_SESSION['usuario']['nivel_acesso'])) : ?>
     <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
-    <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php">Produtos</a>
+    <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php?pagina=1">Produtos</a>
     <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
     <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
     <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>

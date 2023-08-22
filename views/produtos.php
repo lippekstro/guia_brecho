@@ -140,7 +140,7 @@ $listaBrecho = Brecho::listar();
 
       $numTotalProdutos = count(Produto::listar());
 
-      $numPaginas = ceil($numTotalProdutos / $limiteCards)
+      $numPaginas = ceil($numTotalProdutos / $limiteCards);
 
       
 
@@ -154,7 +154,17 @@ $listaBrecho = Brecho::listar();
 
         <?php endforeach; ?>
       <?php } ?>
-      <div class="cont-pag">
+
+     
+
+    <?php endif; ?>
+
+  </ul>
+
+  
+  <?php if(!isset($_GET["categoria"]) && !isset($_GET["pesquisa"]) && !isset($_GET["id_brecho"])) : ?>
+
+  <div class="cont-pag">
         <ul class="pagination modal-3">
           <li><a href="?pagina=<?php echo $MinPag; ?>" class="prev">&laquo</a></li>
 
@@ -177,9 +187,8 @@ $listaBrecho = Brecho::listar();
         </ul>
       </div>
 
-    <?php endif; ?>
+  <?php endif;?>
 
-  </ul>
 
   <!------------------------------------------------------ sidebar ----------------------------------------------------------->
 
