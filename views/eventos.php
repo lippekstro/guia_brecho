@@ -35,7 +35,7 @@ $primeiro = true;
     <?php endforeach; ?>
     <!-- slide do carrossel -->
   </div>
-
+  <!-- botões do carrossel -->
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -52,10 +52,10 @@ $primeiro = true;
 <div class="container marketing mt-3">
 <hr class="featurette-divider">
       <?php  foreach ($eventos as $e):?>
-  <div class="row featurette">
-    <div class="col-md-7 <?= $alternar ? 'order-lg-2' : "" ?>">
-      <h2 class="featurette-heading fw-normal lh-1"><?= $e['nome_evento'] ?><span class="text-body-secondary"><?=" ". $e['local_evento'] ?> <?= " ". date('d/m/Y',strtotime($e['data_evento']))  ?> <?= " ".$e['horario'] ?></span></h2>
-      <p class="lead"><?= $e['descricao_evento']?></p>
+  <div class="row featurette d-flex justify-content-center align-items-center">
+    <div class="col-md-7 d-flex flex-column <?= $alternar ? 'order-lg-2' : "" ?>">
+      <h2 class="featurette-heading fw-normal align-itens-center display-1 text-center d-flex flex-column"><?= $e['nome_evento'] ?><span class="text-body-secondary h3 "><?=" ". $e['local_evento'] ?> <?= " ". date('d/m/Y',strtotime($e['data_evento']))  ?> <?= " ".$e['horario'] ?></span></h2>
+      <p class=" text-center lead"><?= $e['descricao_evento']?></p>
     </div>
     <div class="col-md-5 <?= $alternar ? 'order-lg-1' : "" ?>">
       <img src="data:image;charset=utf8;base64,<?= base64_encode($e['imagem_evento']); ?>" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
