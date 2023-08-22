@@ -13,7 +13,6 @@ $alternar = false;
 $primeiro = true;
 
 ?>
-
 <?php if (count($eventos) > 0) : ?>
   <section>
 <!-- inicio dos indicadores do carrossel  -->
