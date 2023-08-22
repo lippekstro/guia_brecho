@@ -18,11 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $id_brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
         $produto->id_brecho = $id_brecho["id_brecho"];
-        $produto->nome_brecho = $id_brecho["brecho_nome"];
-     
         
 
-        if (isset($_POST["imagem_produto"])) {
+        if (isset($_FILES["imagem_produto"])) {
             
             $img = file_get_contents($_FILES["imagem_produto"]["tmp_name"]);
             $produto->imagem_produto = $img;

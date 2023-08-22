@@ -64,19 +64,11 @@ class Brecho
         return $this->id_brecho;
     }
 
+
+
     public static function listar()
     {
-        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u ON b.id_usuario = u.id_usuario";
-        $conexao = Conexao::conectar();
-        $stmt = $conexao->prepare($query);
-        $stmt->execute();
-        $lista = $stmt->fetchAll();
-        return $lista;
-    }
-
-    public static function listarNomeBrecho()
-    {
-        $query = "SELECT brecho_nome, id_brecho FROM brecho";
+        $query = "SELECT * FROM brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -117,7 +109,7 @@ class Brecho
         $stmt->execute();
         return $stmt->fetch();
     }
-    public static function buscarBrechoId($id_brecho){
+    public static function buscarMeuBrechoPorIdBrecho($id_brecho){
         $query = "SELECT * FROM brecho WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);

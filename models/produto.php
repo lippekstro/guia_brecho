@@ -12,7 +12,7 @@ class Produto {
     public $estoque;
     public $imagem_produto;
     public $id_brecho;
-    public $nome_brecho;
+    
 
     public function __construct($id_produto = false)
     {
@@ -38,12 +38,12 @@ class Produto {
         $this->estoque = $produto['estoque'];
         $this->imagem_produto = $produto['imagem_produto'];
         $this->id_brecho = $produto['id_brecho'];
-        $this->id_brecho = $produto['nome_brecho'];
+        
     }
 
     public function criar()
     {
-        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_brecho, nome_brecho) VALUES (:nome, :descricao, :cat, :preco, :img, :id_brecho, :nome_brecho)";
+        $query = "INSERT INTO produto (nome_produto, descricao, categoria, preco, imagem_produto, id_brecho) VALUES (:nome, :descricao, :cat, :preco, :img, :id_brecho)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->nome_produto);
@@ -52,7 +52,7 @@ class Produto {
         $stmt->bindValue(':preco', $this->preco);
         $stmt->bindValue(':img', $this->imagem_produto);
         $stmt->bindValue(':id_brecho', $this->id_brecho);
-        $stmt->bindValue(':nome_brecho', $this->nome_brecho);
+        
         $stmt->execute();
         $this->id_produto = $conexao->lastInsertId();
         return $this->id_produto;
@@ -60,8 +60,7 @@ class Produto {
 
     public static function listar()
     {
-        /* $query = "SELECT DISTINCT produto.*,brecho.brecho_nome FROM produto LEFT JOIN brecho ON brecho.id_brecho = produto.id_brecho"; */
-        $query = "SELECT * FROM produto";
+        $query = "SELECT DISTINCT p.*,b.brecho_nome FROM produto p JOIN brecho b ON p.id_brecho = b.id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -92,51 +91,50 @@ class Produto {
         $stmt->execute();
     }
 
-    public static function listarLimiteProdutos($inicio,$limite){
+    public static function paginacaoProdutos($inicio,$limite){
 
         $conexao = conexao::conectar();
-        $sql = "SELECT * FROM produto LIMIT $inicio,$limite";
-        $list = $conexao -> query($sql);        
-        $array = $list->fetchAll();
-        return $array;
+        $sql = "SELECT p.*,b.brecho_nome FROM produto p JOIN brecho b ON p.id_brecho=b.id_brecho ORDER BY id_produto LIMIT $inicio,$limite";
+        $query = $conexao -> query($sql);
+        $lista = $query->fetchAll();
+        return $lista;
     }
 
     public static function pesquisarProdutos($nome){
+        
         $conexao = Conexao::conectar();        
         $sql = "SELECT p.*, b.brecho_nome 
         FROM produto p 
         JOIN brecho b ON p.id_brecho = b.id_brecho 
-        WHERE nome_produto LIKE '%$nome%' OR descricao LIKE '%$nome%';";
+        WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
         $query = $conexao->prepare($sql);
         $query->bindValue(":termo", '%' . $nome .'%');
-        $query->execute();
-        $linha = $query->rowCount();
-        $res = $query->fetchAll();
-        
+        $query->execute();        
+        $res = $query->fetchAll();        
         return $res;        
-/*         session_start();
-         if ($linha < 1) {
-            
-            
-            $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
-        } */
     }
 
     public static function filtroCategoria($categoria){
+        
         $conexao = Conexao::conectar();
-        $sql = "SELECT * FROM produto WHERE categoria = :categoria";
-
-        /* $sql = "SELECT DISTINCT produto.*,brecho.brecho_nome FROM produto LEFT JOIN brecho ON brecho.id_brecho = produto.id_brecho AND WHERE categoria = :categoria"; */
-
+        $sql = "SELECT p.*, b.brecho_nome 
+        FROM produto p 
+        JOIN brecho b ON p.id_brecho = b.id_brecho 
+        WHERE categoria = :categoria";
         $query = $conexao->prepare($sql);
         $query->bindValue(":categoria",$categoria);
         $query->execute();
         $resultado = $query->fetchAll();
         return $resultado;
     }
+
     public static function filtroBrecho($id){
+        
         $conexao = Conexao::conectar();
-        $sql = "SELECT * FROM produto WHERE id_brecho = :id_brecho";
+        $sql = "SELECT p.*, b.brecho_nome
+        FROM produto p
+        INNER JOIN brecho b ON p.id_brecho = b.id_brecho
+        WHERE p.id_brecho = :id_brecho";
         $query = $conexao->prepare($sql);
         $query->bindValue(":id_brecho",$id);
         $query->execute();
