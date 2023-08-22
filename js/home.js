@@ -1,17 +1,16 @@
-window.addEventListener("scroll", function () {
-  var menuFixo = document.getElementById("menu_fixo");
+const productContainers = [...document.querySelectorAll('.product-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-  if (window.pageYOffset > 30) {
-    menuFixo.classList.add("scroll");
-  } else {
-    menuFixo.classList.remove("scroll");
-  }
-});
-window.addEventListener('scroll', function () {
-  var menuNav = document.querySelector('.menu_nav');
-  if (window.pageYOffset > 0) {
-    menuNav.classList.add('scrolled');
-  } else {
-    menuNav.classList.remove('scrolled');
-  }
-});
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let cardWidth = containerDimensions.width / 4; // Dividindo por 3 para mover um card por vez
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += cardWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= cardWidth;
+        })
+    })
