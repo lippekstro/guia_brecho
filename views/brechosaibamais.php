@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/loja.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 
 try {
@@ -16,22 +16,22 @@ try {
 <section class="m-3">
     <div class="row">
         <div class="col-lg-4">
-            <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($brecho['logo_loja']); ?>" alt="" class="w-100">
+            <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($brecho['brecho_img']); ?>" alt="" class="w-100">
             <div class="row g-3">
                 <div class="col-12 text-center">
-                    <p><?= $brecho['nome_loja'] ?></p>
+                    <p><?= $brecho['brecho_nome'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>endereço: <?= $brecho['endereco'] ?></p>
+                    <p>endereço: <?= $brecho['brecho_endereco'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>tel: <?= $brecho['telefone'] ?></p>
+                    <p>tel: <?= $brecho['brecho_contato'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>@<?= $brecho['rede_social'] ?></p>
+                    <p>@<?= $brecho['brecho_rede'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>Proprietário(a): <?= $brecho['nome'] ?></p>
+                    <p>Proprietário(a): <?= $brecho['nome_usuario'] ?></p>
                 </div>
             </div>
         </div>

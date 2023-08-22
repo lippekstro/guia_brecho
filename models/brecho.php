@@ -120,7 +120,7 @@ class Brecho
     }
     public static function getBrecho($id)
     {
-        $query = "SELECT l.*, u.nome FROM brecho l JOIN usuario u ON l.id_brecho = :id";
+        $query = "SELECT l.*, u.nome_usuario FROM brecho l JOIN usuario u ON l.id_brecho = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':id', $id);
