@@ -27,7 +27,7 @@ CREATE TABLE produto (
     id_produto int PRIMARY KEY AUTO_INCREMENT, 
     nome_produto VARCHAR(255) NOT NULL, 
     descricao TEXT NOT NULL, 
-    categoria ('vestimentas', 'calcados', 'acessorios') NOT NULL, 
+    categoria ENUM('vestimentas', 'calcados', 'acessorios') NOT NULL, 
     preco FLOAT NOT NULL, 
     imagem_produto LONGBLOB, 
     id_brecho int NOT NULL,

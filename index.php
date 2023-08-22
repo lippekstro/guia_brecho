@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 ?>
 
     
@@ -107,105 +108,46 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
           </section>
         <!-- FIM COLEÇÃO ---------------- -->
 
+
+
+
+
+
         <!-- PRODUTOS BRECHÓ-------- -->
         <br><br><br>
-<?php
-// Array de produtos 
-$products = [
-    [
-        'brand' => 'produto 1',
-        'description' => 'Descrição do Produto 1',
-        'price' => '$20',
-        'actual_price' => '$40',
-        'image' => '/guia_brecho/img/camisa_produtos.png',
-    ],
-    [
-        'brand' => 'produto 2',
-        'description' => 'Descrição do Produto 2',
-        'price' => '$30',
-        'actual_price' => '$50',
-        'image' => '/guia_brecho/img/camisa_produtos.png',
-    ],
-    [
-        'brand' => 'produto 3',
-        'description' => 'Descrição do Produto 3',
-        'price' => '$25',
-        'actual_price' => '$45',
-        'image' => '/guia_brecho/img/camisa_produtos.png',
-    ],
-    [
-      'brand' => 'produto 4',
-      'description' => 'Descrição do Produto 4',
-      'price' => '$25',
-      'actual_price' => '$45',
-      'image' => '/guia_brecho/img/camisa_produtos.png',
-  ],
-  [ 
-    'brand' => 'produto 5',
-    'description' => '/guia_brecho/img/camisa_produtos.png',
-    'price' => '$25',
-    'actual_price' => '$45',
-    'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-[
-  'brand' => 'produto 6',
-  'description' => 'Descrição do Produto 6',
-  'price' => '$25',
-  'actual_price' => '$45',
-  'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-[ 
-  'brand' => 'produto 5',
-  'description' => '/guia_brecho/img/camisa_produtos.png',
-  'price' => '$25',
-  'actual_price' => '$45',
-  'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-[
-'brand' => 'produto 6',
-'description' => 'Descrição do Produto 6',
-'price' => '$25',
-'actual_price' => '$45',
-'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-[ 
-  'brand' => 'produto 5',
-  'description' => '/guia_brecho/img/camisa_produtos.png',
-  'price' => '$25',
-  'actual_price' => '$45',
-  'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-[
-'brand' => 'produto 6',
-'description' => 'Descrição do Produto 6',
-'price' => '$25',
-'actual_price' => '$45',
-'image' => '/guia_brecho/img/camisa_produtos.png',
-],
-];
 
-?>
 
 <section class="product">
     <h2 class="product-category ">Produtos</h2>
     <button class="pre-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
     <div class="product-container">
-        <?php foreach ($products as $product): ?>
+
+    <?php
+// Array de produtos 
+try {
+  $listarUltimos = Produto::listarUltimos();
+} catch (\Throwable $th) {
+  echo $th -> getMessage();
+}
+?>
+
+        <?php foreach ($listarUltimos as $p): ?>
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
-                <img src="<?php echo $product['image']; ?>" class="product-thumb" alt="">
+                <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($p['imagem_produto']) ?>" class="product-thumb" alt="">
                 <button class="card-btn">Veja Mais</button>
             </div>
             <div class="product-info">
-                <h2 class="product-brand"><?php echo $product['brand']; ?></h2>
-                <p class="product-short-description"><?php echo $product['description']; ?></p>
-                <span class="price"><?php echo $product['price']; ?></span>
-                <span class="actual-price"><?php echo $product['actual_price']; ?></span>
+                <h2 class="product-brand"><?php echo $p['nome_produto']; ?></h2>
+                <p class="product-short-description"><?php echo $p['descricao']; ?></p>
+                <span class="price"><?php echo $p['preco']; ?></span>
             </div>
         </div>
         <?php endforeach; ?>
+
+        
     </div>
 </section>
 
