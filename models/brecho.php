@@ -117,4 +117,12 @@ class Brecho
         $stmt->execute();
         return $stmt->fetch();
     }
+        public static function buscarMeuBrechoPorIdBrecho($id_brecho){
+        $query = "SELECT * FROM brecho WHERE id_brecho = :id_brecho";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_brecho', $id_brecho);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
 }
