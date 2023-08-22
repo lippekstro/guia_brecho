@@ -16,7 +16,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
-const productContainers = [...document.querySelectorAll('.product-container')];
+const productContainers = [...document.querySelectorAll('.index .product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
