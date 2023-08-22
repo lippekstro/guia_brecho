@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if (isset($_COOKIE['msg'])) {
     setcookie('msg', '', time() - 3600, '/guia_brecho/');
     setcookie('tipo', '', time() - 3600, '/guia_brecho/');
@@ -48,7 +46,7 @@ try {
             <tr>
                 <th scope="col">Pergunta</th>
                 <th scope="col">Resposta</th>
-                <th scope="col" colspan="2"></th>
+                <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/adicionar_faq.php">Adicionar</a></th>
             </tr>
         </thead>
         <tbody>

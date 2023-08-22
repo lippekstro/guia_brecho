@@ -57,12 +57,10 @@ session_start();
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
                         <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
-                        <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] > 1) : ?>
-                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/perfil_admin.php">Painel</a>
-                        <?php endif; ?>
                         <?php if (!isset($_SESSION['usuario'])) : ?>
                             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
                         <?php else : ?>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/perfil_admin.php">Painel</a>
                             <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
                         <?php endif; ?>
                     </div>

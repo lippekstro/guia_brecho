@@ -1,49 +1,40 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
+
 ?>
 
-<div class="admin">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/guia_brecho/views\admin\perfil_admin.php">Perfil Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/guia_brecho/views\admin\gerenciador-admin.php">Gerenciador Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Eventos</a>
-      </li>
-    </ul>
+<section>
+  <div class="alert alert-info text-center m-3" role="alert">
+    <a href="/guia_brecho/views/admin/editar_perfil.php">Editar Perfil</a>
   </div>
-  
+</section>
 
-<div class="container">
-  <h1 class="text-center" style="font-size: 30px;">Perfil Admin</h1>
-  <div id="profile" class="border p-4 mb-4 bg-transparent-orange">
-    <div class="form-group">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" class="form-control" value="Nome de exemplo" disabled>
+<?php if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] === 1) : ?>
+  <section>
+    <?php if (!Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario'])) : ?>
+      <div class="alert alert-info text-center m-3" role="alert">
+        <a href="/guia_brecho/views/admin/cadastro_brecho.php">Cadastrar Brecho</a>
+      </div>
+    <?php else : ?>
+      <div class="alert alert-info text-center m-3" role="alert">
+        <a href="/guia_brecho/views/admin/editar_brecho.php">Editar Brecho</a>
+      </div>
+      <div class="alert alert-info text-center m-3" role="alert">
+        <a href="/guia_brecho/views/admin/listar_produtos.php">Gerenciar Produtos</a>
+      </div>
+    <?php endif; ?>
+  </section>
+<?php elseif (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] > 1) : ?>
+  <section>
+    <div class="alert alert-success text-center m-3" role="alert">
+      <a href="/guia_brecho/views/admin/listar_produtos.php">Gerenciar Eventos</a>
     </div>
-
-    <div class="form-group">
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" class="form-control" value="email@example.com" disabled>
+    <div class="alert alert-success text-center m-3" role="alert">
+      <a href="/guia_brecho/views/admin/listar_faqs.php">Gerenciar FAQs</a>
     </div>
-
-    <div class="form-group">
-      <label for="password">Nova senha:</label>
-      <input type="password" id="password" class="form-control" disabled>
-    </div>
-
-    <div class="form-group">
-      <label for="confirmPassword">Confirmar nova senha:</label>
-      <input type="password" id="confirmPassword" class="form-control" disabled>
-    </div>
-  </div>
-
-  <button id="editButton" class="btn btn-primary">Editar</button>
-  <button id="saveButton" class="btn btn-success" style="display: none;">Salvar</button>
-</div>
+  </section>
+<?php endif; ?>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/rodape.php";
