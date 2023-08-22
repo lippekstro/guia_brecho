@@ -16,23 +16,21 @@ try {
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
-                    <?php for ($i = 0; $i < 10; $i++) : ?>
-                        <?php foreach ($brecho as $loja) : ?>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-                                    <div class="card-image">
-                                        <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($loja['brecho_img']); ?>" alt="" class="card-img">
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name"><?= $loja['brecho_nome'] ?></h2>
-                                    <p class="description"><?= $loja['brecho_endereco'] ?></p>
-                                    <a href="/guia_brecho/views/detalhes_brecho.php?id=<?= $loja['id_brecho'] ?>" class="btn btn-primary">Detalhes</a>
+                    <?php foreach ($brecho as $loja) : ?>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($loja['brecho_img']); ?>" alt="" class="card-img">
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                    <?php endfor; ?>
+                            <div class="card-content">
+                                <h2 class="name"><?= $loja['brecho_nome'] ?></h2>
+                                <p class="description"><?= $loja['brecho_bio'] ?></p>
+                                <a href="/guia_brecho/views/brechosaibamais.php?id=<?= $loja['id_brecho'] ?>" class="btn button">𝗦𝗮𝗶𝗯𝗮 𝗠𝗮𝗶𝘀</a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="swiper-button-next swiper-navBtn"></div>

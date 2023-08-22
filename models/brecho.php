@@ -42,7 +42,6 @@ class Brecho
         $this->brecho_faixa_preco_fim = $brecho['brecho_faixa_preco_fim'];
         $this->brecho_bio = $brecho['brecho_bio'];
         $this->id_usuario = $brecho['id_usuario'];
-
     }
 
     public function criar()
@@ -109,7 +108,8 @@ class Brecho
         $stmt->execute();
     }
 
-    public static function buscarMeuBrecho($id){
+    public static function buscarMeuBrecho($id)
+    {
         $query = "SELECT id_brecho FROM brecho WHERE id_usuario = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -117,12 +117,24 @@ class Brecho
         $stmt->execute();
         return $stmt->fetch();
     }
-        public static function buscarMeuBrechoPorIdBrecho($id_brecho){
+
+    public static function buscarMeuBrechoPorIdBrecho($id_brecho)
+    {
         $query = "SELECT * FROM brecho WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_brecho', $id_brecho);
         $stmt->execute();
         return $stmt->fetch();
+    }
+    public static function getBrecho($id)
+    {
+        $query = "SELECT l.*, u.nome_usuario FROM brecho l JOIN usuario u ON l.id_brecho = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $lista = $stmt->fetch();
+        return $lista;
     }
 }
