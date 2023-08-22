@@ -53,7 +53,7 @@ class Evento {
 
     public static function listar()
     {
-        $query = "SELECT * FROM evento";
+        $query = "SELECT * FROM evento ORDER BY data_evento ASC";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->execute();
@@ -82,5 +82,13 @@ class Evento {
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id', $this->id_evento);
         $stmt->execute();
+    }
+    public static function listarProximos(){
+        $query = "SELECT * FROM evento ORDER BY data_evento ASC limit 3";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
     }
 }
