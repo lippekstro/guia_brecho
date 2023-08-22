@@ -6,10 +6,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
     <!-- CARROSSEL  ------------->
 
 
-   <!--  <link href="/guia_brecho/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="/guia_brecho/css/bootstrap.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="/guia_brecho/css/indexhome.css">
-<!--     <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script> -->
+    <!--  <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script>  -->
+    <script src="/guia_brecho/js/home.js"></script>
   <html>
 </body>
 <body>
@@ -105,6 +106,84 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             </div>
           </section>
         <!-- FIM COLEÇÃO ---------------- -->
+
+        <!-- PRODUTOS BRECHÓ-------- -->
+
+<?php
+// Array de produtos 
+$products = [
+    [
+        'brand' => 'produto 1',
+        'description' => 'Descrição do Produto 1',
+        'price' => '$20',
+        'actual_price' => '$40',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+        'brand' => 'produto 2',
+        'description' => 'Descrição do Produto 2',
+        'price' => '$30',
+        'actual_price' => '$50',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+        'brand' => 'produto 3',
+        'description' => 'Descrição do Produto 3',
+        'price' => '$25',
+        'actual_price' => '$45',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+      'brand' => 'produto 4',
+      'description' => 'Descrição do Produto 4',
+      'price' => '$25',
+      'actual_price' => '$45',
+      'image' => '/guia_brecho/img/camisa_produtos.png',
+  ],
+  [ 
+    'brand' => 'produto 5',
+    'description' => '/guia_brecho/img/camisa_produtos.png',
+    'price' => '$25',
+    'actual_price' => '$45',
+    'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[
+  'brand' => 'produto 6',
+  'description' => 'Descrição do Produto 6',
+  'price' => '$25',
+  'actual_price' => '$45',
+  'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+];
+
+?>
+
+<section class="product">
+    <h2 class="product-category ">Produtos</h2>
+    <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+    <div class="product-container">
+        <?php foreach ($products as $product): ?>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="<?php echo $product['image']; ?>" class="product-thumb" alt="">
+                <button class="card-btn">Veja Mais</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand"><?php echo $product['brand']; ?></h2>
+                <p class="product-short-description"><?php echo $product['description']; ?></p>
+                <span class="price"><?php echo $product['price']; ?></span>
+                <span class="actual-price"><?php echo $product['actual_price']; ?></span>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+
+
+<!-- FIM DE PRODUTOS BRECHÓ-------- -->
 
 
 
@@ -388,6 +467,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
 </section>
 <!-- fim flex box  -->
+
+
+
+
    
  
 
