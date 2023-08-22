@@ -86,37 +86,54 @@ class Produto {
         $stmt->execute();
     }
 
-    public static function listarLimiteProdutos($inicio,$limite){
+   public static function paginacaoProdutos($inicio,$limite){
 
         $conexao = conexao::conectar();
-        $sql = "SELECT * FROM produto LIMIT $inicio,$limite";
-        $list = $conexao -> query($sql);        
-        $array = $list->fetchAll();
-        return $array;
+        $sql = "SELECT p.*,b.brecho_nome FROM produto p JOIN brecho b ON p.id_brecho=b.id_brecho ORDER BY id_produto LIMIT $inicio,$limite";
+        $query = $conexao -> query($sql);
+        $lista = $query->fetchAll();
+        return $lista;
     }
 
     public static function pesquisarProdutos($nome){
+        
         $conexao = Conexao::conectar();        
-        $sql = "SELECT * FROM produto WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
+        $sql = "SELECT p.*, b.brecho_nome 
+        FROM produto p 
+        JOIN brecho b ON p.id_brecho = b.id_brecho 
+        WHERE nome_produto LIKE :termo OR descricao LIKE :termo";
         $query = $conexao->prepare($sql);
         $query->bindValue(":termo", '%' . $nome .'%');
-        $query->execute();
-        $res = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        if (count($res)== 0) {
-            $_SESSION["resultado_pesquisa"]["sem_sucesso"] = "Nenhum resultado encontrado...";
-        }else {
-            $_SESSION["resultado_pesquisa"]["com_sucesso"] = count($res);
-            return $res;
-        }
+        $query->execute();        
+        $res = $query->fetchAll();        
+        return $res;        
     }
+
     public static function filtroCategoria($categoria){
+        
         $conexao = Conexao::conectar();
-        $sql = "SELECT * FROM produto WHERE categoria = :categoria";
+        $sql = "SELECT p.*, b.brecho_nome 
+        FROM produto p 
+        JOIN brecho b ON p.id_brecho = b.id_brecho 
+        WHERE categoria = :categoria";
         $query = $conexao->prepare($sql);
         $query->bindValue(":categoria",$categoria);
         $query->execute();
-        $resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+        $resultado = $query->fetchAll();
+        return $resultado;
+    }
+
+    public static function filtroBrecho($id){
+        
+        $conexao = Conexao::conectar();
+        $sql = "SELECT p.*, b.brecho_nome
+        FROM produto p
+        INNER JOIN brecho b ON p.id_brecho = b.id_brecho
+        WHERE p.id_brecho = :id_brecho";
+        $query = $conexao->prepare($sql);
+        $query->bindValue(":id_brecho",$id);
+        $query->execute();
+        $resultado = $query->fetchAll();
         return $resultado;
     }
 }
