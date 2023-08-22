@@ -3,18 +3,19 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
 
     
-    <!-- CARROSSEL  ------------->
+   
 
 
-   <!--  <link href="/guia_brecho/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="/guia_brecho/css/bootstrap.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="/guia_brecho/css/indexhome.css">
-<!--     <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script> -->
+    <!--  <script src="/guia_brecho/js/bootstrap.bundle.js" defer></script>  -->
+    <script src="/guia_brecho/js/home.js" defer></script>
   <html>
 </body>
 <body>
  <section class="index">
-    
+     <!-- CARROSSEL  ------------->
              
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -32,7 +33,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             </div>
           </div>
           <div class="carousel-item">
-            <img src="img/carrossel1.jpg" class="d-block w-100" alt="...">
+            <img src="/guia_brecho/img/img_carrossel01.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Explore os Eventos que acontecem na ilha - Moda, Sustentabilidade e Diversão!</p>
@@ -67,12 +68,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <div class="col-lg-7 col-md-12 left-content">
                   <div class="collection-item">
                     <div class="products-thumb">
-                      <img src="img/5.jpg" alt="collection item" class="large-image image-rounded">
+                      <img src="/guia_brecho/img/banner04.png" alt="collection item" class="large-image image-rounded">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
                       <div class="categories text_banner_color">Faça sua coleção</div>
-                      <h3 class="item-title text_banner_color1">Estilo pessoal.</h3>
-                      <p class="text_banner_color"> Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. </p>
+                      <h3 class="item-title text_banner_color1">Estilo pessoal.</h3> <br>
+                      <p class="text_banner_color"> Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. </p><br>
                       <div>
                       <button class="btn-56">
                       <a href="/guia_brecho/views/produtos.php" class="text_banner_link">Veja Mais</a>
@@ -84,7 +85,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 <div class="col-lg-5 col-md-12 right-content flex-wrap">
                   <div class="collection-item top-item">
                     <div class="products-thumb">
-                      <img src="img/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                      <img src="/guia_brecho/img/sapatilha.jpg" alt="collection item " class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
                       <div class="categories"></div>
@@ -93,7 +94,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                   </div>
                   <div class="collection-item bottom-item">
                     <div class="products-thumb">
-                      <img src="img/4.jpg" alt="collection item" class="small-image image-rounded">
+                      <img src="/guia_brecho/img/banner02.png" alt="collection item" class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
                       <div class="categories text_banner_color">Descubra nossas coleções.</div>
@@ -105,6 +106,112 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
             </div>
           </section>
         <!-- FIM COLEÇÃO ---------------- -->
+
+        <!-- PRODUTOS BRECHÓ-------- -->
+        <br><br><br>
+<?php
+// Array de produtos 
+$products = [
+    [
+        'brand' => 'produto 1',
+        'description' => 'Descrição do Produto 1',
+        'price' => '$20',
+        'actual_price' => '$40',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+        'brand' => 'produto 2',
+        'description' => 'Descrição do Produto 2',
+        'price' => '$30',
+        'actual_price' => '$50',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+        'brand' => 'produto 3',
+        'description' => 'Descrição do Produto 3',
+        'price' => '$25',
+        'actual_price' => '$45',
+        'image' => '/guia_brecho/img/camisa_produtos.png',
+    ],
+    [
+      'brand' => 'produto 4',
+      'description' => 'Descrição do Produto 4',
+      'price' => '$25',
+      'actual_price' => '$45',
+      'image' => '/guia_brecho/img/camisa_produtos.png',
+  ],
+  [ 
+    'brand' => 'produto 5',
+    'description' => '/guia_brecho/img/camisa_produtos.png',
+    'price' => '$25',
+    'actual_price' => '$45',
+    'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[
+  'brand' => 'produto 6',
+  'description' => 'Descrição do Produto 6',
+  'price' => '$25',
+  'actual_price' => '$45',
+  'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[ 
+  'brand' => 'produto 5',
+  'description' => '/guia_brecho/img/camisa_produtos.png',
+  'price' => '$25',
+  'actual_price' => '$45',
+  'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[
+'brand' => 'produto 6',
+'description' => 'Descrição do Produto 6',
+'price' => '$25',
+'actual_price' => '$45',
+'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[ 
+  'brand' => 'produto 5',
+  'description' => '/guia_brecho/img/camisa_produtos.png',
+  'price' => '$25',
+  'actual_price' => '$45',
+  'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+[
+'brand' => 'produto 6',
+'description' => 'Descrição do Produto 6',
+'price' => '$25',
+'actual_price' => '$45',
+'image' => '/guia_brecho/img/camisa_produtos.png',
+],
+];
+
+?>
+
+<section class="product">
+    <h2 class="product-category ">Produtos</h2>
+    <button class="pre-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
+    <div class="product-container">
+        <?php foreach ($products as $product): ?>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="<?php echo $product['image']; ?>" class="product-thumb" alt="">
+                <button class="card-btn">Veja Mais</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand"><?php echo $product['brand']; ?></h2>
+                <p class="product-short-description"><?php echo $product['description']; ?></p>
+                <span class="price"><?php echo $product['price']; ?></span>
+                <span class="actual-price"><?php echo $product['actual_price']; ?></span>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+<br><br><br>
+
+<!-- FIM DE PRODUTOS BRECHÓ-------- -->
 
 
 
@@ -128,13 +235,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                         <div class="box">
                             <img src="img/calça.png" alt="">
                             <div class="overlay">
-                                <h3>Calças</h3>
+                                <h3>Roupas</h3>
                                 <p>Nossas calças são cuidadosamente selecionadas por nossos clientes, garantindo qualidade e conforto para que você se sinta confiante em qualquer ocasião. </p>
                                 <a href="#">VEJA MAIS </a>
                             </div>
                         </div>
                         <div class="box">
-                            <img src="img/calçados.png" alt="">
+                            <img src="/guia_brecho/img/produto_calçados.jpg" alt="">
                             <div class="overlay">
                                 <h3>Calçados</h3>
                                 <p>Nossos calçados são selecionados com carinho, garantindo que cada par esteja em ótimo estado e pronto para uma nova jornada com você.</p>
@@ -226,36 +333,64 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
               
 
-      <!-- flex box  -->
-     
-      <section class="flexbox">
 
-      <div class="wrapper_caixa">
-      <div class="caixa-area">
-        <div class="icon-area">
-          <i class="lni lni-island"></i>
+
+
+            <!-- LOJAS ------------------------------------------ -->
+            <section class="flexbox02" id="portfolio" class="portfolio section-padding" >
+        <div  class="wrapper_caixa">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2 class="h2_sevirço">Guia Lojas</h2> 
+                        <p class="p_serviço">Lojas em destaque:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="/guia_brecho/img/profile1.png" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">Loja 1</h3>
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                            <button class="bnt_loja btn bg-warning text-dark ">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="/guia_brecho/img/profile5.png" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">loja 2</h3>
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                            <button class="bnt_loja btn bg-warning text-dark ">learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="/guia_brecho/img/profile6.png" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">loja 3</h3>
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
+                            <button class="bnt_loja btn bg-warning text-dark ">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
-        <h6>único</h6>
-        <p>Cada visita ao Guia Brechó revela achados únicos, oferecendo a chance de possuir algo verdadeiramente exclusivo e cheio de história.</p>
-      </div>
-      <div class="caixa-area custom">
-        <div class="icon-area">
-          <i class="lni lni-mashroom"></i>
-        </div>
-        <h6>Estilo</h6>
-        <p>O Guia Brechó é um tesouro de estilo, onde peças ecléticas se harmonizam, permitindo a todos explorar sua expressão pessoal de maneira única.</p>
-      </div>
-      <div class="caixa-area">
-        <div class="icon-area">
-          <i class="lni lni-trees"></i>
-        </div>
-        <h6>Eclético</h6>
-        <p>Ao adentrar no Guia brechó e mergulhar em um universo eclético de moda, onde cores, estilos e épocas se misturam em uma dança harmoniosa de autenticidade e diversidade.</p>
-      </div>
-    </div>    
- 
-  </section>
-      <!-- fim flex box  -->
+      </section>
+
+      <!-- fim lojas-------------- -->
 
 
       <!--  BANNER ------------------------------ -->
@@ -264,12 +399,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
               <div class="product-collection">
                 <div class="left-content collection-item">
                   <div class="products-thumb">
-                    <img src="img/2.jpg" alt="collection item" class="large-image image-rounded">
+                    <img src="/guia_brecho/img/banner01.png" alt="collection item" class="large-image image-rounded">
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
                     <div class="categories text_banner_color">Descubra Tesouros Únicos:</div>
-                    <h3 class="item-title text_banner_color1">Um universo da moda.</h3>
-                    <p class="text_banner_color">Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. Dos clássicos atemporais às peças mais ousadas, você encontrará algo que se encaixe perfeitamente no seu estilo pessoal.</p>
+                    <h3 class="item-title text_banner_color1">Um universo da moda.</h3> <br>
+                    <p class="text_banner_color">Na busca por um guarda-roupa que reflita sua autenticidade, oferecemos uma ampla gama de opções. Dos clássicos atemporais às peças mais ousadas, você encontrará algo que se encaixe perfeitamente no seu estilo pessoal.</p> <br>
                     <button class="btn-56">
                       <a href="/guia_brecho/views/produtos.php" class="text_banner_link">Veja Mais</a>
                       </button>
@@ -277,90 +412,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                 </div>
               </div>        
             </div>
-          </section>
+          </section><br>
         <!-- FIM  BANNER ------------------------------ -->
 
 
 
 
-      <!-- portfolio strats -->
-      <section id="portfolio" class="portfolio section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center pb-5">
-                        <h2>Guia Lojas</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit. Non, quo.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="img/project-1.jpg" class="img-fluid" alt="">
-                          </div>
-                            <h3 class="card-title">Loja 1</h3>
-                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
-                            <button class="btn bg-warning text-dark">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="img/project-2.jpg" class="img-fluid" alt="">
-                          </div>
-                            <h3 class="card-title">loja 2</h3>
-                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
-                            <button class="btn bg-warning text-dark">learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-light text-center bg-white pb-2">
-                        <div class="card-body text-dark">
-                          <div class="img-area mb-4">
-                              <img src="img/project-3.jpg" class="img-fluid" alt="">
-                          </div>
-                            <h3 class="card-title">loja 3</h3>
-                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eligendi modi temporibus alias iste. Accusantium?</p>
-                            <button class="btn bg-warning text-dark">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      
-
-          <!-- quem somos -->
-         <!--  <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-12">
-                        <div class="about-img">
-                            <img src="img/Prancheta 2.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                        <div class="about-text">
-                              <h2>Quem somos ?</h2>
-                              <p>Bem-vindo(a) ao Guia Brechó, o seu guia online para explorar o mundo dos brechós em São Luís do Maranhão! Nós acreditamos na valorização do que é feito com cuidado e no apoio aos brechozeiros e brechozeiras locais que buscam crescer e expandir seus negócios. Como funciona o Guia Brechó? É simples! Nós fornecemos aos brechós locais uma plataforma para expor seus produtos, mostrando suas peças exclusivas e oferecendo informações detalhadas sobre suas lojas. Você poderá encontrar uma variedade de roupas, acessórios e itens de moda em nosso site, tudo em um só lugar!</p>
-                              <a href="#" class="btn btn-warning">Saiba mais...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- fim de quem somos -->
-
-
         <!-- nossos serviços -->
-      <section class="services section-padding serviços_cor" id="services">
+<!--       <section class="services section-padding serviços_cor" id="services">
           <div class="container">
               <div class="row">
                   <div class="col-md-12">
@@ -400,16 +459,44 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
                   </div>
               </div>
           </div>
-      </section>
+      </section> -->
       <!-- FIM DE SERVIÇOS-->
-   
- 
+
+            <!-- flex box  -->
+     
+            <section class="flexbox">
+
+<div class="wrapper_caixa">
+   <div class="section-header text-center pb-5  text-black">
+      <h2 class="h2_sevirço" >Sobre os nossos serviços:</h2>
+   </div>
+<div class="caixa-area">
+  <div class="icon-area">
+    
+  </div>
+  <h6>Comunidade Engajada</h6>
+  <p>O que torna nosso site brechó verdadeiramente especial é a comunidade engajada que construímos ao longo do tempo. Nossos clientes não são apenas compradores, são membros valiosos da nossa família fashion sustentável.</p>
+</div>
+<div class="caixa-area custom">
+  <div class="icon-area">
+    <i class="lni lni-mashroom"></i>
+  </div>
+  <h6>Sustentabilidade</h6><br>
+  <p>Uma das qualidades mais distintas e valorizadas do nosso site brechó é o compromisso inabalável com a sustentabilidade. Acreditamos que a moda pode ser bonita e responsável ao mesmo tempo, e por isso, priorizamos o conceito de reutilização e reciclagem em tudo o que fazemos.</p>
+</div>
+<div class="caixa-area">
+  <div class="icon-area">
+    <i class="lni lni-trees"></i>
+  </div>
+  <h6>Autenticidade</h6><br>
+  <p>No Guia brechó, a autenticidade é uma das características que nos define. Cada peça em nosso acervo tem uma história única e carrega consigo um charme que apenas itens vintage podem proporcionar.</p>
+</div>
+</div>    
+
+</section>
+<!-- fim flex box  -->
 
 
-    
-
-    
-    
     
 
 </html>

@@ -153,6 +153,14 @@ class Produto
         $stmt->bindValue(':id', $id);
         $stmt->execute();
         $lista = $stmt->fetchAll();
+    }
+    
+    public static function listarUltimos()
+    {
+        $conexao = conexao::conectar();
+        $sql = "SELECT p.* FROM produto ORDER BY id_produto LIMIT 10";
+        $query = $conexao->query($sql);
+        $lista = $query->fetchAll();
         return $lista;
     }
 }

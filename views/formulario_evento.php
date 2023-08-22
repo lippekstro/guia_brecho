@@ -78,11 +78,7 @@
   </form>
  
     <br>
-      <div></div>
-      <p id="demo">Clique para obter sua localização:</p>
-      <button onclick="getLocation()">Clique aqui</button>
-      <div class="mapholder"></div>
-      <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+     
      
       <header class="barrabaixo1">
     
