@@ -87,7 +87,7 @@ class Usuario
         $stmt->execute();
         $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if (count($registro) > 0 && password_verify($senha, $registro['senha'])) {
+        if (isset($registro['id_usuario']) && password_verify($senha, $registro['senha'])) {
             session_start();
             $_SESSION['usuario']['id_usuario'] = $registro['id_usuario'];
             $_SESSION['usuario']['nome'] = $registro['nome_usuario'];

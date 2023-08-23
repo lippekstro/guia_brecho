@@ -127,7 +127,7 @@ class Brecho
 
     public static function buscarMeuBrecho($id)
     {
-        $query = "SELECT id_brecho FROM brecho WHERE id_usuario = :id";
+        $query = "SELECT * FROM brecho WHERE id_usuario = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id', $id);
@@ -137,21 +137,22 @@ class Brecho
 
     public static function buscarMeuBrechoPorIdBrecho($id_brecho)
     {
-        $query = "SELECT * FROM brecho WHERE id_brecho = :id_brecho";
+        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u WHERE id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_brecho', $id_brecho);
         $stmt->execute();
         return $stmt->fetch();
     }
+
     public static function getBrecho($id)
     {
-        $query = "SELECT l.*, u.nome_usuario FROM brecho l JOIN usuario u ON l.id_brecho = :id";
+        $query = "SELECT l.*, u.nome_usuario FROM brecho l JOIN usuario u ON l.id_usuario = :id";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        $lista = $stmt->fetch();
+        $lista = $stmt->fetchAll();
         return $lista;
     }
 }

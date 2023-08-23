@@ -4,12 +4,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 
 try {
-    $brecho = Brecho::getBrecho($_GET['id']);
+    $brecho = Brecho::buscarMeuBrechoPorIdBrecho($_GET['id']);
     $produtos = Produto::listarSomenteEstocados($_GET['id']);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-
 
 ?>
 
@@ -29,6 +28,9 @@ try {
                 </div>
                 <div class="col-12">
                     <p>Instagram: <a target="_blank" href="https://www.instagram.com/<?= $brecho['brecho_rede'] ?>">@<?= $brecho['brecho_rede'] ?></a></p>
+                </div>
+                <div class="col-12">
+                    <p><?= $brecho['brecho_bio'] ?></p>
                 </div>
                 <div class="col-12">
                     <p>Proprietário (a): <?= $brecho['nome_usuario'] ?></p>

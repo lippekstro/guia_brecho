@@ -3,7 +3,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 
 try {
-    $brecho = Brecho::getBrecho($_SESSION['usuario']['id_usuario']);
+    $brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
