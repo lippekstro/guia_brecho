@@ -127,7 +127,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 // Array de produtos 
 try {
   $listarUltimos = Produto::listarUltimos();
-} catch (\Throwable $th) {
+} catch (PDOException $th) {
   echo $th -> getMessage();
 }
 ?>

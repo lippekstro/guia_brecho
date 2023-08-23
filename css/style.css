@@ -29,6 +29,10 @@ footer {
   width: 5rem;
 }
 
+a {
+  color: var(--bs-orange);
+}
+
 /* Login style começo */
 
 #loginmod {

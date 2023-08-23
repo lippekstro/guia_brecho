@@ -174,7 +174,7 @@ class Produto
     public static function listarUltimos()
     {
         $conexao = conexao::conectar();
-        $sql = "SELECT p.* FROM produto ORDER BY id_produto LIMIT 10";
+        $sql = "SELECT * FROM produto ORDER BY id_produto LIMIT 10";
         $query = $conexao->query($sql);
         $lista = $query->fetchAll();
         return $lista;

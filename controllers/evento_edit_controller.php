@@ -17,6 +17,9 @@ try {
     $hora = Utilidades::sanitizaString($_POST['hora']);
     $local = Utilidades::sanitizaString($_POST['local']);
     $descricao = Utilidades::sanitizaString($_POST['descricao']);
+    if (!empty($_FILES['imagem_evento']['tmp_name'])) {
+        $imagem_evento = file_get_contents($_FILES['imagem_evento']['tmp_name']);
+    }
 
     $evento = new Evento($id);
     $evento->nome_evento = $nome;
@@ -24,16 +27,17 @@ try {
     $evento->horario = $hora;
     $evento->local_evento = $local;
     $evento->descricao_evento = $descricao;
-
     if ($imagem_evento) {
         $evento->imagem_evento = $imagem_evento;
         $evento->editarImagem();
+    } else {
+        $evento->editar();
     }
-    $evento->editar();
+
 
     setcookie('msg', "O Evento foi atualizado com sucesso!", time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'sucesso', time() + 3600, '/guia_brecho/');
-    header("Location: /guia_brecho/views/admin/listar_eventos.php");
+    header("Location: /guia_brecho/views/admin/evento_listar.php");
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

@@ -4,7 +4,7 @@ CREATE TABLE usuario (
     id_usuario int PRIMARY KEY AUTO_INCREMENT, 
     nome_usuario VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL, 
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
     cpf_cnpj BIGINT UNIQUE NOT NULL, 
     nivel_acesso int DEFAULT 1
 );
@@ -40,8 +40,8 @@ CREATE TABLE evento (
     nome_evento VARCHAR(255) NOT NULL,
     data_evento DATE NOT NULL, 
     horario TIME NOT NULL,
-    imagem_evento LONGBLOB, 
     local_evento VARCHAR(255) NOT NULL,
+    imagem_evento LONGBLOB, 
     descricao_evento TEXT NOT NULL
 );
 
