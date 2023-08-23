@@ -1,6 +1,7 @@
 <?php
 
 class Utilidades{
+    
     public static function validaEmail($email){
         $email = trim($email);
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -18,10 +19,14 @@ class Utilidades{
         return filter_var($valor, FILTER_VALIDATE_FLOAT);
     }
 
-    public static function sanitizaString($input) {
-        $input = trim($input);
-        $input = filter_var($input, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
-        return $input;
+    public static function validaInt($valor){
+        return filter_var($valor, FILTER_VALIDATE_INT);
+    }
+
+    public static function sanitizaString($s) {
+        $s = htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+        $s = trim($s);
+        return $s;
     }
 
 }

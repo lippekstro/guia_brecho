@@ -154,3 +154,13 @@
     text-align: center;
   }
   
+  .admin .btn-custom {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    color: #ffff;
+  }
+  .admin .btn-custom:hover {
+    background-color: #ff7f00;
+    border-color: #ff7f00;
+    color: #ffff;
+  }
