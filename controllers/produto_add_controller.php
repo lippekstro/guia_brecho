@@ -11,7 +11,7 @@ try {
     if (!empty($_FILES['imagem_produto']['tmp_name'])) {
         $imagem = file_get_contents($_FILES['imagem_produto']['tmp_name']);
     } else {
-        $imagem = file_get_contents('/guia_brecho/img/dummy_1920x1080.png');
+        $imagem = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/img/dummy_1920x1080.png');
     }
     $brecho = Brecho::getBrecho($_SESSION['usuario']['id_usuario']);
 
