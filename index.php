@@ -17,7 +17,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
 <body>
  <section class="index">
      <!-- CARROSSEL  ------------->
-             
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -410,27 +414,27 @@ try {
 
 <div class="wrapper_caixa">
    <div class="section-header text-center pb-5  text-black">
-      <h2 class="h2_sevirço" >Sobre os nossos serviços:</h2>
+      <h2 class="h2_sevirço">Sobre os nossos serviços:</h2>
    </div>
 <div class="caixa-area">
   <div class="icon-area">
     
   </div>
-  <h6>Comunidade Engajada</h6>
+  <h6 class="text_serviços">Comunidade Engajada</h6>
   <p>O que torna nosso site brechó verdadeiramente especial é a comunidade engajada que construímos ao longo do tempo. Nossos clientes não são apenas compradores, são membros valiosos da nossa família fashion sustentável.</p>
 </div>
 <div class="caixa-area custom">
   <div class="icon-area">
     <i class="lni lni-mashroom"></i>
   </div>
-  <h6>Sustentabilidade</h6><br>
+  <h6 class="text_serviços">Sustentabilidade</h6><br>
   <p>Uma das qualidades mais distintas e valorizadas do nosso site brechó é o compromisso inabalável com a sustentabilidade. Acreditamos que a moda pode ser bonita e responsável ao mesmo tempo, e por isso, priorizamos o conceito de reutilização e reciclagem em tudo o que fazemos.</p>
 </div>
 <div class="caixa-area">
   <div class="icon-area">
     <i class="lni lni-trees"></i>
   </div>
-  <h6>Autenticidade</h6><br>
+  <h6 class="text_serviços">Autenticidade</h6><br>
   <p>No Guia brechó, a autenticidade é uma das características que nos define. Cada peça em nosso acervo tem uma história única e carrega consigo um charme que apenas itens vintage podem proporcionar.</p>
 </div>
 </div>    
