@@ -152,6 +152,27 @@
 .pagination a:active {
   outline: none;
 }
+.modal-3 a {
+  margin-left: 3px;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.modal-3 a:hover {
+  background-color: #fb732c;
+  color: white;
+}
+
+.modal-3 a.active,
+.modal-3 a:active {
+  background-color: #fb732c;
+  color: white;
+}
 
 
 /* sidebar */
@@ -655,7 +676,7 @@
       "t"
       "i"
       "p";
-    margin: unset;
+    margin-top: 1rem;
   }
 
   .filtro {
