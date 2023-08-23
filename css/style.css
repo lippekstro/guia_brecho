@@ -123,10 +123,10 @@ a {
 .slide-container {
   width: 100%;
   padding: 40px 0;
-  position: absolute !important;
+ /*  position: absolute !important;
   top: 39%;
   left: 50%;
-  translate: -50% -50%;
+  translate: -50% -50%; */
 
 }
 

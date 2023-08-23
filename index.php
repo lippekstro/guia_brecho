@@ -30,7 +30,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Bem-vindo ao nosso mundo de produtos de brechó cuidadosamente selecionados! Aqui, você encontrará uma coleção única de peças que vão desde roupas e calçados até acessórios, todos em ótimo estado e prontos para uma nova vida com você.</p>
-                              <p><a href="/guia_brecho/views/login.php" class="btn btn-warning mt-3 butao_nav">Cadastre-se</a></p>
+                              <p><a href="/guia_brecho/views/cadastro_usuario.php" class="btn btn-warning mt-3 butao_nav">Cadastre-se</a></p>
             </div>
           </div>
           <div class="carousel-item">
@@ -46,7 +46,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
             <div class="carousel-caption">
               <h5>Guia Brechó</h5>
                               <p>Nossos produtos abrangem uma ampla variedade de estilos, tamanhos e marcas, para atender às necessidades de todos os nossos clientes.</p>
-                              <p><a href="/guia_brecho/views/produtos.php" class="btn btn-warning mt-3 butao_nav">Produtos</a></p>
+                              <p><a href="/guia_brecho/views/produtos.php?pagina=1" class="btn btn-warning mt-3 butao_nav">Produtos</a></p>
             </div>
           </div>
         </div>

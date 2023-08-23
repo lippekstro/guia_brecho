@@ -1,9 +1,13 @@
 <?php
-
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/evento.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/config.php';
+/* require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php'; */
+
+
 
 try {
-    $nome = $_POST["nome_evento"];
+    $nome_evento = $_POST["nome_evento"];
     $data_evento = $_POST["data_evento"];
     $horario = $_POST["horario"];
     $local_evento = $_POST["local_evento"];
@@ -15,7 +19,7 @@ try {
     }
 
     $evento = new Evento();
-    $evento->nome_evento = $nome;
+    $evento->nome_evento = $nome_evento;
     $evento->data_evento = $data_evento;
     $evento->horario = $horario;
     $evento->local_evento = $local_evento;
