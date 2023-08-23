@@ -1,8 +1,6 @@
 <li class="card-produtos">
     <div class="card-produtos-img">
-        <figcaption>
-            <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista['imagem_produto']) ?>" alt="">
-        </figcaption>
+        <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($lista['imagem_produto']) ?>" alt="">
     </div>
     <div class="info-produto">
         <h3><?= $lista["nome_produto"] ?></h3>
@@ -46,7 +44,7 @@ try {
                             <ul class="info-brecho">
                                 <li class="my-2"><i class="bi bi-telephone-fill me-1"></i><?php echo $infoBrecho["brecho_contato"]; ?></li>
                                 <li class="my-2"><i class="bi bi-instagram me-1"></i><a target="_blank" href="https://www.instagram.com/<?= $infoBrecho["brecho_rede"] ?>"><?php echo $infoBrecho["brecho_rede"]; ?></a></li>
-                                <li class="my-2 lh-sm"><i class="bi bi-house-fill"></i><?php echo $infoBrecho["brecho_endereco"]; ?></li>
+                                <li class="my-2 lh-sm"><i class="bi bi-house-fill me-1"></i><?php echo $infoBrecho["brecho_endereco"]; ?></li>
                             </ul>
 
                         </div>

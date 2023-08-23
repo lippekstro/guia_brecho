@@ -6,6 +6,7 @@ if (isset($_COOKIE['msg'])) {
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/produto.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/brecho.php';
 
 /* if (!isset($_SESSION['admin'])) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
@@ -13,9 +14,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/produto.php';
     header('Location: /guia_brecho/index.php');
     exit();
 } */
-
+$brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
 try {
-    $produtos = Produto::listar();
+    $produtos = Produto::filtroBrecho($brecho['id_brecho']);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -40,9 +41,13 @@ try {
     <?php endif; ?>
 </section>
 
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal" style="color: var(--bs-orange);">Gerenciamento de Produtos</h1>
+</div>
+
 <section class="d-flex justify-content-center">
     <div class="table-responsive-xxl m-3 w-100">
-        <table class="table table-hover col col-lg-12">
+        <table class="table table-hover table-dark table-striped col col-lg-12">
             <thead>
                 <tr>
                     <th scope="col">Nome</th>

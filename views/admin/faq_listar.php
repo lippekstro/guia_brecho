@@ -40,9 +40,13 @@ try {
     <?php endif; ?>
 </section>
 
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal" style="color: var(--bs-orange);">Gerenciamento de FAQs</h1>
+</div>
+
 <section class="d-flex justify-content-center">
     <div class="table-responsive-xxl m-3 w-100">
-        <table class="table table-hover col col-lg-12">
+        <table class="table table-hover table-dark table-striped col col-lg-12">
             <thead>
                 <tr>
                     <th scope="col">Pergunta</th>
