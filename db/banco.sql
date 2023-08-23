@@ -40,8 +40,8 @@ CREATE TABLE evento (
     nome_evento VARCHAR(255) NOT NULL,
     data_evento DATE NOT NULL, 
     horario TIME NOT NULL,
-    imagem_evento LONGBLOB, 
     local_evento VARCHAR(255) NOT NULL,
+    imagem_evento LONGBLOB, 
     descricao_evento TEXT NOT NULL
 );
 
