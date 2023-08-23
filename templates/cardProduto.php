@@ -45,7 +45,7 @@ try {
                         <div class="col-md-7 ms-auto">
                             <ul class="info-brecho">
                                 <li class="my-2"><i class="bi bi-telephone-fill me-1"></i><?php echo $infoBrecho["brecho_contato"]; ?></li>
-                                <li class="my-2"><i class="bi bi-instagram me-1"></i><?php echo $infoBrecho["brecho_rede"]; ?></li>
+                                <li class="my-2"><i class="bi bi-instagram me-1"></i><a target="_blank" href="https://www.instagram.com/<?= $infoBrecho["brecho_rede"] ?>"><?php echo $infoBrecho["brecho_rede"]; ?></a></li>
                                 <li class="my-2 lh-sm"><i class="bi bi-house-fill"></i><?php echo $infoBrecho["brecho_endereco"]; ?></li>
                             </ul>
 

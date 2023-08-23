@@ -7,7 +7,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
         <h1 class='barra-cadastro-texto'>CADASTRE SEUS PRODUTOS</h1>
     </div>
     <div class='nav-master-cad-produto'>
-        <form action="\guia_brecho\controllers\inserir_produto_controller.php" method="post" autocomplete="on" enctype="multipart/form-data" target="alert">
+        <form action="\guia_brecho\controllers\produto_add_controller.php" method="post" autocomplete="on" enctype="multipart/form-data" >
             <div class='nav-cad-master'>
                 <fieldset class='nav-cadastro-produto'>
                     <legend>Dados do produto</legend>

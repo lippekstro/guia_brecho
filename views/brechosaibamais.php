@@ -28,7 +28,7 @@ try {
                     <p>Contato: <?= $brecho['brecho_contato'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>Instagram:<?= $brecho['brecho_rede'] ?></p>
+                    <p>Instagram: <a target="_blank" href="https://www.instagram.com/<?= $brecho['brecho_rede'] ?>">@<?= $brecho['brecho_rede'] ?></a></p>
                 </div>
                 <div class="col-12">
                     <p>Proprietário (a): <?= $brecho['nome_usuario'] ?></p>

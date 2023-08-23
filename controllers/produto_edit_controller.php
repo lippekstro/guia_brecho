@@ -27,7 +27,7 @@ try {
     }
 
     if (!empty($_FILES['imagem_produto']['tmp_name'])) {
-        $imagem_produto = file_get_contents($_FILES['imagem_produto']);
+        $imagem_produto = file_get_contents($_FILES['imagem_produto']['tmp_name']);
     }
 
     $estoque = $_POST['estoque'];
