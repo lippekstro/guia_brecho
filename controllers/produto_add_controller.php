@@ -13,8 +13,8 @@ try {
     } else {
         $imagem = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/img/dummy_1920x1080.png');
     }
-    $brecho = Brecho::getBrecho($_SESSION['usuario']['id_usuario']);
-
+    $brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
+    
     $produto = new Produto();
     $produto->nome_produto = $nome;
     $produto->descricao = $descricao;
