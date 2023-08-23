@@ -13,7 +13,7 @@ try {
     $brecho_bio = $_POST['brecho_bio'];
 
     if (!empty($_FILES['brecho_img']['tmp_name'])) {
-        $brecho_img = file_get_contents($_POST['brecho_img']);
+        $brecho_img = file_get_contents($_FILES['brecho_img']['tmp_name']);
     }
 
 
