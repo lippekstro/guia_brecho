@@ -2,6 +2,10 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 ?>
 
+<div class="d-flex justify-content-center mx-5">
+    <iframe src="https://player.vimeo.com/video/857318398?h=268e1abe24" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="mt-5"></iframe>    
+</div>
+
 
 <div class="caixa-laranja" id="margem">
     <p>
