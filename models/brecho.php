@@ -99,6 +99,23 @@ class Brecho
         $stmt->execute();
     }
 
+    public function editarBrechoImg()
+    {
+        $query = "UPDATE brecho SET brecho_nome = :nome, brecho_endereco = :endereco, brecho_rede = :rede, brecho_contato = :contato, brecho_faixa_preco_ini = :faixa_ini, brecho_faixa_preco_fim = :faixa_fim, brecho_bio = :bio, brecho_img = :imagem WHERE id_brecho = :id_brecho";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":nome", $this->brecho_nome);
+        $stmt->bindValue(":endereco", $this->brecho_endereco);
+        $stmt->bindValue(":rede", $this->brecho_rede);
+        $stmt->bindValue(":contato", $this->brecho_contato);
+        $stmt->bindValue(":faixa_ini", $this->brecho_faixa_preco_ini);
+        $stmt->bindValue(":faixa_fim", $this->brecho_faixa_preco_fim);
+        $stmt->bindValue(":bio", $this->brecho_bio);
+        $stmt->bindValue(":imagem", $this->brecho_img);
+        $stmt->bindValue(":id_brecho", $this->id_brecho);
+        $stmt->execute();
+    }
+
     public function deletar()
     {
         $query = "DELETE FROM brecho WHERE id_brecho = :id_brecho";

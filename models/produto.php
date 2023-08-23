@@ -78,6 +78,21 @@ class Produto
         $stmt->execute();
     }
 
+    public function editarImagem()
+    {
+        $query = "UPDATE produto SET nome_produto = :nome, descricao = :descricao, categoria = :cat, preco = :preco, estoque = :estoque, imagem_produto = :imagem WHERE id_produto = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":nome", $this->nome_produto);
+        $stmt->bindValue(":descricao", $this->descricao);
+        $stmt->bindValue(":cat", $this->categoria);
+        $stmt->bindValue(":preco", $this->preco);
+        $stmt->bindValue(":estoque", $this->estoque);
+        $stmt->bindValue(":imagem", $this->imagem_produto);
+        $stmt->bindValue(":id", $this->id_produto);
+        $stmt->execute();
+    }
+
     public function deletar()
     {
         $query = "DELETE FROM produto WHERE id_produto = :id";

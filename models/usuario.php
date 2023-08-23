@@ -60,12 +60,11 @@ class Usuario
 
     public function editar()
     {
-        $query = "UPDATE usuario SET nome_usuario = :nome, email = :email, cpf_cnpj = :doc WHERE id_usuario = :id_usuario";
+        $query = "UPDATE usuario SET nome_usuario = :nome, email = :email WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome', $this->nome_usuario);
         $stmt->bindValue(':email', $this->email);
-        $stmt->bindValue(':doc', $this->cpf_cnpj);
         $stmt->bindValue(":id_usuario", $this->id_usuario);
         $stmt->execute();
     }

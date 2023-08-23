@@ -13,16 +13,21 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php';
 
 try {
     $id = htmlspecialchars($_POST['id_produto']);
-    $nome = Utilidades::sanitizaString($_POST['nome']);
+    $nome = Utilidades::sanitizaString($_POST['nome_produto']);
     $descricao = Utilidades::sanitizaString($_POST['descricao']);
+    $categoria = $_POST['categoria'];
 
     if (Utilidades::validaFloat($_POST['preco'])) {
         $preco = $_POST['preco'];
     } else {
         setcookie('msg', "Preço Invalido!", time() + 3600, '/guia_brecho/');
         setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
-        header("Location: /guia_brecho/views/admin/cadastro_produto.php");
+        header("Location: /guia_brecho/views/admin/produto_editar.php");
         exit();
+    }
+
+    if (!empty($_FILES['imagem_produto']['tmp_name'])) {
+        $imagem_produto = file_get_contents($_FILES['imagem_produto']);
     }
 
     $estoque = $_POST['estoque'];
@@ -33,22 +38,16 @@ try {
     $produto->preco = $preco;
     $produto->categoria = $categoria;
     $produto->estoque = $estoque;
-    $produto->editar();
-
-    /*if (!empty($_FILES['imagem_produto']['tmp_name'])) {
-    $imagem_produto = $_POST['imagem_produto'];
-}
-NÃO SEI QUAL EDITAR IMAGEM É O CORRETO
-    if (imagem_produto) {
+    if ($imagem_produto) {
         $produto->imagem_produto = $imagem_produto;
         $produto->editarImagem();
-    }*/
-
-    $produto->editar();
+    } else {
+        $produto->editar();
+    }
 
     setcookie('msg', "O Produto foi atualizado com sucesso!", time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'sucesso', time() + 3600, '/guia_brecho/');
-    header("Location: /guia_brecho/views/admin/listar_produtos.php");
+    header("Location: /guia_brecho/views/admin/produto_listar.php");
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

@@ -30,9 +30,9 @@ try {
     if ($brecho_img) {
         $brecho->brecho_img = $brecho_img;
         $brecho->editarBrechoImg();
+    } else {
+        $brecho->editar();
     }
-
-    $brecho->editar();
 
     setcookie('msg', "O seu brechó foi atualizado com sucesso!", time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'sucesso', time() + 3600, '/guia_brecho/');
