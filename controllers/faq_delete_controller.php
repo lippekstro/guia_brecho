@@ -18,7 +18,7 @@ try {
 
     setcookie('msg', "A FAQ foi deletada com sucesso!", time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'sucesso', time() + 3600, '/guia_brecho/');
-    header("Location: /guia_brecho/views/admin/listar_faqs.php");
+    header("Location: /guia_brecho/views/admin/faq_listar.php");
     exit();
 } catch (Exception $e) {
     echo $e->getMessage();

@@ -46,7 +46,7 @@ try {
             <tr>
                 <th scope="col">Pergunta</th>
                 <th scope="col">Resposta</th>
-                <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/adicionar_faq.php">Adicionar</a></th>
+                <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/faq_cadastrar.php">Adicionar</a></th>
             </tr>
         </thead>
         <tbody>
@@ -54,8 +54,8 @@ try {
                 <tr>
                     <td class="col-2"><?= $f['faq_pergunta'] ?></td>
                     <td class="col-2"><?= $f['faq_resposta'] ?></td>
-                    <td class="col-2"><a href="/guia_brecho/views/admin/editar_faq.php?id=<?= $f['id_faq'] ?>">Editar</a></td>
-                    <td class="col-2"><a href="/guia_brecho/controllers/delete_faq_controller.php?id=<?= $f['id_faq'] ?>">Deletar</a></td>
+                    <td class="col-2"><a href="/guia_brecho/views/admin/faq_editar.php?id=<?= $f['id_faq'] ?>">Editar</a></td>
+                    <td class="col-2"><a href="/guia_brecho/controllers/faq_delete_controller.php?id=<?= $f['id_faq'] ?>">Deletar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

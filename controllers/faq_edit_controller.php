@@ -22,7 +22,7 @@ try {
 
     setcookie('msg', "A FAQ foi atualizada com sucesso!", time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'sucesso', time() + 3600, '/guia_brecho/');
-    header("Location: /guia_brecho/views/admin/listar_faqs.php");
+    header("Location: /guia_brecho/views/admin/faq_listar.php");
     exit();
 } catch (PDOException $e) {
     echo $e->getMessage();

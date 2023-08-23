@@ -5,7 +5,6 @@ if (isset($_COOKIE['msg'])) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cabecalho.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/faq.php';
 
 /* if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nv_acesso'] < 2) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
@@ -13,12 +12,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/models/faq.php';
     header('Location: /guia_brecho/index.php');
     exit();
 } */
-
-try {
-    $faq = new Faq($_GET['id']);
-} catch (Exception $e) {
-    echo $e->getMessage();
-}
 
 ?>
 
@@ -40,22 +33,20 @@ try {
 
 <section class="d-flex align-items-center py-4">
     <div class="form-signin col-8 col-lg-4 m-auto">
-        <form action="/guia_brecho/controllers/edit_faq_controller.php" method="POST">
-            <h1 class="h3 mb-3 fw-normal">Editar FAQ</h1>
-
-            <input type="hidden" class="form-control" id="floatingInput" name="id" value="<?= $faq->id_faq ?>">
+        <form action="/guia_brecho/controllers/faq_add_controller.php" method="POST">
+            <h1 class="h3 mb-3 fw-normal">Cadastrar FAQ</h1>
 
             <div class="input-group my-3">
                 <span class="input-group-text">Pergunta</span>
-                <textarea class="form-control" aria-label="With textarea" name="faq_pergunta"><?= $faq->faq_pergunta ?></textarea>
+                <textarea class="form-control" aria-label="With textarea" name="faq_pergunta"></textarea>
             </div>
 
             <div class="input-group my-3">
                 <span class="input-group-text">Resposta</span>
-                <textarea class="form-control" aria-label="With textarea" name="faq_resposta"><?= $faq->faq_resposta ?></textarea>
+                <textarea class="form-control" aria-label="With textarea" name="faq_resposta"></textarea>
             </div>
 
-            <button class="btn btn-primary w-100 py-2" type="submit">Atualizar</button>
+            <button class="btn btn-primary w-100 py-2" type="submit">Cadastrar</button>
         </form>
     </div>
 

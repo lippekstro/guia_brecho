@@ -33,7 +33,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
         <a href="/guia_brecho/views/admin/listar_eventos.php"><button type="button" class="btn btn-custom btn-lg">Gerenciar Eventos</button></a>
       </div>
       <div class="alert alert-success text-center m-3" role="alert">
-        <a href="/guia_brecho/views/admin/listar_faqs.php"><button type="button" class="btn btn-custom btn-lg">Gerenciar FAQs</button></a>
+        <a href="/guia_brecho/views/admin/faq_listar.php"><button type="button" class="btn btn-custom btn-lg">Gerenciar FAQs</button></a>
       </div>
     </section>
   <?php endif; ?>
