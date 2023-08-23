@@ -86,7 +86,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
                 <div class="col-lg-5 col-md-12 right-content flex-wrap">
                   <div class="collection-item top-item">
                     <div class="products-thumb">
-                      <img src="/guia_brecho/img/sapatilha.jpg" alt="collection item " class="small-image image-rounded">
+                      <img src="/guia_brecho/img/sapatilha.jpg.png" alt="collection item " class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
                       <div class="categories"></div>
@@ -285,7 +285,7 @@ try {
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-header text-center pb-5">
-                        <h2 class="h2_sevirço">Guia Lojas</h2> 
+                        <h2 class="h2_lojas">Guia Lojas</h2> 
                         <p class="p_serviço">Lojas em destaque:</p>
                     </div>
                 </div>

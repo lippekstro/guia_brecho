@@ -180,11 +180,15 @@ transform: scale(1.1);
 height: 100%;
 }
 /* fim card---------------------------------------------- */
-
+.index .h2_lojas{
+	color: #fff;
+	font-family: bebas neue;
+	font-size: 50px;
+}
 
 
 .index .h2_sevirço{
-	color: #fff;
+	color: #5a5858;
 	font-family: bebas neue;
 	font-size: 50px;
 }
