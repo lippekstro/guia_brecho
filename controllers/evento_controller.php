@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $evento->criar();
 
-        header("Location: /guia_brecho/views/admin/cadastro_eventos.php");        
+        header("Location: /guia_brecho/views/admin/cadastrar_eventos.php");        
         exit();
 
     } catch (PDOException $e) {
