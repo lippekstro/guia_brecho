@@ -126,9 +126,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/produto.php";
     <button class="pre-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="/guia_brecho/img/arrow.png" alt=""></button>
     <div class="product-container">
+ 
+    
+<?php
 
-    <?php
-// Array de produtos 
 try {
   $listarUltimos = Produto::listarUltimos();
 } catch (PDOException $th) {
@@ -202,7 +203,10 @@ try {
 
 
               <!-- EVENTOS ---------------------------------- -->
-      <section id="latest-blog" class="padding-large">
+
+
+
+      <!-- <section id="latest-blog" class="padding-large">
             <div class="container">
               <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                 <h2 class="section-title">Eventos</h2>
@@ -271,8 +275,58 @@ try {
                 </article>
               </div>
             </div>
-          </section>
+          </section> -->
         <!-- FIM EVENTOS ---------------------------------- -->
+
+
+
+        <!-- EVENTOS 02 =================================================== -->
+        <?php
+
+try {
+  $listarproximos = Evento::listarproximos();
+} catch (PDOException $th) {
+  echo $th -> getMessage();
+}
+?>
+
+
+<section id="latest-blog" class="padding-large">
+  <div class="container">
+    <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
+      <h2 class="section-title">Eventos</h2>
+      <div class="btn-wrap align-right">
+        <a href="/guia_brecho/views/eventos.php" class="d-flex align-items-center">Veja Mais<i class="icon icon icon-arrow-io"></i>
+        </a>
+      </div>
+    </div>
+    <div class="row d-flex flex-wrap">
+      <?php foreach ($listarproximos as $artigo): ?>
+        <article class="col-md-4 post-item">
+          <div class="image-holder zoom-effect">
+            <a href="single-post.html">
+              <img src="<?php echo $artigo['imagem']; ?>" alt="post" class="post-image">
+            </a>
+          </div>
+          <div class="post-content d-flex">
+            <div class="meta-date">
+              <div class="meta-day text-primary"><?php echo $artigo['dia']; ?></div>
+              <div class="meta-month"><?php echo $artigo['mes']; ?></div>
+            </div>
+            <div class="post-header">
+              <h3 class="post-title">
+                <a href="single-post.html"><?php echo $artigo['titulo']; ?></a>
+              </h3>
+              <a href="blog.html" class="blog-categories"><?php echo $artigo['categoria']; ?></a>
+            </div>
+          </div>
+        </article>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+        <!-- fim eventos -->
 
 
 
@@ -340,7 +394,7 @@ try {
 
 
       <!--  BANNER ------------------------------ -->
-      <section class="shoppify-section-banner">
+ <!--      <section class="shoppify-section-banner">
             <div class="container">
               <div class="product-collection">
                 <div class="left-content collection-item">
@@ -358,55 +412,8 @@ try {
                 </div>
               </div>        
             </div>
-          </section><br>
+          </section><br> -->
         <!-- FIM  BANNER ------------------------------ -->
-
-
-
-
-        <!-- nossos serviços -->
-<!--       <section class="services section-padding serviços_cor" id="services">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="section-header text-center pb-5 text-orange">
-                          <h2 class="h2_sevirço" >Sobre os nossos serviços:</h2>
-                         
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="card text-black text-center bg-white pb-2">
-                        <div class="card-body">
-                            <i class="bi bi-laptop"></i>
-                            <h3 class="card-title">Comunidade Engajada</h3>
-                            <p class="lead">O que torna nosso site brechó verdadeiramente especial é a comunidade engajada que construímos ao longo do tempo. Nossos clientes não são apenas compradores, são membros valiosos da nossa família fashion sustentável</p>
-                        </div>
-                    </div>
-                </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                  <div class="card text-black text-center bg-white pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-journal"></i>
-                              <h3 class="card-title">Sustentabilidade</h3>
-                              <p class="lead">Uma das qualidades mais distintas e valorizadas do nosso site brechó é o compromisso inabalável com a sustentabilidade. Acreditamos que a moda pode ser bonita e responsável ao mesmo tempo, e por isso, priorizamos o conceito de reutilização e reciclagem em tudo o que fazemos.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-12 col-lg-4">
-                  <div class="card text-black text-center bg-white pb-2">
-                          <div class="card-body">
-                            <i class="bi bi-intersect"></i>
-                              <h3 class="card-title">Autenticidade</h3>
-                              <p class="lead">No Guia brechó, a autenticidade é uma das características que nos define. Cada peça em nosso acervo tem uma história única e carrega consigo um charme que apenas itens vintage podem proporcionar.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section> -->
-      <!-- FIM DE SERVIÇOS-->
 
             <!-- flex box  -->
      
