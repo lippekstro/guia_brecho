@@ -20,7 +20,7 @@ CREATE TABLE brecho (
     brecho_faixa_preco_fim DECIMAL(10,2),
     brecho_bio VARCHAR(255) NOT NULL,
     id_usuario INT NOT NULL,
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
 CREATE TABLE produto (
@@ -32,7 +32,7 @@ CREATE TABLE produto (
     imagem_produto LONGBLOB,
     estoque BOOLEAN DEFAULT 1, 
     id_brecho int NOT NULL,
-    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho)
+    FOREIGN KEY (id_brecho) REFERENCES brecho (id_brecho) ON DELETE CASCADE
 );
 
 CREATE TABLE evento (

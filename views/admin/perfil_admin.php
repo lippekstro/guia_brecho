@@ -21,8 +21,8 @@ $brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
         </div>
       <?php else : ?>
         <div class="alert alert-info text-center m-3" role="alert">
-          <a href="/guia_brecho/views/admin/perfil_brecho.php"><button type="button" class="btn btn-custom btn-lg mr-3">Editar Brecho</button></a>
-          <a href="/guia_brecho/controllers/brecho_delete_controller.php?id="><button type="button" class="btn btn-custom btn-lg">Excluir Brecho</button></a>
+          <a href="/guia_brecho/views/admin/perfil_brecho.php?id=<?= $brecho['id_brecho'] ?>"><button type="button" class="btn btn-custom btn-lg mr-3">Editar Brecho</button></a>
+          <a href="/guia_brecho/controllers/brecho_delete_controller.php?id=<?= $brecho['id_brecho'] ?>"><button type="button" class="btn btn-custom btn-lg">Excluir Brecho</button></a>
         </div>
         <div class="alert alert-info text-center m-3" role="alert">
           <a href="/guia_brecho/views/admin/produto_listar.php"><button type="button" class="btn btn-custom btn-lg">Gerenciar produtos</button></a>
