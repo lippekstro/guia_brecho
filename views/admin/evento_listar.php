@@ -40,30 +40,32 @@ try {
     <?php endif; ?>
 </section>
 
-<section class="d-flex justify-content-center m-5">
-    <table class="table table-hover col col-lg-12">
-        <thead>
-            <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Data/Hora</th>
-                <th scope="col">Local</th>
-                <th scope="col">Descrição</th>
-                <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/evento_cadastrar.php">Adicionar</a></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($eventos as $e) : ?>
+<section class="d-flex justify-content-center">
+    <div class="table-responsive-xxl m-3 w-100">
+        <table class="table table-hover col col-lg-12">
+            <thead>
                 <tr>
-                    <td class="col-2"><?= $e['nome_evento'] ?></td>
-                    <td class="col-2"><?= date('d/m/Y', strtotime($e['data_evento'])) ?> <?= $e['horario'] ?></td>
-                    <td class="col-2"><?= $e['local_evento'] ?></td>
-                    <td class="col-2"><?= $e['descricao_evento'] ?></td>
-                    <td class="col-2"><a href="/guia_brecho/views/admin/evento_editar.php?id=<?= $e['id_evento'] ?>">Editar</a></td>
-                    <td class="col-2"><a href="/guia_brecho/controllers/evento_delete_controller.php?id=<?= $e['id_evento'] ?>">Deletar</a></td>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data/Hora</th>
+                    <th scope="col">Local</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/evento_cadastrar.php">Adicionar</a></th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php foreach ($eventos as $e) : ?>
+                    <tr>
+                        <td class="col-2"><?= $e['nome_evento'] ?></td>
+                        <td class="col-2"><?= date('d/m/Y', strtotime($e['data_evento'])) ?> <?= $e['horario'] ?></td>
+                        <td class="col-2"><?= $e['local_evento'] ?></td>
+                        <td class="col-2"><?= $e['descricao_evento'] ?></td>
+                        <td class="col-2"><a href="/guia_brecho/views/admin/evento_editar.php?id=<?= $e['id_evento'] ?>">Editar</a></td>
+                        <td class="col-2"><a href="/guia_brecho/controllers/evento_delete_controller.php?id=<?= $e['id_evento'] ?>">Deletar</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <?php

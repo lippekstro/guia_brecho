@@ -40,32 +40,34 @@ try {
     <?php endif; ?>
 </section>
 
-<section class="d-flex justify-content-center m-5">
-    <table class="table table-hover col col-lg-12">
-        <thead>
-            <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Em Estoque?</th>
-                <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/produto_cadastrar.php">Adicionar</a></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($produtos as $p) : ?>
+<section class="d-flex justify-content-center">
+    <div class="table-responsive-xxl m-3 w-100">
+        <table class="table table-hover col col-lg-12">
+            <thead>
                 <tr>
-                    <td class="col-2"><?= $p['nome_produto'] ?></td>
-                    <td class="col-2"><?= $p['descricao'] ?></td>
-                    <td class="col-2"><?= $p['categoria'] ?></td>
-                    <td class="col-2"><?= $p['preco'] ?></td>
-                    <td class="col-2"><?= $p['estoque'] == 1 ? 'Sim' : 'Não' ?></td>
-                    <td class="col-2"><a href="/guia_brecho/views/admin/produto_editar.php?id=<?= $p['id_produto'] ?>">Editar</a></td>
-                    <td class="col-2"><a href="/guia_brecho/controllers/produto_delete_controller.php?id=<?= $p['id_produto'] ?>">Deletar</a></td>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Em Estoque?</th>
+                    <th scope="col" colspan="2"><a href="/guia_brecho/views/admin/produto_cadastrar.php">Adicionar</a></th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php foreach ($produtos as $p) : ?>
+                    <tr>
+                        <td class="col-2"><?= $p['nome_produto'] ?></td>
+                        <td class="col-2"><?= $p['descricao'] ?></td>
+                        <td class="col-2"><?= $p['categoria'] ?></td>
+                        <td class="col-2"><?= $p['preco'] ?></td>
+                        <td class="col-2"><?= $p['estoque'] == 1 ? 'Sim' : 'Não' ?></td>
+                        <td class="col-2"><a href="/guia_brecho/views/admin/produto_editar.php?id=<?= $p['id_produto'] ?>">Editar</a></td>
+                        <td class="col-2"><a href="/guia_brecho/controllers/produto_delete_controller.php?id=<?= $p['id_produto'] ?>">Deletar</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <?php

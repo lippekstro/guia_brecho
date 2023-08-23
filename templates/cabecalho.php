@@ -28,7 +28,7 @@ session_start();
     <script src="/guia_brecho/js/cadastroBrecho.js" defer></script>
     <!-- bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -50,19 +50,24 @@ session_start();
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php?pagina=1">Produtos</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
-                        <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
-                        <?php if (!isset($_SESSION['usuario'])) : ?>
-                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
-                        <?php else : ?>
-                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/perfil_admin.php">Painel</a>
-                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
-                        <?php endif; ?>
+                    <div class="navbar-nav w-100 justify-content-lg-between">
+                        <div class="d-lg-flex">
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/index.php">Home</a>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/produtos.php?pagina=1">Produtos</a>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/loja.php">Lojas</a>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/eventos.php">Eventos</a>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/faqs.php">FAQs</a>
+                            <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/quemsomos.php">Quem Somos?</a>
+                        </div>
+
+                        <div class="d-lg-flex">
+                            <?php if (!isset($_SESSION['usuario'])) : ?>
+                                <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/login.php">Login</a>
+                            <?php else : ?>
+                                <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/views/admin/perfil_admin.php">Painel</a>
+                                <a class="nav-link active text-white" aria-current="page" href="/guia_brecho/controllers/logout_controller.php">Sair</a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
