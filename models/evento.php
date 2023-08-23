@@ -75,6 +75,21 @@ class Evento {
         $stmt->execute();
     }
 
+    public function editarImagem()
+    {
+        $query = "UPDATE evento SET nome_evento = :nome, data_evento = :data_evento, horario = :hora, local_evento = :local_evento, descricao_evento = :descricao, imagem_evento = :imagem WHERE id_evento = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":nome", $this->nome_evento);
+        $stmt->bindValue(":data_evento", $this->data_evento);
+        $stmt->bindValue(":hora", $this->horario);
+        $stmt->bindValue(":local_evento", $this->local_evento);
+        $stmt->bindValue(":descricao", $this->descricao_evento);
+        $stmt->bindValue(":imagem", $this->imagem_evento);
+        $stmt->bindValue(":id", $this->id_evento);
+        $stmt->execute();
+    }
+
     public function deletar()
     {
         $query = "DELETE FROM evento WHERE id_evento = :id";
