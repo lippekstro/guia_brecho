@@ -95,11 +95,10 @@ class Usuario
             $_SESSION['usuario']['email'] = $registro['email'];
             $_SESSION['usuario']['nivel_acesso'] = $registro['nivel_acesso'];
 
-            header("Location: /guia_brecho/index.php");
+            header("Location: /guia_brecho/views/admin/perfil_admin.php");
             exit();
         } else {
-
-            setcookie('erro', 'Email ou Senha Incorreto!!', time() + 3600, '/guia_brecho/');
+            setcookie('erro', 'Email ou Senha Incorreto!', time() + 3600, '/guia_brecho/');
             header("Location: /guia_brecho/views/login.php");
             exit();
         }
