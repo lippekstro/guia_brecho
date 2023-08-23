@@ -1,7 +1,7 @@
 .index * {
 	
     box-sizing: border-box;
-font-family: 'Montserrat', sans-serif;
+    
 }
 .index html {
 	box-sizing: border-box;
@@ -182,14 +182,14 @@ height: 100%;
 /* fim card---------------------------------------------- */
 .index .h2_lojas{
 	color: #fff;
-	font-family: bebas neue;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 50px;
 }
 
 
 .index .h2_sevirço{
 	color: #5a5858;
-	font-family: bebas neue;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 50px;
 }
 .index .serviços_cor{
@@ -215,7 +215,7 @@ height: 100%;
 	justify-content: center;
 	min-height: 100vh;
 	background-color: #cecdcd;
-	font-family: poppins;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 }
 .index .flexbox02 {
@@ -224,7 +224,7 @@ height: 100%;
 	justify-content: center;
 	min-height: 100vh;
 	background-color:#fb732c;
-	font-family: poppins;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 }
 .index .wrapper_caixa {
@@ -254,8 +254,8 @@ height: 100%;
 .index .caixa-area h6 {
 	margin-bottom: 10px;
 	color: #fb732c;
-	font-size: 50px;
-	font-family: bebas neue;
+	font-size: 40px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .index .caixa-area:hover {
 	background-color: #fb732c;
@@ -270,6 +270,10 @@ height: 100%;
 .index .caixa-area:hover p {
 	color: #fff;
 } 
+.text_serviços{
+  
+
+}
 
 /* fim flex box */
 
@@ -611,7 +615,7 @@ height: 100%;
     color:#fff;
 }
 .index .text_banner_color1{
-    color:#fb732c;
+    color:#fff;
 }
 
 /* -Zoom Effect
@@ -918,5 +922,4 @@ height: 100%;
 }
 
 /* fim produtos --------------------- */
-
 
