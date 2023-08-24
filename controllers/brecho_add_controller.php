@@ -2,15 +2,13 @@
 session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/brecho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/utils.php";
-/* require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/sessoes.php"; */
 
-
-/* if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nv_acesso'] < 2) {
+if (!isset($_SESSION['usuario'])) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
     header('Location: /guia_brecho/index.php');
     exit();
-} */
+}
 
 try {
     $nome = Utilidades::sanitizaString($_POST['brecho_nome']);

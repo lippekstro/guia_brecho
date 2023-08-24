@@ -1,22 +1,21 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/evento.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php';
-/* require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/configs/sessoes.php"; */
 
-/* if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nv_acesso'] < 2) {
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel_acesso'] === 1) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
     setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
     header('Location: /guia_brecho/index.php');
     exit();
-} */
+}
 
 try {
-    $id = htmlspecialchars($_POST['id']);
-    $nome = Utilidades::sanitizaString($_POST['nome']);
-    $data = Utilidades::sanitizaString($_POST['data']);
-    $hora = Utilidades::sanitizaString($_POST['hora']);
-    $local = Utilidades::sanitizaString($_POST['local']);
-    $descricao = Utilidades::sanitizaString($_POST['descricao']);
+    $id = htmlspecialchars($_POST['id_evento']);
+    $nome = Utilidades::sanitizaString($_POST['nome_evento']);
+    $data = Utilidades::sanitizaString($_POST['data_evento']);
+    $hora = Utilidades::sanitizaString($_POST['horario']);
+    $local = Utilidades::sanitizaString($_POST['local_evento']);
+    $descricao = Utilidades::sanitizaString($_POST['descricao_evento']);
     if (!empty($_FILES['imagem_evento']['tmp_name'])) {
         $imagem_evento = file_get_contents($_FILES['imagem_evento']['tmp_name']);
     }

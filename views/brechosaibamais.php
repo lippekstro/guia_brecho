@@ -14,31 +14,36 @@ try {
 
 <section class="m-3">
     <div class="row">
-        <div class="col-lg-4">
-            <img src="data:image;charset=utf8;base64,<?= base64_encode($brecho['brecho_img']); ?>" alt="" class="w-100">
+        <div class="col-md-6 col-lg-3 p-3 my-3" style="background-color: #fb732c80;">
             <div class="row g-3">
+                <div class="col-12">
+                    <img src="data:image;charset=utf8;base64,<?= base64_encode($brecho['brecho_img']); ?>" alt="" class="w-100">
+                </div>
+            </div>
+
+            <div class="row g-3 m-1">
                 <div class="col-12 text-center">
-                    <p><?= $brecho['brecho_nome'] ?></p>
+                    <p class="fw-bolder"><?= $brecho['brecho_nome'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>Endereço: <?= $brecho['brecho_endereco'] ?></p>
+                    <p class="fw-bold">Endereço: <?= $brecho['brecho_endereco'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p>Contato: <?= $brecho['brecho_contato'] ?></p>
+                    <p class="fw-bold">Contato: <a href="tel:<?= $brecho['brecho_contato'] ?>"><?= $brecho['brecho_contato'] ?></a></p>
                 </div>
                 <div class="col-12">
-                    <p>Instagram: <a target="_blank" href="https://www.instagram.com/<?= $brecho['brecho_rede'] ?>">@<?= $brecho['brecho_rede'] ?></a></p>
+                    <p class="fw-bold">Instagram: <a target="_blank" href="https://www.instagram.com/<?= $brecho['brecho_rede'] ?>">@<?= $brecho['brecho_rede'] ?></a></p>
+                </div>
+                <div class="col-12" style="text-align: justify;">
+                    <p class="fw-bold"><?= $brecho['brecho_bio'] ?></p>
                 </div>
                 <div class="col-12">
-                    <p><?= $brecho['brecho_bio'] ?></p>
-                </div>
-                <div class="col-12">
-                    <p>Proprietário (a): <?= $brecho['nome_usuario'] ?></p>
+                    <p class="fw-bold">Proprietário(a): <?= $brecho['nome_usuario'] ?></p>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-8">
+        <div class="col-md-6 col-lg-8 my-3">
             <h1>Produtos</h1>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <?php foreach ($produtos as $p) : ?>

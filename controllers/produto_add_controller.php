@@ -3,6 +3,13 @@ session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/produto.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/brecho.php';
 
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel_acesso'] > 1) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/index.php');
+    exit();
+}
+
 try {
     $nome = $_POST["nome_produto"];
     $descricao = $_POST["descricao"];
@@ -14,7 +21,7 @@ try {
         $imagem = file_get_contents($_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/img/dummy_1920x1080.png');
     }
     $brecho = Brecho::buscarMeuBrecho($_SESSION['usuario']['id_usuario']);
-    
+
     $produto = new Produto();
     $produto->nome_produto = $nome;
     $produto->descricao = $descricao;

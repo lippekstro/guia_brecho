@@ -2,6 +2,13 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/brecho.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php';
 
+if (!isset($_SESSION['usuario'])) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/index.php');
+    exit();
+}
+
 try {
     $id_brecho = $_POST['id_brecho'];
     $brecho_nome = $_POST['brecho_nome'];

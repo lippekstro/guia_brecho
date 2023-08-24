@@ -155,4 +155,13 @@ class Brecho
         $lista = $stmt->fetchAll();
         return $lista;
     }
+
+    public static function listarDestaques(){
+        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u ON b.id_usuario = u.id_usuario ORDER BY b.id_brecho DESC LIMIT 3";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 }

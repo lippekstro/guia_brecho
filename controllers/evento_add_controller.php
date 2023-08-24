@@ -2,9 +2,13 @@
 session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/evento.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/config.php';
-/* require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php'; */
 
-
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel_acesso'] === 1) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/index.php');
+    exit();
+}
 
 try {
     $nome_evento = $_POST["nome_evento"];

@@ -98,6 +98,7 @@ class Evento {
         $stmt->bindValue(':id', $this->id_evento);
         $stmt->execute();
     }
+    
     public static function listarProximos(){
         $query = "SELECT * FROM evento ORDER BY data_evento ASC limit 3";
         $conexao = Conexao::conectar();

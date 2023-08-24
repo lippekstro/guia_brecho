@@ -760,6 +760,7 @@ height: 100%;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  height: 500px;
 }
 
 .index .product-container::-webkit-scrollbar {

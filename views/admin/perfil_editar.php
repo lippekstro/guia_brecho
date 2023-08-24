@@ -2,6 +2,13 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/usuario.php";
 
+if (!isset($_SESSION['usuario'])) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/index.php');
+    exit();
+}
+
 try {
     $usuario = new Usuario($_SESSION['usuario']['id_usuario']);
 } catch (Exception $e) {

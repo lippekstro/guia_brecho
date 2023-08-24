@@ -1,10 +1,12 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
 
-
-/* if ($_SESSION['usuario']['nivel_acesso'] != '1') {
-    header("Location: /guia_brecho/index.php");
-} */
+if (!isset($_SESSION['usuario'])) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'perigo', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/index.php');
+    exit();
+}
 
 ?>
 
