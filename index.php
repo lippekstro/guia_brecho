@@ -121,7 +121,7 @@ try {
         <?php foreach ($listarUltimos as $p) : ?>
           <div class="product-card">
             <div class="product-image">
-              <span class="discount-tag">50% off</span>
+              <span class="discount-tag"></span>
               <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($p['imagem_produto']) ?>" class="product-thumb" alt="">
               <button class="card-btn">Veja Mais</button>
             </div>
