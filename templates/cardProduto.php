@@ -20,7 +20,7 @@
 <?php
 try {
     $infoBrecho = Brecho::buscarMeuBrechoPorIdBrecho($lista["id_brecho"]);
-} catch (\Throwable $th) {
+} catch (PDOException $th) {
     echo $th->getMessage();
 }
 ?>

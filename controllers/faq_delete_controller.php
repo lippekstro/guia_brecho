@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/faq.php';
 
 if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel_acesso'] === 1) {

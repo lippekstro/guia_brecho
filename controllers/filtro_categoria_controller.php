@@ -6,7 +6,7 @@ if (isset($_GET["categoria"])) {
 
     try {
         
-    } catch (\Throwable $th) {
+    } catch (PDOException $th) {
         //throw $th;
     }
 }

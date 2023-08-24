@@ -15,7 +15,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['nivel_acesso'] > 1) {
         <h1 class='barra-cadastro-texto'>CADASTRE SEUS PRODUTOS</h1>
     </div>
     <div class='nav-master-cad-produto'>
-        <form action="\guia_brecho\controllers\produto_add_controller.php" method="post" autocomplete="on" enctype="multipart/form-data" >
+        <form action="/guia_brecho/controllers/produto_add_controller.php" method="post" autocomplete="on" enctype="multipart/form-data" >
             <div class='nav-cad-master'>
                 <fieldset class='nav-cadastro-produto'>
                     <legend>Dados do produto</legend>

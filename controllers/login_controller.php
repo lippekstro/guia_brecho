@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "\guia_brecho\models\usuario.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/models/usuario.php";
 
 
 try {

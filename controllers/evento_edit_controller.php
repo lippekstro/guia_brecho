@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/models/evento.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/guia_brecho/configs/utils.php';
 

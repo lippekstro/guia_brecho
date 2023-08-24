@@ -53,7 +53,7 @@ $listaBrecho = Brecho::listar();
       try {
 
         $resultadoFiltro = Produto::filtroCategoria($categoria);
-      } catch (\Throwable $th) {
+      } catch (PDOException $th) {
         echo $th->getMessage();
       }
       ?>
@@ -67,7 +67,7 @@ $listaBrecho = Brecho::listar();
 
         <!---------------------------- AQUI O INCLUDE DOS CARDS  -------------------->
 
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '\guia_brecho\templates\cardProduto.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cardProduto.php'; ?>
 
       <?php endforeach; ?>
 
@@ -77,7 +77,7 @@ $listaBrecho = Brecho::listar();
       $nome = htmlspecialchars($_GET["pesquisa"]);
       try {
         $resultadoPesquisa = Produto::pesquisarProdutos($nome);
-      } catch (\Throwable $th) {
+      } catch (PDOException $th) {
         echo $th->getMessage();
       }
       ?>
@@ -92,7 +92,7 @@ $listaBrecho = Brecho::listar();
 
         <!---------------------------- AQUI O INCLUDE DOS CARDS  -------------------->
 
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '\guia_brecho\templates\cardProduto.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cardProduto.php'; ?>
 
       <?php endforeach; ?>
 
@@ -102,7 +102,7 @@ $listaBrecho = Brecho::listar();
 
       try {
         $filtroBrecho = Produto::filtroBrecho($id_brecho);
-      } catch (\Throwable $th) {
+      } catch (PDOException $th) {
         echo $th->getMessage();
       }
       ?>
@@ -110,7 +110,7 @@ $listaBrecho = Brecho::listar();
 
         <!---------------------------- AQUI O INCLUDE DOS CARDS  -------------------->
 
-        <?php include $_SERVER['DOCUMENT_ROOT'] . '\guia_brecho\templates\cardProduto.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cardProduto.php'; ?>
 
       <?php endforeach; ?>
 
@@ -134,7 +134,7 @@ $listaBrecho = Brecho::listar();
 
       try {
         $produtosPaginacao = Produto::paginacaoProdutos($inicioCards, $limiteCards);
-      } catch (\Throwable $th) {
+      } catch (PDOException $th) {
         echo $th->getMessage();
       }
 
@@ -150,7 +150,7 @@ $listaBrecho = Brecho::listar();
 
           <!---------------------------- AQUI O INCLUDE DOS CARDS  -------------------->
 
-          <?php include $_SERVER['DOCUMENT_ROOT'] . '\guia_brecho\templates\cardProduto.php'; ?>
+          <?php include $_SERVER['DOCUMENT_ROOT'] . '/guia_brecho/templates/cardProduto.php'; ?>
 
         <?php endforeach; ?>
       <?php } ?>
@@ -206,7 +206,7 @@ $listaBrecho = Brecho::listar();
           <p class="p"><a href="?categoria=vestimentas" class="p">Roupas</a></p>
           <p class="p"><a href="?categoria=acessorios" class="p">Acessórios</a></p>
           <p class="p"><a href="?categoria=calcados" class="p">Calçados</a></p>
-          <p class="p"><a href="\guia_brecho\views\produtos.php?pagina=1" class="p">Limpar Filtro</a></p>
+          <p class="p"><a href="/guia_brecho/views/produtos.php?pagina=1" class="p">Limpar Filtro</a></p>
         </li>
         <li class="li">
           <input type="checkbox" checked>
@@ -215,7 +215,7 @@ $listaBrecho = Brecho::listar();
           <?php foreach ($listaBrecho as $lista) : ?>
             <p class="p"><a href="?id_brecho=<?= $lista["id_brecho"] ?>" class="p"><?= $lista["brecho_nome"] ?></a></p>
           <?php endforeach; ?>
-          <p class="p"><a href="\guia_brecho\views\produtos.php?pagina=1" class="p">Limpar Filtro</a></p>
+          <p class="p"><a href="/guia_brecho/views/produtos.php?pagina=1" class="p">Limpar Filtro</a></p>
         </li>
       </ul>
     </div>

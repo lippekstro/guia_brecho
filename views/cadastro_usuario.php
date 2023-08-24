@@ -1,5 +1,12 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/guia_brecho/templates/cabecalho.php";
+
+if (isset($_SESSION['usuario'])) {
+    setcookie('msg', 'Você ja está logado', time() + 3600, '/guia_brecho/');
+    setcookie('tipo', 'info', time() + 3600, '/guia_brecho/');
+    header('Location: /guia_brecho/views/admin/perfil_admin.php');
+    exit();
+}
 ?>
 <section class="cadastro_usuario">
     <div class="body-titulo">
