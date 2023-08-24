@@ -175,7 +175,7 @@ try {
         <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
           <h2 class="section-title">Eventos</h2>
           <div class="btn-wrap align-right">
-            <a href="/guia_brecho/views/eventos.php" class="d-flex align-items-center">Veja Mais<i class="icon icon icon-arrow-io"></i>
+            <a href="/guia_brecho/views/eventos.php" class="d-flex align-items-center veja-mais">Veja Mais<i class="icon icon icon-arrow-io"></i>
             </a>
           </div>
         </div>

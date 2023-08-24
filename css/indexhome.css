@@ -385,7 +385,10 @@ height: 100%;
       width: 100%;
   }
 }
-
+.index .veja-mais{
+  color: #fb732c;
+  font-size: 25px;
+}
 
 /*----- Shoppify section banner Section
 --------------------------------------------------------------*/
