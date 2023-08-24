@@ -66,6 +66,10 @@ font-size: 50px;
 .index .team .card-body i {
 font-size: 20px;
 }
+.index .card_loja{
+
+width: 300px;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 .carousel-caption {
