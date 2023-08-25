@@ -137,7 +137,7 @@ class Brecho
 
     public static function buscarMeuBrechoPorIdBrecho($id_brecho)
     {
-        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u WHERE id_brecho = :id_brecho";
+        $query = "SELECT b.*, u.nome_usuario FROM brecho b JOIN usuario u ON b.id_usuario = u.id_usuario WHERE b.id_brecho = :id_brecho";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_brecho', $id_brecho);

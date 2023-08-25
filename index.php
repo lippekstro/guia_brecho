@@ -220,7 +220,7 @@ try {
           </div>
           <div class="row">
             <?php foreach ($lojas as $l) : ?>
-              <div class="col-12 col-md-12 col-lg-4 card_loja">
+              <div class="col-12 col-lg-4">
                 <div class="card text-light text-center bg-white pb-2 ">
                   <div class="card-body text-dark">
                     <div class="img-area mb-4">
